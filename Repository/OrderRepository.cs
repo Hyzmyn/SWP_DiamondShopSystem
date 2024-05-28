@@ -8,48 +8,43 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class UserRepository
+    public class OrderRepository
     {
         private DiamondShopContext _db;
 
-        public User? Get(string username)
+        public Order? GetById(int id)
         {
             _db = new();
-            return _db.Users.FirstOrDefault(x => x.UserName == username);
+            return _db.Orders.Find(id);
         }
-        public List<User> GetAll()
+        public List<Order> GetAll()
         {
             _db = new();
-            return _db.Users.ToList();
+            return _db.Orders.ToList();
+        }
+        public void Create(Order order)
+        {
+            _db = new();
+            _db.Orders.Add(order);
+            _db.SaveChanges();
+
         }
 
-        public User? GetById(int id)
+        public void Update(Order order)
         {
             _db = new();
-            return _db.Users.Find(id);
-        }
-
-        public void Create(User user)
-        {
-            _db = new();
-            _db.Users.Add(user);
+            _db.Orders.Update(order);
             _db.SaveChanges();
         }
 
-        public void Update(User user)
-        {
-            _db = new();
-            _db.Users.Update(user);
-            _db.SaveChanges();
-        }
         public void Delete(int id)
         {
             _db = new();
-            var user = _db.Users.FirstOrDefault(x => x.UserId == id);
+            var order = _db.Orders.FirstOrDefault(x => x.OrderId == id);
 
-            if (user != null)
+            if(order != null)
             {
-                _db.Users.Remove(user);
+                _db.Orders.Remove(order);
                 _db.SaveChanges();
             }
         }
