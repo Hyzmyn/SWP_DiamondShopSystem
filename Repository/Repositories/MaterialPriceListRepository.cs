@@ -1,12 +1,11 @@
 ﻿using Repository.Entities;
-using Repository.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository
+namespace Repository.Repositories
 {
     public class MaterialPriceListRepository
     {
@@ -45,7 +44,7 @@ namespace Repository
             if (MaterialPriceList != null)
             {
                 _db.MaterialPriceLists.Remove(MaterialPriceList);
-                _db.SaveChanges() ;
+                _db.SaveChanges();
             }
         }
     }

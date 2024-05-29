@@ -1,21 +1,20 @@
 ﻿using Repository.Entities;
-using Repository.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository
+namespace Repository.Repositories
 {
     public class FeedBackRepository
     {
         private DiamondShopContext _db;
-        public List<FeedBack> GetAll() 
+        public List<FeedBack> GetAll()
         {
             _db = new();
             return _db.FeedBacks.ToList();
-        } 
+        }
         public FeedBack? GetByID(int id)
         {
             _db = new();
