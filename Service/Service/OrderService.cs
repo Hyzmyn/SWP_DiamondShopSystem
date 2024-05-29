@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Service.Service
 {
-    public class OderService
+    public class OrderService
     {
         private OrderRepository _repo = new OrderRepository();
 
