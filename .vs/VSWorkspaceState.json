@@ -1,12 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Repository",
-    "\\Repository\\Entities",
-    "\\Service",
+    "\\Controller",
     "\\Service\\bin",
+    "\\Service\\bin\\Debug",
+    "\\Service\\bin\\Release",
+    "\\Service\\Model",
     "\\Service\\obj"
   ],
-  "SelectedNode": "\\Repository\\Entities\\FeedBack.cs",
+  "SelectedNode": "\\Controller\\TextFile1.txt",
   "PreviewInSolutionExplorer": false
 }
