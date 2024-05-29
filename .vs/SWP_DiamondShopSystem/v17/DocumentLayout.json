@@ -38,8 +38,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -48,7 +56,7 @@
               "RelativeDocumentMoniker": "Service\\Service\\OderService.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service\\OderService.cs",
               "RelativeToolTip": "Service\\Service\\OderService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T09:11:48.058Z",
               "EditorCaption": ""
@@ -63,8 +71,7 @@
               "RelativeToolTip": "Repository\\Repositories\\OrderRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:11:01.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T09:11:01.578Z"
             },
             {
               "$type": "Document",
@@ -76,12 +83,7 @@
               "RelativeToolTip": "Repository\\Entities\\DiamondShopContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:10:37.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "WhenOpened": "2024-05-29T09:10:37.295Z"
             },
             {
               "$type": "Document",
@@ -93,8 +95,7 @@
               "RelativeToolTip": "Service\\Service\\UserService.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:44:18.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:44:18.789Z"
             },
             {
               "$type": "Document",
@@ -106,8 +107,7 @@
               "RelativeToolTip": "Repository\\Repositories\\UserRepository.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAAAAkAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:42:08.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:42:08.536Z"
             },
             {
               "$type": "Document",
@@ -119,8 +119,7 @@
               "RelativeToolTip": "Repository\\Repositories\\ProductCategoryRepository.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:38:20.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:38:20.759Z"
             },
             {
               "$type": "Document",
