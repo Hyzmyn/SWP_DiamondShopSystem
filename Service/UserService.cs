@@ -1,5 +1,7 @@
 ﻿using Repository;
 using Repository.Entities;
+using Repository.Interface;
+using Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Service
 {
-    public class UserService
+    public class UserService : IUserService
     {
         private UserRepository _repo = new UserRepository();
 
