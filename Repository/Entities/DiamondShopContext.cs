@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Repository.Entities;
 
-namespace Repository.Repositories;
+namespace Repository.Entities;
 
 public partial class DiamondShopContext : DbContext
 {

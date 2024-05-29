@@ -1,12 +1,11 @@
 ﻿using Repository.Entities;
-using Repository.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository
+namespace Repository.Repositories
 {
     public class OrderRepository
     {
@@ -42,7 +41,7 @@ namespace Repository
             _db = new();
             var order = _db.Orders.FirstOrDefault(x => x.OrderId == id);
 
-            if(order != null)
+            if (order != null)
             {
                 _db.Orders.Remove(order);
                 _db.SaveChanges();

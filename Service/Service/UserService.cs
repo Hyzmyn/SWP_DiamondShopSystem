@@ -1,12 +1,12 @@
-﻿using Repository;
-using Repository.Entities;
+﻿using Repository.Entities;
+using Repository.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service
+namespace Service.Service
 {
     public class UserService
     {

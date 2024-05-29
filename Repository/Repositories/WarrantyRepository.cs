@@ -1,20 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Repository.Entities;
-using Repository.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository
+namespace Repository.Repositories
 {
     public class WarrantyRepository
     {
         private DiamondShopContext _db;
 
-        
-        public List<Warranty> GetAll() 
+
+        public List<Warranty> GetAll()
         {
             _db = new();
             return _db.Warranties.ToList();

@@ -1,12 +1,12 @@
-﻿using Repository;
-using Repository.Entities;
+﻿using Repository.Entities;
+using Repository.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service
+namespace Service.Service
 {
     public class ProductCategoryService
     {
@@ -14,8 +14,8 @@ namespace Service
 
         public List<ProductCategory> GetAllProductCate() => _repo.GetAll();
 
-        public List<ProductCategory> SreachProductCate(string keyword) 
-            => _repo.GetAll().Where(x => x.CategoryId.ToString().Contains(keyword.ToLower())  ||
+        public List<ProductCategory> SreachProductCate(string keyword)
+            => _repo.GetAll().Where(x => x.CategoryId.ToString().Contains(keyword.ToLower()) ||
                                          x.CategoryName.ToLower().Contains(keyword.ToLower())).ToList();
 
         public ProductCategory? GetProductCate(int id) => _repo.GetById(id);

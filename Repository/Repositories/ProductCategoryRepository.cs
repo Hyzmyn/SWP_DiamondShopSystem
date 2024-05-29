@@ -1,18 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Repository.Entities;
-using Repository.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository
+namespace Repository.Repositories
 {
     public class ProductCategoryRepository
     {
         private DiamondShopContext _db;
-        
+
         public List<ProductCategory> GetAll()
         {
             _db = new();
@@ -30,7 +29,7 @@ namespace Repository
             return _db.ProductCategories.Find(id);
         }
 
-        public void Create (ProductCategory category)
+        public void Create(ProductCategory category)
         {
             _db = new();
 
@@ -39,19 +38,19 @@ namespace Repository
 
         }
 
-        public void Update (ProductCategory category)
+        public void Update(ProductCategory category)
         {
             _db = new();
             _db.ProductCategories.Update(category);
             _db.SaveChanges();
 
         }
-        public void Delete (int id)
+        public void Delete(int id)
         {
             _db = new();
             var productCategory = _db.ProductCategories.FirstOrDefault(x => x.CategoryId == id);
 
-            if(productCategory != null)
+            if (productCategory != null)
             {
                 _db.ProductCategories.Remove(productCategory);
                 _db.SaveChanges();
