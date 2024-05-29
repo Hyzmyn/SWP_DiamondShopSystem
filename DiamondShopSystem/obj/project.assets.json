@@ -3151,19 +3151,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\SWP\\DiamondShopSystem\\DiamondShopSystem.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\HDB\\DiamondShopSystem\\DiamondShopSystem.csproj",
       "projectName": "DiamondShopSystem",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\SWP\\DiamondShopSystem\\DiamondShopSystem.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\SWP\\DiamondShopSystem\\obj\\",
+      "projectPath": "C:\\Users\\DELL\\Desktop\\HDB\\DiamondShopSystem\\DiamondShopSystem.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\Desktop\\HDB\\DiamondShopSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3177,8 +3177,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\SWP\\Service\\Service.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\SWP\\Service\\Service.csproj"
+            "C:\\Users\\DELL\\Desktop\\HDB\\Service\\Service.csproj": {
+              "projectPath": "C:\\Users\\DELL\\Desktop\\HDB\\Service\\Service.csproj"
             }
           }
         }
@@ -3216,7 +3216,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
