@@ -64,7 +64,7 @@
               "RelativeDocumentMoniker": "Repository\\Interface\\IOrderRepository.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Interface\\IOrderRepository.cs",
               "RelativeToolTip": "Repository\\Interface\\IOrderRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T16:25:55.834Z",
               "EditorCaption": ""
@@ -79,8 +79,7 @@
               "RelativeToolTip": "Repository\\Interface\\IUserRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T16:24:51.931Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T16:24:51.931Z"
             },
             {
               "$type": "Document",
@@ -92,8 +91,7 @@
               "RelativeToolTip": "Repository\\Repositories\\DiscountRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T16:23:45.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T16:23:45.235Z"
             },
             {
               "$type": "Document",
@@ -105,8 +103,7 @@
               "RelativeToolTip": "Repository\\Repositories\\FeedBackRepository.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAA4AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T10:01:26.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T10:01:26.505Z"
             },
             {
               "$type": "Document",
@@ -118,8 +115,7 @@
               "RelativeToolTip": "Service\\Service\\OrderService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:11:48.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T09:11:48.058Z"
             },
             {
               "$type": "Document",
@@ -131,8 +127,7 @@
               "RelativeToolTip": "Repository\\Repositories\\OrderRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:11:01.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T09:11:01.578Z"
             },
             {
               "$type": "Document",
