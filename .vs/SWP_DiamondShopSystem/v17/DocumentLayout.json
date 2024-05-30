@@ -3,20 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\service\\service\\materialpricelistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|solutionrelative:service\\service\\materialpricelistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\service\\interface\\idiscountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|solutionrelative:service\\interface\\idiscountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\service\\service\\discountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|solutionrelative:service\\service\\discountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\service\\interface\\imaterialpricelistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|solutionrelative:service\\interface\\imaterialpricelistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\service\\service\\materialpricelistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|solutionrelative:service\\service\\materialpricelistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\service\\interface\\ifeedbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|solutionrelative:service\\interface\\ifeedbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\service\\interface\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|solutionrelative:service\\interface\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\service\\service\\feedbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|solutionrelative:service\\service\\feedbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\service\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|solutionrelative:service\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\interface\\idiscountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\interface\\idiscountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\repositories\\discountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\discountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\interface\\imaterialpricelistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\interface\\imaterialpricelistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\repositories\\materialpricelistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\materialpricelistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\interface\\ifeedbackrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\interface\\ifeedbackrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\repositories\\feedbackrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\feedbackrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\interface\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\interface\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\interface\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\interface\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\entities\\materialpricelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,10 +91,6 @@
       "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\entities\\diamondshopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\service\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|solutionrelative:service\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\service\\service\\productcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|solutionrelative:service\\service\\productcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,24 +99,8 @@
       "RelativeMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|solutionrelative:service\\service\\warrantyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\repositories\\feedbackrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\feedbackrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\interface\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\interface\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\repositories\\discountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\discountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\hodinhbinh\\swp_diamondshopsystem\\repository\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,8 +122,86 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IDiscountService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Interface\\IDiscountService.cs",
+              "RelativeDocumentMoniker": "Service\\Interface\\IDiscountService.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Interface\\IDiscountService.cs",
+              "RelativeToolTip": "Service\\Interface\\IDiscountService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAsAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T09:24:07.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IMaterialPriceListService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Interface\\IMaterialPriceListService.cs",
+              "RelativeDocumentMoniker": "Service\\Interface\\IMaterialPriceListService.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Interface\\IMaterialPriceListService.cs",
+              "RelativeToolTip": "Service\\Interface\\IMaterialPriceListService.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAAAsAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T09:22:35.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IFeedBackService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Interface\\IFeedBackService.cs",
+              "RelativeDocumentMoniker": "Service\\Interface\\IFeedBackService.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Interface\\IFeedBackService.cs",
+              "RelativeToolTip": "Service\\Interface\\IFeedBackService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T09:20:54.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Interface\\IProductService.cs",
+              "RelativeDocumentMoniker": "Service\\Interface\\IProductService.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Interface\\IProductService.cs",
+              "RelativeToolTip": "Service\\Interface\\IProductService.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T09:19:34.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IDiscountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Interface\\IDiscountRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Interface\\IDiscountRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Interface\\IDiscountRepository.cs",
+              "RelativeToolTip": "Repository\\Interface\\IDiscountRepository.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAIwA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T09:18:24.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IMaterialPriceListRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Interface\\IMaterialPriceListRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Interface\\IMaterialPriceListRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Interface\\IMaterialPriceListRepository.cs",
+              "RelativeToolTip": "Repository\\Interface\\IMaterialPriceListRepository.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA0wAsAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T09:16:10.005Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -96,7 +210,7 @@
               "RelativeDocumentMoniker": "Service\\Service\\DiscountService.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\DiscountService.cs",
               "RelativeToolTip": "Service\\Service\\DiscountService.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAcwBQAAAAAAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAowBkAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T08:57:27.808Z",
               "EditorCaption": ""
@@ -104,103 +218,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MaterialPriceListRepository.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Repositories\\MaterialPriceListRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\MaterialPriceListRepository.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Repositories\\MaterialPriceListRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\MaterialPriceListRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T08:29:03.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "MaterialPriceListService.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\MaterialPriceListService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\MaterialPriceListService.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\MaterialPriceListService.cs",
               "RelativeToolTip": "Service\\Service\\MaterialPriceListService.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T08:16:36.563Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\UserService.cs",
-              "RelativeDocumentMoniker": "Service\\Service\\UserService.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\UserService.cs",
-              "RelativeToolTip": "Service\\Service\\UserService.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABEAAAAlAAAA",
+              "DocumentIndex": 12,
+              "Title": "IFeedBackRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Interface\\IFeedBackRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Interface\\IFeedBackRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Interface\\IFeedBackRepository.cs",
+              "RelativeToolTip": "Repository\\Interface\\IFeedBackRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:44:18.789Z",
+              "WhenOpened": "2024-05-30T09:14:54.232Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MaterialPriceList.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Entities\\MaterialPriceList.cs",
-              "RelativeDocumentMoniker": "Repository\\Entities\\MaterialPriceList.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Entities\\MaterialPriceList.cs",
-              "RelativeToolTip": "Repository\\Entities\\MaterialPriceList.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 14,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Interface\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Interface\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Interface\\IProductRepository.cs",
+              "RelativeToolTip": "Repository\\Interface\\IProductRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T08:28:49.521Z",
+              "WhenOpened": "2024-05-30T09:12:58.003Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "FeedBackService.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\FeedBackService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\FeedBackService.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\FeedBackService.cs",
               "RelativeToolTip": "Service\\Service\\FeedBackService.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAiwBYAAAA/AAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAiwBYAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T07:59:33.619Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\OrderService.cs",
-              "RelativeDocumentMoniker": "Service\\Service\\OrderService.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\OrderService.cs",
-              "RelativeToolTip": "Service\\Service\\OrderService.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAAAAAAAA",
+              "DocumentIndex": 15,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\ProductRepository.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAA5wCsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:11:48.058Z",
+              "WhenOpened": "2024-05-30T09:13:19.114Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "DiamondShopContext.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Entities\\DiamondShopContext.cs",
-              "RelativeDocumentMoniker": "Repository\\Entities\\DiamondShopContext.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Entities\\DiamondShopContext.cs",
-              "RelativeToolTip": "Repository\\Entities\\DiamondShopContext.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAA3wBsAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:10:37.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\ProductService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\ProductService.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\ProductService.cs",
               "RelativeToolTip": "Service\\Service\\ProductService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAABqAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwBkAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T07:59:48.469Z",
               "EditorCaption": ""
@@ -208,68 +296,94 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "ProductCategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\ProductCategoryService.cs",
-              "RelativeDocumentMoniker": "Service\\Service\\ProductCategoryService.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\ProductCategoryService.cs",
-              "RelativeToolTip": "Service\\Service\\ProductCategoryService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T08:00:20.135Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "WarrantyService.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\WarrantyService.cs",
-              "RelativeDocumentMoniker": "Service\\Service\\WarrantyService.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\WarrantyService.cs",
-              "RelativeToolTip": "Service\\Service\\WarrantyService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T08:08:44.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FeedBackRepository.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Repositories\\FeedBackRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\FeedBackRepository.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Repositories\\FeedBackRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\FeedBackRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAuwA4AAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T10:01:26.505Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IOrderRepository.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Interface\\IOrderRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Interface\\IOrderRepository.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Interface\\IOrderRepository.cs",
-              "RelativeToolTip": "Repository\\Interface\\IOrderRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T16:25:55.834Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "DiscountRepository.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Repositories\\DiscountRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\DiscountRepository.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Repositories\\DiscountRepository.cs",
               "RelativeToolTip": "Repository\\Repositories\\DiscountRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAkwDMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T16:23:45.235Z"
+              "WhenOpened": "2024-05-29T16:23:45.235Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 11,
+              "Title": "MaterialPriceListRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Repositories\\MaterialPriceListRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\MaterialPriceListRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Repositories\\MaterialPriceListRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\MaterialPriceListRepository.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwDAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T08:29:03.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\OrderService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\OrderService.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\OrderService.cs",
+              "RelativeToolTip": "Service\\Service\\OrderService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T09:11:48.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FeedBackRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Repositories\\FeedBackRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\FeedBackRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Repositories\\FeedBackRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\FeedBackRepository.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAgwCsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T10:01:26.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MaterialPriceList.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Entities\\MaterialPriceList.cs",
+              "RelativeDocumentMoniker": "Repository\\Entities\\MaterialPriceList.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Entities\\MaterialPriceList.cs",
+              "RelativeToolTip": "Repository\\Entities\\MaterialPriceList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T08:28:49.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Interface\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Interface\\IOrderRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Interface\\IOrderRepository.cs",
+              "RelativeToolTip": "Repository\\Interface\\IOrderRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T16:25:55.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\UserService.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\UserService.cs",
+              "RelativeToolTip": "Service\\Service\\UserService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABEAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T08:44:18.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Interface\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Interface\\IUserRepository.cs",
@@ -277,11 +391,48 @@
               "RelativeToolTip": "Repository\\Interface\\IUserRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T16:24:51.931Z"
+              "WhenOpened": "2024-05-29T16:24:51.931Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
+              "Title": "DiamondShopContext.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Entities\\DiamondShopContext.cs",
+              "RelativeDocumentMoniker": "Repository\\Entities\\DiamondShopContext.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Entities\\DiamondShopContext.cs",
+              "RelativeToolTip": "Repository\\Entities\\DiamondShopContext.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAA3wBsAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T09:10:37.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProductCategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\ProductCategoryService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\ProductCategoryService.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\ProductCategoryService.cs",
+              "RelativeToolTip": "Service\\Service\\ProductCategoryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T08:00:20.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "WarrantyService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\WarrantyService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\WarrantyService.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Service\\Service\\WarrantyService.cs",
+              "RelativeToolTip": "Service\\Service\\WarrantyService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T08:08:44.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Repositories\\OrderRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\OrderRepository.cs",
@@ -293,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 25,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\UserRepository.cs",
@@ -305,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
               "Title": "ProductCategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\Repository\\Repositories\\ProductCategoryRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\ProductCategoryRepository.cs",
@@ -317,7 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 27,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\HoDinhBinh\\SWP_DiamondShopSystem\\DiamondShopSystem\\appsettings.json",
               "RelativeDocumentMoniker": "DiamondShopSystem\\appsettings.json",
