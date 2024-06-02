@@ -1,5 +1,9 @@
 namespace DiamondShopSystem
 {
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
+    using Microsoft.IdentityModel.Tokens;
+    using System.Text;
+
     public class Program
     {
         public static void Main(string[] args)
@@ -9,13 +13,34 @@ namespace DiamondShopSystem
             // Add services to the container.
             builder.Services.AddRazorPages();
 
+            // JWT Authentication configuration
+            var key = Encoding.ASCII.GetBytes("YourSecretKeyHere"); // Use a secure key stored in configuration
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = "YourIssuer",
+                    ValidAudience = "YourAudience",
+                    IssuerSigningKey = new SymmetricSecurityKey(key)
+                };
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -24,6 +49,7 @@ namespace DiamondShopSystem
 
             app.UseRouting();
 
+            app.UseAuthentication(); // Add this line
             app.UseAuthorization();
 
             app.MapRazorPages();
