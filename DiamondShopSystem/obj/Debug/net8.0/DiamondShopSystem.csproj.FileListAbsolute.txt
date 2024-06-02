@@ -28,15 +28,3 @@ C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\
 C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.pdb
 C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.genruntimeconfig.cache
 C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\ref\DiamondShopSystem.dll
-C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.csproj.AssemblyReference.cache
-C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.AssemblyInfoInputs.cache
-C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.AssemblyInfo.cs
-C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.csproj.CoreCompileInputs.cache
-C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.RazorAssemblyInfo.cache
-C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.RazorAssemblyInfo.cs
-C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.sourcelink.json
-C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.dll
-C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\refint\DiamondShopSystem.dll
-C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.pdb
