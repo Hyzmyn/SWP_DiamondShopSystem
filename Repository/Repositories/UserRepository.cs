@@ -1,5 +1,4 @@
 ﻿using Repository.Entities;
-using Repository.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository
     {
         private DiamondShopContext _db;
 

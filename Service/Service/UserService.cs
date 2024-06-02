@@ -1,7 +1,5 @@
 ﻿using Repository.Entities;
-using Repository.Interface;
 using Repository.Repositories;
-using Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,22 +8,14 @@ using System.Threading.Tasks;
 
 namespace Service.Service
 {
-    public class UserService : IUserService
+    public class UserService
     {
-        private readonly IUserRepository _repo = null;
-
-        public UserService()
-        {
-            if(_repo == null)
-            {
-                _repo = new UserRepository();
-            }
-        }
+        private UserRepository _repo = new UserRepository();
 
         public List<User> GetAllUser() => _repo.GetAll();
 
         public List<User> SearchUser(string keyword)
-            => _repo.GetAll().Where(x => x.UserId.ToString().Equals(keyword.ToLower()) ||
+            => _repo.GetAll().Where(x => x.UserId.ToString().Contains(keyword.ToLower()) ||
                                          x.UserName.ToLower().Contains(keyword.ToLower())).ToList();
 
         public User? GetUser(int id) => _repo.GetById(id);
