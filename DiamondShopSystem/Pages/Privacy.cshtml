@@ -1,8 +1,22 @@
 ﻿@page
 @model PrivacyModel
 @{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Register";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="text-center">
+    <h1 class="display-4">Register</h1>
+    <form method="post">
+        <p>
+            <label> Username: </label> <input type="text" name="Username" /> <br />
+        </p>
+        <p>
+            <label> Email: </label> <input type="text" name="Email" /> <br />
+        </p>
+        <p>
+
+            <label> Password: </label> <input type="password" name="Password" /> <br />
+        </p>
+        <input type="submit" value="Create" />
+    </form>
+</div>

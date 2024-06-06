@@ -12,19 +12,24 @@ namespace Repository.Repositories
     {
         private DiamondShopContext _db;
 
-        public Order? GetById(int id)
+        public OrderRepository()
         {
             _db = new();
+        }
+
+        public Order? GetById(int id)
+        {
+            
             return _db.Orders.Find(id);
         }
         public List<Order> GetAll()
         {
-            _db = new();
+            
             return _db.Orders.ToList();
         }
         public void Create(Order order)
         {
-            _db = new();
+            
             _db.Orders.Add(order);
             _db.SaveChanges();
 
@@ -32,14 +37,14 @@ namespace Repository.Repositories
 
         public void Update(Order order)
         {
-            _db = new();
+            
             _db.Orders.Update(order);
             _db.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            _db = new();
+            
             var order = _db.Orders.FirstOrDefault(x => x.OrderId == id);
 
             if (order != null)

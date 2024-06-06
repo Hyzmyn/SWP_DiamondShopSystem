@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Service.Interface;
+using Service.Service;
 using System.Text;
 
 public class Program
@@ -20,6 +22,10 @@ public class Program
 
         // Register JwtTokenGenerator
         builder.Services.AddSingleton<JwtTokenGenerator>();
+
+        builder.Services.AddScoped<IUserService, UserService>();
+        builder.Services.AddScoped<IJwtService, JwtTokenGenerator>();
+
 
         // Configure JWT authentication
         builder.Services.AddAuthentication(options =>

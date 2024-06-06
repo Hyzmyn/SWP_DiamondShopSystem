@@ -16,6 +16,5 @@ namespace Service.Interface
         void AddUser(User user);
         void UpdateUser(User user);
         User? Login(string username, string password);
-
     }
 }

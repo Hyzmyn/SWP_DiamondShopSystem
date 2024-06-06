@@ -27,3 +27,4 @@ C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\Repository\obj\Debug\net8
 C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\Repository\obj\Debug\net8.0\Repository.pdb
 C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\Repository\obj\Debug\net8.0\Repository.genruntimeconfig.cache
 C:\Users\DELL\Desktop\HoDinhBinh\SWP_DiamondShopSystem\Repository\obj\Debug\net8.0\ref\Repository.dll
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\Repository\obj\Debug\net8.0\Repository.sourcelink.json
