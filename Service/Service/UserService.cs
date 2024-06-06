@@ -22,7 +22,15 @@ namespace Service.Service
 
         public void DeleteUser(int id) => _repo.Delete(id);
 
-        public void AddUser(User user) => _repo.Create(user);
+        public void AddUser(User user)
+        {
+            int maxUserId = _repo.GetMaxUserId();
+            user.UserId = maxUserId + 1;
+            user.RoleId = 4;
+            user.UserStatus = true;
+
+            _repo.Create(user);
+        }
 
         public void UpdateUser(User user) => _repo.Update(user);
 

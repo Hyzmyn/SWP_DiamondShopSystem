@@ -1,4 +1,6 @@
-﻿using Repository.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Repository.Entities;
+using Repository.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,44 +9,67 @@ using System.Threading.Tasks;
 
 namespace Repository.Repositories
 {
-    public class UserRepository
+    public class UserRepository : IUserRepository
     {
         private DiamondShopContext _db;
 
-        public User? Get(string username)
+        public UserRepository()
         {
             _db = new();
+        }
+
+        public User? Get(string username)
+        {
             return _db.Users.FirstOrDefault(x => x.UserName == username);
         }
         public List<User> GetAll()
         {
-            _db = new();
             return _db.Users.ToList();
+        }
+        public int GetMaxUserId()
+        {
+            // Get the maximum UserID from the database
+            int maxUserId = _db.Users.Max(u => u.UserId);
+            return maxUserId;
         }
 
         public User? GetById(int id)
         {
-            _db = new();
             return _db.Users.Find(id);
         }
 
         public void Create(User user)
         {
-            _db = new();
-            _db.Users.Add(user);
-            _db.SaveChanges();
+            User u = GetById(user.UserId);
+            if (u != null)
+            {
+                _db.Users.Add(user);
+                _db.SaveChanges();
+            }
+
         }
 
         public void Update(User user)
         {
-            _db = new();
-            _db.Users.Update(user);
-            _db.SaveChanges();
+            User u = GetById(user.UserId);
+            if (u != null)
+            {
+                u.UserId = user.UserId;
+                u.UserName = user.UserName;
+                u.Password = user.Password;
+                u.Email = user.Email;
+                u.PhoneNumber = user.PhoneNumber;
+                u.Address = user.Address;
+                u.RoleId = user.RoleId;
+                u.UserStatus = user.UserStatus;
+                u.NiSize = user.NiSize;
+                _db.Users.Update(u);
+                _db.SaveChanges();
+            }
         }
         public void Delete(int id)
         {
-            _db = new();
-            var user = _db.Users.FirstOrDefault(x => x.UserId == id);
+            User user = GetById(id);
 
             if (user != null)
             {

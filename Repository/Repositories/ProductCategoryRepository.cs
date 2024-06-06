@@ -12,26 +12,31 @@ namespace Repository.Repositories
     {
         private DiamondShopContext _db;
 
-        public List<ProductCategory> GetAll()
+        public ProductCategoryRepository()
         {
             _db = new();
+        }
+
+        public List<ProductCategory> GetAll()
+        {
+            
             return _db.ProductCategories.ToList();
         }
 
         public ProductCategory? Get(int id)
         {
-            _db = new();
+            
             return _db.ProductCategories.SingleOrDefault();
         }
         public ProductCategory? GetById(int id)
         {
-            _db = new();
+            
             return _db.ProductCategories.Find(id);
         }
 
         public void Create(ProductCategory category)
         {
-            _db = new();
+            
 
             _db.ProductCategories.Add(category);
             _db.SaveChanges();
@@ -40,14 +45,14 @@ namespace Repository.Repositories
 
         public void Update(ProductCategory category)
         {
-            _db = new();
+            
             _db.ProductCategories.Update(category);
             _db.SaveChanges();
 
         }
         public void Delete(int id)
         {
-            _db = new();
+            
             var productCategory = _db.ProductCategories.FirstOrDefault(x => x.CategoryId == id);
 
             if (productCategory != null)

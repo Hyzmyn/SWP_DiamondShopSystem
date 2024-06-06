@@ -3156,11 +3156,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWP391\\bink\\SWP_DiamondShopSystem\\DiamondShopSystem\\DiamondShopSystem.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\DiamondShopSystem.csproj",
       "projectName": "DiamondShopSystem",
-      "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\bink\\SWP_DiamondShopSystem\\DiamondShopSystem\\DiamondShopSystem.csproj",
+      "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\DiamondShopSystem.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\bink\\SWP_DiamondShopSystem\\DiamondShopSystem\\obj\\",
+      "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3177,8 +3177,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\ADMIN\\Desktop\\SWP391\\bink\\SWP_DiamondShopSystem\\Service\\Service.csproj": {
-              "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\bink\\SWP_DiamondShopSystem\\Service\\Service.csproj"
+            "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service.csproj": {
+              "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service.csproj"
             }
           }
         }
