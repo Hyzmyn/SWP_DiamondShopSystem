@@ -13,7 +13,7 @@ namespace Repository.Repositories
     {
         private DiamondShopContext _db;
 
-        public UserRepository(DbContext dbContext, DiamondShopContext context) : base(dbContext)
+        public UserRepository(DiamondShopContext context) : base(context)
         {
             _db = context;
         }
@@ -22,10 +22,10 @@ namespace Repository.Repositories
         //    _db = new();
         //}
 
-        //public User? Get(string username)
-        //{
-        //    return _db.Users.FirstOrDefault(x => x.UserName == username);
-        //}
+        public User? GetUsername(string username)
+        {
+            return _db.Users.FirstOrDefault(x => x.UserName == username);
+        }
         //public List<User> GetAll()
         //{
         //    return _db.Users.ToList();

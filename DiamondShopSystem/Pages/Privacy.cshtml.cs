@@ -2,19 +2,27 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Repository.Entities;
 using Service.Interface;
+using System.ComponentModel.DataAnnotations;
 using System.Net;
 
 namespace DiamondShopSystem.Pages
 {
     public class PrivacyModel : PageModel
     {
+        [BindProperty]
+        [Required]
+        public string UserName { get; set; }
 
         [BindProperty]
-        public string Username { get; set; }
-        [BindProperty]
-        public string Email { get; set; }
-        [BindProperty]
+        [Required]
         public string Password { get; set; }
+
+        [BindProperty]
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        public string Message { get; set; }
 
 
         private readonly IUserService _userService;
@@ -26,19 +34,30 @@ namespace DiamondShopSystem.Pages
 
         public void OnPost()
         {
-            var user = new User
+            try
             {
-                UserName = Username,
-                Password = Password,
-                Email = Email
-            };
-            if (user == null)
-            {
-                NotFound();
-            }
-            else
-            {
+                if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(Password) || string.IsNullOrEmpty(Email))
+                {
+                    Message = "Please fill in all fields.";
+                    throw new Exception(Message);
+                }
+
+                var user = new User
+                {
+                    UserName = UserName,
+                    Password = Password,
+                    Email = Email
+                };
+
+
                 _userService.AddUser(user);
+                Message = "User Added";
+                Console.WriteLine(Message);
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+                Console.WriteLine(Message);
             }
         }
     }

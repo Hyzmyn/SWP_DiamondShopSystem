@@ -54,7 +54,7 @@ public partial class DiamondShopContext : DbContext
         IConfiguration configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", true, true).Build();
-        return configuration["ConnectionStrings:DBConn"];
+        return configuration["ConnectionStrings:DefaultConnection"];
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

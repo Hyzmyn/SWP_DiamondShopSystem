@@ -26,16 +26,20 @@ namespace DiamondShopSystem.Pages
 
         public void OnPost()
         {
-            User user = _userService.Login(Username, Password);
-            if (user != null)
+            try
             {
-                Console.WriteLine(Username + ":" + Password);
-                string token = _jwtService.GenerateToken(user.UserId, (int)user.RoleId);
-                Console.WriteLine(token);
+                User user = _userService.Login(Username, Password);
+                if (user != null)
+                {
+                    Console.WriteLine(Username + ":" + Password);
+                    string token = _jwtService.GenerateToken(user.UserId, (int)user.RoleId);
+                    Console.WriteLine(token);
+                }
             }
-            else
+
+            catch (Exception ex)
             {
-                Console.WriteLine("failed");
+                Console.WriteLine(ex.Message);
             }
         }
 

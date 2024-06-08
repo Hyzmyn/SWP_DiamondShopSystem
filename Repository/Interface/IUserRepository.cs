@@ -9,10 +9,10 @@ namespace Repository.Interface
 {
     public interface IUserRepository : IBaseRepository<User>
     {
-        //User? Get(string username);
+        User? GetUsername(string username);
+        public int GetMaxUserId();
         //List<User> GetAll();
         //User? GetById(int id);
-        public int GetMaxUserId();
         //void Create(User user);
         //void Update(User user);
         //void Delete(int id);
