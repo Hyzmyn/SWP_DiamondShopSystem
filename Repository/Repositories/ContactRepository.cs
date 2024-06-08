@@ -12,8 +12,7 @@ namespace Repository.Repositories
     public class ContactRepository : BaseRepository<Contact>, IContactRepository
     {
         private DiamondShopContext _db;
-
-        public ContactRepository(DbContext dbContext, DiamondShopContext context) : base(dbContext)
+        public ContactRepository(DiamondShopContext context) : base(context)
         {
             _db = context;
         }

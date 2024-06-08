@@ -1,6 +1,10 @@
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Repository.Entities;
+using Repository.Interface;
+using Repository.Repositories;
 using Service.Interface;
 using Service.Service;
 using System.Text;
@@ -10,6 +14,7 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+
 
         // Add services to the container.
         builder.Services.AddRazorPages();
@@ -23,7 +28,8 @@ public class Program
 
         // Register JwtTokenGenerator
         builder.Services.AddSingleton<JwtTokenGenerator>();
-
+        builder.Services.AddDbContext<DiamondShopContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+        builder.Services.AddScoped<IUserRepository, UserRepository>();
         builder.Services.AddScoped<IUserService, UserService>();
         builder.Services.AddScoped<IJwtService, JwtTokenGenerator>();
 

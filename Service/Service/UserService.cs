@@ -1,4 +1,5 @@
 ﻿using Repository.Entities;
+using Repository.Interface;
 using Repository.Repositories;
 using Service.Interface;
 using System;
@@ -11,8 +12,13 @@ namespace Service.Service
 {
     public class UserService : IUserService
     {
-        private UserRepository _repo;
+        private IUserRepository _repo;
 
+
+        public UserService(IUserRepository repo)
+        {
+            _repo = repo;
+        }
 
 
         public List<User> GetAllUser(string keyword, int pageNumber, int pageSize)
@@ -51,60 +57,60 @@ namespace Service.Service
             if (user != null)
             {
                 _repo.Delete(user);
+                _repo.Save();
             }
             else
             {
-                throw new Exception($"No user found with id: {id}");
+                throw new Exception($"User with id: {user.UserId} doesn't exists");
             }
+
         }
 
 
         public void AddUser(User user)
         {
-            if (user == null)
+            var existingUser = _repo.GetUsername(user.UserName);
+            if (existingUser == null)
             {
-                throw new Exception("User cannot be null");
+                int maxUserId = _repo.GetMaxUserId();
+                user.UserId = maxUserId + 1;
+                user.RoleId = 4;
+                user.UserStatus = true;
+                _repo.Create(user);
+                _repo.Save();
             }
-            var existingUser = _repo.Get(user);
-            if (existingUser != null)
+            else
             {
-                throw new Exception($"User with id: {user.UserId} already exists");
+                throw new Exception($"Username: {user.UserName} already exists");
             }
-            int maxUserId = _repo.GetMaxUserId();
-            user.UserId = maxUserId + 1;
-            user.RoleId = 4;
-            user.UserStatus = true;
-            _repo.Create(user);
+
         }
 
         public void UpdateUser(User user)
         {
-            if (user == null)
-            {
-                throw new Exception("User cannot be null");
-            }
             var existingUser = _repo.Get(user);
             if (existingUser != null)
             {
                 user.UserId = existingUser.UserId;
                 _repo.Update(user);
+                _repo.Save();
             }
             else
             {
-                throw new Exception("User doesn't exist");
+                throw new Exception($"User with id: {user.UserId} doesn't exists");
             }
+
         }
 
         public User? Login(string username, string password)
         {
-            User account = _repo.Get(username);
+            User account = _repo.GetUsername(username);
 
-            if (account == null)
+            if (account == null || account.Password != password)
             {
-                throw new Exception("Incorrect username or password");
+                throw new Exception($"Username or Password was incorrect");
             }
-            return account != null && account.Password == password ? account : null;
+            return account;
         }
-
     }
 }

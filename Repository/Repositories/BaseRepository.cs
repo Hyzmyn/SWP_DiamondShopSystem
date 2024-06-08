@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Repository.Entities;
 using Repository.Interface;
 using System;
 using System.Collections.Generic;
@@ -10,12 +11,10 @@ namespace Repository.Repositories
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
-        private readonly DbContext _dbContext;
-
+        private readonly DiamondShopContext _dbContext;
         private readonly DbSet<TEntity> _dbSet;
 
-        private bool _disposed = false;
-        public BaseRepository(DbContext dbContext)
+        public BaseRepository(DiamondShopContext dbContext)
         {
             _dbContext = dbContext;
             _dbSet = _dbContext.Set<TEntity>();
@@ -44,6 +43,11 @@ namespace Repository.Repositories
         public void Update(TEntity entity)
         {
             _dbSet.Update(entity);
+        }
+
+        public void Save()
+        {
+            _dbContext.SaveChanges();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace Repository.Interface
         public IQueryable<TEntity> Get();
         public TEntity? Get<TKey>(TKey id);
         public void Update(TEntity entity);
+        public void Save();
 
     }
 }

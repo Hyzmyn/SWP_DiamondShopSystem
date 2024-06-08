@@ -13,7 +13,7 @@ namespace Repository.Repositories
     {
         private DiamondShopContext _db;
 
-        public ProductGemRepository(DbContext dbContext, DiamondShopContext context) : base(dbContext)
+        public ProductGemRepository(DiamondShopContext context) : base(context)
         {
             _db = context;
         }
