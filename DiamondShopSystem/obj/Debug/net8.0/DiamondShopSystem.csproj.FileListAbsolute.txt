@@ -28,3 +28,5 @@ C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\
 C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.pdb
 C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.genruntimeconfig.cache
 C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\ref\DiamondShopSystem.dll
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\DiamondShopSystem\obj\Debug\net8.0\DiamondShopSystem.sourcelink.json

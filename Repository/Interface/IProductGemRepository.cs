@@ -7,13 +7,8 @@ using System.Threading.Tasks;
 
 namespace Repository.Interface
 {
-    public interface IProductGemRepository
+    public interface IProductGemRepository : IBaseRepository<ProductGem>
     {
-        List<ProductGem> GetAll();
-        ProductGem? GetById(int id);
-        public int GetMaxUserId();
-        void Create(ProductGem pGem);
-        void Update(ProductGem pGem);
-        void Delete(int id);
+
     }
 }
