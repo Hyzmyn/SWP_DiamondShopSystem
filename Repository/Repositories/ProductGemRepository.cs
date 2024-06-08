@@ -1,4 +1,5 @@
-﻿using Repository.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Repository.Entities;
 using Repository.Interface;
 using System;
 using System.Collections.Generic;
@@ -8,38 +9,14 @@ using System.Threading.Tasks;
 
 namespace Repository.Repositories
 {
-    public class ProductGemRepository : IProductGemRepository
+    public class ProductGemRepository : BaseRepository<ProductGem>, IProductGemRepository
     {
         private DiamondShopContext _db;
 
-        public void Create(ProductGem pGem)
+        public ProductGemRepository(DbContext dbContext, DiamondShopContext context) : base(dbContext)
         {
-            
+            _db = context;
         }
 
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<ProductGem> GetAll()
-        {
-            return _db.ProductGems.ToList();
-        }
-
-        public ProductGem? GetById(int id)
-        {
-            
-        }
-
-        public int GetMaxUserId()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(ProductGem pGem)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

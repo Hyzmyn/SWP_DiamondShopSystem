@@ -12,3 +12,4 @@ C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\Repository\obj\Debug\net8.0\
 C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\Repository\bin\Debug\net8.0\Repository.runtimeconfig.json
 C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\Repository\obj\Debug\net8.0\Repository.csproj.AssemblyReference.cache
 C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\Repository\obj\Debug\net8.0\Repository.genruntimeconfig.cache
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\Repository\obj\Debug\net8.0\Repository.sourcelink.json
