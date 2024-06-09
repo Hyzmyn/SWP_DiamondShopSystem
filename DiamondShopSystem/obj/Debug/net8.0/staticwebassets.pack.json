@@ -1,248 +1,348 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\DiamondShopSystem.bundle.scp.css",
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\DiamondShopSystem.bundle.scp.css",
       "PackagePath": "staticwebassets\\DiamondShopSystem.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\banner\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\banner\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\banner\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\banner\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\banner\\banner2222.jpg",
+      "PackagePath": "staticwebassets\\images\\banner\\banner2222.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\banner\\bg-1.jpg",
+      "PackagePath": "staticwebassets\\images\\banner\\bg-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\banner\\bg-2.jpg",
+      "PackagePath": "staticwebassets\\images\\banner\\bg-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\banner\\bg-3.jpg",
+      "PackagePath": "staticwebassets\\images\\banner\\bg-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\blog\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\blog\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\blog\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\blog\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\icon\\icon_phone.png",
+      "PackagePath": "staticwebassets\\images\\icon\\icon_phone.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\icon\\papyel2.png",
+      "PackagePath": "staticwebassets\\images\\icon\\papyel2.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\instagram\\insta-1.jpg",
+      "PackagePath": "staticwebassets\\images\\instagram\\insta-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\instagram\\insta-2.jpg",
+      "PackagePath": "staticwebassets\\images\\instagram\\insta-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\instagram\\insta-3.jpg",
+      "PackagePath": "staticwebassets\\images\\instagram\\insta-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\instagram\\insta-4.jpg",
+      "PackagePath": "staticwebassets\\images\\instagram\\insta-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\instagram\\insta-5.jpg",
+      "PackagePath": "staticwebassets\\images\\instagram\\insta-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\instagram\\insta-6.jpg",
+      "PackagePath": "staticwebassets\\images\\instagram\\insta-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\login-img.jpg",
+      "PackagePath": "staticwebassets\\images\\login-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\logo\\MS.svg",
+      "PackagePath": "staticwebassets\\images\\logo\\MS.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\nav-product\\product.jpg",
+      "PackagePath": "staticwebassets\\images\\nav-product\\product.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\nav-product\\product2.jpg",
+      "PackagePath": "staticwebassets\\images\\nav-product\\product2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\10.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\11.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\12.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\13.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\14.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\15.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\16.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\17.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\18.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\19.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\20.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\21.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\21.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\22.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\23.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\23.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\24.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\24.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\25.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\25.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\26.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\26.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\27.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\27.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\28.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\28.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\29.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\29.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\30.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\30.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\31.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\31.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\32.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\32.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\33.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\33.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\34.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\34.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\35.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\35.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\36.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\36.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\37.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\37.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\38.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\38.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\39.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\39.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\40.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\40.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\41.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\41.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\42.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\42.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\43.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\43.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\44.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\44.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\45.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\45.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\46.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\46.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\47.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\47.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\48.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\48.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\49.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\49.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\50.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\50.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\7.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\70.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\70.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\71.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\71.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\72.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\72.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\73.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\73.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\75.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\75.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\8.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\product\\9.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\signup-img.jpg",
+      "PackagePath": "staticwebassets\\images\\signup-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\slider\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\slider\\1.png",
+      "PackagePath": "staticwebassets\\images\\slider\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\slider\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\images\\slider\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "PackagePath": "staticwebassets\\lib\\bootstrap"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\jquery\\dist\\jquery.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
-    },
-    {
-      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DiamondShopSystem.Microsoft.AspNetCore.StaticWebAssets.props",
