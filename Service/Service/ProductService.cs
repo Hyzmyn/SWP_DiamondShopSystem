@@ -1,6 +1,8 @@
 ﻿using Repository;
 using Repository.Entities;
+using Repository.Interface;
 using Repository.Repositories;
+using Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,23 +11,89 @@ using System.Threading.Tasks;
 
 namespace Service
 {
-    public class ProductService
+    public class ProductService :IProductService
     {
-        private ProductRepository _repo = new ProductRepository();
+        private IProductRepository _repo;
+        public ProductService(IProductRepository repo)
+        {
+            _repo = repo;
+        }
 
-        public List<Product> GetAllProduct() => _repo.GetAll();
+        public List<Product> GetProducts(string keyword, int pageNumber, int pageSize)
+        {
+            var product = _repo.Get().ToList();
 
-        public Product? GetProduct(int id) => _repo.GetById(id);
+            if (keyword != null && keyword.Length > 0)
+            {
+                if (!string.IsNullOrEmpty(keyword))
+                {
+                    product = product.Where(x =>
+                    x.ProductId.ToString().Contains(keyword.ToLower()) ||
+                    x.ProductName.ToLower().Contains(keyword.ToLower())).ToList();
+                }
+            }
 
-        public List<Product> SearchProduct(string keyword) => _repo.GetAll().Where(x => x.ProductId.ToString().Contains(keyword.ToLower())).ToList();
+            var totalProducts = product.Count();
+            var totalPages = pageSize > 0 ? (int)Math.Ceiling((double)totalProducts / pageSize) : 0;
 
-        public void AddProduct(Product product) => _repo.Create(product);
+            if (pageNumber > totalPages)
+            {
+                pageNumber = totalPages;
+            }
 
-        public void UpdateProduct(Product product) => _repo.Update(product);
+            if (pageNumber > 0 && pageSize > 0)
+            {
+                product = product.OrderBy(x => x.ProductId).Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+            }
 
-        public void DeleteProduct(int id) => _repo.Delete(id);
+            return product;
+        }
+
+        public void DeleteProduct(int id)
+        {
+            var product = _repo.Get(id);
+            if (product != null)
+            {
+                _repo.Delete(product);
+                _repo.Save();
+            }
+            else
+            {
+                throw new Exception($"Product with id: {product.ProductId} doesn't exists");
+            }
+
+        }
 
 
+        public void AddProduct(Product product)
+        {
+            var existingProduct = _repo.Get(product.ProductId);
+            if (existingProduct == null)
+            {
+                _repo.Create(product);
+                _repo.Save();
+            }
+            else
+            {
+                throw new Exception($"Product already exists");
+            }
 
+        }
+
+        public void UpdateProduct(Product product)
+        {
+            var existingProduct = _repo.Get(product.ProductId);
+            if (existingProduct != null)
+            {
+                product.ProductId = existingProduct.ProductId;
+                _repo.Update(product);
+                _repo.Save();
+            }
+            else
+            {
+                throw new Exception($"Product with id: {product.ProductId} doesn't exists");
+            }
+
+        }
     }
 }

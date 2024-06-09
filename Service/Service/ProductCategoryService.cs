@@ -1,5 +1,7 @@
 ﻿using Repository.Entities;
+using Repository.Interface;
 using Repository.Repositories;
+using Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,18 +10,12 @@ using System.Threading.Tasks;
 
 namespace Service.Service
 {
-    public class ProductCategoryService
+    public class ProductCategoryService : IProductCategoryService
     {
-        private ProductCategoryRepository _repo = new ProductCategoryRepository();
-
-        public List<ProductCategory> GetAllProductCate() => _repo.GetAll();
-
-        public List<ProductCategory> SreachProductCate(string keyword)
-            => _repo.GetAll().Where(x => x.CategoryId.ToString().Contains(keyword.ToLower()) ||
-                                         x.CategoryName.ToLower().Contains(keyword.ToLower())).ToList();
-
-        public ProductCategory? GetProductCate(int id) => _repo.GetById(id);
-
-        public void UpdateProductCate(ProductCategory category) => _repo.Update(category);
+        private IProductCategoryRepository _repo;
+        public ProductCategoryService(IProductCategoryRepository repo)
+        {
+            _repo = repo;
+        }
     }
 }

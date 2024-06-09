@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace Repository.Interface
 {
-    public interface IWarrantyRepository
+    public interface IWarrantyRepository : IBaseRepository<Warranty>
     {
-        public List<Warranty> GetAll();
-        public Warranty? GetByID(int WarrantyID);
-        public void Create(Warranty warranty);
-        public void Update(Warranty warranty);
-        public void Delete(int WarrantyID);
+
     }
 }

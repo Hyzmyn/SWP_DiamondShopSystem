@@ -21,7 +21,7 @@ namespace Service.Service
         }
 
 
-        public List<User> GetAllUser(string keyword, int pageNumber, int pageSize)
+        public List<User> GetUsers(string keyword, int pageNumber, int pageSize)
         {
             var user = _repo.Get().Where(u => u.UserStatus == true).ToList();
 
@@ -88,7 +88,7 @@ namespace Service.Service
 
         public void UpdateUser(User user)
         {
-            var existingUser = _repo.Get(user);
+            var existingUser = _repo.Get(user.UserId);
             if (existingUser != null)
             {
                 user.UserId = existingUser.UserId;

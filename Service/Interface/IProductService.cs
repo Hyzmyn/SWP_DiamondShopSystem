@@ -9,16 +9,9 @@ namespace Service.Interface
 {
     public interface IProductService
     {
-        public List<Product> GetAllProduct();
-
-        public Product? GetProduct(int id);
-
-        public List<Product> SearchProduct(string keyword);
-
-        public void AddProduct(Product product);
-
-        public void UpdateProduct(Product product);
-
+        public List<Product> GetProducts(string keyword, int pageNumber, int pageSize);
         public void DeleteProduct(int id);
+        public void AddProduct(Product product);
+        public void UpdateProduct(Product product);
     }
 }

@@ -7,13 +7,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Interface
 {
-    public interface IOrderDetailRepository
+    public interface IOrderDetailRepository : IBaseRepository<OrderDetail>
     {
-        public List<OrderDetail> GetAll();
-        public OrderDetail Get(int id);
-        public OrderDetail? GetbyID(int id);
-        public void Create(OrderDetail orderdetail);
-        public void Update(OrderDetail orderdetail);
-        public void Delete(int id);
     }
 }

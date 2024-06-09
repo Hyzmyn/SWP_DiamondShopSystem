@@ -1,4 +1,5 @@
 ﻿using Repository.Entities;
+using Repository.Interface;
 using Repository.Repositories;
 using System;
 using System.Collections.Generic;
@@ -9,48 +10,12 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class DiscountRepository
+    public class DiscountRepository : BaseRepository<Discount>, IDiscountRepository
     {
         private DiamondShopContext _db;
-        public List<Discount> GetAll()
+        public DiscountRepository(DiamondShopContext context) : base(context)
         {
-            _db = new();
-            return _db.Discounts.ToList();
-
+            _db = context;
         }
-        public Discount? Get(int id)
-        {
-            _db = new();
-            return _db.Discounts.FirstOrDefault();
-        }
-        public Discount? GetByID(int id)
-        {
-            _db = new();
-            return _db.Discounts.FirstOrDefault();
-        }
-        public void Create(Discount discount)
-        {
-            _db = new();
-            _db.Discounts.Add(discount);
-            _db.SaveChanges();
-        }
-        public void Update(Discount discount)
-        {
-            _db = new();
-            _db.Discounts.Update(discount);
-            _db.SaveChanges();
-        }
-        public void Delete(int id)
-        {
-            _db = new();
-            var Discount = _db.Discounts.FirstOrDefault(x => x.DiscountId == id);
-            if (Discount != null )
-            {
-                _db.Discounts.Remove(Discount);
-                _db.SaveChanges();
-            }
-        }
-
-
     }
 }

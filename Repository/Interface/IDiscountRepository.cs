@@ -7,19 +7,9 @@ using System.Threading.Tasks;
 
 namespace Repository.Interface
 {
-    public interface IDiscountRepository
+    public interface IDiscountRepository : IBaseRepository<Discount>
     {
-        public List<Discount> GetAll();
 
-        public Discount? Get(int id);
-
-        public Discount? GetByID(int id);
-
-        public void Create(Discount discount);
-
-        public void Update(Discount discount);
-
-        public void Delete(int id);
         
     }
 }

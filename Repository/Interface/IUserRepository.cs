@@ -11,11 +11,6 @@ namespace Repository.Interface
     {
         User? GetUsername(string username);
         public int GetMaxUserId();
-        //List<User> GetAll();
-        //User? GetById(int id);
-        //void Create(User user);
-        //void Update(User user);
-        //void Delete(int id);
 
     }
 }

@@ -1,5 +1,7 @@
 ﻿using Repository.Entities;
+using Repository.Interface;
 using Repository.Repositories;
+using Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,13 +10,12 @@ using System.Threading.Tasks;
 
 namespace Service.Service
 {
-    public class WarrantyService
+    public class WarrantyService : IWarrantyService
     {
-        public WarrantyRepository _repo = new WarrantyRepository();
-        public List<Warranty> GetAllWarranty() => _repo.GetAll();
-        public Warranty GetWarranty(int id) => _repo.GetByID(id);
-        public void AddWarranty(Warranty warranty) => _repo.Create(warranty);
-        public void UpdateWarranty(Warranty Warranty) => _repo.Update(Warranty);
-        public void DeleteWarranty(int Warranty) => _repo.Delete(Warranty);
+        private IWarrantyRepository _repo;
+        public WarrantyService(IWarrantyRepository repo)
+        {
+            _repo = repo;
+        }
     }
 }

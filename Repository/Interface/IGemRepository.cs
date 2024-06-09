@@ -7,16 +7,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Interface
 {
-    public interface IGemRepository
+    public interface IGemRepository : IBaseRepository<Gem>
     {
-        public Gem? Get(string GemName);
-        public List<Gem> GetAll();
-
-        public Gem? GetById(int id);
-
-        public void Create(Gem gem);
-
-        public void Update(Gem gem);
-        public void Delete(int id);
     }
 }

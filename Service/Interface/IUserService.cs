@@ -9,7 +9,7 @@ namespace Service.Interface
 {
     public interface IUserService
     {
-        public List<User> GetAllUser(string keyword, int pageNumber, int pageSize);
+        public List<User> GetUsers(string keyword, int pageNumber, int pageSize);
         public void DeleteUser(int id);
         public void AddUser(User user);
         public void UpdateUser(User user);
