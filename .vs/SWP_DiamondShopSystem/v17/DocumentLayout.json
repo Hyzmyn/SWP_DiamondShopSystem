@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B9C570C9-571D-4F8D-8328-E907A0D0D7D2}|DiamondShopSystem\\DiamondShopSystem.csproj|c:\\users\\admin\\desktop\\swp391\\swp_diamondshopsystem\\diamondshopsystem\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9C570C9-571D-4F8D-8328-E907A0D0D7D2}|DiamondShopSystem\\DiamondShopSystem.csproj|solutionrelative:diamondshopsystem\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9C570C9-571D-4F8D-8328-E907A0D0D7D2}|DiamondShopSystem\\DiamondShopSystem.csproj|c:\\users\\admin\\desktop\\swp391\\swp_diamondshopsystem\\diamondshopsystem\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{B9C570C9-571D-4F8D-8328-E907A0D0D7D2}|DiamondShopSystem\\DiamondShopSystem.csproj|solutionrelative:diamondshopsystem\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9C570C9-571D-4F8D-8328-E907A0D0D7D2}|DiamondShopSystem\\DiamondShopSystem.csproj|c:\\users\\admin\\desktop\\swp391\\swp_diamondshopsystem\\diamondshopsystem\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9C570C9-571D-4F8D-8328-E907A0D0D7D2}|DiamondShopSystem\\DiamondShopSystem.csproj|solutionrelative:diamondshopsystem\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9C570C9-571D-4F8D-8328-E907A0D0D7D2}|DiamondShopSystem\\DiamondShopSystem.csproj|c:\\users\\admin\\desktop\\swp391\\swp_diamondshopsystem\\diamondshopsystem\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B9C570C9-571D-4F8D-8328-E907A0D0D7D2}|DiamondShopSystem\\DiamondShopSystem.csproj|solutionrelative:diamondshopsystem\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|c:\\users\\admin\\desktop\\swp391\\swp_diamondshopsystem\\service\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|solutionrelative:service\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9C570C9-571D-4F8D-8328-E907A0D0D7D2}|DiamondShopSystem\\DiamondShopSystem.csproj|c:\\users\\admin\\desktop\\swp391\\swp_diamondshopsystem\\diamondshopsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9C570C9-571D-4F8D-8328-E907A0D0D7D2}|DiamondShopSystem\\DiamondShopSystem.csproj|solutionrelative:diamondshopsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|c:\\users\\admin\\desktop\\swp391\\swp_diamondshopsystem\\service\\service\\productcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|solutionrelative:service\\service\\productcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\swp391\\swp_diamondshopsystem\\repository\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D763B3A-430F-4ED2-888A-584C0FE4FC0B}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A5A3D72E-E22E-455D-BB67-1953F7E7E86E}|Service\\Service.csproj|c:\\users\\admin\\desktop\\swp391\\swp_diamondshopsystem\\service\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,17 +54,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service\\UserService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\UserService.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service\\UserService.cs",
               "RelativeToolTip": "Service\\Service\\UserService.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAIwFoAAAA0AAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAAYwGsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-08T15:43:59.53Z",
               "IsPinned": true,
@@ -44,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Interface\\IUserService.cs",
               "RelativeDocumentMoniker": "Service\\Interface\\IUserService.cs",
@@ -53,33 +81,19 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-08T15:43:52.419Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Interface\\IProductService.cs",
-              "RelativeDocumentMoniker": "Service\\Interface\\IProductService.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Interface\\IProductService.cs",
-              "RelativeToolTip": "Service\\Interface\\IProductService.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAgwAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T15:49:48.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service\\ProductService.cs",
-              "RelativeDocumentMoniker": "Service\\Service\\ProductService.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service\\ProductService.cs",
-              "RelativeToolTip": "Service\\Service\\ProductService.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAwwBMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T15:49:27.947Z",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "DiamondShopSystem\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\Pages\\Index.cshtml*",
+              "RelativeToolTip": "DiamondShopSystem\\Pages\\Index.cshtml*",
+              "ViewState": "AQIAAC4AAAAAAAAAAADwv0cAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-09T15:43:39.933Z",
               "EditorCaption": ""
             },
             {
@@ -89,6 +103,108 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "DiamondShopSystem\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "DiamondShopSystem\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAAMoKAAAAAAAAAAAAwNwKAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-09T16:05:52.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "DiamondShopSystem\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "DiamondShopSystem\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAN8AAAAAAAAAAAAAAPoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-09T16:00:44.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "DiamondShopSystem\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "DiamondShopSystem\\wwwroot\\js\\site.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-09T15:57:07.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\Program.cs",
+              "RelativeDocumentMoniker": "DiamondShopSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\Program.cs",
+              "RelativeToolTip": "DiamondShopSystem\\Program.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAADwvxoAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T15:44:39.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductCategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service\\ProductCategoryService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\ProductCategoryService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service\\ProductCategoryService.cs",
+              "RelativeToolTip": "Service\\Service\\ProductCategoryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T15:44:29.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\ProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T15:44:05.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Interface\\IProductService.cs",
+              "RelativeDocumentMoniker": "Service\\Interface\\IProductService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Interface\\IProductService.cs",
+              "RelativeToolTip": "Service\\Interface\\IProductService.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAgwAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T15:49:48.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service\\ProductService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\ProductService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service\\ProductService.cs",
+              "RelativeToolTip": "Service\\Service\\ProductService.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAwwBMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T15:49:27.947Z"
             }
           ]
         }

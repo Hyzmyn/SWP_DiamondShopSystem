@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Repositories
 {
-    public class ProductRepository : BaseRepository<User>, IProductRepository
+    public class ProductRepository : BaseRepository<Product>, IProductRepository
     {
         private DiamondShopContext _db;
 
