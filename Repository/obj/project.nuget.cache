@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U7tQSrdqk+A9JQtWFMmLMtPuVlCVyxpHeGN58KN6JCWIYULN0aWP0eUcoQ4yI+iCJMhQC39V8zw8YNGngyGYpQ==",
+  "dgSpecHash": "ZjQr/xHM40NOoYHXcGLHkgXGjqfyE3Nx3+A6yAPBhXQIsGvd8nKyGT9x2V0q43joXhNL1b0gER9mMggPseop1A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repository.csproj",
+  "projectFilePath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

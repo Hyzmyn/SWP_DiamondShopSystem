@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\DiamondShopSystem.csproj": {}
+    "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\DiamondShopSystem\\DiamondShopSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\DiamondShopSystem.csproj": {
+    "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\DiamondShopSystem\\DiamondShopSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\DiamondShopSystem.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\DiamondShopSystem\\DiamondShopSystem.csproj",
         "projectName": "DiamondShopSystem",
-        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\DiamondShopSystem.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\DiamondShopSystem\\DiamondShopSystem.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\DiamondShopSystem\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\DiamondShopSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service.csproj"
+              "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\Service\\Service.csproj"
               }
             }
           }
@@ -52,6 +52,30 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             }
           },
           "imports": [
@@ -77,14 +101,14 @@
         }
       }
     },
-    "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repository.csproj": {
+    "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repository.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -167,14 +191,14 @@
         }
       }
     },
-    "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service.csproj": {
+    "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -191,8 +215,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repository.csproj"
+              "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\sidestuff\\SWP_DiamondShopSystem\\Repository\\Repository.csproj"
               }
             }
           }
@@ -211,6 +235,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

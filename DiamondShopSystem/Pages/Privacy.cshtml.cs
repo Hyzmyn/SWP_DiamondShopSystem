@@ -44,7 +44,7 @@ namespace DiamondShopSystem.Pages
 
                 var user = new User
                 {
-                    UserName = UserName,
+                    Username = UserName,
                     Password = Password,
                     Email = Email
                 };

@@ -31,7 +31,7 @@ namespace Service.Service
                 {
                     user = user.Where(x =>
                     x.UserId.ToString().Contains(keyword.ToLower()) ||
-                    x.UserName.ToLower().Contains(keyword.ToLower())).ToList();
+                    x.Username.ToLower().Contains(keyword.ToLower())).ToList();
                 }
             }
 
@@ -69,7 +69,7 @@ namespace Service.Service
 
         public void AddUser(User user)
         {
-            var existingUser = _repo.GetUsername(user.UserName);
+            var existingUser = _repo.GetUsername(user.Username);
             if (existingUser == null)
             {
                 int maxUserId = _repo.GetMaxUserId();
@@ -81,7 +81,7 @@ namespace Service.Service
             }
             else
             {
-                throw new Exception($"Username: {user.UserName} already exists");
+                throw new Exception($"Username: {user.Username} already exists");
             }
 
         }

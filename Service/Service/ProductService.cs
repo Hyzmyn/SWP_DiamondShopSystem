@@ -1,13 +1,8 @@
-﻿using Repository;
-using Repository.Entities;
+﻿using Repository.Entities;
 using Repository.Interface;
-using Repository.Repositories;
 using Service.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+
 
 namespace Service
 {

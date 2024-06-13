@@ -20,7 +20,7 @@ namespace Repository.Repositories
 
         public User? GetUsername(string username)
         {
-            return _db.Users.FirstOrDefault(x => x.UserName == username);
+            return _db.Users.FirstOrDefault(x => x.Username == username);
         }
 
         public int GetMaxUserId()
