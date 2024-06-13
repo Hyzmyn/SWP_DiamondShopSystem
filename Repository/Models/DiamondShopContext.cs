@@ -14,16 +14,24 @@ namespace Repository.Models
 
     public class DiamondShopContext : DbContext
     {
+<<<<<<< HEAD
+=======
         public DiamondShopContext()
         { }
 
+>>>>>>> 275bb62d07d918df0bffe2a6de9523233ebe2f41
         public DiamondShopContext(DbContextOptions<DiamondShopContext> options) : base(options)
         {
 
         }
 
+<<<<<<< HEAD
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<User> Users { get; set; }
+=======
         public DbSet<Role> Role { get; set; }
         public DbSet<User> User { get; set; }
+>>>>>>> 275bb62d07d918df0bffe2a6de9523233ebe2f41
         public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<ProductMaterial> ProductMaterials { get; set; }
         public DbSet<Product> Products { get; set; }
@@ -34,6 +42,10 @@ namespace Repository.Models
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Discount> Discounts { get; set; }
+<<<<<<< HEAD
+        public DbSet<Feedback> Feedbacks { get; set; }
+=======
+>>>>>>> 275bb62d07d918df0bffe2a6de9523233ebe2f41
         public DbSet<Warranty> Warranties { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -47,7 +59,10 @@ namespace Repository.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+<<<<<<< HEAD
+=======
 
+>>>>>>> 275bb62d07d918df0bffe2a6de9523233ebe2f41
             modelBuilder.Entity<Role>().HasData(
                 new Role { RoleID = 1, RoleName = "Customer" },
                 new Role { RoleID = 2, RoleName = "SalesStaff" },
