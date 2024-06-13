@@ -7937,11 +7937,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\SWP\\SWP.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\SWP.csproj",
       "projectName": "SWP",
-      "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\SWP\\SWP.csproj",
+      "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\SWP.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\SWP\\obj\\",
+      "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7958,8 +7958,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\Service\\Service.csproj": {
-              "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\Service\\Service.csproj"
+            "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service.csproj": {
+              "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service.csproj"
             }
           }
         }
