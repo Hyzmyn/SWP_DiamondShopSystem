@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service.csproj": {}
+    "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\Service\\Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repository.csproj": {
+    "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repository.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,23 +47,23 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[8.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[8.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[8.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[8.0.6, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -94,14 +94,14 @@
         }
       }
     },
-    "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service.csproj": {
+    "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Service.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -118,8 +118,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repository.csproj"
+              "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\New\\SWP_FINAL_PASSED\\SWP_DiamondProject\\Repository\\Repository.csproj"
               }
             }
           }
