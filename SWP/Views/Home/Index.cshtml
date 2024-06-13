@@ -1,0 +1,367 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="blur-bg-overlay"></div>
+            <div class="form-popup">
+                <span class="close-btn material-symbols-rounded">x</span>
+                <div class="form-box login">
+                    <div class="form-details">
+
+                        <h2>Welcome Back</h2>
+                        <p>Please login using your personal information to stay connected with us</p>
+                    </div>
+                    <div class="form-content">
+                        <h2>LOGIN</h2>
+                        <form action="#">
+                            <div class="input-field">
+                                <input type="text" required>
+                                <label>Username</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" required>
+                                <label>Password</label>
+                            </div>
+                            <a  class="forgot-pass">Forgot Password?</a>
+                            <button type="submit">Log In</button>
+                        </form>
+                        <div class="bottom-link">
+                            Don't have an account?
+                            <a  id="signup-link">Signup</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-box signup">
+                    <div class="form-details">
+
+                        <h2>Create Account</h2>
+                        <p>To become a part of our community, please sign up using your personal information </p>
+                    </div>
+                    <div class="form-content">
+                        <h2>SIGNUP</h2>
+                        <form action="#">
+                            <div class="input-field">
+                                <input type="text" required>
+                                <label>Enter your username</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" required>
+                                <label>Enter your email</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" required>
+                                <label>Create password</label>
+                            </div>
+                            <div class="policy-text">
+                                <input type="checkbox" id="policy">
+                                <label for="policy">
+                                    I agree the
+                                    <a >Terms & Conditions</a>
+                                </label>
+                            </div>
+                            <button type="submit">Sign Up</button>
+                        </form>
+                        <div class="bottom-link">
+                            Already have an account?
+                            <a  id="login-link">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="single_slider" >
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <div class="slider_content">
+                                <p style="color: white">exclusive offer -20% off this week</p>
+                                <h1 style="color: white">Necklace</h1>
+                                <span style="color: white">22 Carat gold necklace for wedding</span>
+                                <p class="slider_price">starting at <span>29.999.999VNĐ</span></p>
+                                <a  class="button">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="banner_section banner_black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single_banner">
+                            <div class="banner_thumb">
+                                <a ><img src="images/banner/bg-1.jpg" alt="banner1"></a>
+                                <div class="banner_content" >
+                                    <p>New Design</p>
+                                    <h2>Small design Rings</h2>
+                                    <span>Sale 20% </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single_banner">
+                            <div class="banner_thumb">
+                                <a ><img src="images/banner/bg-2.jpg" alt="banner2"></a>
+                                <div class="banner_content">
+                                    <p>Bestselling Rings</p>
+                                    <h2>White gold rings</h2>
+                                    <span>Sale 10% </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single_banner">
+                            <div class="banner_thumb">
+                                <a ><img src="images/banner/bg-3.jpg" alt="banner3"></a>
+                                <div class="banner_content">
+                                    <p>Featured Rings</p>
+                                    <h2>Platinium Rings</h2>
+                                    <span>Sale 30% </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner section ends -->
+        <!-- product section area starts  -->
+
+        <section class="product_section p_section1 product_black_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="product_area">
+                            <div class="product_tab_button">
+                                <ul class="nav" role="tablist">
+                                    <li>
+                                        <a href="#featured" class="active" data-toggle="tab" role="tab"
+                                            aria-controls="featured" aria-selected="true">Featured</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="featured" role="tabpane1">
+                                    <div class="product_container">
+                                        <div class="custom-row product_column3">
+                                            <div class="custom-col-5">
+                                                <div class="single_product">
+                                                    <div class="product_thumb">
+                                                        <a  class="primary_img"><img src="images/product/1.jpg"
+                                                                alt="product1"></a>
+                                                        <a  class="secondary_img"><img
+                                                                src="images/product/2.jpg" alt="product1"></a>
+                                                        <div class="quick_button">
+                                                            <a  data-toggle="modal" data-target="#modal_box"
+                                                                data-placement="top"
+                                                                data-original-title="quick view">Quick View</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product_content">
+                                                        <div class="tag_cate">
+                                                            <a >Ring, Necklace</a>
+                                                            <a >Earrings</a>
+                                                        </div>
+                                                        <h3><a >Women's diamond ring 18K</a></h3>
+                                                        <div class="price_box">
+                                                            <span class="old_price">19.440.000₫</span>
+                                                            <span class="current_price">16.329.600 ₫</span>
+                                                        </div>
+                                                        <div class="product_hover">
+
+
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li><a  data-placement="top"
+                                                                            title="Add to Wishlist"
+                                                                            data-toggle="tooltip"><span
+                                                                                class="ion-heart"></span></a></li>
+                                                                    <li class="add_to_cart"><a 
+                                                                            title="Add to Cart">Add to Cart</a></li>
+                                                                    <li><a  title="Compare"><i
+                                                                                class="ion-ios-settings-strong"></i></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- blog section starts -->
+        <section class="blog_section blog_black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section_title">
+                            <h2>Minh Sang Updates</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="blog_wrapper blog_column3 owl-carousel">
+                        <div class="col-lg-4">
+                            <div class="single_blog">
+                                <div class="blog_thumb">
+                                    <a ><img src="images/blog/4.jpg" alt="blog 4"></a>
+                                </div>
+                                <div class="blog_content">
+                                    <h3><a >Earrings for Navratri</a></h3>
+                                    <div class="author_name">
+                                        <p>
+                                            <span>by</span>
+                                            <span class="themes">MInh Sang</span>
+                                            <span class="post_by">/ 4 November 2020</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="post_desc">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt fugit commodi
+                                            quo eligendi laudantium quisquam, magnam hic numquam fuga illum sed aperiam
+                                            sint, expedita dolor.</p>
+                                    </div>
+                                    <div class="read_more">
+                                        <a >Continue Reading</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="single_blog">
+                                <div class="blog_thumb">
+                                    <a ><img src="images/blog/1.jpg" alt="blog 1"></a>
+                                </div>
+                                <div class="blog_content">
+                                    <h3><a >Pendant for engagement</a></h3>
+                                    <div class="author_name">
+                                        <p>
+                                            <span>by</span>
+                                            <span class="themes">Minh Sang</span>
+                                            <span class="post_by">/ 3 November 2020</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="post_desc">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt fugit commodi
+                                            quo eligendi laudantium quisquam, magnam hic numquam fuga illum sed aperiam
+                                            sint, expedita dolor.</p>
+                                    </div>
+                                    <div class="read_more">
+                                        <a >Continue Reading</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="single_blog">
+                                <div class="blog_thumb">
+                                    <a ><img src="images/blog/2.jpg" alt="blog 2"></a>
+                                </div>
+                                <div class="blog_content">
+                                    <h3><a >Engagement Couple Rings</a></h3>
+                                    <div class="author_name">
+                                        <p>
+                                            <span>by</span>
+                                            <span class="themes">Minh Sang</span>
+                                            <span class="post_by">/ 2 November 2020</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="post_desc">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt fugit commodi
+                                            quo eligendi laudantium quisquam, magnam hic numquam fuga illum sed aperiam
+                                            sint, expedita dolor.</p>
+                                    </div>
+                                    <div class="read_more">
+                                        <a >Continue Reading</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="single_blog">
+                                <div class="blog_thumb">
+                                    <a ><img src="images/blog/3.jpg" alt="blog 3"></a>
+                                </div>
+                                <div class="blog_content">
+                                    <h3><a >Earrings for Party</a></h3>
+                                    <div class="author_name">
+                                        <p>
+                                            <span>by</span>
+                                            <span class="themes">Minh Sang</span>
+                                            <span class="post_by">/ 5 November 2020</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="post_desc">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt fugit commodi
+                                            quo eligendi laudantium quisquam, magnam hic numquam fuga illum sed aperiam
+                                            sint, expedita dolor.</p>
+                                    </div>
+                                    <div class="read_more">
+                                        <a >Continue Reading</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="newsletter_area newsletter_black">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="newsletter_content">
+                            <h2>Subscribe for Minh Sang Magazines</h2>
+                            <p>Get E-mail of all the updates about our lastest and special offers</p>
+                            <div class="subscibe_form">
+                                <form class="footer-newsletter">
+                                    <input type="email" placeholder="Email address ..." autocapitalize="off"
+                                        autocomplete="off">
+                                    <button>Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- subscribe section ends -->
+        <!-- banner area starts  -->
+        <section class="banner_section banner_section_five">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="port-box">
+                            <div class="text-overlay">
+                                <h1>New Arrivals 2020</h1>
+                                <p>Crown for wife</p>
+                            </div>
+                            <img src="images/banner/1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="port-box">
+                            <div class="text-overlay">
+                                <h1>Featured Products 2020</h1>
+                                <p>Pendant for Valentine</p>
+                            </div>
+                            <img src="images/banner/2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner area ends -->
