@@ -1,4 +1,4 @@
-namespace SWP.Models
+namespace Service.Service.ViewModels
 {
     public class ErrorViewModel
     {

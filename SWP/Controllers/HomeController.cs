@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using SWP.Models;
+using Service.Service.ViewModels;
 using System.Diagnostics;
 
 namespace SWP.Controllers

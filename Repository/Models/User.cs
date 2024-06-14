@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-<<<<<<< HEAD
 using System.Data;
-=======
->>>>>>> 275bb62d07d918df0bffe2a6de9523233ebe2f41
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,10 +25,6 @@ namespace Repository.Models
         [ForeignKey("RoleID")]
         public virtual Role Role { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
-<<<<<<< HEAD
-        public virtual ICollection<Feedback> Feedbacks { get; set; }
-    }
-=======
     }
 }
->>>>>>> 275bb62d07d918df0bffe2a6de9523233ebe2f41
+
