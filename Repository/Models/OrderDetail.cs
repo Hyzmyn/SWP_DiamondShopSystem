@@ -22,9 +22,6 @@ namespace Repository.Models
         public virtual Order Order { get; set; }
         [ForeignKey("ProductID")]
         public virtual Product Product { get; set; }
-<<<<<<< HEAD
-        public virtual ICollection<Feedback> Feedbacks { get; set; }
-=======
->>>>>>> 275bb62d07d918df0bffe2a6de9523233ebe2f41
+
     }
 }

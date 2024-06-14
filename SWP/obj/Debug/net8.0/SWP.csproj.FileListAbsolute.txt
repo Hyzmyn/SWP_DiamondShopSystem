@@ -661,3 +661,15 @@ C:\Users\ADMIN\Desktop\SWP391\New\SWP_FINAL_PASSED\SWP_DiamondProject\SWP\obj\De
 C:\Users\ADMIN\Desktop\SWP391\New\SWP_FINAL_PASSED\SWP_DiamondProject\SWP\obj\Debug\net8.0\SWP.csproj.Up2Date
 C:\Users\ADMIN\Desktop\SWP391\New\SWP_FINAL_PASSED\SWP_DiamondProject\SWP\obj\Debug\net8.0\SWP.genruntimeconfig.cache
 C:\Users\ADMIN\Desktop\SWP391\New\SWP_FINAL_PASSED\SWP_DiamondProject\SWP\obj\Debug\net8.0\ref\SWP.dll
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.RazorAssemblyInfo.cache
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.RazorAssemblyInfo.cs
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.sourcelink.json
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.dll
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\refint\SWP.dll
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.pdb
