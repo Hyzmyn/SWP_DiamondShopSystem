@@ -7,7 +7,7 @@ using Service.Interface;
 
 namespace Service
 {
-    public class ProductService :IProductService
+    public class ProductService : IProductService
     {
         private IProductRepository _repo;
         public ProductService(IProductRepository repo)
@@ -81,7 +81,7 @@ namespace Service
             var existingProduct = _repo.Get(product.ProductID);
             if (existingProduct != null)
             {
-                product.ProductID = existingProduct.ProductId;
+                product.ProductID = existingProduct.ProductID;
                 _repo.Update(product);
                 _repo.Save();
             }
