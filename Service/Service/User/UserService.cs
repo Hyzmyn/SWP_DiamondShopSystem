@@ -115,13 +115,17 @@ namespace Service.Service
 
         }
 
-        public User? Login(string username, string password)
+        public User Login(string username, string password)
         {
             User account = _repo.GetUsername(username);
 
-            if (account == null || account.Password != password)
+            if (account == null)
             {
-                throw new Exception($"Username or Password was incorrect");
+                throw new Exception($"Username does not exist");
+            }
+            else if (account.Password != password)
+            {
+                throw new Exception($"Password is incorrect");
             }
             return account;
         }

@@ -1,3 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using Repository.Interface;
+using Repository.Models;
+using Repository.Repositories;
+using Service.Interface;
+using Service.Service;
+
 namespace SWP
 {
     public class Program
@@ -8,6 +15,12 @@ namespace SWP
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+            builder.Services.AddDbContext<DiamondShopContext>(options =>
+                    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 

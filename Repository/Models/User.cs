@@ -22,8 +22,8 @@ namespace Repository.Models
         public bool UserStatus { get; set; }
         public string NiSize { get; set; }
 
-        [ForeignKey("RoleID")]
-        public virtual Role Role { get; set; }
+        //[ForeignKey("RoleID")]
+        //public virtual Role Role { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
     }
 }
