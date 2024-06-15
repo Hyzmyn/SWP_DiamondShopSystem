@@ -238,6 +238,9 @@ namespace Repository.Migrations
                     b.Property<int>("CategoryID")
                         .HasColumnType("int");
 
+                    b.Property<int>("GemID")
+                        .HasColumnType("int");
+
                     b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -315,45 +318,6 @@ namespace Repository.Migrations
                     b.ToTable("ProductMaterials");
                 });
 
-            modelBuilder.Entity("Repository.Models.Role", b =>
-                {
-                    b.Property<int>("RoleID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleID"));
-
-                    b.Property<string>("RoleName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("RoleID");
-
-                    b.ToTable("Role");
-
-                    b.HasData(
-                        new
-                        {
-                            RoleID = 1,
-                            RoleName = "Customer"
-                        },
-                        new
-                        {
-                            RoleID = 2,
-                            RoleName = "SalesStaff"
-                        },
-                        new
-                        {
-                            RoleID = 3,
-                            RoleName = "Manager"
-                        },
-                        new
-                        {
-                            RoleID = 4,
-                            RoleName = "Admin"
-                        });
-                });
-
             modelBuilder.Entity("Repository.Models.User", b =>
                 {
                     b.Property<int>("UserID")
@@ -394,9 +358,7 @@ namespace Repository.Migrations
 
                     b.HasKey("UserID");
 
-                    b.HasIndex("RoleID");
-
-                    b.ToTable("User");
+                    b.ToTable("Users");
 
                     b.HasData(
                         new
@@ -565,17 +527,6 @@ namespace Repository.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("Repository.Models.User", b =>
-                {
-                    b.HasOne("Repository.Models.Role", "Role")
-                        .WithMany("User")
-                        .HasForeignKey("RoleID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Role");
-                });
-
             modelBuilder.Entity("Repository.Models.Warranty", b =>
                 {
                     b.HasOne("Repository.Models.Order", "Order")
@@ -617,11 +568,6 @@ namespace Repository.Migrations
             modelBuilder.Entity("Repository.Models.ProductCategory", b =>
                 {
                     b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("Repository.Models.Role", b =>
-                {
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Repository.Models.User", b =>

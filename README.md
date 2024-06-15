@@ -7,3 +7,4 @@ type each lines below:
 
 Add-Migration InitialCreate -Context DiamondShopContext
 Update-Database
+

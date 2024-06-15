@@ -16,6 +16,8 @@ namespace Repository.Models
         public string ProductCode { get; set; }
         public string ProductName { get; set; }
         public string ImageUrl { get; set; }
+        public int GemID { get; set; }
+        public int MaterialID { get; set; }
         public int CategoryID { get; set; }
         public decimal ProductionCost { get; set; }
         public decimal PriceRate { get; set; }
