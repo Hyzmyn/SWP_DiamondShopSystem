@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Repository.Models;
 
 
 namespace SWP.Areas.SaleStaff.Controllers
@@ -8,17 +9,19 @@ namespace SWP.Areas.SaleStaff.Controllers
     [Route("salestaff/homesalestaff")]
     public class HomeSaleStaffController : Controller
     {
-       
+        DiamondShopContext db = new DiamondShopContext();
         [Route("")]
         [Route("salestaff")]
         public IActionResult Index()
         {
             return View();
         }
+
         [Route("productlist")]
         public IActionResult ProductList()
         {
-            return View();
+           var lstProDuct = db.Products.ToList();
+            return View(lstProDuct);
         }
 
 

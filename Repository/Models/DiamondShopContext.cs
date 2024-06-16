@@ -22,7 +22,7 @@ namespace Repository.Models
 
         }
 
-        //public DbSet<Role> Roles { get; set; }
+        public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<ProductMaterial> ProductMaterials { get; set; }
@@ -40,12 +40,12 @@ namespace Repository.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            //modelBuilder.Entity<Role>().HasData(
-            //    new Role { RoleID = 1, RoleName = "Customer" },
-            //    new Role { RoleID = 2, RoleName = "SalesStaff" },
-            //    new Role { RoleID = 3, RoleName = "Manager" },
-            //    new Role { RoleID = 4, RoleName = "Admin" }
-            //);
+            modelBuilder.Entity<Role>().HasData(
+                new Role { RoleID = 1, RoleName = "Customer" },
+                new Role { RoleID = 2, RoleName = "SalesStaff" },
+                new Role { RoleID = 3, RoleName = "Manager" },
+                new Role { RoleID = 4, RoleName = "Admin" }
+            );
 
             modelBuilder.Entity<User>().HasData(
                 new User { UserID = 1, Username = "User1", Password = "Password1", Email = "user1@example.com", PhoneNumber = "1234567890", Address = "Address1", RoleID = 1, UserStatus = true, NiSize = "S" },

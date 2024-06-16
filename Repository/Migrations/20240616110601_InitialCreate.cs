@@ -101,8 +101,10 @@ namespace Repository.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ProductCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ProductName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageUrl1 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageUrl2 = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     GemID = table.Column<int>(type: "int", nullable: false),
+                    MaterialID = table.Column<int>(type: "int", nullable: false),
                     CategoryID = table.Column<int>(type: "int", nullable: false),
                     ProductionCost = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     PriceRate = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
