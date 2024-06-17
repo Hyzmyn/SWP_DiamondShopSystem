@@ -13,7 +13,7 @@
         </div>
         <div class="form-content">
             <h2>LOGIN</h2>
-            <form action="/Home/Login" method="post">
+            <form action="/H/ome/Login" method="post">
                 <div class="input-field">
                     <input type="text" name="username" required>
                     <label>Username</label>
@@ -35,31 +35,35 @@
         </div>
         <div class="form-content">
             <h2>SIGNUP</h2>
-            <form action="#">
+            <!-- Update the action attribute to point to your register route -->
+            <form action="/HomeController/Register" method="post">
                 <div class="input-field">
-                    <input type="text" required>
+                    <!-- Add name attribute that matches your controller parameter -->
+                    <input type="text" name="username" required>
                     <label>Enter your username</label>
                 </div>
+                <!-- Add an input field for email if needed -->
                 <div class="input-field">
-                    <input type="text" required>
-                    <label>Enter your email</label>
-                </div>
-                <div class="input-field">
-                    <input type="password" required>
+                    <input type="password" name="password" required>
                     <label>Create password</label>
                 </div>
+                <div class="input-field">
+                    <input type="password" name="checkPassword" required>
+                    <label>Confirm password</label>
+                </div>
                 <div class="policy-text">
-                    <input type="checkbox" id="policy">
+                    <input type="checkbox" id="policy" required>
                     <label for="policy">
-                        I agree the
-                        <a>Terms & Conditions</a>
+                        I agree to the
+                        <a href="/path-to-your-terms">Terms & Conditions</a>
                     </label>
                 </div>
                 <button type="submit">Sign Up</button>
             </form>
             <div class="bottom-link">
                 Already have an account?
-                <a id="login-link">Login</a>
+                <!-- Update href attribute if necessary -->
+                <a id="login-link" href="/path-to-login">Login</a>
             </div>
         </div>
     </div>

@@ -245,6 +245,9 @@ namespace Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("MaterialID")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("PriceRate")
                         .HasColumnType("decimal(18,2)");
 

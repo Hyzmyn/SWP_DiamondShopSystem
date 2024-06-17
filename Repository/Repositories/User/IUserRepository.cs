@@ -12,7 +12,6 @@ namespace Repository.Interface
     public interface IUserRepository : IBaseRepository<User>
     {
         User? GetUsername(string username);
-        public int GetMaxUserId();
 
     }
 }

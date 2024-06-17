@@ -8,6 +8,7 @@ namespace Repository.Repositories.Base
 {
     public interface IBaseRepository<TEntity> where TEntity : class
     {
+        public int GetMaxId();
         public void Create(TEntity entity);
         public void Delete(TEntity entity);
         public IQueryable<TEntity> Get();

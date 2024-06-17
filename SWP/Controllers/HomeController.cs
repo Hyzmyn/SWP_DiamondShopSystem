@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Repository.Models;
 using Service.Interface;
 using Service.Service;
 using Service.Service.ViewModels;
@@ -61,6 +62,32 @@ namespace SWP.Controllers
                 _logger.LogError(ex, "An error occurred while logging in");
                 ViewBag.ErrorMessage = "An error occurred, please try again later";
                 return View("Error");
+            }
+        }
+
+        public IActionResult register(string username, string password, string checkPassword)
+        {
+            try
+            {
+                if (password != checkPassword)
+                {
+                    return BadRequest("Passwords do not match.");
+                }
+
+                User newUser = new User
+                {
+                    Username = username,
+                    Password = password, // Note: Store passwords securely using hashing
+                                         // Set other properties as needed
+                };
+
+                _userService.AddUser(newUser); // Assuming _userService is your service with the AddUser method
+
+                return Ok("User registered successfully.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
         }
     }

@@ -36,6 +36,15 @@ namespace Repository.Models
         public DbSet<Discount> Discounts { get; set; }
         public DbSet<Warranty> Warranties { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlServer(GetConnectionString());
+
+        private string? GetConnectionString()
+        {
+            IConfiguration configuration = new ConfigurationBuilder()
+                    .SetBasePath(Directory.GetCurrentDirectory())
+                    .AddJsonFile("appsettings.json", true, true).Build();
+            return configuration["ConnectionStrings:DefaultConnection"];
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

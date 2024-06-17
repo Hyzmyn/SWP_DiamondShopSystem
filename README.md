@@ -5,6 +5,6 @@ default project: dropbox set to repository (project with dbcontext)
 type each lines below:
 
 
-Add-Migration InitialCreate -Context DiamondShopContext
-Update-Database
+Add-Migration  v1 -Context DiamondShopContext -Project "Repository"
+Update-Database -Project "Repository"
 

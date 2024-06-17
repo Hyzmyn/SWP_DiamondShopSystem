@@ -85,9 +85,9 @@ namespace Service.Service
             var existingUser = _repo.GetUsername(user.Username);
             if (existingUser == null)
             {
-                int maxUserId = _repo.GetMaxUserId();
+                int maxUserId = _repo.GetMaxId();
                 user.UserID = maxUserId + 1;
-                user.RoleID = 4;
+                user.RoleID = 5;
                 user.UserStatus = true;
                 _repo.Create(user);
                 _repo.Save();

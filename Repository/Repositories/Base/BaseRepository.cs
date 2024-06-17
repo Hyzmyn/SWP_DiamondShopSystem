@@ -19,6 +19,16 @@ namespace Repository.Repositories.Base
             _dbSet = _dbContext.Set<TEntity>();
         }
 
+        public int GetMaxId()
+        {
+            if (_dbSet.Any())
+            {
+                int maxId = _dbSet.Max(u => EF.Property<int>(u, "ID"));
+                return maxId;
+            }
+            return 0;
+        }
+
         public void Create(TEntity entity)
         {
             _dbSet.Add(entity);
