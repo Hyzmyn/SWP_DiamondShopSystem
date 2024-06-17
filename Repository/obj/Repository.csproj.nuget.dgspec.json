@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repository.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repository.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Repository\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,6 +45,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.6, )"

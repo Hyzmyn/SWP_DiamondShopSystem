@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Repository.Models
 {
-    //public class Role
-    //{
-    //    [Key]
-    //    public int RoleID { get; set; }
-    //    public string RoleName { get; set; }
+	public class Role
+	{
+		//[Key]
+		//public int RoleID { get; set; }
+		//public string RoleName { get; set; }
 
-    //    public virtual ICollection<User> User { get; set; }
-    //}
+		//public virtual ICollection<User> User { get; set; }
+	}
 }

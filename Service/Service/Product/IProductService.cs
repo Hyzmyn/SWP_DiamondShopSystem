@@ -14,5 +14,7 @@ namespace Service.Interface
         public void DeleteProduct(int id);
         public void AddProduct(Product product);
         public void UpdateProduct(Product product);
-    }
+        public List<Product> GetProducts();
+
+	}
 }
