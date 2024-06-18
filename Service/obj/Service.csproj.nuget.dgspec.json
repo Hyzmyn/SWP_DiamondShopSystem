@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP_DiamondShopSystem\\Service\\Service.csproj": {}
+    "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\Service\\Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP_DiamondShopSystem\\Repository\\Repository.csproj": {
+    "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP_DiamondShopSystem\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP_DiamondShopSystem\\Repository\\Repository.csproj",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP_DiamondShopSystem\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -94,14 +94,14 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP_DiamondShopSystem\\Service\\Service.csproj": {
+    "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP_DiamondShopSystem\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP_DiamondShopSystem\\Service\\Service.csproj",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP_DiamondShopSystem\\Service\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -118,8 +118,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP_DiamondShopSystem\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP_DiamondShopSystem\\Repository\\Repository.csproj"
+              "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\Repository\\Repository.csproj"
               }
             }
           }

@@ -1,0 +1,70 @@
+﻿@model Repository.Models.Product
+
+@{
+    ViewData["Title"] = "CreateProduct";
+    Layout = "~/Areas/SaleStaff/Views/Shared/_LayoutSaleStaff.cshtml";
+}
+
+<h1>CreateProduct</h1>
+
+<h4>Product</h4>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-action="CreateProduct">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <a>Product Code:</a>
+                <label asp-for="ProductCode" class="control-label"></label>
+                <input asp-for="ProductCode" class="form-control" />
+                <span asp-validation-for="ProductCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductName" class="control-label"></label>
+                <input asp-for="ProductName" class="form-control" />
+                <span asp-validation-for="ProductName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl1" class="control-label"></label>
+                <input asp-for="ImageUrl1" class="form-control" />
+                <span asp-validation-for="ImageUrl1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl2" class="control-label"></label>
+                <input asp-for="ImageUrl2" class="form-control" />
+                <span asp-validation-for="ImageUrl2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GemID" class="control-label"></label>
+                <input asp-for="GemID" class="form-control" />
+                <span asp-validation-for="GemID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaterialID" class="control-label"></label>
+                <input asp-for="MaterialID" class="form-control" />
+                <span asp-validation-for="MaterialID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryID" class="control-label"></label>
+                <select asp-for="CategoryID" class ="form-control" asp-items="ViewBag.CategoryID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductionCost" class="control-label"></label>
+                <input asp-for="ProductionCost" class="form-control" />
+                <span asp-validation-for="ProductionCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PriceRate" class="control-label"></label>
+                <input asp-for="PriceRate" class="form-control" />
+                <span asp-validation-for="PriceRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<p>
+    <a asp-action="ProductList">Back to List</a>
+ </p>
+

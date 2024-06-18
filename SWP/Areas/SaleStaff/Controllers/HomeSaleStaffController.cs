@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Repository.Models;
+using Service.Interface;
 
 
 namespace SWP.Areas.SaleStaff.Controllers
@@ -10,6 +11,7 @@ namespace SWP.Areas.SaleStaff.Controllers
     [Route("salestaff/homesalestaff")]
     public class HomeSaleStaffController : Controller
     {
+        private readonly IProductService _productService;
         DiamondShopContext db = new DiamondShopContext();
         [Route("")]
         [Route("salestaff")]
@@ -21,31 +23,31 @@ namespace SWP.Areas.SaleStaff.Controllers
         [Route("productlist")]
         public IActionResult ProductList()
         {
-           var lstProDuct = db.Products.ToList();
+            var lstProDuct = db.Products.ToList();
             return View(lstProDuct);
         }
 
         [Route("createproduct")]
-        [HttpGet]//đưa dữ liệu lên
-        public IActionResult CreateProduct()
+        [HttpGet] //đưa dữ liệu lên
+        public IActionResult createproduct()
         {
-            ViewBag.CategoryID = new SelectList(db.ProductCategories.ToList(), "CategoryID", "CategoryName");
+            ViewBag.categoryid = new SelectList(db.ProductCategories.ToList(), "categoryid", "categoryname");
             return View();
         }
 
         [Route("createproduct")]
-        [HttpPost]//lưu về trong cơ sở dữ liệu
-        [ValidateAntiForgeryToken]//kiểm tra xem dữ liệu có nhập chĩnh xác vali ko
-        public IActionResult CreateProduct(Product sp)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateProduct(Product product)
         {
             if (ModelState.IsValid)
             {
-                db.Products.Add(sp);
-                db.SaveChanges();
+                _productService.AddProduct(product);
                 return RedirectToAction("ProductList");
             }
-            return View(sp);
+            return View();
         }
+    
 
 
 
