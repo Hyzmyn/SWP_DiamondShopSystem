@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,52 +11,40 @@
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\salestaff\\views\\shared\\_layoutsalestaff.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\salestaff\\views\\shared\\_layoutsalestaff.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\salestaff\\views\\homesalestaff\\historyorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\salestaff\\views\\homesalestaff\\historyorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\service\\enum\\roleenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|solutionrelative:service\\enum\\roleenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\repositories\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\service\\service\\product\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|solutionrelative:service\\service\\product\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\service\\service\\product\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|solutionrelative:service\\service\\product\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\repositories\\product\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\product\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\repositories\\product\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\product\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\customer\\views\\shared\\_layoutcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\customer\\views\\shared\\_layoutcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\repositories\\base\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\base\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\repositories\\base\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\base\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\repositories\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\repositories\\productcatergory\\productcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\productcatergory\\productcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\service\\service\\product\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|solutionrelative:service\\service\\product\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,189 +66,146 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "SWP\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\AccountController.cs",
               "RelativeToolTip": "SWP\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T05:58:58.318Z",
+              "WhenOpened": "2024-06-17T09:45:29.463Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "HistoryOrder.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\HistoryOrder.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\HistoryOrder.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\HistoryOrder.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\HistoryOrder.cshtml",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T15:24:30.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_LayoutSaleStaff.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\SaleStaff\\Views\\Shared\\_LayoutSaleStaff.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\Shared\\_LayoutSaleStaff.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\SaleStaff\\Views\\Shared\\_LayoutSaleStaff.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\SaleStaff\\Views\\Shared\\_LayoutSaleStaff.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T14:53:59.362Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Program.cs",
-              "RelativeDocumentMoniker": "SWP\\Program.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Program.cs",
-              "RelativeToolTip": "SWP\\Program.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAQwBEAAAAwAAAA",
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Base\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Base\\BaseRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Base\\BaseRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\Base\\BaseRepository.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T14:33:24.602Z",
+              "WhenOpened": "2024-06-17T09:41:35.851Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "SWP\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAJgAAAAAAAAAAADwv6MAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T10:25:32.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RoleEnum.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Enum\\RoleEnum.cs",
-              "RelativeDocumentMoniker": "Service\\Enum\\RoleEnum.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Enum\\RoleEnum.cs",
-              "RelativeToolTip": "Service\\Enum\\RoleEnum.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T14:10:22.876Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "SWP\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\HomeController.cs",
               "RelativeToolTip": "SWP\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAqwDcAAAAwAAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAowBwAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T10:26:17.008Z",
+              "WhenOpened": "2024-06-17T09:35:18.563Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Role.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Models\\Role.cs",
-              "RelativeDocumentMoniker": "Repository\\Models\\Role.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Models\\Role.cs",
-              "RelativeToolTip": "Repository\\Models\\Role.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T14:26:04.598Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "SWP\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAEgAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T10:41:54.947Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\User\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\User\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\User\\IUserRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\User\\IUserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T14:26:29.185Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 3,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Product\\IProductRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Product\\IProductRepository.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Product\\IProductRepository.cs",
               "RelativeToolTip": "Repository\\Repositories\\Product\\IProductRepository.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABcAAAAlAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABYAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T14:17:47.624Z"
+              "WhenOpened": "2024-06-17T09:34:20.809Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Service\\Product\\ProductService.cs",
-              "RelativeDocumentMoniker": "Service\\Service\\Product\\ProductService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Service\\Product\\ProductService.cs",
-              "RelativeToolTip": "Service\\Service\\Product\\ProductService.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAkwF0AAAAqAAAA",
+              "DocumentIndex": 4,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Product\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Product\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Product\\ProductRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\Product\\ProductRepository.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T14:18:02.16Z"
+              "WhenOpened": "2024-06-17T09:34:18.855Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "IProductService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Service\\Product\\IProductService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\Product\\IProductService.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Service\\Product\\IProductService.cs",
               "RelativeToolTip": "Service\\Service\\Product\\IProductService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAArAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T14:19:40.558Z"
+              "WhenOpened": "2024-06-17T09:34:40.096Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "_Layout.cshtml.css",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeDocumentMoniker": "SWP\\Views\\Shared\\_Layout.cshtml.css",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeToolTip": "SWP\\Views\\Shared\\_Layout.cshtml.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-16T14:13:44.097Z"
+              "DocumentIndex": 6,
+              "Title": "IBaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Base\\IBaseRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Base\\IBaseRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Base\\IBaseRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\Base\\IBaseRepository.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T09:44:49.458Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "_LayoutCustomer.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T11:54:13.668Z"
+              "DocumentIndex": 7,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\User\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\User\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\User\\IUserRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\User\\IUserRepository.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAswAsAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T09:43:01.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\User\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\User\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\User\\UserRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\User\\UserRepository.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBoAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T09:42:48.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductCategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\ProductCatergory\\ProductCategoryRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\ProductCatergory\\ProductCategoryRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\ProductCatergory\\ProductCategoryRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\ProductCatergory\\ProductCategoryRepository.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T09:43:36.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Service\\Product\\ProductService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\Product\\ProductService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Service\\Product\\ProductService.cs",
+              "RelativeToolTip": "Service\\Service\\Product\\ProductService.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAowF8AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T09:34:26.549Z",
+              "EditorCaption": ""
             }
           ]
         }
