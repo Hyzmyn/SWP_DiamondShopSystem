@@ -48,6 +48,49 @@ namespace Repository.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Discount>()
+                .Property(p => p.DiscountAmount)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<Gem>()
+                .Property(p => p.FourC)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<GemPriceList>()
+                .Property(p => p.CaratWeight)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<GemPriceList>()
+                .Property(p => p.Price)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<MaterialPriceList>()
+                .Property(p => p.BuyPrice)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<MaterialPriceList>()
+                .Property(p => p.SellPrice)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<Order>()
+                .Property(p => p.TotalPrice)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<OrderDetail>()
+                .Property(p => p.Price)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<Product>()
+                .Property(p => p.PriceRate)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<Product>()
+                .Property(p => p.ProductionCost)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<ProductMaterial>()
+                .Property(p => p.Weight)
+                .HasPrecision(18, 2);
 
             //modelBuilder.Entity<Role>().HasData(
             //    new Role { RoleID = 1, RoleName = "Customer" },
@@ -57,12 +100,21 @@ namespace Repository.Models
             //);
 
             modelBuilder.Entity<User>().HasData(
-                new User { UserID = 1, Username = "User1", Password = "Password1", Email = "user1@example.com", PhoneNumber = "1234567890", Address = "Address1", RoleID = 1, UserStatus = true, NiSize = "S" },
-                new User { UserID = 2, Username = "User2", Password = "Password2", Email = "user2@example.com", PhoneNumber = "0987654321", Address = "Address2", RoleID = 2, UserStatus = true, NiSize = "M" }
-
-
-
+                new User { UserID = 1, Username = "User1", Password = "123", Email = "a@example.com", PhoneNumber = "1234567890", Address = "Address1", RoleID = 1, UserStatus = true, NiSize = "S" },
+                new User { UserID = 2, Username = "User2", Password = "123", Email = "b@example.com", PhoneNumber = "0987654321", Address = "Address2", RoleID = 2, UserStatus = true, NiSize = "M" },
+                new User { UserID = 3, Username = "User3", Password = "123", Email = "c@example.com", PhoneNumber = "1234567890", Address = "Address3", RoleID = 3, UserStatus = true, NiSize = "M" },
+                new User { UserID = 4, Username = "User4", Password = "123", Email = "d@example.com", PhoneNumber = "0987654321", Address = "Address4", RoleID = 4, UserStatus = true, NiSize = "M" },
+                new User { UserID = 5, Username = "User5", Password = "123", Email = "e@example.com", PhoneNumber = "1234567890", Address = "Address5", RoleID = 5, UserStatus = true, NiSize = "M" },
+                new User { UserID = 6, Username = "User6", Password = "Password", Email = "user6@example.com", PhoneNumber = "0987654321", Address = "Address2", RoleID = 5, UserStatus = true, NiSize = "M" },
+                new User { UserID = 7, Username = "User7", Password = "Password", Email = "user7@example.com", PhoneNumber = "0987654321", Address = "Address2", RoleID = 5, UserStatus = true, NiSize = "M" },
+                new User { UserID = 8, Username = "User8", Password = "Password", Email = "user8@example.com", PhoneNumber = "0987654321", Address = "Address2", RoleID = 5, UserStatus = true, NiSize = "M" },
+                new User { UserID = 9, Username = "User9", Password = "Password", Email = "user9@example.com", PhoneNumber = "0987654321", Address = "Address2", RoleID = 5, UserStatus = true, NiSize = "M" },
+                new User { UserID = 10, Username = "User10", Password = "Password", Email = "user10@example.com", PhoneNumber = "0987654321", Address = "Address2", RoleID = 5, UserStatus = true, NiSize = "M" }
             );
+
+
+
+
         }
     }
 

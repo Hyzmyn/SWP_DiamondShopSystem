@@ -65,7 +65,7 @@ namespace SWP.Controllers
             }
         }
 
-        public IActionResult register(string username, string password, string checkPassword)
+        public IActionResult Register(string username, string password, string checkPassword)
         {
             try
             {

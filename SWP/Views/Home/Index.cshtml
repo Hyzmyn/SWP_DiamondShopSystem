@@ -13,7 +13,7 @@
         </div>
         <div class="form-content">
             <h2>LOGIN</h2>
-            <form action="/H/ome/Login" method="post">
+            <form asp-action="Login" asp-controller="Account" method="post">
                 <div class="input-field">
                     <input type="text" name="username" required>
                     <label>Username</label>
@@ -25,6 +25,10 @@
                 <a class="forgot-pass">Forgot Password?</a>
                 <button type="submit">Log In</button>
             </form>
+            <div class="bottom-link">
+                Don't have an account?
+                <a id="signup-link">Signup</a>
+            </div>
         </div>
     </div>
     <div class="form-box signup">
@@ -36,7 +40,7 @@
         <div class="form-content">
             <h2>SIGNUP</h2>
             <!-- Update the action attribute to point to your register route -->
-            <form action="/HomeController/Register" method="post">
+            <form action="Register" method="post">
                 <div class="input-field">
                     <!-- Add name attribute that matches your controller parameter -->
                     <input type="text" name="username" required>
