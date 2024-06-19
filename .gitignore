@@ -48,8 +48,8 @@ artifacts/
 *_i.h
 *.ilk
 *.meta
-**/bin/
-**/obj/
+*/bin/
+*/obj/
 *.pch
 *.pdb
 *.pgc
