@@ -19,11 +19,10 @@ namespace Repository.Repositories
             _db = context;
         }
 
-        public User? GetUsername(string username)
+        public async Task<User?> GetUsernameAsync(string username)
         {
-            return _db.Users.FirstOrDefault(x => x.Username == username);
+            return await _db.Users.FirstOrDefaultAsync(x => x.Username == username);
         }
-
 
     }
 }

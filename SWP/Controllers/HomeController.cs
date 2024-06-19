@@ -2,8 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Repository.Models;
 using Service;
-using Service.Interface;
+
 using Service.Service.ViewModels;
+using Service.Services.Products;
 using System.Diagnostics;
 
 
@@ -24,11 +25,11 @@ namespace SWP.Controllers
 		}
 
 
-		public IActionResult Index()
-		{
-			var product = _productService.GetProducts();
-			return View(product);
-		}
+		//public async Task<IActionResult> Index()
+		//{
+		//	var product = await _productService.GetProductsAsync();
+		//	return View(product);
+		//}
 
 
 		public IActionResult Privacy()

@@ -19,19 +19,19 @@ namespace Repository.Repositories.Base
             _dbSet = _dbContext.Set<TEntity>();
         }
 
-        public int GetMaxId()
+        public async Task<int> GetMaxIdAsync()
         {
-            if (_dbSet.Any())
+            if (await _dbSet.AnyAsync())
             {
-                int maxId = _dbSet.Max(u => EF.Property<int>(u, "ID"));
+                int maxId = await _dbSet.MaxAsync(u => EF.Property<int>(u, "ID"));
                 return maxId;
             }
             return 0;
         }
 
-        public void Create(TEntity entity)
+        public async Task CreateAsync(TEntity entity)
         {
-            _dbSet.Add(entity);
+            await _dbSet.AddAsync(entity);
         }
 
         public void Delete(TEntity entity)
@@ -44,9 +44,9 @@ namespace Repository.Repositories.Base
             return _dbSet;
         }
 
-        public TEntity? Get<TKey>(TKey id)
+        public async Task<TEntity?> GetAsync<TKey>(TKey id)
         {
-            return _dbSet.Find(id);
+            return await _dbSet.FindAsync(id);
         }
 
         public void Update(TEntity entity)
@@ -54,9 +54,9 @@ namespace Repository.Repositories.Base
             _dbSet.Update(entity);
         }
 
-        public void Save()
+        public async Task SaveAsync()
         {
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
 
         public IQueryable<TEntity> QueryStart()
