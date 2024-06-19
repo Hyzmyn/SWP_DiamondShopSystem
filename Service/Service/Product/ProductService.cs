@@ -91,5 +91,9 @@ namespace Service
             }
 
         }
+        public List<Product> GetProducts()
+        {
+            return _repo.GetProducts();
+        }
     }
 }

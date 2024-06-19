@@ -241,7 +241,11 @@ namespace Repository.Migrations
                     b.Property<int>("GemID")
                         .HasColumnType("int");
 
-                    b.Property<string>("ImageUrl")
+                    b.Property<string>("ImageUrl1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl2")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
