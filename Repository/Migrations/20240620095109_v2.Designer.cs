@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Repository.Models;
 
@@ -11,9 +12,11 @@ using Repository.Models;
 namespace Repository.Migrations
 {
     [DbContext(typeof(DiamondShopContext))]
-    partial class DiamondShopContextModelSnapshot : ModelSnapshot
+    [Migration("20240620095109_v2")]
+    partial class v2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -953,45 +956,6 @@ namespace Repository.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Repository.Models.Role", b =>
-                {
-                    b.Property<int>("RoleID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleID"));
-
-                    b.Property<string>("RoleName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("RoleID");
-
-                    b.ToTable("Roles");
-
-                    b.HasData(
-                        new
-                        {
-                            RoleID = 1,
-                            RoleName = "Customer"
-                        },
-                        new
-                        {
-                            RoleID = 2,
-                            RoleName = "SalesStaff"
-                        },
-                        new
-                        {
-                            RoleID = 3,
-                            RoleName = "Manager"
-                        },
-                        new
-                        {
-                            RoleID = 4,
-                            RoleName = "Admin"
-                        });
-                });
-
             modelBuilder.Entity("Repository.Models.User", b =>
                 {
                     b.Property<int>("UserID")
@@ -1031,8 +995,6 @@ namespace Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserID");
-
-                    b.HasIndex("RoleID");
 
                     b.ToTable("Users");
 
@@ -1329,15 +1291,6 @@ namespace Repository.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("Repository.Models.User", b =>
-                {
-                    b.HasOne("Repository.Models.Role", null)
-                        .WithMany("User")
-                        .HasForeignKey("RoleID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Repository.Models.Warranty", b =>
                 {
                     b.HasOne("Repository.Models.Order", "Order")
@@ -1379,11 +1332,6 @@ namespace Repository.Migrations
             modelBuilder.Entity("Repository.Models.ProductCategory", b =>
                 {
                     b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("Repository.Models.Role", b =>
-                {
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Repository.Models.User", b =>

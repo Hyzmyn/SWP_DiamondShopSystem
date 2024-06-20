@@ -16,9 +16,10 @@ namespace Service.Services.Users
         }
 
 
-        public async Task<List<User>> GetUsersAsync(string keyword, int pageNumber, int pageSize, int defaultPageSize, string sortBy)
+        public async Task<List<User>> GetUsersAsync(string keyword, int pageNumber, int pageSize, string sortBy)
         {
-            if (pageNumber <= 0 && pageSize <= 0)
+			int defaultPageSize = 10;
+			if (pageNumber <= 0 && pageSize <= 0)
             {
                 pageSize = defaultPageSize;
                 pageNumber = 1;

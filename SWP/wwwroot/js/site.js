@@ -212,23 +212,37 @@
 })(jQuery);
 
 
-const showPopupBtn = document.querySelector(".login-btn");
-const formPopup = document.querySelector(".form-popup");
-const hidePopupBtn = document.querySelector(".close-btn");
-const loginSignupLink = document.querySelectorAll(".form-box .bottom-link a");
+document.addEventListener("DOMContentLoaded", () => {
+    const showPopupBtn = document.querySelector(".login-btn");
+    const formPopup = document.querySelector(".form-popup");
+    const hidePopupBtn = document.querySelector(".close-btn");
+    const loginSignupLink = document.querySelectorAll(".form-box .bottom-link a");
 
+    showPopupBtn?.addEventListener("click", () => {
+        document.body.classList.toggle("show-popup");
+    });
 
-showPopupBtn.addEventListener("click", () => {
-    document.body.classList.toggle("show-popup");
+    hidePopupBtn?.addEventListener("click", () => {
+        document.body.classList.remove("show-popup");
+        resetLoginInputs();
+    });
+    function resetLoginInputs() {
+        const loginInputs = document.querySelectorAll('.form-popup .login .input-field input');
+        loginInputs.forEach(input => {
+            input.value = '';
+        });
+    }
+
+    loginSignupLink.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            formPopup.classList[link.id === 'signup-link' ? 'add' : 'remove']("show-signup");
+        });
+    });
+    if (document.querySelector(".form-popup .login-error")) {
+        document.body.classList.add("show-popup");
+    }
 });
-
-hidePopupBtn.addEventListener("click", () => showPopupBtn.click());
-loginSignupLink.forEach(link => {
-    link.addEventListener("click", (e) => {
-        e.preventDefault();
-        formPopup.classList[link.id === 'signup-link' ? 'add' : 'remove']("show-signup");
-    })
-})
 
 // Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.

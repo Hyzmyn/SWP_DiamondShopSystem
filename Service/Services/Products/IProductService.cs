@@ -10,9 +10,13 @@ namespace Service.Services.Products
 {
     public interface IProductService
     {
-        Task<List<Product>> GetProductsAsync(string keyword, int pageNumber, int pageSize, int defaultPageSize, string sortBy);
-        Task DeleteProductAsync(int id);
+        Task<List<Product>> GetProductsAsync(string keyword, int pageNumber, int pageSize, string sortBy);
+		Task DeleteProductAsync(int id);
         Task AddProductAsync(Product product);
         Task UpdateProductAsync(Product product);
-    }
+        public List<Product> GetProducts();
+        public List<Product> GetAllProducts();
+
+
+	}
 }
