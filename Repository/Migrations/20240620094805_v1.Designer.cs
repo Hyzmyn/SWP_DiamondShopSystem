@@ -12,7 +12,7 @@ using Repository.Models;
 namespace Repository.Migrations
 {
     [DbContext(typeof(DiamondShopContext))]
-    [Migration("20240619200445_v1")]
+    [Migration("20240620094805_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -536,6 +536,10 @@ namespace Repository.Migrations
                         .HasPrecision(12, 2)
                         .HasColumnType("decimal(12,2)");
 
+                    b.Property<decimal>("TotalPrice")
+                        .HasPrecision(12, 2)
+                        .HasColumnType("decimal(12,2)");
+
                     b.HasKey("ProductID");
 
                     b.HasIndex("CategoryID");
@@ -548,52 +552,140 @@ namespace Repository.Migrations
                             ProductID = 1,
                             CategoryID = 1,
                             GemID = 1,
-                            ImageUrl1 = "",
-                            ImageUrl2 = "",
+                            ImageUrl1 = "images/diamond_necklace_1.jpg",
+                            ImageUrl2 = "images/diamond_necklace_2.jpg",
                             MaterialID = 1,
                             PriceRate = 2.5m,
                             ProductCode = "P001",
                             ProductName = "Diamond Necklace",
-                            ProductionCost = 150.0m
+                            ProductionCost = 150.0m,
+                            TotalPrice = 0m
                         },
                         new
                         {
                             ProductID = 2,
                             CategoryID = 2,
                             GemID = 2,
-                            ImageUrl1 = "",
-                            ImageUrl2 = "",
+                            ImageUrl1 = "images/gold_ring_1.jpg",
+                            ImageUrl2 = "images/gold_ring_2.jpg",
                             MaterialID = 2,
                             PriceRate = 2.0m,
                             ProductCode = "P002",
                             ProductName = "Gold Ring",
-                            ProductionCost = 100.0m
+                            ProductionCost = 100.0m,
+                            TotalPrice = 0m
                         },
                         new
                         {
                             ProductID = 3,
                             CategoryID = 3,
                             GemID = 3,
-                            ImageUrl1 = "",
-                            ImageUrl2 = "",
+                            ImageUrl1 = "images/emerald_bracelet_1.jpg",
+                            ImageUrl2 = "images/emerald_bracelet_2.jpg",
                             MaterialID = 3,
                             PriceRate = 2.2m,
                             ProductCode = "P003",
                             ProductName = "Emerald Bracelet",
-                            ProductionCost = 120.0m
+                            ProductionCost = 120.0m,
+                            TotalPrice = 0m
                         },
                         new
                         {
                             ProductID = 4,
-                            CategoryID = 3,
+                            CategoryID = 4,
                             GemID = 4,
-                            ImageUrl1 = "",
-                            ImageUrl2 = "",
+                            ImageUrl1 = "images/silver_earrings_1.jpg",
+                            ImageUrl2 = "images/silver_earrings_2.jpg",
                             MaterialID = 4,
                             PriceRate = 1.8m,
                             ProductCode = "P004",
                             ProductName = "Silver Earrings",
-                            ProductionCost = 80.0m
+                            ProductionCost = 80.0m,
+                            TotalPrice = 0m
+                        },
+                        new
+                        {
+                            ProductID = 5,
+                            CategoryID = 3,
+                            GemID = 1,
+                            ImageUrl1 = "images/sapphire_pendant_1.jpg",
+                            ImageUrl2 = "images/sapphire_pendant_2.jpg",
+                            MaterialID = 2,
+                            PriceRate = 2.3m,
+                            ProductCode = "P005",
+                            ProductName = "Sapphire Pendant",
+                            ProductionCost = 130.0m,
+                            TotalPrice = 0m
+                        },
+                        new
+                        {
+                            ProductID = 6,
+                            CategoryID = 4,
+                            GemID = 2,
+                            ImageUrl1 = "images/platinum_bracelet_1.jpg",
+                            ImageUrl2 = "images/platinum_bracelet_2.jpg",
+                            MaterialID = 3,
+                            PriceRate = 2.7m,
+                            ProductCode = "P006",
+                            ProductName = "Platinum Bracelet",
+                            ProductionCost = 200.0m,
+                            TotalPrice = 0m
+                        },
+                        new
+                        {
+                            ProductID = 7,
+                            CategoryID = 1,
+                            GemID = 3,
+                            ImageUrl1 = "images/ruby_ring_1.jpg",
+                            ImageUrl2 = "images/ruby_ring_2.jpg",
+                            MaterialID = 4,
+                            PriceRate = 2.1m,
+                            ProductCode = "P007",
+                            ProductName = "Ruby Ring",
+                            ProductionCost = 90.0m,
+                            TotalPrice = 0m
+                        },
+                        new
+                        {
+                            ProductID = 8,
+                            CategoryID = 2,
+                            GemID = 4,
+                            ImageUrl1 = "images/amethyst_earrings_1.jpg",
+                            ImageUrl2 = "images/amethyst_earrings_2.jpg",
+                            MaterialID = 1,
+                            PriceRate = 1.9m,
+                            ProductCode = "P008",
+                            ProductName = "Amethyst Earrings",
+                            ProductionCost = 70.0m,
+                            TotalPrice = 0m
+                        },
+                        new
+                        {
+                            ProductID = 9,
+                            CategoryID = 1,
+                            GemID = 1,
+                            ImageUrl1 = "images/topaz_necklace_1.jpg",
+                            ImageUrl2 = "images/topaz_necklace_2.jpg",
+                            MaterialID = 3,
+                            PriceRate = 2.4m,
+                            ProductCode = "P009",
+                            ProductName = "Topaz Necklace",
+                            ProductionCost = 110.0m,
+                            TotalPrice = 0m
+                        },
+                        new
+                        {
+                            ProductID = 10,
+                            CategoryID = 2,
+                            GemID = 2,
+                            ImageUrl1 = "images/opal_brooch_1.jpg",
+                            ImageUrl2 = "images/opal_brooch_2.jpg",
+                            MaterialID = 4,
+                            PriceRate = 2.0m,
+                            ProductCode = "P010",
+                            ProductName = "Opal Brooch",
+                            ProductionCost = 95.0m,
+                            TotalPrice = 0m
                         });
                 });
 
@@ -638,6 +730,13 @@ namespace Repository.Migrations
                         new
                         {
                             CategoryID = 3,
+                            CategoryName = "Bracelets",
+                            CategoryStatus = true,
+                            CategoryType = "Jewelry"
+                        },
+                        new
+                        {
+                            CategoryID = 4,
                             CategoryName = "Bracelets",
                             CategoryStatus = true,
                             CategoryType = "Jewelry"
