@@ -14,6 +14,5 @@ namespace Service.Services.Products
         Task DeleteProductAsync(int id);
         Task AddProductAsync(Product product);
         Task UpdateProductAsync(Product product);
-
     }
 }

@@ -21,10 +21,11 @@ namespace Repository.Models
         public int MaterialID { get; set; }
         public int CategoryID { get; set; }
         public decimal ProductionCost { get; set; }
-        public decimal PriceRate { get; set; }
+        public decimal PriceRateID { get; set; }
+        public decimal TotalCost { get; set; }
 
-        [ForeignKey("CategoryID")]
-        public virtual ProductCategory ProductCategory { get; set; }
+        [ForeignKey("PriceRateId")]
+        public virtual PriceRateList PriceRateLists { get; set; }
         public virtual ICollection<ProductMaterial> ProductMaterials { get; set; }
         public virtual ICollection<ProductGem> ProductGems { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }

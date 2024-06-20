@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Repository.Models
 {
-    public class ProductCategory
+    public class PriceRateList
     {
         [Key]
-        public int CategoryID { get; set; }
-        public string CategoryName { get; set; }
-        public string CategoryType { get; set; }
-        public bool CategoryStatus { get; set; }
+        public int PriceRateID { get; set; }
+        public Decimal PriceRate { get; set; }
+        public DateTime EffDate { get; set; }
+
 
         public virtual ICollection<Product> Products { get; set; }
     }

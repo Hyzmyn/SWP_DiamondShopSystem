@@ -6,19 +6,22 @@ using Service.Services.Gems;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Service.Service
 {
     public class GemService : IGemService
     {
         private IGemRepository _repo;
+        private readonly HttpClient _httpClient;
 
-
-        public GemService(IGemRepository repo)
+        public GemService(IGemRepository repo, IHttpClientFactory httpClientFactory)
         {
             _repo = repo;
+            _httpClient = httpClientFactory.CreateClient();
         }
 
         public Task AddGemAsync(Gem gem)
@@ -40,5 +43,7 @@ namespace Service.Service
         {
             throw new NotImplementedException();
         }
+
+
     }
 }

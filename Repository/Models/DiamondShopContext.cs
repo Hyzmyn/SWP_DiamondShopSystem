@@ -24,7 +24,7 @@ namespace Repository.Models
 
         //public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<ProductCategory> ProductCategories { get; set; }
+        public DbSet<PriceRateList> PriceRateLists { get; set; }
         public DbSet<ProductMaterial> ProductMaterials { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Gem> Gems { get; set; }
@@ -80,7 +80,7 @@ namespace Repository.Models
                 .HasPrecision(12, 2);
 
             modelBuilder.Entity<Product>()
-                .Property(p => p.PriceRate)
+                .Property(p => p.PriceRateID)
                 .HasPrecision(12, 2);
 
             modelBuilder.Entity<Product>()
@@ -131,12 +131,11 @@ namespace Repository.Models
                 new MaterialPriceList { ID = 4, MaterialID = 4, BuyPrice = 19.00m, SellPrice = 26.0m, EffDate = new DateTime(2023, 8, 1) }
             );
 
-
-
-            modelBuilder.Entity<ProductCategory>().HasData(
-                new ProductCategory { CategoryID = 1, CategoryName = "Rings", CategoryType = "Jewelry", CategoryStatus = true },
-                new ProductCategory { CategoryID = 2, CategoryName = "Necklaces", CategoryType = "Jewelry", CategoryStatus = true },
-                new ProductCategory { CategoryID = 3, CategoryName = "Bracelets", CategoryType = "Jewelry", CategoryStatus = true }
+            modelBuilder.Entity<PriceRateList>().HasData(
+                new PriceRateList { PriceRateID = 1, PriceRate = 10, EffDate = new DateTime(2023, 5, 6) },
+                new PriceRateList { PriceRateID = 2, PriceRate = 10, EffDate = new DateTime(2023, 5, 7) },
+                new PriceRateList { PriceRateID = 3, PriceRate = 11, EffDate = new DateTime(2023, 5, 8) },
+                new PriceRateList { PriceRateID = 4, PriceRate = 11, EffDate = new DateTime(2023, 5, 8) }
             );
 
 
@@ -154,15 +153,12 @@ namespace Repository.Models
                 new ProductMaterial { MaterialID = 4, Weight = 22.1m }
             );
 
-
             modelBuilder.Entity<ProductGem>().HasData(
                 new ProductGem { ProductID = 1, GemID = 1 },
                 new ProductGem { ProductID = 2, GemID = 2 },
                 new ProductGem { ProductID = 3, GemID = 3 },
                 new ProductGem { ProductID = 4, GemID = 1 }
-
             );
-
 
             modelBuilder.Entity<Order>().HasData(
                 new Order { OrderID = 1, UserID = 1, TotalPrice = 175.0m, TimeOrder = new DateTime(2023, 6, 1), Note = "Express delivery", OrderStatus = true },

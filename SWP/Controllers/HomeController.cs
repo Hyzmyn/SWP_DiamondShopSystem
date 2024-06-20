@@ -25,11 +25,11 @@ namespace SWP.Controllers
 		}
 
 
-		//public async Task<IActionResult> Index()
-		//{
-		//	var product = await _productService.GetProductsAsync();
-		//	return View(product);
-		//}
+		public async Task<IActionResult> Index()
+		{
+			var product = await _productService.GetProductsAsync();
+			return View(product);
+		}
 
 
 		public IActionResult Privacy()

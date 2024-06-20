@@ -29,8 +29,9 @@ public class Program
 			options.Cookie.HttpOnly = true;
 			options.Cookie.IsEssential = true;
 		});
+		builder.Services.AddHttpClient();
 
-		var app = builder.Build();
+        var app = builder.Build();
 
 		// Cấu hình pipeline yêu cầu HTTP.
 		if (!app.Environment.IsDevelopment())
