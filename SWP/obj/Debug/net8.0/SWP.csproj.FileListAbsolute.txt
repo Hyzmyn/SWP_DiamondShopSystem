@@ -1187,14 +1187,13 @@ C:\Users\DELL\Desktop\SWPPASS\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\refint\
 C:\Users\DELL\Desktop\SWPPASS\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.pdb
 C:\Users\DELL\Desktop\SWPPASS\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.genruntimeconfig.cache
 C:\Users\DELL\Desktop\SWPPASS\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\ref\SWP.dll
+C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\bin\Debug\net8.0\SWP.dll
 C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\bin\Debug\net8.0\appsettings.json
 C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\bin\Debug\net8.0\SWP.staticwebassets.runtime.json
 C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\bin\Debug\net8.0\SWP.exe
 C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\bin\Debug\net8.0\SWP.deps.json
 C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\bin\Debug\net8.0\SWP.runtimeconfig.json
-C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\bin\Debug\net8.0\SWP.dll
-C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\bin\Debug\net8.0\SWP.pdb
 C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\bin\Debug\net8.0\Humanizer.dll
@@ -1449,4 +1448,5 @@ C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP
 C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\refint\SWP.dll
 C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.pdb
 C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.genruntimeconfig.cache
+C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\bin\Debug\net8.0\SWP.pdb
 C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\ref\SWP.dll
