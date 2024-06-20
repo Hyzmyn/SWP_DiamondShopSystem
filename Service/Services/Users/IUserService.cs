@@ -10,7 +10,7 @@ namespace Service.Services.Users
 {
     public interface IUserService
     {
-        Task<List<User>> GetUsersAsync(string keyword, int pageNumber, int pageSize, int defaultPageSize, string sortBy);
+        Task<List<User>> GetUsersAsync(string keyword, int pageNumber, int pageSize, string sortBy);
         Task DeleteUserAsync(int id);
         Task AddUserAsync(User user);
         Task UpdateUserAsync(User user);

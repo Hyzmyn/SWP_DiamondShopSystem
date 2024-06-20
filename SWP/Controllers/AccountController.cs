@@ -4,16 +4,15 @@ using Microsoft.AspNetCore.Http;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Service.Services.Users;
 
 public class AccountController : Controller
 {
-	private readonly IUserService _userService;
+	private readonly DiamondShopContext db;
 
-	public AccountController(IUserService userService)
+	public AccountController(DiamondShopContext dbContext)
 	{
-        _userService = userService;
-    }
+		db = dbContext;
+	}
 
 	public IActionResult Login()
 	{
@@ -24,56 +23,28 @@ public class AccountController : Controller
 	[ValidateAntiForgeryToken]
 	public async Task<IActionResult> Login(string username, string password)
 	{
-        User user = await _userService.LoginAsync(username, password);
-        if (user != null)
+		var user = await db.Users.FirstOrDefaultAsync(u => u.Username == username && u.Password == password);
+		if (user != null)
 		{
 			HttpContext.Session.SetString("UserId", user.UserID.ToString());
 			HttpContext.Session.SetInt32("RoleID", user.RoleID);
+			TempData["ResetInputs"] = true;
 			return RedirectToAction("Index", "Home");
 		}
 		else
 		{
-			ModelState.AddModelError("", "Invalid username or password");
-			return View();
+			TempData["LoginError"] = "Invalid username or password";
+			TempData["ResetInputs"] = true;
+			return RedirectToAction("Index", "Home");
+
 		}
 	}
 
 
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Register(string username, string password, string checkPassword)
-    {
-        try
-        {
-            if (password != checkPassword)
-            {
-                return BadRequest("Passwords do not match.");
-            }
 
-            User newUser = new User
-            {
-                Username = username,
-                Password = password, 
-            };
-
-            await _userService.AddUserAsync(newUser);
-
-            return RedirectToAction("Index", "Home");
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
-        }
-    }
-
-
-    public IActionResult Logout()
+	public IActionResult Logout()
 	{
 		HttpContext.Session.Clear();
 		return RedirectToAction("Index", "Home");
 	}
 }
-
-
-
-   

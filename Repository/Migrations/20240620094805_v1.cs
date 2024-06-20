@@ -100,7 +100,8 @@ namespace Repository.Migrations
                     MaterialID = table.Column<int>(type: "int", nullable: false),
                     CategoryID = table.Column<int>(type: "int", nullable: false),
                     ProductionCost = table.Column<decimal>(type: "decimal(12,2)", precision: 12, scale: 2, nullable: false),
-                    PriceRate = table.Column<decimal>(type: "decimal(12,2)", precision: 12, scale: 2, nullable: false)
+                    PriceRate = table.Column<decimal>(type: "decimal(12,2)", precision: 12, scale: 2, nullable: false),
+                    TotalPrice = table.Column<decimal>(type: "decimal(12,2)", precision: 12, scale: 2, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -364,7 +365,8 @@ namespace Repository.Migrations
                 {
                     { 1, "Rings", true, "Jewelry" },
                     { 2, "Necklaces", true, "Jewelry" },
-                    { 3, "Bracelets", true, "Jewelry" }
+                    { 3, "Bracelets", true, "Jewelry" },
+                    { 4, "Bracelets", true, "Jewelry" }
                 });
 
             migrationBuilder.InsertData(
@@ -408,13 +410,19 @@ namespace Repository.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "ProductID", "CategoryID", "GemID", "ImageUrl1", "ImageUrl2", "MaterialID", "PriceRate", "ProductCode", "ProductName", "ProductionCost" },
+                columns: new[] { "ProductID", "CategoryID", "GemID", "ImageUrl1", "ImageUrl2", "MaterialID", "PriceRate", "ProductCode", "ProductName", "ProductionCost", "TotalPrice" },
                 values: new object[,]
                 {
-                    { 1, 1, 1, "", "", 1, 2.5m, "P001", "Diamond Necklace", 150.0m },
-                    { 2, 2, 2, "", "", 2, 2.0m, "P002", "Gold Ring", 100.0m },
-                    { 3, 3, 3, "", "", 3, 2.2m, "P003", "Emerald Bracelet", 120.0m },
-                    { 4, 3, 4, "", "", 4, 1.8m, "P004", "Silver Earrings", 80.0m }
+                    { 1, 1, 1, "images/diamond_necklace_1.jpg", "images/diamond_necklace_2.jpg", 1, 2.5m, "P001", "Diamond Necklace", 150.0m, 0m },
+                    { 2, 2, 2, "images/gold_ring_1.jpg", "images/gold_ring_2.jpg", 2, 2.0m, "P002", "Gold Ring", 100.0m, 0m },
+                    { 3, 3, 3, "images/emerald_bracelet_1.jpg", "images/emerald_bracelet_2.jpg", 3, 2.2m, "P003", "Emerald Bracelet", 120.0m, 0m },
+                    { 4, 4, 4, "images/silver_earrings_1.jpg", "images/silver_earrings_2.jpg", 4, 1.8m, "P004", "Silver Earrings", 80.0m, 0m },
+                    { 5, 3, 1, "images/sapphire_pendant_1.jpg", "images/sapphire_pendant_2.jpg", 2, 2.3m, "P005", "Sapphire Pendant", 130.0m, 0m },
+                    { 6, 4, 2, "images/platinum_bracelet_1.jpg", "images/platinum_bracelet_2.jpg", 3, 2.7m, "P006", "Platinum Bracelet", 200.0m, 0m },
+                    { 7, 1, 3, "images/ruby_ring_1.jpg", "images/ruby_ring_2.jpg", 4, 2.1m, "P007", "Ruby Ring", 90.0m, 0m },
+                    { 8, 2, 4, "images/amethyst_earrings_1.jpg", "images/amethyst_earrings_2.jpg", 1, 1.9m, "P008", "Amethyst Earrings", 70.0m, 0m },
+                    { 9, 1, 1, "images/topaz_necklace_1.jpg", "images/topaz_necklace_2.jpg", 3, 2.4m, "P009", "Topaz Necklace", 110.0m, 0m },
+                    { 10, 2, 2, "images/opal_brooch_1.jpg", "images/opal_brooch_2.jpg", 4, 2.0m, "P010", "Opal Brooch", 95.0m, 0m }
                 });
 
             migrationBuilder.InsertData(
