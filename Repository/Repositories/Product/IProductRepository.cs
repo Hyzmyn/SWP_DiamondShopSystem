@@ -12,15 +12,6 @@ namespace Repository.Interface
 {
     public interface IProductRepository : IBaseRepository<Product>
     {
-		//public List<Product> GetAll();
-
-		//public Product? GetById(int ProductID);
-
-		//public void Create(Product product);
-
-		//public void Update(Product product);
-
-		//public void Delete(int ProductID);
 		public List<Product> GetProducts();
 		public List<Product> GetAllProduct();
 

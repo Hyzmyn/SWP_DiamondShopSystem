@@ -16,10 +16,4 @@
     <ProjectReference Include="..\Repository\Repository.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Service\GemPriceList\" />
-    <Folder Include="Service\ProductGem\" />
-    <Folder Include="Service\ProductMaterial\" />
-  </ItemGroup>
-
 </Project>

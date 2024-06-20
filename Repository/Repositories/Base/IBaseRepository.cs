@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +9,20 @@ namespace Repository.Repositories.Base
 {
     public interface IBaseRepository<TEntity> where TEntity : class
     {
-        public void Create(TEntity entity);
-        public void Delete(TEntity entity);
-        public IQueryable<TEntity> Get();
-        public TEntity? Get<TKey>(TKey id);
-        public void Update(TEntity entity);
-        public void Save();
-        public IQueryable<TEntity> QueryStart();
+        Task<int> GetMaxIdAsync();
+        Task CreateAsync(TEntity entity);
+
+        void Delete(TEntity entity);
+
+        IQueryable<TEntity> Get();
+
+        Task<TEntity?> GetAsync<TKey>(TKey id);
+
+        void Update(TEntity entity);
+
+        Task SaveAsync();
+
+        IQueryable<TEntity> QueryStart();
 
     }
 }

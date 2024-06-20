@@ -4,8 +4,9 @@ using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pag
 using Repository.Models;
 using Repository.Repositories.Base;
 using Service;
-using Service.Interface;
+
 using Service.Service.ViewModels;
+using Service.Services.Products;
 using System.Diagnostics;
 
 
@@ -33,9 +34,9 @@ namespace SWP.Controllers
 			return View(product);
 		}
 		[Route("DiamondJewelery")]
-		public IActionResult DiamondJewelery(string keyword, int pageNumber = 1, int pageSize = 10)
+		public async Task<IActionResult> DiamondJewelery(string keyword, int pageNumber = 1, int pageSize = 10)
 		{
-			var products = _productService.GetProducts(keyword, pageNumber, pageSize);
+			var products = await _productService.GetProductsAsync(keyword, pageNumber, pageSize, "");
 			var totalProducts = _productService.GetAllProducts().Count();
 			var totalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
 

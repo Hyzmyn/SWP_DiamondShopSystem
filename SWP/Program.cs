@@ -2,9 +2,9 @@
 using Repository.Interface;
 using Repository.Models;
 using Repository.Repositories;
-using Service;
-using Service.Interface;
-using Service.Service;
+using Service.Services.Products;
+using Service.Services.Users;
+
 
 public class Program
 {
@@ -20,7 +20,7 @@ public class Program
 		builder.Services.AddScoped<IProductService, ProductService>();
 		builder.Services.AddScoped<IProductRepository, ProductRepository>();
 		builder.Services.AddDbContext<DiamondShopContext>(options =>
-				options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+			options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 		builder.Services.AddDistributedMemoryCache();
 		builder.Services.AddSession(options =>
@@ -44,8 +44,8 @@ public class Program
 
 		app.UseRouting();
 
-		app.UseSession(); // Đảm bảo session được sử dụng trước routing
-		app.UseAuthentication(); // Nếu bạn sử dụng authentication
+		app.UseSession(); 
+		app.UseAuthentication(); 
 		app.UseAuthorization();
 
 		app.MapControllerRoute(
