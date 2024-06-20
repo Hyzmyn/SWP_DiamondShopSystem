@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SWP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cdb610fbd215db2b2f996c3843819cd8809e560d")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e312d7454a2241480efe31012a09b608ec41405f")]
+>>>>>>> c91c109d5753a80fdb3cf7a2134a38ae363fcadf
 [assembly: System.Reflection.AssemblyProductAttribute("SWP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SWP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

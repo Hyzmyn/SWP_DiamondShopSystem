@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
 using Repository.Interface;
 using Repository.Models;
 using Repository.Repositories.Base;
@@ -18,5 +19,13 @@ namespace Repository.Repositories
         {
             _db = context;
         }
+        public List<Product> GetProducts()
+        {
+			var products = _db.Products
+									 .OrderByDescending(p => p.ProductID)
+									 .Take(10)
+									 .ToList();
+            return products;
+		}
     }
 }

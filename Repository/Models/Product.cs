@@ -17,9 +17,14 @@ namespace Repository.Models
         public string ProductCode { get; set; }
         public string ProductName { get; set; }
         public string ImageUrl1 { get; set; }
+<<<<<<< HEAD
        
         public string ImageUrl2 { get; set; }
         public int GemID { get; set; }
+=======
+		public string ImageUrl2 { get; set; }
+		public int GemID { get; set; }
+>>>>>>> c91c109d5753a80fdb3cf7a2134a38ae363fcadf
         public int MaterialID { get; set; }
         public int CategoryID { get; set; }
         public decimal ProductionCost { get; set; }

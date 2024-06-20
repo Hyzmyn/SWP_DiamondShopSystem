@@ -45,9 +45,15 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+<<<<<<< HEAD
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
               "version": "[2.2.2, )"
+=======
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+>>>>>>> c91c109d5753a80fdb3cf7a2134a38ae363fcadf
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
