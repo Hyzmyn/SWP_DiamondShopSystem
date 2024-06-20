@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\swp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\repository\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\swp\\views\\home\\diamondjewelery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\swp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,16 +66,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Models\\Product.cs",
               "RelativeDocumentMoniker": "Repository\\Models\\Product.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Models\\Product.cs",
               "RelativeToolTip": "Repository\\Models\\Product.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBcAAAAuAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAxwBcAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T07:59:45.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-20T07:59:45.754Z"
             },
             {
               "$type": "Document",
@@ -87,8 +86,7 @@
               "RelativeToolTip": "SWP\\wwwroot\\js\\site.js",
               "ViewState": "AQIAAN0AAAAAAAAAAAAAwOkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-06-20T05:42:50.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-20T05:42:50.868Z"
             },
             {
               "$type": "Document",
@@ -112,8 +110,7 @@
               "RelativeToolTip": "SWP\\Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAC0AAAAAAMonYjaXv1UAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T06:29:03.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T06:29:03.687Z"
             },
             {
               "$type": "Document",
@@ -125,8 +122,7 @@
               "RelativeToolTip": "SWP\\Controllers\\AccountController.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAgwCQAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T09:21:11.523Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T09:21:11.523Z"
             },
             {
               "$type": "Document",
@@ -186,18 +182,17 @@
               "RelativeToolTip": "SWP\\Views\\Home\\diamondjewelery.cshtml",
               "ViewState": "AQIAAD8AAAAAAAAAAAAAAFEAAADZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T06:35:11.046Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T06:35:11.046Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "SWP\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\HomeController.cs",
               "RelativeToolTip": "SWP\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAgwCMAAABcAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwCMAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T06:18:08.781Z",
               "EditorCaption": ""
