@@ -37,14 +37,15 @@ namespace Repository.Models
         public DbSet<Warranty> Warranties { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            IConfigurationRoot configuration = new ConfigurationBuilder()
-               .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-               .AddJsonFile("appsettings.json")
-               .Build();
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
-        }
+            => optionsBuilder.UseSqlServer(GetConnectionString());
 
+        private string? GetConnectionString()
+        {
+            IConfiguration configuration = new ConfigurationBuilder()
+                    .SetBasePath(Directory.GetCurrentDirectory())
+                    .AddJsonFile("appsettings.json", true, true).Build();
+            return configuration["ConnectionStrings:DefaultConnection"];
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Discount>()
@@ -140,10 +141,10 @@ namespace Repository.Models
 
 
             modelBuilder.Entity<Product>().HasData(
-                new Product { ProductID = 1, ProductCode = "P001", ProductName = "Diamond Necklace", ImageUrl1 = "", ImageUrl2 = "", GemID = 1, MaterialID = 1, CategoryID = 1, ProductionCost = 150.0m, PriceRate = 2.5m },
-                new Product { ProductID = 2, ProductCode = "P002", ProductName = "Gold Ring", ImageUrl1 = "", ImageUrl2 = "", GemID = 2, MaterialID = 2, CategoryID = 2, ProductionCost = 100.0m, PriceRate = 2.0m },
-                new Product { ProductID = 3, ProductCode = "P003", ProductName = "Emerald Bracelet", ImageUrl1 = "", ImageUrl2 = "", GemID = 3, MaterialID = 3, CategoryID = 3, ProductionCost = 120.0m, PriceRate = 2.2m },
-                new Product { ProductID = 4, ProductCode = "P004", ProductName = "Silver Earrings", ImageUrl1 = "", ImageUrl2 = "", GemID = 4, MaterialID = 4, CategoryID = 3, ProductionCost = 80.0m, PriceRate = 1.8m }
+                new Product { ProductID = 1, ProductCode = "P001", ProductName = "Diamond Necklace", ImageUrl1 = "", ImageUrl2 = "", GemID = 1, MaterialID = 1, CategoryID = 1, ProductionCost = 150.0m, PriceRateID = 1 },
+                new Product { ProductID = 2, ProductCode = "P002", ProductName = "Gold Ring", ImageUrl1 = "", ImageUrl2 = "", GemID = 2, MaterialID = 2, CategoryID = 2, ProductionCost = 100.0m, PriceRateID = 1 },
+                new Product { ProductID = 3, ProductCode = "P003", ProductName = "Emerald Bracelet", ImageUrl1 = "", ImageUrl2 = "", GemID = 3, MaterialID = 3, CategoryID = 3, ProductionCost = 120.0m, PriceRateID = 2 },
+                new Product { ProductID = 4, ProductCode = "P004", ProductName = "Silver Earrings", ImageUrl1 = "", ImageUrl2 = "", GemID = 4, MaterialID = 4, CategoryID = 3, ProductionCost = 80.0m, PriceRateID = 2 }
             );
 
             modelBuilder.Entity<ProductMaterial>().HasData(

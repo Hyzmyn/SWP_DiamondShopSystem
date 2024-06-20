@@ -45,9 +45,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Session": {
+            "Microsoft.AspNetCore.Http": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[2.2.2, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -225,9 +225,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Session": {
+            "Microsoft.AspNetCore.Http": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[2.2.2, )"
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
