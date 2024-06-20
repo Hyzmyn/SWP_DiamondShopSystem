@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using Repository.Models;
+using Repository.Repositories.Base;
 using Service;
 using Service.Interface;
 using Service.Service.ViewModels;
@@ -10,7 +12,7 @@ using System.Diagnostics;
 namespace SWP.Controllers
 {
 	public class HomeController : Controller
-		
+
 	{
 		private readonly IProductService _productService;
 		private readonly DiamondShopContext dbContext;
@@ -20,7 +22,8 @@ namespace SWP.Controllers
 		{
 			_logger = logger;
 			this.dbContext = dbContext;
-			_productService = productService ;
+			_productService = productService;
+
 		}
 
 
@@ -29,6 +32,19 @@ namespace SWP.Controllers
 			var product = _productService.GetProducts();
 			return View(product);
 		}
+		[Route("DiamondJewelery")]
+		public IActionResult DiamondJewelery(string keyword, int pageNumber = 1, int pageSize = 10)
+		{
+			var products = _productService.GetProducts(keyword, pageNumber, pageSize);
+			var totalProducts = _productService.GetAllProducts().Count();
+			var totalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
+
+			ViewBag.CurrentPage = pageNumber;
+			ViewBag.TotalPages = totalPages;
+
+			return View(products);
+		}
+
 
 
 		public IActionResult Privacy()
@@ -58,5 +74,9 @@ namespace SWP.Controllers
 
 			return View(user);
 		}
+		//[Route("DIAMONDJEWELERY")]
+
+
+
 	}
 }

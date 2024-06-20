@@ -15,37 +15,39 @@ namespace Service
             _repo = repo;
         }
 
-        public List<Product> GetProducts(string keyword, int pageNumber, int pageSize)
-        {
-            var product = _repo.Get().ToList();
+		public List<Product> GetProducts(string keyword, int pageNumber, int pageSize)
+		{
+			var products = _repo.Get().ToList();
 
-            if (keyword != null && keyword.Length > 0)
-            {
-                if (!string.IsNullOrEmpty(keyword))
-                {
-                    product = product.Where(x =>
-                    x.ProductID.ToString().Contains(keyword.ToLower()) ||
-                    x.ProductName.ToLower().Contains(keyword.ToLower())).ToList();
-                }
-            }
+			if (!string.IsNullOrEmpty(keyword))
+			{
+				products = products.Where(x =>
+					x.ProductID.ToString().Contains(keyword.ToLower()) ||
+					x.ProductName.ToLower().Contains(keyword.ToLower()))
+					.ToList();
+			}
 
-            var totalProducts = product.Count();
-            var totalPages = pageSize > 0 ? (int)Math.Ceiling((double)totalProducts / pageSize) : 0;
+			var totalProducts = products.Count();
+			var totalPages = pageSize > 0 ? (int)Math.Ceiling((double)totalProducts / pageSize) : 0;
 
-            if (pageNumber > totalPages)
-            {
-                pageNumber = totalPages;
-            }
+			if (pageNumber > totalPages)
+			{
+				pageNumber = totalPages;
+			}
 
-            if (pageNumber > 0 && pageSize > 0)
-            {
-                product = product.OrderBy(x => x.ProductID).Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
-            }
+			if (pageNumber > 0 && pageSize > 0)
+			{
+				products = products
+					.OrderBy(x => x.ProductID)
+					.Skip((pageNumber - 1) * pageSize)
+					.Take(pageSize)
+					.ToList();
+			}
 
-            return product;
-        }
+			return products;
+		}
 
-        public void DeleteProduct(int id)
+		public void DeleteProduct(int id)
         {
             var product = _repo.Get(id);
             if (product != null)
@@ -94,6 +96,10 @@ namespace Service
         public List<Product> GetProducts()
         {
             return _repo.GetProducts();
+        }
+		public List<Product> GetAllProducts()
+        {
+            return _repo.GetAllProduct();
         }
     }
 }

@@ -28,14 +28,18 @@ public class AccountController : Controller
 		{
 			HttpContext.Session.SetString("UserId", user.UserID.ToString());
 			HttpContext.Session.SetInt32("RoleID", user.RoleID);
+			TempData["ResetInputs"] = true;
 			return RedirectToAction("Index", "Home");
 		}
 		else
 		{
-			ModelState.AddModelError("", "Invalid username or password");
-			return View();
+			TempData["LoginError"] = "Invalid username or password";
+			TempData["ResetInputs"] = true;
+			return RedirectToAction("Index", "Home");
+
 		}
 	}
+
 
 
 	public IActionResult Logout()

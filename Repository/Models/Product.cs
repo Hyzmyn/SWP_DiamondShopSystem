@@ -22,7 +22,6 @@ namespace Repository.Models
         public int CategoryID { get; set; }
         public decimal ProductionCost { get; set; }
         public decimal PriceRate { get; set; }
-
         [ForeignKey("CategoryID")]
         public virtual ProductCategory ProductCategory { get; set; }
         public virtual ICollection<ProductMaterial> ProductMaterials { get; set; }

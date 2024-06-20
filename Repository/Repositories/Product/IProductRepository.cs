@@ -22,6 +22,7 @@ namespace Repository.Interface
 
 		//public void Delete(int ProductID);
 		public List<Product> GetProducts();
+		public List<Product> GetAllProduct();
 
 
 

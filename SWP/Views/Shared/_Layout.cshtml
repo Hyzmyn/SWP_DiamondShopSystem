@@ -132,11 +132,10 @@
 									<nav>
 										<ul>
 											<li class="active">
-												<a >Home</a>
+												<a asp-controller="Home" asp-action="Index">Home</a>
 											</li>
 											<li>
-												<a >DIAMOND JEWELERY</a>
-
+												 <a asp-controller="Home" asp-action="DiamondJewelery">DIAMOND JEWELERY</a>
 											</li>
 											<li>
 												<a >GOLD JEWELERY</a>
@@ -154,6 +153,73 @@
 					</div>
 				</div>
 			</div>
+			<div class="blur-bg-overlay"></div>
+			
+			<div class="form-popup">
+				<span class="close-btn material-symbols-rounded">x</span>
+				<div class="form-box login">
+					<div class="form-details">
+
+						<h2>Welcome Back</h2>
+						<p>Please login using your personal information to stay connected with us</p>
+					</div>
+					<div class="form-content">
+						<h2>LOGIN</h2>
+						<form asp-action="Login" asp-controller="Account" method="post">
+							<div class="input-field">
+								<input type="text" name="username" required>
+								<label>Username</label>
+							</div>
+							<div class="input-field">
+								<input type="password" name="password" required>
+								<label>Password</label>
+							</div>
+							@if (TempData["LoginError"] != null)
+							{
+									<p class="login-error" style ="color: red;">@TempData["LoginError"]</p>
+							}
+
+							<a  class="forgot-pass">Forgot Password?</a>
+							<button type="submit">Log In</button>
+						</form>
+						
+						<div class="bottom-link">
+							Don't have an account?
+							<a  id="signup-link">Signup</a>
+						</div>
+					</div>
+				</div>
+				<div class="form-box signup">
+					<div class="form-details">
+
+						<h2>Create Account</h2>
+						<p>To become a part of our community, please sign up using your personal information </p>
+					</div>
+					<div class="form-content">
+						<h2>SIGNUP</h2>
+						<form action="#">
+							<div class="input-field">
+								<input type="text" required>
+								<label>Enter your username</label>
+							</div>
+							<div class="input-field">
+								<input type="password" required>
+								<label>Create password</label>
+							</div>
+							<div class="input-field">
+								<input type="password" required>
+								<label>Confirm password</label>
+							</div>
+
+							<button type="submit">Sign Up</button>
+						</form>
+						<div class="bottom-link">
+							Already have an account?
+							<a  id="login-link">Login</a>
+						</div>
+					</div>
+				</div>
+			</div> 
 
 		</header>
 
@@ -342,9 +408,16 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 	<script src="~/js/site.js" asp-append-version="true"></script>
+		@section Scripts {
+		<script>
+			var loginError = '@TempData["LoginError"]';
+			if (loginError !== '') {
+				document.body.classList.add("show-popup");
+			}
+		</script>
+		}
 
 </body>
-
 
 
 @await RenderSectionAsync("Scripts", required: false)

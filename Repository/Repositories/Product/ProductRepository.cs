@@ -27,5 +27,10 @@ namespace Repository.Repositories
 									 .ToList();
             return products;
 		}
+        public List<Product> GetAllProduct()
+        {
+            var products = _db.Products.ToList();
+            return products;
+        }
     }
 }

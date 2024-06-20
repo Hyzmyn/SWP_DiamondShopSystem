@@ -1672,8 +1672,6 @@ ul {
 /* add this from last part  */
 
 .p_section1 .slick-list {
-    padding-bottom: 135px !important;
-    margin-bottom: -135px;
     z-index: 9;
     padding-top: 18px !important;
     margin-top: -30px;
@@ -2792,5 +2790,8 @@ form button {
         padding: 30px 20px;
     }
 }
-
+.nav.pagination {
+    color: white;
+    background-color: #a8741a;
+}
 

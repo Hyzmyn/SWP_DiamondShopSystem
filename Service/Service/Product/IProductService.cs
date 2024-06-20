@@ -15,6 +15,7 @@ namespace Service.Interface
         public void AddProduct(Product product);
         public void UpdateProduct(Product product);
         public List<Product> GetProducts();
+        public List<Product> GetAllProducts();
 
 	}
 }
