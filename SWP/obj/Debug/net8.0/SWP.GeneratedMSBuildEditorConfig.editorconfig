@@ -17,83 +17,87 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SWP
 build_property.RootNamespace = SWP
-build_property.ProjectDir = C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP\
+build_property.ProjectDir = C:\Users\DELL\Desktop\SWPcuoi_DiamondShopSystem\SWP_DiamondShopSystem\SWP\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\DELL\Desktop\SWPPASS\SWP\SWP_DiamondShopSystem\SWP
+build_property.MSBuildProjectDirectory = C:\Users\DELL\Desktop\SWPcuoi_DiamondShopSystem\SWP_DiamondShopSystem\SWP
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/ChangePassword.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZUN1c3RvbWVyXENoYW5nZVBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/CustomerInformation.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/CustomerInformation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZUN1c3RvbWVyXEN1c3RvbWVySW5mb3JtYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/HistoryOfCustomer.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/HistoryOfCustomer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZUN1c3RvbWVyXEhpc3RvcnlPZkN1c3RvbWVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/Index.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZUN1c3RvbWVyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/OrderOfCustomer.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/OrderOfCustomer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZUN1c3RvbWVyXE9yZGVyT2ZDdXN0b21lci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hhcmVkXF9MYXlvdXRDdXN0b21lci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/CreateProduct.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/CreateProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcQ3JlYXRlUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/HistoryOrder.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/EditProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcRWRpdFByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/HistoryOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcSGlzdG9yeU9yZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/Index.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/ProductList.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/ProductList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcUHJvZHVjdExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/Shared/_LayoutSaleStaff.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/Shared/_LayoutSaleStaff.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXFNoYXJlZFxfTGF5b3V0U2FsZVN0YWZmLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Views/Home/Index.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Views/Home/Privacy.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Views/Shared/Error.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Views/_ViewImports.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Views/_ViewStart.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/Desktop/SWPPASS/SWP/SWP_DiamondShopSystem/SWP/Views/Shared/_Layout.cshtml]
+[C:/Users/DELL/Desktop/SWPcuoi_DiamondShopSystem/SWP_DiamondShopSystem/SWP/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-e9hm209d39

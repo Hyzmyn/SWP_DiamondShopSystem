@@ -1373,20 +1373,12 @@
       "PackagePath": "staticwebassets\\images\\product20240618215838006.jfif20240618215838036.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\1.jpg",
-      "PackagePath": "staticwebassets\\images\\product\\1.jpg"
-    },
-    {
       "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\10.jpg",
       "PackagePath": "staticwebassets\\images\\product\\10.jpg"
     },
     {
       "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\11.jpg",
       "PackagePath": "staticwebassets\\images\\product\\11.jpg"
-    },
-    {
-      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\12.jpg",
-      "PackagePath": "staticwebassets\\images\\product\\12.jpg"
     },
     {
       "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\13.jpg",
@@ -1429,20 +1421,60 @@
       "PackagePath": "staticwebassets\\images\\product\\20240618220237821.jfif20240618220237853.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240618221116031.jpg",
-      "PackagePath": "staticwebassets\\images\\product\\20240618221116031.jpg"
+      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240619160811171.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240619160811171.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240618221116063.jpg",
-      "PackagePath": "staticwebassets\\images\\product\\20240618221116063.jpg"
+      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240619160811187.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240619160811187.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240618222228888.jpg",
-      "PackagePath": "staticwebassets\\images\\product\\20240618222228888.jpg"
+      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240620150818743.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240620150818743.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240618222228922.jpg",
-      "PackagePath": "staticwebassets\\images\\product\\20240618222228922.jpg"
+      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240620150818753.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240620150818753.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240620150917757.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240620150917757.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240620151135565.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240620151135565.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240620152224083.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240620152224083.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240620152224096.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240620152224096.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240620152239373.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240620152239373.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240620152640203.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240620152640203.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240620153644478.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240620153644478.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240620153644479.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240620153644479.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240620160636960.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240620160636960.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240620160636973.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240620160636973.jpg"
     },
     {
       "Id": "C:\\Users\\DELL\\Desktop\\SWPPASS\\SWP\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\21.jpg",
