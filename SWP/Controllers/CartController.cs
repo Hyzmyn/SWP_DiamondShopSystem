@@ -1,15 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Service.Services.Cart;
+using Service.Services.Discounts;
+using System.Threading.Tasks;
 
 namespace SWP.Controllers
 {
     public class CartController : Controller
     {
         private readonly ICartService _cartService;
+        private readonly IDiscountService _discountService;
 
-        public CartController(ICartService cartService)
+        public CartController(ICartService cartService, IDiscountService discountService)
         {
             _cartService = cartService;
+            _discountService = discountService;
         }
 
         [HttpPost]
@@ -35,6 +39,8 @@ namespace SWP.Controllers
         {
             var userId = int.Parse(HttpContext.Session.GetString("UserId"));
             var cartItems = await _cartService.GetCartItemsAsync(userId);
+            ViewBag.DiscountAmount = HttpContext.Session.GetDecimal("DiscountAmount") ?? 0;
+            ViewBag.DiscountCode = HttpContext.Session.GetString("DiscountCode") ?? string.Empty;
             return View(cartItems);
         }
 
@@ -55,6 +61,38 @@ namespace SWP.Controllers
 
             await _cartService.UpdateQuantityAsync(orderDetailId, quantity);
             return RedirectToAction("Cart");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ApplyDiscount(string discountCode)
+        {
+            var discount = await _discountService.GetDiscountAsync(discountCode);
+            if (discount != null && discount.DiscountStatus)
+            {
+                HttpContext.Session.SetDecimal("DiscountAmount", discount.DiscountAmount);
+                HttpContext.Session.SetString("DiscountCode", discountCode);
+            }
+            else
+            {
+                HttpContext.Session.SetDecimal("DiscountAmount", 0);
+                HttpContext.Session.SetString("DiscountCode", string.Empty);
+            }
+            return RedirectToAction("Cart");
+        }
+
+    }
+
+    public static class SessionExtensions
+    {
+        public static void SetDecimal(this ISession session, string key, decimal value)
+        {
+            session.SetString(key, value.ToString());
+        }
+
+        public static decimal? GetDecimal(this ISession session, string key)
+        {
+            var value = session.GetString(key);
+            return value == null ? (decimal?)null : decimal.Parse(value);
         }
     }
 }

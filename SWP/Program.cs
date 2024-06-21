@@ -6,6 +6,8 @@ using Service.Services.Cart;
 using Service.Services.Products;
 using Service.Services.Users;
 using Service.Services.Cart;
+using Repository;
+using Service.Services.Discounts;
 
 public class Program
 {
@@ -17,8 +19,9 @@ public class Program
 
 		// Thêm dịch vụ vào container.
 		builder.Services.AddControllersWithViews();
-
-		builder.Services.AddScoped<IUserService, UserService>();
+        builder.Services.AddScoped<IDiscountService, DiscountService>();
+        builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
+        builder.Services.AddScoped<IUserService, UserService>();
 		builder.Services.AddScoped<IUserRepository, UserRepository>();
 		builder.Services.AddScoped<IProductService, ProductService>();
 		builder.Services.AddScoped<IProductRepository, ProductRepository>();

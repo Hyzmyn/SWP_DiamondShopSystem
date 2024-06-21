@@ -17,7 +17,9 @@ namespace Repository
         }
         public async Task<Discount> GetDiscountByCodeAsync(string discountCode)
         {
-            return await _db.Discounts.FirstOrDefaultAsync(d => d.DiscountCode == discountCode);
+            return await _db.Discounts
+                .Where(d => d.DiscountCode == discountCode && d.DiscountStatus)
+                .FirstOrDefaultAsync();
         }
     }
 }

@@ -14,6 +14,6 @@ namespace Service.Services.Discounts
         Task DeleteDiscountAsync(int id);
         Task AddDiscountAsync(Discount discount);
         Task UpdateDiscountAsync(Discount discount);
-        Task<Discount> GetDiscountByCodeAsync(string discountCode);
+        Task<Discount> GetDiscountAsync(string discountCode);
     }
 }
