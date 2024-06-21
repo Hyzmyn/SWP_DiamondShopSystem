@@ -35,5 +35,9 @@ namespace Service.Services.Discounts
         {
             throw new NotImplementedException();
         }
+        public async Task<Discount> GetDiscountByCodeAsync(string discountCode)
+        {
+            return await _repo.GetDiscountByCodeAsync(discountCode);
+        }
     }
 }

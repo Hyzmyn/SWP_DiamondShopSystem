@@ -2,15 +2,18 @@
 using Repository.Interface;
 using Repository.Models;
 using Repository.Repositories;
+using Service.Services.Cart;
 using Service.Services.Products;
 using Service.Services.Users;
-
+using Service.Services.Cart;
 
 public class Program
 {
 	public static void Main(string[] args)
 	{
 		var builder = WebApplication.CreateBuilder(args);
+
+		builder.Services.AddScoped<ICartService, CartService>();
 
 		// Thêm dịch vụ vào container.
 		builder.Services.AddControllersWithViews();
@@ -38,7 +41,7 @@ public class Program
 			app.UseExceptionHandler("/Home/Error");
 			app.UseHsts();
 		}
-
+		
 		app.UseHttpsRedirection();
 		app.UseStaticFiles();
 

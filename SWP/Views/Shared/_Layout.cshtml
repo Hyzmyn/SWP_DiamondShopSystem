@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 	@{
@@ -70,8 +71,28 @@
 								}
 								@if(role==5)
 								{
+															<form asp-controller="Cart" asp-action="Cart"><li><div style="margin-right: 10px;">
+												<button b-e9hm209d39="" class="profile-btn"  style="
+										font-weight: 500;
+
+										/* margin-top: 25px; */
+										/* color: #fff; */
+										/* height: 50px; */
+										/* line-height: 50px; */
+										/* padding: 0 35px; */
+										background: #a8741a;
+										box-shadow: none;
+										color: #fff;
+										display: inline-block;
+										height: 45px;
+										line-height: 45px;
+										padding: 0px 22px;
+										text-transform: uppercase;
+										font-size: 13px;
+										border-radius: 5px;
+												"><i class="bi bi-cart"></i> YOUR CART</button></div></li></form>
 													<form asp-area="customer" asp-controller="HomeCustomer" asp-action="Index"><li><div style="margin-right: 10px;">
-											<button b-e9hm209d39="" class="profile-btn" style="
+											<button b-e9hm209d39="" class="profile-btn"  style="
 										font-weight: 500;
 										
 										/* margin-top: 25px; */
@@ -89,7 +110,7 @@
 										text-transform: uppercase;
 										font-size: 13px;
 										border-radius: 5px;
-														">PROFILE</button></div></li></form>
+										"><i class="bi bi-person-circle"></i> PROFILE</button></div></li></form>
 											<form asp-action="Logout" asp-controller="Account" method="post">	<li><div><button b-e9hm209d39="" class="logout-btn" style="
 										font-weight: 500;
 										/* margin-top: 25px; */

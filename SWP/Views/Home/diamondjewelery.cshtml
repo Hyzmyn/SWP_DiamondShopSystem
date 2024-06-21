@@ -19,45 +19,58 @@
                         <div class="tab-pane fade show active" id="featured" role="tabpane1">
                             <div class="product_container">
                                 <div class="custom-row product_column3">
-                                    @foreach (var product in Model)
-                                    {
-                                        var oldPrice = product.PriceRate * 1.20m;
-                                            <div class="custom-col-5">
-                                                <div class="single_product">
-                                                    <div class="product_thumb">
-                                                        <a class="primary_img">
-                                                            <img src="images/product/@product.ImageUrl1" alt="product1">
-                                                        </a>
-                                                        <a class="secondary_img">
-                                                            <img src="images/product/@product.ImageUrl2" alt="product1">
-                                                        </a>
-                                                        <div class="quick_button" style="color: white">
-                                                            <a data-toggle="modal" data-target="#modal_box" data-placement="top" data-original-title="Xem Nhanh">Xem Nhanh</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product_content" style="color: white">
-                                                        <div class="tag_cate">
-                                                            <a>@product.ProductCode</a>
-                                                        </div>
-                                                        <h3><a>@product.ProductName</a></h3>
-                                                        <div class="price_box">
-                                                            <span class="old_price">@oldPrice $</span>
-                                                            <span class="">@product.PriceRate $</span>
-                                                        </div>
-                                                        <div class="product_hover">
-                                                            <div class="action_links">
-                                                                <ul>
-                                                                    <li><a data-placement="top" title="Thêm vào yêu thích" data-toggle="tooltip"><span class="ion-heart"></span></a></li>
-                                                                    <li class="add_to_cart"><a title="Thêm vào giỏ hàng">Thêm vào giỏ hàng</a></li>
-                                                                    <li><a title="So sánh"><i class="ion-ios-settings-strong"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+									@foreach (var product in Model)
+									{
+										var oldPrice = product.PriceRate * 1.20m;
+												<div class="custom-col-5">
+															<div class="single_product">
+																<div class="product_thumb">
+																		<a  class="primary_img"><img src="images/product/@product.ImageUrl1"
+																			alt="product1"></a>
+																		<a  class="secondary_img"><img
+																		src="images/product/@product.ImageUrl2" alt="product1"></a>
+																		<div class="quick_button" style="color: white ">
+																			<a  data-toggle="modal" data-target="#modal_box"
+																			data-placement="top"
+																			data-original-title="quick view">Quick View</a>
+																		</div>
+																</div>
+																<div class="product_content" style="color: white">
+																		<div class="tag_cate">
+																			<a >@product.ProductCode</a>
 
-                                    }
+																		</div>
+																		<h3><a >@product.ProductName</a></h3>
+																		<div class="price_box">
+																				<span class="old_price">@oldPrice $</span>
+																			<span class="">@product.PriceRate $</span>
+																		</div>
+																		<div class="product_hover">
+
+
+																			<div class="action_links">
+																				<ul>
+																					<li><a  data-placement="top"
+																						title="Add to Wishlist"
+																						data-toggle="tooltip"><span
+																							class="ion-heart"></span></a></li>
+																							<li class="add_to_cart">
+																								<form asp-controller="Cart" asp-action="AddToCart" method="post" style="display: inline;">
+																									<input type="hidden" name="productId" value="@product.ProductID" />
+																									<input type="hidden" name="quantity" value="1" />
+																									<a onclick="this.closest('form').submit(); return false;" title="Add to Cart">Add to Cart</a>
+																								</form>
+																							</li>
+																					<li><a  title="Compare"><i
+																							class="ion-ios-settings-strong"></i></a>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+									}
                                     
                                 </div>
                                 <nav aria-label="Page navigation" >

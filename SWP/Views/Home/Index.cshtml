@@ -119,8 +119,13 @@
 																					title="Add to Wishlist"
 																					data-toggle="tooltip"><span
 																						class="ion-heart"></span></a></li>
-																				<li class="add_to_cart"><a 
-																					title="Add to Cart">Add to Cart</a></li>
+																						<li class="add_to_cart">
+																							<form asp-controller="Cart" asp-action="AddToCart" method="post" style="display: inline;">
+																								<input type="hidden" name="productId" value="@product.ProductID" />
+																								<input type="hidden" name="quantity" value="1" />
+																								<a onclick="this.closest('form').submit(); return false;" title="Add to Cart">Add to Cart</a>
+																							</form>
+																						</li>
 																				<li><a  title="Compare"><i
 																						class="ion-ios-settings-strong"></i></a>
 																				</li>
