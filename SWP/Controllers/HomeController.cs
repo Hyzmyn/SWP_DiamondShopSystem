@@ -45,8 +45,23 @@ namespace SWP.Controllers
 
 			return View(products);
 		}
-
-
+		public async Task<IActionResult> QuickView(int id)
+		{
+			var product = await _productService.GetProductByIdAsync(id);
+			if (product == null)
+			{
+				return NotFound();
+			}
+			return Json(new
+			{
+				productID = product.ProductID,
+				productName = product.ProductName,
+				totalPrice = product.TotalPrice,
+				
+				imageUrl1 = product.ImageUrl1,
+				imageUrl2 = product.ImageUrl2
+			});
+		}
 
 		public IActionResult Privacy()
 		{

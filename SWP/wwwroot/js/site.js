@@ -177,7 +177,7 @@
         items: 4,
         dots: false,
         navText: [
-            '<i class="ion-chevron-left arrow-left"></i>',
+            '<i class="ion-chevron-left arrow-left"></i>',  
             '<i class="ion-chevron-right arrow-right"></i>',
         ],
         responsiveClass: true,
@@ -269,5 +269,41 @@ $(document).ready(function () {
         if (!this.checked) {
             $("#selectAll").prop("checked", false);
         }
+    });
+});
+$(document).ready(function () {
+    $(document).on('click', '.quick-view-btn', function (e) {
+        e.preventDefault();
+        var productId = $(this).data('product-id');
+        console.log("Quick View clicked for product ID:", productId);
+
+        $.ajax({
+            url: '/Home/QuickView',
+            type: 'GET',
+            data: { id: productId },
+            dataType: 'json',
+            success: function (product) {
+                $('#quickview-title').text(product.productName);
+                $('#quickview-price').text(product.totalPrice.toFixed(2) + ' $');
+                $('#quickview-old-price').text((product.totalPrice * 1.2).toFixed(2) + ' $');
+                $('#quickview-description').text(product.description);
+                $('#quickview-product-id').val(product.productID);
+
+                $('#quickview-img-1, #quickview-thumb-1').attr('src', '/images/product/' + product.imageUrl1);
+                $('#quickview-img-2, #quickview-thumb-2').attr('src', '/images/product/' + product.imageUrl2);
+
+                $('#quickview-img-1, #quickview-thumb-1, #quickview-img-2, #quickview-thumb-2').attr('alt', product.productName);
+
+                modal.modal('show');
+            },
+            error: function () {
+                alert('Error loading product information.');
+            }
+        });
+    });
+
+    $('#quickview-add-to-cart-form').submit(function (e) {
+        e.preventDefault();
+        // Implement your add to cart logic here
     });
 });

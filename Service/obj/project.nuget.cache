@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "JujXBsbdsOw/Bpzm/BGWxKLocZr6QxUAH9z7W5VhS3S5yD7Sb0C9iCAFg2Fc5BOl67s984VV0ov0FbmVF0jAIg==",
+  "dgSpecHash": "vExWF9/c/1TO6TW7eqNZ+94h+LhQ3eBgViPZvN1wJ4nvQQjhi3AXZ8JrgEp2iiDJCBajQFsuH1XtiKZzLR12Ow==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.2.0\\microsoft.aspnetcore.cryptography.internal.2.2.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.dataprotection\\2.2.0\\microsoft.aspnetcore.dataprotection.2.2.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.dataprotection.abstractions\\2.2.0\\microsoft.aspnetcore.dataprotection.abstractions.2.2.0.nupkg.sha512",

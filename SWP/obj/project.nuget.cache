@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "txqRjijhA2LZBDhe6aT+caNEZuA9sMZ05WOrIg+X31CS0JNOyd1ZbSWhyPBLxlE7u8cR1BhKbAPNsA1rHQXhjw==",
+  "dgSpecHash": "BQSXK0dlM/UD0UEXicSW+d0vFi3Duj99ESJf0Tm8Y8bzrJXPs/loVdmrrIjmPnE241p0VNg6HRv1m8ks3tRVWA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\SWP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

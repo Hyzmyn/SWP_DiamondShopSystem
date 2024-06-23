@@ -23,6 +23,9 @@ namespace Repository.Repositories
         {
             return await _db.Users.FirstOrDefaultAsync(x => x.Username == username);
         }
-
+        public async Task<User> GetUserByIdAsync(int userId)
+        {
+            return await _db.Users.FirstOrDefaultAsync(x => x.UserID == userId);
+        }
     }
 }

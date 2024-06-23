@@ -1,5 +1,4 @@
-﻿
-using Repository.Models;
+﻿using Repository.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +15,7 @@ namespace Service.Services.Products
         Task UpdateProductAsync(Product product);
         public List<Product> GetProducts();
         public List<Product> GetAllProducts();
+		Task<Product> GetProductByIdAsync(int id);
 
 
 	}

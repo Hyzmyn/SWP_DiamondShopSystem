@@ -15,6 +15,7 @@ namespace Service.Services.Users
         Task AddUserAsync(User user);
         Task UpdateUserAsync(User user);
         Task<User> LoginAsync(string username, string password);
+        Task<User> GetUserByIdAsync(int userId);
 
     }
 }

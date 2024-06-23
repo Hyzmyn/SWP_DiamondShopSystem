@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Repository.Interface;
 using Repository.Models;
+using static Microsoft.AspNetCore.Hosting.Internal.HostingApplication;
 
 namespace Service.Services.Products
 {
@@ -81,6 +82,10 @@ namespace Service.Services.Products
 		public List<Product> GetAllProducts()
 		{
 			return _repo.GetAllProduct();
+		}
+		public async Task<Product> GetProductByIdAsync(int id)
+		{
+			return await _repo.GetProductByIdAsync(id);
 		}
 	}
 }

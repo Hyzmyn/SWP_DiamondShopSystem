@@ -1,0 +1,42 @@
+﻿@model Repository.Models.User
+
+@{
+    ViewData["Title"] = "Edit " + ViewBag.Field;
+    Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml";
+}
+
+<h2>Edit @ViewBag.Field</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label>@ViewBag.Field</label>
+        <input type="text" name="newValue" class="form-control" value="@{
+            switch (ViewBag.Field.ToLower())
+            {
+                case "username":
+                        @Model.Username
+;
+                    break;
+                case "email":
+                        @Model.Email
+;
+                    break;
+                case "phonenumber":
+                        @Model.PhoneNumber
+;
+                    break;
+                case "address":
+                        @Model.Address
+;
+                    break;
+                case "nisize":
+                        @Model.NiSize
+;
+                    break;
+            }
+        }" />
+    </div>
+    <input type="hidden" name="field" value="@ViewBag.Field" />
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+</form>
