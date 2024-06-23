@@ -8,6 +8,7 @@ using Service.Services.Users;
 using Service.Services.Cart;
 using Repository;
 using Service.Services.Discounts;
+using Service.Services.Orders;
 
 public class Program
 {
@@ -25,7 +26,10 @@ public class Program
 		builder.Services.AddScoped<IUserRepository, UserRepository>();
 		builder.Services.AddScoped<IProductService, ProductService>();
 		builder.Services.AddScoped<IProductRepository, ProductRepository>();
-		builder.Services.AddDbContext<DiamondShopContext>(options =>
+		builder.Services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
+		builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+        builder.Services.AddScoped<IOrderService, OrderService>();
+        builder.Services.AddDbContext<DiamondShopContext>(options =>
 			options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 		builder.Services.AddDistributedMemoryCache();

@@ -12,6 +12,8 @@ namespace Repository.Interface
     public interface IOrderRepository : IBaseRepository<Order>
     {
 
-        
+        Task<IEnumerable<Order>> GetOrdersByUserIdAsync(int userId);
+        Task<Order> GetByIdAsync(int orderId);
+
     }
 }

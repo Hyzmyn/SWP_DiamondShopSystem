@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Service.Services.Cart;
 using Service.Services.Discounts;
+using Service.Services.Orders;
 using Service.Services.Users;
 using SWP.Controllers;
 using System.Threading.Tasks;
@@ -14,13 +15,16 @@ namespace SWP.Areas.Customer.Controllers
 	{
 		private readonly IUserService _userService;
 		private readonly ICartService _cartService;
-        private readonly IDiscountService _discountService;
+		private readonly IDiscountService _discountService;
+        private readonly IOrderService _orderService;
 
-        public HomeCustomerController(IUserService userService, ICartService cartService, IDiscountService discountService)
+        public HomeCustomerController(IUserService userService, ICartService cartService, IDiscountService discountService, IOrderService orderService)
         {
             _userService = userService;
             _cartService = cartService;
-            _discountService = discountService;
+			_discountService = discountService;
+            _orderService = orderService;
+
         }
 
         [Route("")]
@@ -93,12 +97,13 @@ namespace SWP.Areas.Customer.Controllers
 					return BadRequest("Invalid field");
 			}
 			HttpContext.Session.SetString("Username", user.Username);
-    HttpContext.Session.SetString("Email", user.Email);
-    HttpContext.Session.SetString("PhoneNumber", user.PhoneNumber);
-    HttpContext.Session.SetString("Address", user.Address);
-    HttpContext.Session.SetString("NiSize", user.NiSize);
+			HttpContext.Session.SetString("Email", user.Email);
+			HttpContext.Session.SetString("PhoneNumber", user.PhoneNumber);
+			HttpContext.Session.SetString("Address", user.Address);
+			HttpContext.Session.SetString("NiSize", user.NiSize);
+
 			await _userService.UpdateUserAsync(user);
-			return RedirectToAction("Index");
+            return RedirectToAction("Index");
 		}
         [HttpPost]
         [Route("updatequantity")]
@@ -168,32 +173,60 @@ namespace SWP.Areas.Customer.Controllers
 			return View();
 		}
 
-		[Route("historyofcustomer")]
-		public IActionResult HistoryOfCustomer()
-		{
-			return View();
-		}
-
-
-
-        [HttpPost]
-        [Route("changepassword")]
-		public async Task<IActionResult> ChangePassword(string Pass)
-		{
+        [Route("historyofcustomer")]
+        public async Task<IActionResult> HistoryOfCustomer()
+        {
             var userId = HttpContext.Session.GetString("UserId");
-            if (userId == null)
+            if (string.IsNullOrEmpty(userId))
             {
                 return RedirectToAction("Index", "Home");
             }
 
-            var user = await _userService.GetUserByIdAsync(int.Parse(userId));
-            if (user == null)
+            var orders = await _orderService.GetOrdersByUserIdAsync(int.Parse(userId));
+            return View(orders);
+		}
+
+
+
+		[HttpPost]
+		[Route("changepassword")]
+		public async Task<IActionResult> ChangePassword(string Pass)
+		{
+			var userId = HttpContext.Session.GetString("UserId");
+			if (userId == null)
+			{
+				return RedirectToAction("Index", "Home");
+			}
+
+			var user = await _userService.GetUserByIdAsync(int.Parse(userId));
+			if (user == null)
+			{
+				return NotFound();
+			}
+
+			ViewBag.Field = Pass;
+			return View(user);
+		}
+        [Route("orderdetails")]
+        public async Task<IActionResult> OrderDetails(int orderId)
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            var order = await _orderService.GetOrderByIdAsync(orderId);
+            if (order == null || order.UserID != int.Parse(userId))
             {
                 return NotFound();
             }
 
-            ViewBag.Field = Pass;
-            return View(user);
+            return View(order);
         }
-	}
+
+
+
+
+    }
 }

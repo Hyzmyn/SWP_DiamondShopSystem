@@ -37,5 +37,14 @@ namespace Service.Services.Orders
         {
             throw new NotImplementedException();
         }
+        public async Task<IEnumerable<Order>> GetOrdersByUserIdAsync(int userId)
+        {
+            return await _repo.GetOrdersByUserIdAsync(userId);
+        }
+        public async Task<Order> GetOrderByIdAsync(int orderId)
+        {
+            return await _repo.GetByIdAsync(orderId);
+        }
+
     }
 }

@@ -1,0 +1,57 @@
+﻿
+
+@model Repository.Models.Order
+@using Repository.Models
+
+
+@{
+    ViewData["Title"] = "OrderDetails";
+    Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<main role="main">
+    <h2>Order Details - Order ID: @Model.OrderID</h2>
+    <p>Order Date: @Model.TimeOrder</p>
+    <p>Status: @Model.OrderStatus</p>
+
+    <table class="table" style="margin: 0px 10px;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>IMAGE</th>
+                <th>NISIZE</th>
+                <th>Quantity</th>
+                <th>PRICE</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.OrderDetails)
+            {
+                var image = item.Product.ImageUrl1;
+                var itemTotalPrice = item.Product.TotalPrice * item.Quantity;
+
+                    <tr>
+                        <td>@item.Product.ProductID</td>
+                        <td>@item.Product.ProductName</td>
+                        <td><img src="@Url.Content("~/images/product/" + image)" style="height: 75px; width: 75px;" /></td>
+                        <td>@item.NiSize</td>
+                        <td>@item.Quantity</td>
+                        <td>@itemTotalPrice</td>
+                    </tr>
+            }
+            <tr>
+                <td colspan="5" style="text-align: right; font-weight: bold;">TOTAL PRICE</td>
+                <td colspan="2" style="font-weight: bold;">@Model.TotalPrice</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="text-align: right;">
+                    <a href="@Url.Action("HistoryOfCustomer", "HomeCustomer")" class="btn btn-secondary">Exit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+

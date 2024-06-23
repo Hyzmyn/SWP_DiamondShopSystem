@@ -13,5 +13,8 @@ namespace Service.Services.Orders
         Task DeleteOrderAsync(int id);
         Task AddOrderAsync(Order order);
         Task UpdateOrderAsync(Order order);
+        Task<IEnumerable<Order>> GetOrdersByUserIdAsync(int userId);
+        Task<Order> GetOrderByIdAsync(int orderId);
+
     }
 }
