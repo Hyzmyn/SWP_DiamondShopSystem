@@ -58,6 +58,7 @@ namespace Repository.Models
             modelBuilder.Entity<User>().HasData(
                 new User { UserID = 1, Username = "User1", Password = "Password1", Email = "user1@example.com", PhoneNumber = "1234567890", Address = "Address1", RoleID = 1, UserStatus = true, NiSize = "S" },
                 new User { UserID = 2, Username = "User2", Password = "Password2", Email = "user2@example.com", PhoneNumber = "0987654321", Address = "Address2", RoleID = 2, UserStatus = true, NiSize = "M" }
+                 
             );
             modelBuilder.Entity<Discount>().HasData(
     new Discount { DiscountID = 1, DiscountCode = "CODE1", DiscountAmount = 10 },

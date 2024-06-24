@@ -787,6 +787,12 @@ namespace SWP.Areas.Manager.Controllers
 
             return RedirectToAction("DiscountList");
         }
+        [Route("informationcustomer")]
+        public IActionResult InformationCustomer()
+        {
+            var users = context.Users.Where(u => u.RoleID == 5).ToList();
+            return View(users);
+        }
 
 
 
