@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="8.0.6" />
@@ -22,12 +23,15 @@
   <ItemGroup>
     <Folder Include="Areas\Customer\Data\" />
     <Folder Include="Areas\Customer\Models\" />
+    <Folder Include="Areas\Manager\Data\" />
+    <Folder Include="Areas\Manager\Models\" />
     <Folder Include="Areas\SaleStaff\Data\" />
     <Folder Include="Areas\SaleStaff\Models\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="wwwroot\LayoutCustomer\.DS_Store" />
+    <None Include="wwwroot\LayoutManager\.DS_Store" />
     <None Include="wwwroot\LayoutSaleStaff\.DS_Store" />
   </ItemGroup>
 

@@ -1,37 +1,36 @@
-﻿
+﻿@model IEnumerable<Repository.Models.Order>
 @{
-    ViewData["Title"] = "HistoryOfCustomer";
+    ViewData["Title"] = "Order History";
     Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml";
 }
 
-<body>
-    <div class="history-container">
-        <h1 class="page-title">Purchase History</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Date</th>
-                    <th>Price</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>2024-06-10</td>
-                    <td>$29.99</td>
-                    <td><a href="#" class="details-button">View Details</a></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>2024-06-05</td>
-                    <td>$49.99</td>
-                    <td><a href="#" class="details-button">View Details</a></td>
-                </tr>
-               
-            </tbody>
-        </table>
-    </div>
-</body>
-
+<div class="history-container">
+    <h1 class="page-title">Purchase History</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Total Price</th>
+                <th>Status</th>
+                <th>Note</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                    <tr>
+                        <td>@order.OrderID</td>
+                        <td>@order.TimeOrder.ToString("yyyy-MM-dd")</td>
+                        <td>@order.TotalPrice.ToString("C")</td>
+                        <td>@(order.OrderStatus ? "Completed" : "Waiting")</td>
+                        <td>@order.Note</td>
+                        <td>
+                            <a href="@Url.Action("OrderDetails", "HomeCustomer", new { orderId = order.OrderID })" class="btn btn-primary">View Detail</a>
+                        </td>
+                    </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,65 @@
+﻿@model Repository.Models.Order
+@{
+    ViewData["Title"] = "Order Details";
+    Layout = "~/Areas/SaleStaff/Views/Shared/_LayoutSaleStaff.cshtml";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h1>Order Details</h1>
+
+<div>
+    <h4>Order #@Model.OrderID</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">Order ID</dt>
+        <dd class="col-sm-9">@Model.OrderID</dd>
+
+        <dt class="col-sm-3">User</dt>
+        <dd class="col-sm-9">@Model.User.UserID</dd>
+
+        <dt class="col-sm-3">Total Price</dt>
+        <dd class="col-sm-9">@Model.TotalPrice.ToString("C")</dd>
+
+        <dt class="col-sm-3">Order Date</dt>
+        <dd class="col-sm-9">@Model.TimeOrder.ToString("g")</dd>
+
+        <dt class="col-sm-3">Status</dt>
+        <dd class="col-sm-9">@(Model.OrderStatus ? "Active" : "Inactive")</dd>
+
+        <dt class="col-sm-3">Note</dt>
+        <dd class="col-sm-9">@Model.Note</dd>
+    </dl>
+</div>
+
+<h4>Order Items</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderDetails)
+        {
+            <tr>
+                <td>@item.Product.ProductName</td>
+                <td>@item.Quantity</td>
+                <td>@item.Price.ToString("C")</td>
+                <td>@((item.Quantity * item.Price).ToString("C"))</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="3">Total</th>
+            <th>@Model.TotalPrice.ToString("C")</th>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="col-sm-4 d-grid">
+    <a class="btn btn-outline-primary" asp-action="HistoryOrder" >Back to History Order</a>
+</div>

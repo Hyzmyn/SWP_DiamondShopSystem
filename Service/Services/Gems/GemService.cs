@@ -2,7 +2,6 @@
 using Repository.Interface;
 using Repository.Models;
 using Repository.Repositories;
-using Service.Services.Gems;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace Service.Service
+namespace Service.Services
 {
     public class GemService : IGemService
     {

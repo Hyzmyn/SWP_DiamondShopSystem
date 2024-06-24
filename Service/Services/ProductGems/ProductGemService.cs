@@ -6,8 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.Services.ProductGems
+namespace Service.Services
 {
+
     public class ProductGemService : IProductGemService
     {
         private IProductGemRepository _repo;

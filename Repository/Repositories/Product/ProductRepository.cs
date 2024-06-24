@@ -21,16 +21,20 @@ namespace Repository.Repositories
         }
         public List<Product> GetProducts()
         {
-			var products = _db.Products
-									 .OrderByDescending(p => p.ProductID)
-									 .Take(10)
-									 .ToList();
+            var products = _db.Products
+                                     .OrderByDescending(p => p.ProductID)
+                                     .Take(10)
+                                     .ToList();
             return products;
-		}
+        }
         public List<Product> GetAllProduct()
         {
             var products = _db.Products.ToList();
             return products;
+        }
+        public async Task<Product> GetProductByIdAsync(int id)
+        {
+            return await _db.Products.FindAsync(id);
         }
     }
 }

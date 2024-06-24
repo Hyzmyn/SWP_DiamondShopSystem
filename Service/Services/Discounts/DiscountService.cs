@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.Services.Discounts
+namespace Service.Services
 {
     public class DiscountService : IDiscountService
     {
@@ -35,5 +35,10 @@ namespace Service.Services.Discounts
         {
             throw new NotImplementedException();
         }
+        public async Task<Discount> GetDiscountAsync(string discountCode)
+        {
+            return await _repo.GetDiscountByCodeAsync(discountCode);
+        }
+
     }
 }

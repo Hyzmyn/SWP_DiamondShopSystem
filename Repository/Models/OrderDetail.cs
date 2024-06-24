@@ -16,7 +16,7 @@ namespace Repository.Models
         public int ProductID { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
-        public string NiSize { get; set; }
+        public string NiSize { get; set; } = "";
 
         [ForeignKey("OrderID")]
         public virtual Order Order { get; set; }

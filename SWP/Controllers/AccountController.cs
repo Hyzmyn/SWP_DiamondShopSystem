@@ -28,7 +28,8 @@ public class AccountController : Controller
 		{
 			HttpContext.Session.SetString("UserId", user.UserID.ToString());
 			HttpContext.Session.SetInt32("RoleID", user.RoleID);
-			TempData["ResetInputs"] = true;
+            HttpContext.Session.SetString("Username", user.Username);
+            TempData["ResetInputs"] = true;
 			return RedirectToAction("Index", "Home");
 		}
 		else

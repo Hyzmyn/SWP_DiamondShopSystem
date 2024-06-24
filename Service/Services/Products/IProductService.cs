@@ -1,12 +1,11 @@
-﻿
-using Repository.Models;
+﻿using Repository.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.Services.Products
+namespace Service.Services
 {
     public interface IProductService
     {
@@ -16,6 +15,7 @@ namespace Service.Services.Products
         Task UpdateProductAsync(Product product);
         public List<Product> GetProducts();
         public List<Product> GetAllProducts();
+		Task<Product> GetProductByIdAsync(int id);
 
 
 	}

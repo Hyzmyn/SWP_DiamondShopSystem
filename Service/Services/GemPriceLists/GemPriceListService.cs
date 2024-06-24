@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace Service.Services.GemPriceLists
+namespace Service.Services
 {
     public class GemPriceListService : IGemPriceListService
     {
