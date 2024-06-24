@@ -22,12 +22,15 @@
   <ItemGroup>
     <Folder Include="Areas\Customer\Data\" />
     <Folder Include="Areas\Customer\Models\" />
+    <Folder Include="Areas\Manager\Data\" />
+    <Folder Include="Areas\Manager\Models\" />
     <Folder Include="Areas\SaleStaff\Data\" />
     <Folder Include="Areas\SaleStaff\Models\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="wwwroot\LayoutCustomer\.DS_Store" />
+    <None Include="wwwroot\LayoutManager\.DS_Store" />
     <None Include="wwwroot\LayoutSaleStaff\.DS_Store" />
   </ItemGroup>
 

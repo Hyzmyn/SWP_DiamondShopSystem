@@ -1,0 +1,97 @@
+﻿@model IEnumerable<Repository.Models.Product>
+
+@{
+    ViewData["Title"] = "CreateGem";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+@using Repository.Models
+
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<h1>Product List</h1>
+
+<p>
+    <a asp-action="CreateProduct">Create New</a>
+</p>
+<p>@TempData["Message"]</p>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+<table class="table">
+    <thead>
+        <tr class="table-warning">
+            <th>
+                @Html.DisplayNameFor(model => model.ProductCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageUrl1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageUrl2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GemID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaterialID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductionCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PriceRate)
+            </th>
+            <th> Action</th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="table-success">
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    <img src="~/images/product/@item.ImageUrl1" width="1000" alt="Image 1" />
+                </td>
+                <td>
+                    <img src="~/images/product/@item.ImageUrl2" width="1000" alt="Image 1" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GemID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaterialID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductionCost)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PriceRate)
+                </td>
+
+                <td>
+                    <a asp-action="EditProduct" asp-route-productCode="@item.ProductCode">Edit</a>
+                    <a asp-action="DeleteProduct" asp-route-productCode="@item.ProductCode" onclick="return confirm('Are you sure you want to delete this product?')">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

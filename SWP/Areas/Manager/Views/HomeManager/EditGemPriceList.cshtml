@@ -1,0 +1,82 @@
+﻿@model Repository.Models.GemPriceList
+
+@{
+    ViewData["Title"] = "Edit Gem Price List";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h1>Edit Gem Price List Entry</h1>
+
+<p>
+    <a asp-action="GemPriceList">Back to List</a>
+</p>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<form asp-action="EditGemPriceList" method="post" enctype="multipart/form-data" class="mt-4">
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Gem ID</label>
+        <div class="col-sm-10">
+            <input asp-for="GemID" class="form-control" readonly />
+            <span asp-validation-for="GemID" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Origin</label>
+        <div class="col-sm-10">
+            <input asp-for="Origin" class="form-control" />
+            <span asp-validation-for="Origin" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Carat Weight</label>
+        <div class="col-sm-10">
+            <input asp-for="CaratWeight" class="form-control" />
+            <span asp-validation-for="CaratWeight" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Color</label>
+        <div class="col-sm-10">
+            <input asp-for="Color" class="form-control" />
+            <span asp-validation-for="Color" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Clarity</label>
+        <div class="col-sm-10">
+            <input asp-for="Clarity" class="form-control" />
+            <span asp-validation-for="Clarity" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Cut</label>
+        <div class="col-sm-10">
+            <input asp-for="Cut" class="form-control" />
+            <span asp-validation-for="Cut" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Price</label>
+        <div class="col-sm-10">
+            <input asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Effective Date</label>
+        <div class="col-sm-10">
+            <input asp-for="EffDate" class="form-control" />
+            <span asp-validation-f
