@@ -1,92 +1,52 @@
-﻿
+﻿@model IEnumerable<Repository.Models.Order>
 @{
-    ViewData["Title"] = "HistoryOrder";
+    ViewData["Title"] = "Order History";
     Layout = "~/Areas/SaleStaff/Views/Shared/_LayoutSaleStaff.cshtml";
 }
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<div class="container-xl">
-    <div class="table-responsive">
-        <div class="table-wrapper">
-            <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-6"><h2>History <b>Order</b></h2></div>
-                    <div class="col-sm-6">
-                        <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-info active">
-                                <input type="radio" name="status" value="all" checked="checked"> All
-                            </label>
-                            <label class="btn btn-success">
-                                <input type="radio" name="status" value="active"> Accepted
-                            </label>
-                            <label class="btn btn-warning">
-                                <input type="radio" name="status" value="inactive"> Refused
-                            </label>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Id</th>
-                        <th>Created&nbsp;On</th>
-                        <th>Price</th>
-                        <th>View</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr data-status="active">
-                        <td>1</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="#" class="btn btn-sm manage">Manage</a></td>
-                    </tr>
-                    <tr data-status="inactive">
-                        <td>2</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="#" class="btn btn-sm manage">Manage</a></td>
-                    </tr>
-                    <tr data-status="active">
-                        <td>3</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="#" class="btn btn-sm manage">Manage</a></td>
-                    </tr>
-                    <tr data-status="expired">
-                        <td>4</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="#" class="btn btn-sm manage">Manage</a></td>
-                    </tr>
-                    <tr data-status="inactive">
-                        <td>5</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="#" class="btn btn-sm manage">Manage</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<h1>Order History</h1>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
     </div>
-</div> 
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<table class="table">
+    <thead>
+        <tr class="table-warning">
+            <th>@Html.DisplayNameFor(model => model.OrderID)</th>
+            <th>@Html.DisplayNameFor(model => model.UserID)</th>
+            <th>@Html.DisplayNameFor(model => model.TotalPrice)</th>
+            <th>@Html.DisplayNameFor(model => model.TimeOrder)</th>
+            <th>@Html.DisplayNameFor(model => model.Note)</th>
+            <th>@Html.DisplayNameFor(model => model.OrderStatus)</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="table-light">
+                <td>@Html.DisplayFor(modelItem => item.OrderID)</td>
+                <td>@Html.DisplayFor(modelItem => item.UserID)</td>
+                <td>@Html.DisplayFor(modelItem => item.TotalPrice)</td>
+                <td>@Html.DisplayFor(modelItem => item.TimeOrder)</td>
+                <td>@Html.DisplayFor(modelItem => item.Note)</td>
+                <td>@Html.DisplayFor(modelItem => item.OrderStatus)</td>
+                <td>
+                    <a asp-action="OrderDetails" asp-route-orderId="@item.OrderID">View Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

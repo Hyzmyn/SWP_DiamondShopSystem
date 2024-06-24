@@ -1,0 +1,92 @@
+﻿@model Repository.Models.Gem
+
+@{
+    ViewData["Title"] = "CreateGem";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+
+<div class="row">
+	<div class="col-md-8 mx-auto rounded border p-3">
+		<h2 class="text-center mb-5">Create Gem</h2>
+		<form method="post" enctype="multipart/form-data">
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">GemCode</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="GemCode">
+					<span asp-validation-for="GemCode" class="text-danger"></span>@*hiển thị lỗi xác thực màu đỏ*@
+				</div>
+			</div>
+
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">GemName</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="GemName">
+					<span asp-validation-for="GemName" class="text-danger"></span>@*hiển thị lỗi xác thực màu đỏ*@
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Origin</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Origin">
+					<span asp-validation-for="Origin" class="text-danger"></span>@*hiển thị lỗi xác thực màu đỏ*@
+				</div>
+			</div>
+
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">FourC</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="FourC">
+					<span asp-validation-for="FourC" class="text-danger"></span>@*hiển thị lỗi xác thực màu đỏ*@
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Proportion</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Proportion">
+					<span asp-validation-for="Proportion" class="text-danger"></span>@*hiển thị lỗi xác thực màu đỏ*@
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Polish</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Polish">
+					<span asp-validation-for="Polish" class="text-danger"></span>@*hiển thị lỗi xác thực màu đỏ*@
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Symmetry</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Symmetry">
+					<span asp-validation-for="Symmetry" class="text-danger"></span>@*hiển thị lỗi xác thực màu đỏ*@
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<label class="col-sm-4 col-form-label">Fluorescence</label>
+				<div class="col-sm-8">
+					<input class="form-control" asp-for="Fluorescence">
+					<span asp-validation-for="Fluorescence" class="text-danger"></span>@*hiển thị lỗi xác thực màu đỏ*@
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="offset-sm-4 col-sm-4 d-grid">
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+				<div class="col-sm-4 d-grid">
+					<a class="btn btn-outline-primary" asp-action="GemList" role="button">Cancel</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
