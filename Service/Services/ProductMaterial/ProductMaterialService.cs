@@ -34,5 +34,12 @@ namespace Service.Services
         {
             throw new NotImplementedException();
         }
+
+        public async Task<decimal> GetMaterialPrice( decimal Weight)
+        {
+            RandomizeValue randomValues = RandomNumberStore.RandomValues;
+
+            return (randomValues.SellPrice / 3.75m) * Weight;
+        }
     }
 }
