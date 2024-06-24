@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Repository.Models;
-using Service.Interface;
 using Microsoft.AspNetCore.Http;
 using System;
+using Service.Services;
 
 
 
@@ -100,7 +100,7 @@ namespace SWP.Areas.SaleStaff.Controllers
                 MaterialID = productDto.MaterialID,
                 CategoryID = productDto.CategoryID,
                 ProductionCost = productDto.ProductionCost,
-                PriceRate = productDto.PriceRate,
+                PriceRateID = productDto.PriceRateID,
             };
 
             context.Products.Add(product);
@@ -128,7 +128,7 @@ namespace SWP.Areas.SaleStaff.Controllers
                 MaterialID = product.MaterialID,
                 CategoryID = product.CategoryID,
                 ProductionCost = product.ProductionCost,
-                PriceRate = product.PriceRate,
+                PriceRateID = product.PriceRateID,
             };
 
             ViewData["ProductCode"] = product.ProductCode;
@@ -158,7 +158,7 @@ namespace SWP.Areas.SaleStaff.Controllers
 			}
 
 			productDto.ProductionCost = product.ProductionCost;
-			productDto.PriceRate = product.PriceRate;
+			productDto.PriceRateID = product.PriceRateID;
 
 			// Initialize the file names with existing image URLs
 			string newFileName1 = product.ImageUrl1;
@@ -214,7 +214,7 @@ namespace SWP.Areas.SaleStaff.Controllers
 			product.MaterialID = productDto.MaterialID;
 			product.CategoryID = productDto.CategoryID;
 			product.ProductionCost = productDto.ProductionCost;
-			product.PriceRate = productDto.PriceRate;
+			product.PriceRateID = productDto.PriceRateID;
 
 			context.SaveChanges();
 			return RedirectToAction("ProductList", "HomeSaleStaff");

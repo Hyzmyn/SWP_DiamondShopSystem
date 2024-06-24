@@ -8,17 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.Services.ProductCatergories
+namespace Service.Services
 {
-    public class ProductCategoryService : IProductCategoryService
+    public class PriceRateListService : IPriceRateListService
     {
-        private IProductCategoryRepository _repo;
-        public ProductCategoryService(IProductCategoryRepository repo)
+        private IPriceRateListRepository _repo;
+        public PriceRateListService(IPriceRateListRepository repo)
         {
             _repo = repo;
         }
 
-        public Task AddProductCatergoryAsync(ProductCategory productCatergory)
+        public Task AddProductCatergoryAsync(PriceRateList productCatergory)
         {
             throw new NotImplementedException();
         }
@@ -28,12 +28,12 @@ namespace Service.Services.ProductCatergories
             throw new NotImplementedException();
         }
 
-        public Task<List<ProductCategory>> GetProductCatergorysAsync(string keyword, int pageNumber, int pageSize, int defaultPageSize, string sortBy)
+        public Task<List<PriceRateList>> GetProductCatergorysAsync(string keyword, int pageNumber, int pageSize, int defaultPageSize, string sortBy)
         {
             throw new NotImplementedException();
         }
 
-        public Task UpdateProductCatergoryAsync(ProductCategory productCatergory)
+        public Task UpdateProductCatergoryAsync(PriceRateList productCatergory)
         {
             throw new NotImplementedException();
         }

@@ -2,9 +2,8 @@
 using Repository.Interface;
 using Repository.Models;
 using Repository.Repositories;
-using Service.Services.Products;
-using Service.Services.Users;
-
+using Service.Services;
+using Repository;
 
 public class Program
 {
@@ -12,14 +11,20 @@ public class Program
 	{
 		var builder = WebApplication.CreateBuilder(args);
 
+		builder.Services.AddScoped<ICartService, CartService>();
+
 		// Thêm dịch vụ vào container.
 		builder.Services.AddControllersWithViews();
-
-		builder.Services.AddScoped<IUserService, UserService>();
+        builder.Services.AddScoped<IDiscountService, DiscountService>();
+        builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
+        builder.Services.AddScoped<IUserService, UserService>();
 		builder.Services.AddScoped<IUserRepository, UserRepository>();
 		builder.Services.AddScoped<IProductService, ProductService>();
 		builder.Services.AddScoped<IProductRepository, ProductRepository>();
-		builder.Services.AddDbContext<DiamondShopContext>(options =>
+		builder.Services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
+		builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+        builder.Services.AddScoped<IOrderService, OrderService>();
+        builder.Services.AddDbContext<DiamondShopContext>(options =>
 			options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 		builder.Services.AddDistributedMemoryCache();
@@ -39,7 +44,7 @@ public class Program
 			app.UseExceptionHandler("/Home/Error");
 			app.UseHsts();
 		}
-
+		
 		app.UseHttpsRedirection();
 		app.UseStaticFiles();
 

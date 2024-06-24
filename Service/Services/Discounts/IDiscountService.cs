@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.Services.Discounts
+namespace Service.Services
 {
     public interface IDiscountService
     {
@@ -14,5 +14,6 @@ namespace Service.Services.Discounts
         Task DeleteDiscountAsync(int id);
         Task AddDiscountAsync(Discount discount);
         Task UpdateDiscountAsync(Discount discount);
+        Task<Discount> GetDiscountAsync(string discountCode);
     }
 }

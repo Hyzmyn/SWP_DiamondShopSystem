@@ -30,8 +30,8 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZUN1c3RvbWVyXENoYW5nZVBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/CustomerInformation.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZUN1c3RvbWVyXEN1c3RvbWVySW5mb3JtYXRpb24uY3NodG1s
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZUN1c3RvbWVyXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/HistoryOfCustomer.cshtml]
@@ -40,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZUN1c3RvbWVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/OrderDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZUN1c3RvbWVyXE9yZGVyRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/OrderOfCustomer.cshtml]
@@ -72,6 +76,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/Shared/_LayoutSaleStaff.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXFNoYXJlZFxfTGF5b3V0U2FsZVN0YWZmLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Views/Cart/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Views/Home/diamondjewelery.cshtml]

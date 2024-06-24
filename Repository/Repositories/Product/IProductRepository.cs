@@ -1,5 +1,4 @@
 ﻿
-
 using Repository.Models;
 using Repository.Repositories.Base;
 using System;
@@ -15,6 +14,7 @@ namespace Repository.Interface
 		public List<Product> GetProducts();
 		public List<Product> GetAllProduct();
 
+		Task<Product> GetProductByIdAsync(int id);
 
 
 	}

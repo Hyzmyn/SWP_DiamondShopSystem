@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Repository.Models;
 
-namespace Service.Services.ProductMaterialServices
+namespace Service.Services
 {
     public class ProductMaterialService : IProductMaterialService
     {
