@@ -1,67 +1,98 @@
-using Microsoft.AspNetCore.Mvc;
-using Service.Interface;
-using Service.Service;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
+using Repository.Models;
+using Repository.Repositories.Base;
+using Service;
+
 using Service.Service.ViewModels;
+using Service.Services;
 using System.Diagnostics;
+
 
 namespace SWP.Controllers
 {
+	public class HomeController : Controller
 
-    public class HomeController : Controller
-    {
-        private readonly IUserService _userService;
-        private readonly ILogger<HomeController> _logger;
+	{
+		private readonly IProductService _productService;
+		private readonly DiamondShopContext dbContext;
+		private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger, IUserService userService)
-        {
-            _logger = logger;
-            _userService = userService;
-        }
+		public HomeController(ILogger<HomeController> logger, DiamondShopContext dbContext, IProductService productService)
+		{
+			_logger = logger;
+			this.dbContext = dbContext;
+			_productService = productService;
 
-        public IActionResult Index()
-        {
+		}
 
-            return View();
-        }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+		public IActionResult Index()
+		{
+			var product = _productService.GetProducts();
+			return View(product);
+		}
+		[Route("DiamondJewelery")]
+		public async Task<IActionResult> DiamondJewelery(string keyword, int pageNumber = 1, int pageSize = 10)
+		{
+			var products = await _productService.GetProductsAsync(keyword, pageNumber, pageSize, "");
+			var totalProducts = _productService.GetAllProducts().Count();
+			var totalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+			ViewBag.CurrentPage = pageNumber;
+			ViewBag.TotalPages = totalPages;
 
-        [HttpPost]
-        public IActionResult Login(string username, string password)
-        {
-            try
-            {
-                var user = _userService.Login(username, password);
-                if (user != null)
-                {
-                    // Login successful, redirect to a secure page
-                    Console.WriteLine("login success");
-                    return View("Index");
+			return View(products);
+		}
+		public async Task<IActionResult> QuickView(int id)
+		{
+			var product = await _productService.GetProductByIdAsync(id);
+			if (product == null)
+			{
+				return NotFound();
+			}
+			return Json(new
+			{
+				productID = product.ProductID,
+				productName = product.ProductName,
+                TotalCost = product.TotalCost,
+				
+				imageUrl1 = product.ImageUrl1,
+				imageUrl2 = product.ImageUrl2
+			});
+		}
 
-                }
-                else
-                {
-                    // Login failed, return to the login page with an error message
-                    ViewBag.ErrorMessage = "Invalid username or password";
-                    return View("Index");
-                }
-            }
-            catch (Exception ex)
-            {
-                // Log the exception and display a generic error message
-                _logger.LogError(ex, "An error occurred while logging in");
-                ViewBag.ErrorMessage = "An error occurred, please try again later";
-                return View("Error");
-            }
-        }
-    }
+		public IActionResult Privacy()
+		{
+			return View();
+		}
+
+		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+		public IActionResult Error()
+		{
+			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+		}
+
+		public IActionResult Profile()
+		{
+			var userId = HttpContext.Session.GetString("UserId");
+			if (string.IsNullOrEmpty(userId))
+			{
+				return RedirectToAction("Login", "Account");
+			}
+
+			var user = dbContext.Users.Include(u => u.RoleID).FirstOrDefault(u => u.UserID.ToString() == userId);
+			if (user == null)
+			{
+				return RedirectToAction("Login", "Account");
+			}
+
+			return View(user);
+		}
+		//[Route("DIAMONDJEWELERY")]
+
+
+
+	}
 }

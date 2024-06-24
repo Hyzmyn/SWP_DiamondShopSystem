@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
 using Repository.Interface;
 using Repository.Models;
 using Repository.Repositories.Base;
@@ -17,6 +18,23 @@ namespace Repository.Repositories
         public ProductRepository(DiamondShopContext context) : base(context)
         {
             _db = context;
+        }
+        public List<Product> GetProducts()
+        {
+            var products = _db.Products
+                                     .OrderByDescending(p => p.ProductID)
+                                     .Take(10)
+                                     .ToList();
+            return products;
+        }
+        public List<Product> GetAllProduct()
+        {
+            var products = _db.Products.ToList();
+            return products;
+        }
+        public async Task<Product> GetProductByIdAsync(int id)
+        {
+            return await _db.Products.FindAsync(id);
         }
     }
 }

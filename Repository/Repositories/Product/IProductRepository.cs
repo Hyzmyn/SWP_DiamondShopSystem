@@ -1,5 +1,4 @@
 ﻿
-
 using Repository.Models;
 using Repository.Repositories.Base;
 using System;
@@ -12,16 +11,11 @@ namespace Repository.Interface
 {
     public interface IProductRepository : IBaseRepository<Product>
     {
-        //public List<Product> GetAll();
+		public List<Product> GetProducts();
+		public List<Product> GetAllProduct();
 
-        //public Product? GetById(int ProductID);
+		Task<Product> GetProductByIdAsync(int id);
 
-        //public void Create(Product product);
 
-        //public void Update(Product product);
-
-        //public void Delete(int ProductID);
-        
-        
-    }
+	}
 }

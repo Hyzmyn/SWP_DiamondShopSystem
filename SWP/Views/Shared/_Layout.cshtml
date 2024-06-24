@@ -1,394 +1,347 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - DiamondShopSystem</title>
+	 <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - DiamondShopSystem</title>
 
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/DiamondShopSystem.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/DiamondShopSystem.styles.css" asp-append-version="true" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <div class="home_black_version">
-        <header class="header_area header_black">
-            <!-- thanh trên đầu -->
-            
-            <!-- trang logo và hotline -->
-            <div class="header_middel">
-                <div class="container">
-                    <div class="row align-items-center">
+	@{
+		var userId = Context.Session.GetString("UserId");
+		var role = Context.Session.GetInt32("RoleID");
+	}
+	@Html.AntiForgeryToken()
+	<div class="home_black_version">
+		<header class="header_area header_black">
+			<!-- thanh trên đầu -->
 
-                        <div class="col-lg-5">
-                            <div class="home_contact" >
-                                <div class="contact_icone">
-                                    <img src="images/icon/icon_phone.png" alt="">
-                                </div>
-                                <div class="contact_box" style="color: white" >Hotline: <a href="tel: 1234567894">1234567894</a></p>
-                                </div>
-                            </div>
-                        </div>
+			<!-- trang logo và hotline -->
+			<div class="header_middel">
+				<div class="container">
+					<div class="row align-items-center">
 
-                        <div class="col-lg-2 col-md-3 col-4">
-                            <div class="logo">
-                                <a><img src="~/images/logo/MS.svg" alt="logo"></a>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-5 col-md-7 col-6">
-                            <div class="middel_right">
-                                <div class="search_btn">
-                                    <a style="color: white" ><i class="ion-ios-search-strong"></i></a>
-                                    <div class="dropdown_search">
-                                        <form action="#">
-                                            <input type="text" placeholder="Search Product ....">
-                                            <button type="submit"><i class="ion-ios-search-strong"></i></button>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="wishlist_btn">
-                                    <a style="color: white" ><i class="ion-heart"></i></a>
-                                </div>
-                                <div class="cart_link">
-                                    <a style="color: white" >
-                                        <i class="ion-android-cart"></i><span class="cart_text_quantity">
-                                            65.000.000VNĐ
-                                        </span><i class="ion-chevron-down"></i>
-                                    </a>
-                                    <span class="cart_quantity">2</span>
+						<div class="col-lg-5">
+							<div class="home_contact" >
+								<div class="contact_icone">
+									<img src="images/icon/icon_phone.png" alt="">
+								</div>
+								<div class="contact_box" style="color: white" >Hotline: <a href="tel: 1234567894">1234567894</a></p>
+								</div>
+							</div>
+						</div>
 
-                                    <!-- mini cart -->
-                                    <div class="mini_cart">
-                                        <div class="cart_close">
-                                            <div class="cart_text">
-                                                <h3>cart</h3>
-                                            </div>
-                                            <div class="mini_cart_close">
-                                                <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="cart_item">
-                                            <div class="cart_img">
-                                                <a ><img src="images/nav-product/product.jpg" alt=""></a>
-                                            </div>
-                                            <div class="cart_info">
-                                                <a >Earings</a>
-                                                <span class="quantity">Qty : 1</span>
-                                                <span class="price_cart">Rs. 54,599</span>
-                                            </div>
-                                            <div class="cart_remove">
-                                                <a ><i class="ion-android-close"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="cart_item">
-                                            <div class="cart_img">
-                                                <a ><img src="images/nav-product/product2.jpg" alt=""></a>
-                                            </div>
-                                            <div class="cart_info">
-                                                <a >Bracelet</a>
-                                                <span class="quantity">Qty : 1</span>
-                                                <span class="price_cart">Rs. 12,999</span>
-                                            </div>
-                                            <div class="cart_remove">
-                                                <a ><i class="ion-android-close"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="cart_total">
-                                            <span>Subtotal : </span>
-                                            <span>Rs. 67,598</span>
-                                        </div>
-                                        <div class="mini_cart_footer">
-                                            <div class="cart_button view_cart">
-                                                <a >View Cart</a>
-                                            </div>
-                                            <div class="cart_button checkout">
-                                                <a  class="active">Checkout</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- mini cart ends  -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+						<div class="col-lg-2 col-md-3 col-4">
+							<div class="logo">
+								<a><img src="~/images/logo/MS.svg" alt="logo"></a>
+							</div>
+						</div>
 
-            <!-- header middle ends -->
-            <!-- header bottom starts -->
+						<div class="col-lg-5 col-md-7 col-6">
+							<div class="middel_right">
+								@if (string.IsNullOrEmpty(userId))
+								{
+									<li><div href=""><button b-e9hm209d39="" class="login-btn" style="
+										font-weight: 500;
+										/* margin-top: 25px; */
+										/* color: #fff; */
+										/* height: 50px; */
+										/* line-height: 50px; */
+										/* padding: 0 35px; */
+										background: #a8741a;
+										box-shadow: none;
+										color: #fff;
+										display: inline-block;
+										height: 45px;
+										line-height: 45px;
+										padding: 0px 22px;
+										text-transform: uppercase;
+										font-size: 13px;
+										border-radius: 5px;
+											">LOG IN</button></div></li>
+								}
+								@if(role==5)
+								{
+															<form asp-controller="Cart" asp-action="Cart"><li><div style="margin-right: 10px;">
+												<button b-e9hm209d39="" class="profile-btn"  style="
+										font-weight: 500;
 
-            <div class="header_bottom sticky-header">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-12">
-                            <div class="main_menu_inner">
-                                <div class="logo_sticky">
-                                    <a asp-area="" asp-page="/Privacy"><img src="images/logo/MS.svg" alt="logo"></a>
-                                </div>
-                                <div class="main_menu">
-                                    <nav>
-                                        <ul>
-                                            <li class="active">
-                                                <a >Home <i class="ion-chevron-down"></i></a>
-                                                <ul class="sub_menu">
-                                                    <li><a >Banner</a></li>
-                                                    <li><a >Featured</a></li>
-                                                    <li><a >Collection</a></li>
-                                                    <li><a >Best Selling</a></li>
-                                                    <li><a >News</a></li>
-                                                    <li><a >Blog</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a >DIAMOND JEWELERY <i class="ion-chevron-down"></i></a>
-                                                <ul class="mega_menu">
-                                                    <li>
-                                                        <a >Women</a>
-                                                        <ul>
-                                                            <li><a >Rings</a></li>
-                                                            <li><a >Earring</a></li>
-                                                            <li><a >Necklace</a></li>
-                                                            <li><a >Bangles</a></li>
+										/* margin-top: 25px; */
+										/* color: #fff; */
+										/* height: 50px; */
+										/* line-height: 50px; */
+										/* padding: 0 35px; */
+										background: #a8741a;
+										box-shadow: none;
+										color: #fff;
+										display: inline-block;
+										height: 45px;
+										line-height: 45px;
+										padding: 0px 22px;
+										text-transform: uppercase;
+										font-size: 13px;
+										border-radius: 5px;
+												"><i class="bi bi-cart"></i> YOUR CART</button></div></li></form>
+													<form asp-area="customer" asp-controller="HomeCustomer" asp-action="Index"><li><div style="margin-right: 10px;">
+											<button b-e9hm209d39="" class="profile-btn"  style="
+										font-weight: 500;
+										
+										/* margin-top: 25px; */
+										/* color: #fff; */
+										/* height: 50px; */
+										/* line-height: 50px; */
+										/* padding: 0 35px; */
+										background: #a8741a;
+										box-shadow: none;
+										color: #fff;
+										display: inline-block;
+										height: 45px;
+										line-height: 45px;
+										padding: 0px 22px;
+										text-transform: uppercase;
+										font-size: 13px;
+										border-radius: 5px;
+										"><i class="bi bi-person-circle"></i> PROFILE</button></div></li></form>
+											<form asp-action="Logout" asp-controller="Account" method="post">	<li><div><button b-e9hm209d39="" class="logout-btn" style="
+										font-weight: 500;
+										/* margin-top: 25px; */
+										/* color: #fff; */
+										/* height: 50px; */
+										/* line-height: 50px; */
+										/* padding: 0 35px; */
+										background: #a8741a;
+										box-shadow: none;
+										color: #fff;
+										display: inline-block;
+										height: 45px;
+										line-height: 45px;
+										padding: 0px 22px;
+										text-transform: uppercase;
+										font-size: 13px;
+										border-radius: 5px;
+													">LOG OUT</button></div></li></form>
+								}
 
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a >Men</a>
-                                                        <ul>
-                                                            <li><a >Rings</a></li>
-                                                            <li><a >Bangles</a></li>
-                                                            <li><a >Necklace</a></li>
 
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a >Other</a>
-                                                        <ul>
-                                                            <li><a >Platinium</a></li>
-                                                            <li><a >Silver</a></li>
-                                                            <li><a >Coins</a></li>
-                                                            <li><a >Gift Card</a></li>
-                                                        </ul>
-                                                    </li>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a >GOLD JEWELERY <i class="ion-chevron-down"></i></a>
-                                                <ul class="sub_menu pages">
-                                                    <li><a >Rings</a></li>
-                                                    <li><a >Earring</a></li>
-                                                    <li><a >Necklace</a></li>
-                                                    <li><a >Bangles</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a >CONTACT</a></li>
-                                            <li>
-                                            <li><div href=""><button class="login-btn">LOG IN</button></div></li>
+			<!-- header middle ends -->
+			<!-- header bottom starts -->
 
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<div class="header_bottom sticky-header">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-12">
+							<div class="main_menu_inner">
+								<div class="logo_sticky">
+									<a asp-area="" asp-page="/Privacy"><img src="images/logo/MS.svg" alt="logo"></a>
+								</div>
+								<div class="main_menu">
+									<nav>
+										<ul>
+											<li class="active">
+												<a asp-controller="Home" asp-action="Index">Home</a>
+											</li>
+											<li>
+												 <a asp-controller="Home" asp-action="DiamondJewelery">DIAMOND JEWELERY</a>
+											</li>
+											<li>
+												<a >GOLD JEWELERY</a>
+											</li>
+											<li><a >CONTACT</a></li>
+											<li>
 
-        </header>
 
-    <div>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="blur-bg-overlay"></div>
+			
+			<div class="form-popup">
+				<span class="close-btn material-symbols-rounded">x</span>
+				<div class="form-box login">
+					<div class="form-details">
 
-        <main role="main">
-                @RenderBody()
-        </main>
-    </div>
+						<h2>Welcome Back</h2>
+						<p>Please login using your personal information to stay connected with us</p>
+					</div>
+					<div class="form-content">
+						<h2>LOGIN</h2>
+						<form asp-action="Login" asp-controller="Account" method="post">
+							<div class="input-field">
+								<input type="text" name="username" required>
+								<label>Username</label>
+							</div>
+							<div class="input-field">
+								<input type="password" name="password" required>
+								<label>Password</label>
+							</div>
+							@if (TempData["LoginError"] != null)
+							{
+									<p class="login-error" style ="color: red;">@TempData["LoginError"]</p>
+							}
 
-            <!-- footer section starts -->
-        <footer class="footer_widgets footer_black">
-            <div class="container">
-                <div class="footer_top">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-8">
-                            <div class="widgets_container contact_us">
-                                <h3>About Minh Sang</h3>
-                                <div class="footer_contact">
-                                    <p>Address : Minh Sang palace, Surat, Gujarat</p>
-                                    <p>Phone : <a href="tel:(+91)888888885555">(+91)888888885555</a></p>
-                                    <p>Email : minhsangjewlers@gmail.com</p>
-                                    <ul style="color: white">
-                                        <li><a ><i class="ion-social-facebook"></i></a></li>
-                                        <li><a ><i class="ion-social-twitter"></i></a></li>
-                                        <li><a ><i class="ion-social-rss"></i></a></li>
-                                        <li><a ><i class="ion-social-googleplus"></i></a></li>
-                                        <li><a ><i class="ion-social-youtube"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-4 col-6">
-                            <div class="widgets_container widget_menu">
-                                <h3>Information</h3>
-                                <div class="footer_menu">
-                                    <ul style="color: white">
-                                        <li><a >About Us</a></li>
-                                        <li><a >Blog</a></li>
-                                        <li><a >Contact</a></li>
-                                        <li><a >Services</a></li>
-                                        <li><a >Collection</a></li>
-                                        <li><a >Portfolio</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-5 col-6">
-                            <div class="widgets_container widget_menu">
-                                <h3>My Account</h3>
-                                <div class="footer_menu">
-                                    <ul style="color: white">
-                                        <li><a >My Account</a></li>
-                                        <li><a >Contact</a></li>
-                                        <li><a >Wishlist</a></li>
-                                        <li><a >Portfolio</a></li>
-                                        <li><a >Checkout</a></li>
-                                        <li><a >Frequently Questions</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+							<a  class="forgot-pass">Forgot Password?</a>
+							<button type="submit">Log In</button>
+						</form>
+						
+						<div class="bottom-link">
+							Don't have an account?
+							<a  id="signup-link">Signup</a>
+						</div>
+					</div>
+				</div>
+				<div class="form-box signup">
+					<div class="form-details">
 
-                    </div>
-                </div>
-                <div class="footer_bottom">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="copyright_area">
-                                <p>Copyright &copy; 2020 <a >ashirwaad</a> All rights Reserved.</p>
-                                <img src="images/icon/papyel2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+						<h2>Create Account</h2>
+						<p>To become a part of our community, please sign up using your personal information </p>
+					</div>
+					<div class="form-content">
+						<h2>SIGNUP</h2>
+						<form action="#">
+							<div class="input-field">
+								<input type="text" required>
+								<label>Enter your username</label>
+							</div>
+							<div class="input-field">
+								<input type="password" required>
+								<label>Create password</label>
+							</div>
+							<div class="input-field">
+								<input type="password" required>
+								<label>Confirm password</label>
+							</div>
 
-            </div>
-        </footer>
+							<button type="submit">Sign Up</button>
+						</form>
+						<div class="bottom-link">
+							Already have an account?
+							<a  id="login-link">Login</a>
+						</div>
+					</div>
+				</div>
+			</div> 
 
-        <!-- modal section starts -->
-    <div class="modal fade" id="modal_box" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="modal_body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-5 col-md-5 col-sm-12">
-                                <div class="modal_tab">
-                                    <div class="tab-content product-details-large">
-                                        <div class="tab-pane fade show active" id="tab1" role="tabpanel">
-                                            <div class="modal_tab_img">
-                                                <a ><img src="images/product/70.jpg" alt=""></a>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="tab2" role="tabpanel">
-                                            <div class="modal_tab_img">
-                                                <a ><img src="images/product/71.jpg" alt=""></a>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="tab3" role="tabpanel">
-                                            <div class="modal_tab_img">
-                                                <a ><img src="images/product/72.jpg" alt=""></a>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="tab4" role="tabpanel">
-                                            <div class="modal_tab_img">
-                                                <a ><img src="images/product/73.jpg" alt=""></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal_tab_button">
-                                        <ul class="nav product_navactive owl-carousel" role="tablist">
-                                            <li>
-                                                <a href="#tab1" class="nav-link active" data-toggle="tab" role="tab"
-                                                    aria-controls="tab1" aria-selected="false"><img
-                                                        src="images/product/70.jpg" alt=""></a>
-                                            </li>
-                                            <li>
-                                                <a href="#tab2" class="nav-link" data-toggle="tab" role="tab"
-                                                    aria-controls="tab2" aria-selected="false"><img
-                                                        src="images/product/71.jpg" alt=""></a>
-                                            </li>
-                                            <li>
-                                                <a href="#tab3" class="nav-link button_three" data-toggle="tab"
-                                                    role="tab" aria-controls="tab3" aria-selected="false"><img
-                                                        src="images/product/72.jpg" alt=""></a>
-                                            </li>
-                                            <li>
-                                                <a href="#tab4" class="nav-link" data-toggle="tab" role="tab"
-                                                    aria-controls="tab4" aria-selected="false"><img
-                                                        src="images/product/73.jpg" alt=""></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-7 col-md-7 col-sm-12">
-                                <div class="modal_right">
-                                    <div class="modal_title mb-10">
-                                        <h2>Women's Necklace</h2>
-                                    </div>
-                                    <div class="modal_price mb-10">
-                                        <span class="new_price">11.000.000VNĐ</span>
-                                        <span class="old_price">9.999.999VNĐ</span>
-                                    </div>
-                                    <div class="see_all">
-                                        <a >See All Features</a>
-                                    </div>
-                                    <div class="modal_add_to_cart mb-15">
-                                        <form action="#">
-                                            <input type="number" min="0" max="100" step="1">
-                                            <button type="submit">Add To Cart</button>
-                                        </form>
-                                    </div>
-                                    <div class="modal_description mb-15">
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus quibusdam
-                                            nisi voluptas consequatur tempora, recusandae nemo blanditiis eaque odit
-                                            voluptatibus voluptatem, ipsa incidunt fugiat a.</p>
-                                    </div>
-                                    <div class="modal_social">
-                                        <h2>Share this Product</h2>
-                                        <ul>
-                                            <li><a ><i class="ion-social-facebook"></i></a></li>
-                                            <li><a ><i class="ion-social-youtube"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- footer section ends -->
-    </div>
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+		</header>
+
+	<div>
+
+		<main role="main">
+				@RenderBody()
+		</main>
+	</div>
+
+			<!-- footer section starts -->
+		<footer class="footer_widgets footer_black">
+			<div class="container">
+				<div class="footer_top">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 col-sm-8">
+							<div class="widgets_container contact_us">
+								<h3>About Minh Sang</h3>
+								<div class="footer_contact">
+									<p>Address : Minh Sang palace, Surat, Gujarat</p>
+									<p>Phone : <a href="tel:(+91)888888885555">(+91)888888885555</a></p>
+									<p>Email : minhsangjewlers@gmail.com</p>
+									<ul style="color: white">
+										<li><a ><i class="ion-social-facebook"></i></a></li>
+										<li><a ><i class="ion-social-twitter"></i></a></li>
+										<li><a ><i class="ion-social-rss"></i></a></li>
+										<li><a ><i class="ion-social-googleplus"></i></a></li>
+										<li><a ><i class="ion-social-youtube"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-6 col-sm-4 col-6">
+							<div class="widgets_container widget_menu">
+								<h3>Information</h3>
+								<div class="footer_menu">
+									<ul style="color: white">
+										<li><a >About Us</a></li>
+										<li><a >Blog</a></li>
+										<li><a >Contact</a></li>
+										<li><a >Services</a></li>
+										<li><a >Collection</a></li>
+										<li><a >Portfolio</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-6 col-sm-5 col-6">
+							<div class="widgets_container widget_menu">
+								<h3>My Account</h3>
+								<div class="footer_menu">
+									<ul style="color: white">
+										<li><a >My Account</a></li>
+										<li><a >Contact</a></li>
+										<li><a >Wishlist</a></li>
+										<li><a >Portfolio</a></li>
+										<li><a >Checkout</a></li>
+										<li><a >Frequently Questions</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="footer_bottom">
+					<div class="row">
+						<div class="col-12">
+							<div class="copyright_area">
+								<p>Copyright &copy; 2020 <a >ashirwaad</a> All rights Reserved.</p>
+								<img src="images/icon/papyel2.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</footer>
+		
+		<!-- modal section starts -->
+	
+	
+	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+		@section Scripts {
+		<script>
+			var loginError = '@TempData["LoginError"]';
+			if (loginError !== '') {
+				document.body.classList.add("show-popup");
+			}
+		</script>
+		}
 
 </body>
-
 
 
 @await RenderSectionAsync("Scripts", required: false)

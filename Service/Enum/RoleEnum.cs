@@ -7,6 +7,7 @@ namespace Service.Enum
         Admin = 1,
         Manager = 2,
         SalesStaff = 3,
-        Customer = 4,
+        DeliveryStaff = 4,
+        Customer = 5
     }
 }

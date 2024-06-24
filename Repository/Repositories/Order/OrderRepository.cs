@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
 using Repository.Interface;
 using Repository.Models;
 using Repository.Repositories.Base;
@@ -13,9 +14,21 @@ namespace Repository.Repositories
     public class OrderRepository : BaseRepository<Order>, IOrderRepository
     {
         private DiamondShopContext _db;
-    public OrderRepository(DiamondShopContext context) : base(context)
-    {
-        _db = context;
+        public OrderRepository(DiamondShopContext context) : base(context)
+        {
+            _db = context;
+        }
+        public async Task<IEnumerable<Order>> GetOrdersByUserIdAsync(int userId)
+        {
+            return await _db.Orders
+                            .Where(o => o.UserID == userId)
+                            .Include(o => o.OrderDetails)
+                            .ToListAsync();
+        }
+        public async Task<Order> GetByIdAsync(int orderId)
+        {
+            return await _db.Orders.Include(o => o.OrderDetails).ThenInclude(od => od.Product).FirstOrDefaultAsync(o => o.OrderID == orderId);
+        }
+
     }
-}
 }

@@ -1,8 +1,40 @@
 ﻿
+
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Customer Information";
     Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml";
 }
 
-<h1>Index</h1>
+@model Repository.Models.User
+
+
+
+<table class="table table-bordered">
+    <tr>
+        <td>Username</td>
+        <td>@Model.Username</td>
+        <td><a href="@Url.Action("Edit", new { field = "Username" })" class="btn btn-primary">Edit</a></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>@(string.IsNullOrEmpty(Model.Email) ? "N/A" : Model.Email)</td>
+        <td><a href="@Url.Action("Edit", new { field = "Email" })" class="btn btn-primary">Edit</a></td>
+    </tr>
+    <tr>
+        <td>Phone Number</td>
+        <td>@(string.IsNullOrEmpty(Model.PhoneNumber) ? "N/A" : Model.PhoneNumber)</td>
+        <td><a href="@Url.Action("Edit", new { field = "PhoneNumber" })" class="btn btn-primary">Edit</a></td>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <td>@(string.IsNullOrEmpty(Model.Address) ? "N/A" : Model.Address)</td>
+        <td><a href="@Url.Action("Edit", new { field = "Address" })" class="btn btn-primary">Edit</a></td>
+    </tr>
+    <tr>
+        <td>Ni Size</td>
+        <td>@(string.IsNullOrEmpty(Model.NiSize) ? "N/A" : Model.NiSize)</td>
+        <td><a href="@Url.Action("Edit", new { field = "NiSize" })" class="btn btn-primary">Edit</a></td>
+    </tr>
+</table>
+
 

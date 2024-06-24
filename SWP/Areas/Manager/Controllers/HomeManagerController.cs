@@ -313,7 +313,7 @@ namespace SWP.Areas.Manager.Controllers
                 MaterialID = productDto.MaterialID,
                 CategoryID = productDto.CategoryID,
                 ProductionCost = productDto.ProductionCost,
-                PriceRate = productDto.PriceRate,
+                PriceRateID = productDto.PriceRateID,
             };
 
             context.Products.Add(product);
@@ -341,7 +341,7 @@ namespace SWP.Areas.Manager.Controllers
                 MaterialID = product.MaterialID,
                 CategoryID = product.CategoryID,
                 ProductionCost = product.ProductionCost,
-                PriceRate = product.PriceRate,
+                PriceRateID = product.PriceRateID,
             };
 
             ViewData["ProductCode"] = product.ProductCode;
@@ -371,7 +371,7 @@ namespace SWP.Areas.Manager.Controllers
             }
 
             productDto.ProductionCost = product.ProductionCost;
-            productDto.PriceRate = product.PriceRate;
+            productDto.PriceRateID = product.PriceRateID;
 
             // Initialize the file names with existing image URLs
             string newFileName1 = product.ImageUrl1;
@@ -427,7 +427,7 @@ namespace SWP.Areas.Manager.Controllers
             product.MaterialID = productDto.MaterialID;
             product.CategoryID = productDto.CategoryID;
             product.ProductionCost = productDto.ProductionCost;
-            product.PriceRate = productDto.PriceRate;
+            product.PriceRateID = productDto.PriceRateID;
 
             context.SaveChanges();
             return RedirectToAction("ProductList", "HomeManager");

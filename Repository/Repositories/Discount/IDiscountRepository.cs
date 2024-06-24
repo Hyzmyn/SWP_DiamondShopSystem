@@ -7,6 +7,6 @@ namespace Repository.Interface
     public interface IDiscountRepository : IBaseRepository<Discount>
     {
 
-        
+        Task<Discount> GetDiscountByCodeAsync(string discountCode);
     }
 }

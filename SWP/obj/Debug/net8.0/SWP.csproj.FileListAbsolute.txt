@@ -1713,3 +1713,5 @@ C:\Users\DELL\Desktop\SWPcuoi_DiamondShopSystem\SWP_DiamondShopSystem\SWP\obj\De
 C:\Users\DELL\Desktop\SWPcuoi_DiamondShopSystem\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.pdb
 C:\Users\DELL\Desktop\SWPcuoi_DiamondShopSystem\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.genruntimeconfig.cache
 C:\Users\DELL\Desktop\SWPcuoi_DiamondShopSystem\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\ref\SWP.dll
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\bin\Debug\net8.0\BCrypt.Net-Core.dll
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\bin\Debug\net8.0\System.Security.Permissions.dll
