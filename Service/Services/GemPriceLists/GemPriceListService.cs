@@ -42,31 +42,103 @@ namespace Service.Services
         {
             throw new NotImplementedException();
         }
-
-        public async Task<decimal> GetDiamondPrice(string cut, decimal carat, string color, string clarity, string make, string certificate)
+        public async Task<decimal> GetDiamondPrice(string cut, decimal carat, string color, string clarity)
         {
-            string apiUrl = $"http://www.idexonline.com/DPService.asp?Cut={cut}&Carat={carat}&Color={color}&Clarity={clarity}&Make={make}&Cert={certificate}";
+            RandomizeValue randomValues = RandomNumberStore.RandomValues;
+            decimal cutValue = 0m;
+            decimal colorValue = 0m;
+            decimal clarityValue = 0m;
 
-            HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
-
-            if (response.IsSuccessStatusCode)
+            switch (cut.ToLower())
             {
-                string responseBody = await response.Content.ReadAsStringAsync();
-
-                XDocument xmlDoc = XDocument.Parse(responseBody);
-                XElement priceElement = xmlDoc.Descendants("price").FirstOrDefault();
-
-                if (priceElement != null && decimal.TryParse(priceElement.Value, out decimal price))
-                {
-                    return price;
-                }
-
-                throw new Exception("Unable to extract price from API response.");
+                case "excellent":
+                    cutValue = randomValues.Excellent;
+                    break;
+                case "verygood":
+                    cutValue = randomValues.VeryGood;
+                    break;
+                case "good":
+                    cutValue = randomValues.Good;
+                    break;
+                default:
+                    throw new ArgumentException("Invalid cut value.");
             }
-            else
+
+            // Determine the value for color
+            switch (color.ToUpper())
             {
-                throw new Exception($"API request failed with status code: {response.StatusCode}");
+                case "D":
+                    colorValue = randomValues.D;
+                    break;
+                case "E":
+                    colorValue = randomValues.E;
+                    break;
+                case "F":
+                    colorValue = randomValues.F;
+                    break;
+                case "J":
+                    colorValue = randomValues.J;
+                    break;
+                default:
+                    throw new ArgumentException("Invalid color value.");
             }
+
+            // Determine the value for clarity
+            switch (clarity.ToUpper())
+            {
+                case "IF":
+                    clarityValue = randomValues.IF;
+                    break;
+                case "VVS1":
+                    clarityValue = randomValues.VVS1;
+                    break;
+                case "VVS2":
+                    clarityValue = randomValues.VVS2;
+                    break;
+                case "VS1":
+                    clarityValue = randomValues.VS1;
+                    break;
+                case "VS2":
+                    clarityValue = randomValues.VS2;
+                    break;
+                default:
+                    throw new ArgumentException("Invalid clarity value.");
+            }
+
+            // Calculate the total price
+            decimal totalPrice = (cutValue + colorValue + clarityValue + (carat * randomValues.CaratPrice));
+
+            return await Task.FromResult(totalPrice);
         }
     }
 }
+
+
+
+//public async Task<decimal> GetDiamondPrice(string cut, decimal carat, string color, string clarity, string make, string certificate)
+//{
+//    string apiUrl = $"http://www.idexonline.com/DPService.asp?Cut={cut}&Carat={carat}&Color={color}&Clarity={clarity}&Make={make}&Cert={certificate}";
+
+//    HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
+
+//    if (response.IsSuccessStatusCode)
+//    {
+//        string responseBody = await response.Content.ReadAsStringAsync();
+
+//        XDocument xmlDoc = XDocument.Parse(responseBody);
+//        XElement priceElement = xmlDoc.Descendants("price").FirstOrDefault();
+
+//        if (priceElement != null && decimal.TryParse(priceElement.Value, out decimal price))
+//        {
+//            return price;
+//        }
+
+//        throw new Exception("Unable to extract price from API response.");
+//    }
+//    else
+//    {
+//        throw new Exception($"API request failed with status code: {response.StatusCode}");
+//    }
+//}
+
+
