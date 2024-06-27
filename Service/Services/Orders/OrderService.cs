@@ -2,6 +2,7 @@
 using Repository.Interface;
 using Repository.Models;
 using Repository.Repositories;
+using service.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +14,12 @@ namespace Service.Services
     public class OrderService : IOrderService
     {
         private IOrderRepository _repo;
+        private IOrderDetailService _orderDetailService;
+
         public OrderService(IOrderRepository repo)
         {
             _repo = repo;
         }
-
-
 
         public async Task<IEnumerable<Order>> GetOrdersByUserIdAsync(int userId)
         {
@@ -48,7 +49,5 @@ namespace Service.Services
         {
             throw new NotImplementedException();
         }
-
-
     }
 }

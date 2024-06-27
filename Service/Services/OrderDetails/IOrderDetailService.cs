@@ -14,5 +14,6 @@ namespace service.Services
         Task DeleteOrderDetailAsync(int id);
         Task AddOrderDetailAsync(OrderDetail orderDetail);
         Task UpdateOrderDetailAsync(OrderDetail orderDetail);
+        Task<decimal> GetOrderDetailPrice(decimal Weight, string cut, decimal carat, string color, string clarity);
     }
 }

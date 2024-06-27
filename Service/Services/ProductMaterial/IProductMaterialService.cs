@@ -13,6 +13,7 @@ namespace Service.Services
         Task DeleteProductMaterialAsync(int id);
         Task AddProductMaterialAsync(ProductMaterial productMaterial);
         Task UpdateProductMaterialAsync(ProductMaterial productMaterial);
+        Task<decimal> GetMaterialPrice(decimal Weight);
 
     }
 }
