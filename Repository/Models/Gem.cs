@@ -21,6 +21,8 @@ namespace Repository.Models
         public string Fluorescence { get; set; }
         public bool Active { get; set; }
 
+      
         public virtual ICollection<ProductGem> ProductGems { get; set; }
+        
     }
 }

@@ -2,13 +2,8 @@
 using Repository.Interface;
 using Repository.Models;
 using Repository.Repositories;
-using Service.Services.Cart;
-using Service.Services.Products;
-using Service.Services.Users;
-using Service.Services.Cart;
+using Service.Services;
 using Repository;
-using Service.Services.Discounts;
-using Service.Services.Orders;
 
 public class Program
 {
@@ -39,8 +34,9 @@ public class Program
 			options.Cookie.HttpOnly = true;
 			options.Cookie.IsEssential = true;
 		});
+		builder.Services.AddHttpClient();
 
-		var app = builder.Build();
+        var app = builder.Build();
 
 		// Cấu hình pipeline yêu cầu HTTP.
 		if (!app.Environment.IsDevelopment())

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.Services.Cart
+namespace Service.Services
 {
 	public class CartService : ICartService
     {
@@ -47,7 +47,7 @@ namespace Service.Services.Cart
 					OrderID = order.OrderID,
 					ProductID = productId,
 					Quantity = quantity,
-					Price = product.TotalPrice,
+					Price = product.TotalCost,
 					NiSize = user.NiSize
 				};
 				_context.OrderDetails.Add(orderDetail);

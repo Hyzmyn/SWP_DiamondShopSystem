@@ -4,7 +4,7 @@ using Repository.Interface;
 using Repository.Models;
 using static Microsoft.AspNetCore.Hosting.Internal.HostingApplication;
 
-namespace Service.Services.Products
+namespace Service.Services
 {
     public class ProductService : IProductService
     {

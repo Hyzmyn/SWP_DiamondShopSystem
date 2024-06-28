@@ -1,0 +1,71 @@
+﻿@model Repository.Models.GemPriceList
+
+@{
+    ViewData["Title"] = "Create Gem Price List";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h1>Create New Gem Price List Entry</h1>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<p>
+    <a asp-action="GemPriceList">Back to List</a>
+</p>
+
+@if (ViewData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewData["ErrorMessage"]
+    </div>
+}
+
+<form asp-action="CreateGemPriceList" method="post">
+    <div class="form-group">
+        <label asp-for="GemID">Gem ID</label>
+        <input asp-for="GemID" class="form-control" />
+        <span asp-validation-for="GemID" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Origin">Origin</label>
+        <input asp-for="Origin" class="form-control" />
+        <span asp-validation-for="Origin" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CaratWeight">Carat Weight</label>
+        <input asp-for="CaratWeight" class="form-control" />
+        <span asp-validation-for="CaratWeight" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Color">Color</label>
+        <input asp-for="Color" class="form-control" />
+        <span asp-validation-for="Color" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Clarity">Clarity</label>
+        <input asp-for="Clarity" class="form-control" />
+        <span asp-validation-for="Clarity" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Cut">Cut</label>
+        <input asp-for="Cut" class="form-control" />
+        <span asp-validation-for="Cut" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Price">Price</label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EffDate">Effective Date</label>
+        <input asp-for="EffDate" class="form-control" />
+        <span asp-validation-for="EffDate" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

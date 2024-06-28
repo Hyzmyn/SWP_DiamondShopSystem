@@ -4,17 +4,22 @@ using Repository.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
-namespace Service.Services.GemPriceLists
+namespace Service.Services
 {
     public class GemPriceListService : IGemPriceListService
     {
         private IGemPriceListRepository _repo;
-        public GemPriceListService(IGemPriceListRepository repo)
+        private readonly HttpClient _httpClient;
+
+        public GemPriceListService(IGemPriceListRepository repo, IHttpClientFactory httpClientFactory)
         {
             _repo = repo;
+            _httpClient = httpClientFactory.CreateClient();
         }
 
         public Task AddGemPriceListAsync(GemPriceList gemPriceList)
@@ -38,6 +43,30 @@ namespace Service.Services.GemPriceLists
             throw new NotImplementedException();
         }
 
+        public async Task<decimal> GetDiamondPrice(string cut, decimal carat, string color, string clarity, string make, string certificate)
+        {
+            string apiUrl = $"http://www.idexonline.com/DPService.asp?Cut={cut}&Carat={carat}&Color={color}&Clarity={clarity}&Make={make}&Cert={certificate}";
 
+            HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string responseBody = await response.Content.ReadAsStringAsync();
+
+                XDocument xmlDoc = XDocument.Parse(responseBody);
+                XElement priceElement = xmlDoc.Descendants("price").FirstOrDefault();
+
+                if (priceElement != null && decimal.TryParse(priceElement.Value, out decimal price))
+                {
+                    return price;
+                }
+
+                throw new Exception("Unable to extract price from API response.");
+            }
+            else
+            {
+                throw new Exception($"API request failed with status code: {response.StatusCode}");
+            }
+        }
     }
 }

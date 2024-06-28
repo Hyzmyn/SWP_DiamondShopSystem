@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.Services.GemPriceLists
+namespace Service.Services
 {
     public interface IGemPriceListService
     {

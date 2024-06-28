@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
@@ -21,10 +22,11 @@ namespace Repository.Models
         public int MaterialID { get; set; }
         public int CategoryID { get; set; }
         public decimal ProductionCost { get; set; }
-        public decimal PriceRate { get; set; }
-        public decimal TotalPrice { get; set; }
-        [ForeignKey("CategoryID")]
-        public virtual ProductCategory ProductCategory { get; set; }
+        public decimal PriceRateID { get; set; }
+        public decimal TotalCost { get; set; }
+
+        [ForeignKey("PriceRateID")]
+        public virtual ICollection<PriceRateList>  PriceRateLists { get; set; }
         public virtual ICollection<ProductMaterial> ProductMaterials { get; set; }
         public virtual ICollection<ProductGem> ProductGems { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }

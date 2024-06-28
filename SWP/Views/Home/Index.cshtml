@@ -86,7 +86,7 @@
 
 									@foreach (var product in Model)
 									{
-										var oldPrice = product.TotalPrice * 1.20m;
+										var oldPrice = product.TotalCost * 1.20m;
 											<div class="custom-col-5">
 														<div class="single_product">
 															<div class="product_thumb">
@@ -106,7 +106,7 @@
 																	<h3><a >@product.ProductName</a></h3>
 																	<div class="price_box">
 																			<span class="old_price">@oldPrice $</span>
-																		<span class="">@product.TotalPrice $</span>
+														<span class="">@product.TotalCost $</span>
 																	</div>
 																	<div class="product_hover">
 

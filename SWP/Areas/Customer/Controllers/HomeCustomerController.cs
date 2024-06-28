@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Service.Services.Cart;
-using Service.Services.Discounts;
-using Service.Services.Orders;
-using Service.Services.Users;
+using Service.Services;
 using SWP.Controllers;
 using System.Threading.Tasks;
 

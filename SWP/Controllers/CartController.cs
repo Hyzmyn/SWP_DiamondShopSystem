@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Service.Services.Cart;
-using Service.Services.Discounts;
+using Service.Services;
 using System.Threading.Tasks;
 
 namespace SWP.Controllers

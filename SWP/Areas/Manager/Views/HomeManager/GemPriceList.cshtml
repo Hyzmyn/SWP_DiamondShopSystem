@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Repository.Models.GemPriceList>
+
+@{
+    ViewData["Title"] = "Gem Price List";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h1>Gem Price List</h1>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<p>
+    <a asp-action="CreateGemPriceList">Create New</a>
+</p>
+<p>@TempData["Message"]</p>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+<table class="table">
+    <thead>
+        <tr class="table-warning">
+            <th>
+                @Html.DisplayNameFor(model => model.GemID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Origin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CaratWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clarity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EffDate)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="table-success">
+                <td>
+                    @Html.DisplayFor(modelItem => item.GemID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Origin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CaratWeight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Clarity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cut)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EffDate)
+                </td>
+                <td>
+                    <a asp-action="EditGemPriceList" asp-route-gemID="@item.GemID">Edit</a>
+                    <a asp-action="DeleteGemPriceList" asp-route-gemID="@item.GemID" onclick="return confirm('Are you sure you want to delete this product?')">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

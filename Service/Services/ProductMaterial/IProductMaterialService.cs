@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.Services.ProductMaterialServices
+namespace Service.Services
 {
     public interface IProductMaterialService
     {

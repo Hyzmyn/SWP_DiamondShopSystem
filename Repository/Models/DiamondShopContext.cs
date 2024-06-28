@@ -24,7 +24,7 @@ namespace Repository.Models
 
         //public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<ProductCategory> ProductCategories { get; set; }
+        public DbSet<PriceRateList> PriceRateLists { get; set; }
         public DbSet<ProductMaterial> ProductMaterials { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Gem> Gems { get; set; }
@@ -37,14 +37,15 @@ namespace Repository.Models
         public DbSet<Warranty> Warranties { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            IConfigurationRoot configuration = new ConfigurationBuilder()
-               .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-               .AddJsonFile("appsettings.json")
-               .Build();
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
-        }
+            => optionsBuilder.UseSqlServer(GetConnectionString());
 
+        private string? GetConnectionString()
+        {
+            IConfiguration configuration = new ConfigurationBuilder()
+                    .SetBasePath(Directory.GetCurrentDirectory())
+                    .AddJsonFile("appsettings.json", true, true).Build();
+            return configuration["ConnectionStrings:DefaultConnection"];
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Discount>()
@@ -80,7 +81,7 @@ namespace Repository.Models
                 .HasPrecision(12, 2);
 
             modelBuilder.Entity<Product>()
-                .Property(p => p.PriceRate)
+                .Property(p => p.PriceRateID)
                 .HasPrecision(12, 2);
 
             modelBuilder.Entity<Product>()
@@ -90,9 +91,15 @@ namespace Repository.Models
             modelBuilder.Entity<ProductMaterial>()
                 .Property(p => p.Weight)
                 .HasPrecision(12, 2);
+
             modelBuilder.Entity<Product>()
-                .Property(P=>P.TotalPrice)
+                .Property(P => P.TotalCost)
                 .HasPrecision(12, 2);
+
+            modelBuilder.Entity<PriceRateList>()
+                .Property(P => P.PriceRate)
+                .HasPrecision(12, 2);
+
 
             //modelBuilder.Entity<Role>().HasData(
             //	new Role { RoleID = 1, RoleName = "Customer" },
@@ -134,40 +141,36 @@ namespace Repository.Models
                 new MaterialPriceList { ID = 4, MaterialID = 4, BuyPrice = 19.00m, SellPrice = 26.0m, EffDate = new DateTime(2023, 8, 1) }
             );
 
-
-
-            modelBuilder.Entity<ProductCategory>().HasData(
-                new ProductCategory { CategoryID = 1, CategoryName = "Rings", CategoryType = "Jewelry", CategoryStatus = true },
-                new ProductCategory { CategoryID = 2, CategoryName = "Necklaces", CategoryType = "Jewelry", CategoryStatus = true },
-                new ProductCategory { CategoryID = 3, CategoryName = "Bracelets", CategoryType = "Jewelry", CategoryStatus = true },
-
-				 new ProductCategory { CategoryID = 4, CategoryName = "Bracelets", CategoryType = "Jewelry", CategoryStatus = true }
-
-			);
+            modelBuilder.Entity<PriceRateList>().HasData(
+                new PriceRateList { PriceRateID = 1, PriceRate = 10, EffDate = new DateTime(2023, 5, 6) },
+                new PriceRateList { PriceRateID = 2, PriceRate = 10, EffDate = new DateTime(2023, 5, 7) },
+                new PriceRateList { PriceRateID = 3, PriceRate = 11, EffDate = new DateTime(2023, 5, 8) },
+                new PriceRateList { PriceRateID = 4, PriceRate = 11, EffDate = new DateTime(2023, 5, 8) }
+            );
 
 
 			modelBuilder.Entity<Product>().HasData(
-	new Product { ProductID = 1, ProductCode = "P001", ProductName = "Diamond Necklace", ImageUrl1 = "images/diamond_necklace_1.jpg", ImageUrl2 = "images/diamond_necklace_2.jpg", GemID = 1, MaterialID = 1, CategoryID = 1, ProductionCost = 150.0m, PriceRate = 2.5m, TotalPrice = 0 },
-	new Product { ProductID = 2, ProductCode = "P002", ProductName = "Gold Ring", ImageUrl1 = "images/gold_ring_1.jpg", ImageUrl2 = "images/gold_ring_2.jpg", GemID = 2, MaterialID = 2, CategoryID = 2, ProductionCost = 100.0m, PriceRate = 2.0m, TotalPrice = 0 },
-	new Product { ProductID = 3, ProductCode = "P003", ProductName = "Emerald Bracelet", ImageUrl1 = "images/emerald_bracelet_1.jpg", ImageUrl2 = "images/emerald_bracelet_2.jpg", GemID = 3, MaterialID = 3, CategoryID = 3, ProductionCost = 120.0m, PriceRate = 2.2m, TotalPrice = 0 },
-	new Product { ProductID = 4, ProductCode = "P004", ProductName = "Silver Earrings", ImageUrl1 = "images/silver_earrings_1.jpg", ImageUrl2 = "images/silver_earrings_2.jpg", GemID = 4, MaterialID = 4, CategoryID = 4, ProductionCost = 80.0m, PriceRate = 1.8m, TotalPrice = 0 },
-	new Product { ProductID = 5, ProductCode = "P005", ProductName = "Sapphire Pendant", ImageUrl1 = "images/sapphire_pendant_1.jpg", ImageUrl2 = "images/sapphire_pendant_2.jpg", GemID = 1, MaterialID = 2, CategoryID = 3, ProductionCost = 130.0m, PriceRate = 2.3m, TotalPrice = 0 },
-	new Product { ProductID = 6, ProductCode = "P006", ProductName = "Platinum Bracelet", ImageUrl1 = "images/platinum_bracelet_1.jpg", ImageUrl2 = "images/platinum_bracelet_2.jpg", GemID = 2, MaterialID = 3, CategoryID = 4, ProductionCost = 200.0m, PriceRate = 2.7m, TotalPrice = 0 },
-	new Product { ProductID = 7, ProductCode = "P007", ProductName = "Ruby Ring", ImageUrl1 = "images/ruby_ring_1.jpg", ImageUrl2 = "images/ruby_ring_2.jpg", GemID = 3, MaterialID = 4, CategoryID = 1, ProductionCost = 90.0m, PriceRate = 2.1m, TotalPrice = 0 },
-	new Product { ProductID = 8, ProductCode = "P008", ProductName = "Amethyst Earrings", ImageUrl1 = "images/amethyst_earrings_1.jpg", ImageUrl2 = "images/amethyst_earrings_2.jpg", GemID = 4, MaterialID = 1, CategoryID = 2, ProductionCost = 70.0m, PriceRate = 1.9m, TotalPrice = 0 },
-	new Product { ProductID = 9, ProductCode = "P009", ProductName = "Topaz Necklace", ImageUrl1 = "images/topaz_necklace_1.jpg", ImageUrl2 = "images/topaz_necklace_2.jpg", GemID = 1, MaterialID = 3, CategoryID = 1, ProductionCost = 110.0m, PriceRate = 2.4m, TotalPrice = 0 },
-	new Product { ProductID = 10, ProductCode = "P010", ProductName = "Opal Brooch", ImageUrl1 = "images/opal_brooch_1.jpg", ImageUrl2 = "images/opal_brooch_2.jpg", GemID = 2, MaterialID = 4, CategoryID = 2, ProductionCost = 95.0m, PriceRate = 2.0m, TotalPrice = 0 },
+	new Product { ProductID = 1, ProductCode = "P001", ProductName = "Diamond Necklace", ImageUrl1 = "images/diamond_necklace_1.jpg", ImageUrl2 = "images/diamond_necklace_2.jpg", GemID = 1, MaterialID = 1, CategoryID = 1, ProductionCost = 150.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 2, ProductCode = "P002", ProductName = "Gold Ring", ImageUrl1 = "images/gold_ring_1.jpg", ImageUrl2 = "images/gold_ring_2.jpg", GemID = 2, MaterialID = 2, CategoryID = 2, ProductionCost = 100.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 3, ProductCode = "P003", ProductName = "Emerald Bracelet", ImageUrl1 = "images/emerald_bracelet_1.jpg", ImageUrl2 = "images/emerald_bracelet_2.jpg", GemID = 3, MaterialID = 3, CategoryID = 3, ProductionCost = 120.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 4, ProductCode = "P004", ProductName = "Silver Earrings", ImageUrl1 = "images/silver_earrings_1.jpg", ImageUrl2 = "images/silver_earrings_2.jpg", GemID = 4, MaterialID = 4, CategoryID = 4, ProductionCost = 80.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 5, ProductCode = "P005", ProductName = "Sapphire Pendant", ImageUrl1 = "images/sapphire_pendant_1.jpg", ImageUrl2 = "images/sapphire_pendant_2.jpg", GemID = 1, MaterialID = 2, CategoryID = 3, ProductionCost = 130.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 6, ProductCode = "P006", ProductName = "Platinum Bracelet", ImageUrl1 = "images/platinum_bracelet_1.jpg", ImageUrl2 = "images/platinum_bracelet_2.jpg", GemID = 2, MaterialID = 3, CategoryID = 4, ProductionCost = 200.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 7, ProductCode = "P007", ProductName = "Ruby Ring", ImageUrl1 = "images/ruby_ring_1.jpg", ImageUrl2 = "images/ruby_ring_2.jpg", GemID = 3, MaterialID = 4, CategoryID = 1, ProductionCost = 90.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 8, ProductCode = "P008", ProductName = "Amethyst Earrings", ImageUrl1 = "images/amethyst_earrings_1.jpg", ImageUrl2 = "images/amethyst_earrings_2.jpg", GemID = 4, MaterialID = 1, CategoryID = 2, ProductionCost = 70.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 9, ProductCode = "P009", ProductName = "Topaz Necklace", ImageUrl1 = "images/topaz_necklace_1.jpg", ImageUrl2 = "images/topaz_necklace_2.jpg", GemID = 1, MaterialID = 3, CategoryID = 1, ProductionCost = 110.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 10, ProductCode = "P010", ProductName = "Opal Brooch", ImageUrl1 = "images/opal_brooch_1.jpg", ImageUrl2 = "images/opal_brooch_2.jpg", GemID = 2, MaterialID = 4, CategoryID = 2, ProductionCost = 95.0m, PriceRateID = 1, TotalCost = 0 },
 
-	new Product { ProductID = 11, ProductCode = "P001", ProductName = "Diamond Necklace", ImageUrl1 = "images/diamond_necklace_1.jpg", ImageUrl2 = "images/diamond_necklace_2.jpg", GemID = 1, MaterialID = 1, CategoryID = 1, ProductionCost = 150.0m, PriceRate = 2.5m, TotalPrice = 0 },
-	new Product { ProductID = 12, ProductCode = "P002", ProductName = "Gold Ring", ImageUrl1 = "images/gold_ring_1.jpg", ImageUrl2 = "images/gold_ring_2.jpg", GemID = 2, MaterialID = 2, CategoryID = 2, ProductionCost = 100.0m, PriceRate = 2.0m, TotalPrice = 0 },
-	new Product { ProductID = 13, ProductCode = "P003", ProductName = "Emerald Bracelet", ImageUrl1 = "images/emerald_bracelet_1.jpg", ImageUrl2 = "images/emerald_bracelet_2.jpg", GemID = 3, MaterialID = 3, CategoryID = 3, ProductionCost = 120.0m, PriceRate = 2.2m, TotalPrice = 0 },
-	new Product { ProductID = 14, ProductCode = "P004", ProductName = "Silver Earrings", ImageUrl1 = "images/silver_earrings_1.jpg", ImageUrl2 = "images/silver_earrings_2.jpg", GemID = 4, MaterialID = 4, CategoryID = 4, ProductionCost = 80.0m, PriceRate = 1.8m, TotalPrice = 0 },
-	new Product { ProductID = 15, ProductCode = "P005", ProductName = "Sapphire Pendant", ImageUrl1 = "images/sapphire_pendant_1.jpg", ImageUrl2 = "images/sapphire_pendant_2.jpg", GemID = 1, MaterialID = 2, CategoryID = 3, ProductionCost = 130.0m, PriceRate = 2.3m, TotalPrice = 0 },
-	new Product { ProductID = 16, ProductCode = "P006", ProductName = "Platinum Bracelet", ImageUrl1 = "images/platinum_bracelet_1.jpg", ImageUrl2 = "images/platinum_bracelet_2.jpg", GemID = 2, MaterialID = 3, CategoryID = 4, ProductionCost = 200.0m, PriceRate = 2.7m, TotalPrice = 0 },
-	new Product { ProductID = 17, ProductCode = "P007", ProductName = "Ruby Ring", ImageUrl1 = "images/ruby_ring_1.jpg", ImageUrl2 = "images/ruby_ring_2.jpg", GemID = 3, MaterialID = 4, CategoryID = 1, ProductionCost = 90.0m, PriceRate = 2.1m, TotalPrice = 0 },
-	new Product { ProductID = 18, ProductCode = "P008", ProductName = "Amethyst Earrings", ImageUrl1 = "images/amethyst_earrings_1.jpg", ImageUrl2 = "images/amethyst_earrings_2.jpg", GemID = 4, MaterialID = 1, CategoryID = 2, ProductionCost = 70.0m, PriceRate = 1.9m, TotalPrice = 0 },
-	new Product { ProductID = 19, ProductCode = "P009", ProductName = "Topaz Necklace", ImageUrl1 = "images/topaz_necklace_1.jpg", ImageUrl2 = "images/topaz_necklace_2.jpg", GemID = 1, MaterialID = 3, CategoryID = 1, ProductionCost = 110.0m, PriceRate = 2.4m, TotalPrice = 0 },
-	new Product { ProductID = 20, ProductCode = "P010", ProductName = "Opal Brooch", ImageUrl1 = "images/opal_brooch_1.jpg", ImageUrl2 = "images/opal_brooch_2.jpg", GemID = 2, MaterialID = 4, CategoryID = 2, ProductionCost = 95.0m, PriceRate = 2.0m, TotalPrice = 0 }
+	new Product { ProductID = 11, ProductCode = "P001", ProductName = "Diamond Necklace", ImageUrl1 = "images/diamond_necklace_1.jpg", ImageUrl2 = "images/diamond_necklace_2.jpg", GemID = 1, MaterialID = 1, CategoryID = 1, ProductionCost = 150.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 12, ProductCode = "P002", ProductName = "Gold Ring", ImageUrl1 = "images/gold_ring_1.jpg", ImageUrl2 = "images/gold_ring_2.jpg", GemID = 2, MaterialID = 2, CategoryID = 2, ProductionCost = 100.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 13, ProductCode = "P003", ProductName = "Emerald Bracelet", ImageUrl1 = "images/emerald_bracelet_1.jpg", ImageUrl2 = "images/emerald_bracelet_2.jpg", GemID = 3, MaterialID = 3, CategoryID = 3, ProductionCost = 120.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 14, ProductCode = "P004", ProductName = "Silver Earrings", ImageUrl1 = "images/silver_earrings_1.jpg", ImageUrl2 = "images/silver_earrings_2.jpg", GemID = 4, MaterialID = 4, CategoryID = 4, ProductionCost = 80.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 15, ProductCode = "P005", ProductName = "Sapphire Pendant", ImageUrl1 = "images/sapphire_pendant_1.jpg", ImageUrl2 = "images/sapphire_pendant_2.jpg", GemID = 1, MaterialID = 2, CategoryID = 3, ProductionCost = 130.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 16, ProductCode = "P006", ProductName = "Platinum Bracelet", ImageUrl1 = "images/platinum_bracelet_1.jpg", ImageUrl2 = "images/platinum_bracelet_2.jpg", GemID = 2, MaterialID = 3, CategoryID = 4, ProductionCost = 200.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 17, ProductCode = "P007", ProductName = "Ruby Ring", ImageUrl1 = "images/ruby_ring_1.jpg", ImageUrl2 = "images/ruby_ring_2.jpg", GemID = 3, MaterialID = 4, CategoryID = 1, ProductionCost = 90.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 18, ProductCode = "P008", ProductName = "Amethyst Earrings", ImageUrl1 = "images/amethyst_earrings_1.jpg", ImageUrl2 = "images/amethyst_earrings_2.jpg", GemID = 4, MaterialID = 1, CategoryID = 2, ProductionCost = 70.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 19, ProductCode = "P009", ProductName = "Topaz Necklace", ImageUrl1 = "images/topaz_necklace_1.jpg", ImageUrl2 = "images/topaz_necklace_2.jpg", GemID = 1, MaterialID = 3, CategoryID = 1, ProductionCost = 110.0m, PriceRateID = 1, TotalCost = 0 },
+	new Product { ProductID = 20, ProductCode = "P010", ProductName = "Opal Brooch", ImageUrl1 = "images/opal_brooch_1.jpg", ImageUrl2 = "images/opal_brooch_2.jpg", GemID = 2, MaterialID = 4, CategoryID = 2, ProductionCost = 95.0m, PriceRateID = 1, TotalCost = 0 }
 );
 
 
@@ -178,15 +181,12 @@ namespace Repository.Models
                 new ProductMaterial { MaterialID = 4, Weight = 22.1m }
             );
 
-
             modelBuilder.Entity<ProductGem>().HasData(
                 new ProductGem { ProductID = 1, GemID = 1 },
                 new ProductGem { ProductID = 2, GemID = 2 },
                 new ProductGem { ProductID = 3, GemID = 3 },
                 new ProductGem { ProductID = 4, GemID = 1 }
-
             );
-
 
             modelBuilder.Entity<Order>().HasData(
                 new Order { OrderID = 1, UserID = 1, TotalPrice = 175.0m, TimeOrder = new DateTime(2023, 6, 1), Note = "Express delivery", OrderStatus = true },

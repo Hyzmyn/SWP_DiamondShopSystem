@@ -48,7 +48,7 @@
             @foreach (var item in Model)
             {
                 var image = item.Product.ImageUrl1;
-                var itemTotalPrice = item.Product.TotalPrice * item.Quantity;
+                var itemTotalPrice = item.Product.TotalCost * item.Quantity;
                 totalPrice += itemTotalPrice;
 
                     <tr>

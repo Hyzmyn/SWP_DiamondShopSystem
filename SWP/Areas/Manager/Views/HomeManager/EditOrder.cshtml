@@ -1,0 +1,75 @@
+﻿@model Repository.Models.OrderDto
+
+@{
+    ViewData["Title"] = "CreateGem";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div class="row">
+    <div class="col-md-8 mx-auto rounded border p-3">
+        <h2 class="text-center mb-5">Edit Order</h2>
+        <form method="post">
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">OrderID</label>
+                <div class="col-sm-8">
+                    <input class="form-control-plaintext" readonly value="@ViewData["OrderID"]">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">UserID</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="UserID">
+                    <span asp-validation-for="UserID" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">TotalPrice</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="TotalPrice">
+                    <span asp-validation-for="TotalPrice" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">TimeOrder</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="TimeOrder" type="datetime-local">
+                    <span asp-validation-for="TimeOrder" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">Note</label>
+                <div class="col-sm-8">
+                    <input class="form-control" asp-for="Note">
+                    <span asp-validation-for="Note" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-4 col-form-label">OrderStatus</label>
+                <div class="col-sm-8">
+                    <select class="form-control" asp-for="OrderStatus">
+                        <option value="true">Active</option>
+                        <option value="false">Inactive</option>
+                    </select>
+                    <span asp-validation-for="OrderStatus" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="offset-sm-4 col-sm-4 d-grid">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="col-sm-4 d-grid">
+                    <a class="btn btn-outline-primary" asp-action="OrderList" role="button">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

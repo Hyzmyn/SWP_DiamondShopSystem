@@ -19,140 +19,148 @@
                         <div class="tab-pane fade show active" id="featured" role="tabpane1">
                             <div class="product_container">
                                 <div class="custom-row product_column3">
-									@foreach (var product in Model)
-									{
-										var oldPrice = product.TotalPrice * 1.20m;
-												<div class="custom-col-5">
-															<div class="single_product">
-																<div class="product_thumb">
-																		<a  class="primary_img"><img src="images/product/@product.ImageUrl1"
-																			alt="product1"></a>
-																		<a  class="secondary_img"><img
-																		src="images/product/@product.ImageUrl2" alt="product1"></a>
-																		<div class="quick_button" style="color: white ">
-																				<a href="#" class="quick-view-btn" data-product-id="@product.ProductID" data-toggle="modal" data-target="#modal_box" data-placement="top" data-original-title="quick view">Quick View</a>
-																		</div>
-																</div>
-																<div class="product_content" style="color: white">
-																		<div class="tag_cate">
-																			<a >@product.ProductCode</a>
+                                    @foreach (var product in Model)
+                                    {
+                                        var oldPrice = product.TotalCost * 1.20m;
+                                        <div class="custom-col-5">
+                                            <div class="single_product">
+                                                <div class="product_thumb">
+                                                    <a class="primary_img">
+                                                        <img src="images/product/@product.ImageUrl1"
+                                                             alt="product1">
+                                                    </a>
+                                                    <a class="secondary_img">
+                                                        <img src="images/product/@product.ImageUrl2" alt="product1">
+                                                    </a>
+                                                    <div class="quick_button" style="color: white ">
+                                                        <a href="#" class="quick-view-btn" data-product-id="@product.ProductID" data-toggle="modal" data-target="#modal_box" data-placement="top" data-original-title="quick view">Quick View</a>
+                                                    </div>
+                                                </div>
+                                                <div class="product_content" style="color: white">
+                                                    <div class="tag_cate">
+                                                        <a>@product.ProductCode</a>
 
-																		</div>
-																		<h3><a >@product.ProductName</a></h3>
-																		<div class="price_box">
-																				<span class="old_price">@oldPrice $</span>
-																			<span class="">@product.TotalPrice $</span>
-																		</div>
-																		<div class="product_hover">
+                                                    </div>
+                                                    <h3><a>@product.ProductName</a></h3>
+                                                    <div class="price_box">
+                                                        <span class="old_price">@oldPrice $</span>
+                                                        <span class="">@product.TotalCost $</span>
+                                                    </div>
+                                                    <div class="product_hover">
 
 
-																			<div class="action_links">
-																				<ul>
-																					<li><a  data-placement="top"
-																						title="Add to Wishlist"
-																						data-toggle="tooltip"><span
-																							class="ion-heart"></span></a></li>
-																							<li class="add_to_cart">
-																								<form asp-controller="Cart" asp-action="AddToCart" method="post" style="display: inline;">
-																									<input type="hidden" name="productId" value="@product.ProductID" />
-																									<input type="hidden" name="quantity" value="1" />
-																									<a onclick="this.closest('form').submit(); return false;" title="Add to Cart">Add to Cart</a>
-																								</form>
-																							</li>
-																					<li><a  title="Compare"><i
-																							class="ion-ios-settings-strong"></i></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-									}
-                                    
+                                                        <div class="action_links">
+                                                            <ul>
+                                                                <li>
+                                                                    <a data-placement="top"
+                                                                       title="Add to Wishlist"
+                                                                       data-toggle="tooltip">
+                                                                        <span class="ion-heart"></span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="add_to_cart">
+                                                                    <form asp-controller="Cart" asp-action="AddToCart" method="post" style="display: inline;">
+                                                                        <input type="hidden" name="productId" value="@product.ProductID" />
+                                                                        <input type="hidden" name="quantity" value="1" />
+                                                                        <a onclick="this.closest('form').submit(); return false;" title="Add to Cart">Add to Cart</a>
+                                                                    </form>
+                                                                </li>
+                                                                <li>
+                                                                    <a title="Compare">
+                                                                        <i class="ion-ios-settings-strong"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+
                                 </div>
-                                <nav aria-label="Page navigation" >
-                                    <ul class="pagination" >
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
                                         @if (currentPage > 1)
                                         {
-                                                            <li class="page-item" style=" color: white; background-color: #a8741a;">
-                                                                        <a class="page-link" asp-action="DiamondJewelery" asp-route-pageNumber="@(currentPage - 1)" style=" color: #a8741a; background-color: black;">Previous</a>
-                                                        </li>
+                                            <li class="page-item" style=" color: white; background-color: #a8741a;">
+                                                <a class="page-link" asp-action="DiamondJewelery" asp-route-pageNumber="@(currentPage - 1)" style=" color: #a8741a; background-color: black;">Previous</a>
+                                            </li>
                                         }
 
                                         @for (int i = 1; i <= totalPages; i++)
                                         {
-                                                            <li class="page-item @(i == currentPage ? "active" : "")" style=" color: white; background-color: #a8741a;">
-                                                                        <a class="page-link" asp-action="DiamondJewelery" asp-route-pageNumber="@i" style=" color: #a8741a; background-color: black;">@i</a>
-                                                        </li>
+                                            <li class="page-item @(i == currentPage ? "active" : "")" style=" color: white; background-color: #a8741a;">
+                                                <a class="page-link" asp-action="DiamondJewelery" asp-route-pageNumber="@i" style=" color: #a8741a; background-color: black;">@i</a>
+                                            </li>
                                         }
 
                                         @if (currentPage < totalPages)
                                         {
-                                                            <li class="page-item" style=" color: white; background-color: #a8741a;">
-                                                                        <a class="page-link" asp-action="DiamondJewelery" asp-route-pageNumber="@(currentPage + 1)"style=" color: #a8741a; background-color: black;">Next</a>
-                                                        </li>
+                                            <li class="page-item" style=" color: white; background-color: #a8741a;">
+                                                <a class="page-link" asp-action="DiamondJewelery" asp-route-pageNumber="@(currentPage + 1)" style=" color: #a8741a; background-color: black;">Next</a>
+                                            </li>
                                         }
-            </ul>
-        </nav>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
-        </div>       
+        </div>
     </div>
 </section>
 
-	<div class="modal fade" id="modal_box" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				<div class="modal_body">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-5 col-md-5 col-sm-12">
-								<div class="modal_tab">
-									<div class="tab-content product-details-large">
-										<div class="tab-pane fade show active" id="tab1" role="tabpanel">
-											<div class="modal_tab_img">
-												<a><img src="" alt="" id="quickview-img-1"></a>
-											</div>
-										</div>
-										<div class="tab-pane fade" id="tab2" role="tabpanel">
-											<div class="modal_tab_img">
-												<a><img src="" alt="" id="quickview-img-2"></a>
-											</div>
-										</div>
-									</div>
-									<div class="modal_tab_button">
-										<ul class="nav product_navactive owl-carousel" role="tablist">
-											<li>
-												<a href="#tab1" class="nav-link active" data-toggle="tab" role="tab" aria-controls="tab1" aria-selected="false">
-													<img src="" alt="" id="quickview-thumb-1">
-												</a>
-											</li>
-											<li>
-												<a href="#tab2" class="nav-link" data-toggle="tab" role="tab" aria-controls="tab2" aria-selected="false">
-													<img src="" alt="" id="quickview-thumb-2">
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-7 col-md-7 col-sm-12">
-								<div class="modal_right">
-									<div class="modal_title mb-10">
-										<h2 id="quickview-title"></h2>
-									</div>
-									<div class="modal_price mb-10">
-										<span class="new_price" id="quickview-price"></span>
-										<span class="old_price" id="quickview-old-price"></span>
-									</div>
-									<div class="modal_add_to_cart mb-15" style="
+<div class="modal fade" id="modal_box" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal_body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-12">
+                            <div class="modal_tab">
+                                <div class="tab-content product-details-large">
+                                    <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                                        <div class="modal_tab_img">
+                                            <a><img src="quickview-thumb-1" alt="" id="quickview-img-1"></a>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab2" role="tabpanel">
+                                        <div class="modal_tab_img">
+                                            <a><img src="" alt="" id="quickview-img-2"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal_tab_button">
+                                    <ul class="nav product_navactive owl-carousel" role="tablist">
+                                        <li>
+                                            <a href="#tab1" class="nav-link active" data-toggle="tab" role="tab" aria-controls="tab1" aria-selected="false">
+                                                <img src="" alt="" id="quickview-thumb-1">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#tab2" class="nav-link" data-toggle="tab" role="tab" aria-controls="tab2" aria-selected="false">
+                                                <img src="" alt="" id="quickview-thumb-2">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12">
+                            <div class="modal_right">
+                                <div class="modal_title mb-10">
+                                    <h2 id="quickview-title"></h2>
+                                </div>
+                                <div class="modal_price mb-10">
+                                    <span class="new_price" id="quickview-price"></span>
+                                    <span class="old_price" id="quickview-old-price"></span>
+                                </div>
+                                <div class="modal_add_to_cart mb-15" style="
 										font-weight: 500;
 										/* margin-top: 25px; */
 										/* color: #fff; */
@@ -169,25 +177,25 @@
 										text-transform: uppercase;
 										font-size: 13px;
 										border-radius: 5px;
-											">
-											<form asp-controller="Cart" asp-action="AddToCart" method="post" style="display: inline;">
-										<input type="hidden" name="productId" id="quickview-product-id" />
-										<input type="hidden" name="quantity" value="1" />
-										<a onclick="this.closest('form').submit(); return false;" title="Add to Cart">Add to Cart</a>
-										</form>
-									</div>
-									<div class="modal_description mb-15">
-										<p id="quickview-description"></p>
-									</div>
-									<div class="modal_social">
-										<h2>Share this Product</h2>
-										
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                                            ">
+                                    <form asp-controller="Cart" asp-action="AddToCart" method="post" style="display: inline;">
+                                        <input type="hidden" name="productId" id="quickview-product-id" />
+                                        <input type="hidden" name="quantity" value="1" />
+                                        <a onclick="this.closest('form').submit(); return false;" title="Add to Cart">Add to Cart</a>
+                                    </form>
+                                </div>
+                                <div class="modal_description mb-15">
+                                    <p id="quickview-description"></p>
+                                </div>
+                                <div class="modal_social">
+                                    <h2>Share this Product</h2>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
