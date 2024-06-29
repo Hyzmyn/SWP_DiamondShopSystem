@@ -4,6 +4,7 @@ using Repository.Models;
 using Repository.Repositories;
 using Service.Services;
 using Repository;
+using service.Services;
 
 public class Program
 {
@@ -21,9 +22,25 @@ public class Program
 		builder.Services.AddScoped<IUserRepository, UserRepository>();
 		builder.Services.AddScoped<IProductService, ProductService>();
 		builder.Services.AddScoped<IProductRepository, ProductRepository>();
-		builder.Services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
+        builder.Services.AddScoped<IOrderDetailService, OrderDetailService>();
+        builder.Services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
 		builder.Services.AddScoped<IOrderRepository, OrderRepository>();
         builder.Services.AddScoped<IOrderService, OrderService>();
+        builder.Services.AddScoped<IGemPriceListService, GemPriceListService>();
+        builder.Services.AddScoped<IGemPriceListRepository, GemPriceListRepository>();
+        builder.Services.AddScoped<IGemService, GemService>();
+        builder.Services.AddScoped<IGemRepository, GemRepository>();
+        builder.Services.AddScoped<IMaterialPriceListService, MaterialPriceListService>();
+        builder.Services.AddScoped<IMaterialPriceListRepository, MaterialPriceListRepository>();
+        builder.Services.AddScoped<IPriceRateListService, PriceRateListService>();
+        builder.Services.AddScoped<IPriceRateListRepository, PriceRateListRepository>();
+        builder.Services.AddScoped<IProductGemService, ProductGemService>();
+        builder.Services.AddScoped<IProductGemRepository, ProductGemRepository>();
+        builder.Services.AddScoped<IProductMaterialService, ProductMaterialService>();
+        builder.Services.AddScoped<IProductMaterialRepository, ProductMaterialRepository>();
+        builder.Services.AddScoped<IWarrantyService, WarrantyService>();
+        builder.Services.AddScoped<IWarrantyRepository, WarrantyRepository>();
+
         builder.Services.AddDbContext<DiamondShopContext>(options =>
 			options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
