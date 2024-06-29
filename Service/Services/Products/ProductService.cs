@@ -8,7 +8,7 @@ namespace Service.Services
 {
 	public class ProductService : IProductService
 	{
-		private IProductRepository _repo;
+		private IProductRepository _repo;  
         private IGemPriceListService _gemPriceListService;
         private IProductMaterialService _productMaterialService;
 

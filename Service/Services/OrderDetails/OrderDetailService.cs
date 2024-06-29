@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Service.Services
 {
-    internal class OrderDetailService : IOrderDetailService
+    public class OrderDetailService : IOrderDetailService
     {
         private IOrderDetailRepository _repo;
         private IGemPriceListService _gemPriceListService;
