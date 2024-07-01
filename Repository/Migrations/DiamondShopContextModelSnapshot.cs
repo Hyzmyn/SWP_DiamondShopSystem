@@ -110,10 +110,7 @@ namespace Repository.Migrations
             modelBuilder.Entity("Repository.Models.Gem", b =>
                 {
                     b.Property<int>("GemID")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GemID"));
 
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
@@ -885,43 +882,6 @@ namespace Repository.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Repository.Models.ProductGem", b =>
-                {
-                    b.Property<int>("ProductID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("GemID")
-                        .HasColumnType("int");
-
-                    b.HasKey("ProductID");
-
-                    b.HasIndex("GemID");
-
-                    b.ToTable("ProductGems");
-
-                    b.HasData(
-                        new
-                        {
-                            ProductID = 1,
-                            GemID = 1
-                        },
-                        new
-                        {
-                            ProductID = 2,
-                            GemID = 2
-                        },
-                        new
-                        {
-                            ProductID = 3,
-                            GemID = 3
-                        },
-                        new
-                        {
-                            ProductID = 4,
-                            GemID = 1
-                        });
-                });
-
             modelBuilder.Entity("Repository.Models.ProductMaterial", b =>
                 {
                     b.Property<int>("MaterialID")
@@ -1215,6 +1175,17 @@ namespace Repository.Migrations
                     b.Navigation("Order");
                 });
 
+            modelBuilder.Entity("Repository.Models.Gem", b =>
+                {
+                    b.HasOne("Repository.Models.Product", "Product")
+                        .WithOne("Gem")
+                        .HasForeignKey("Repository.Models.Gem", "GemID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Repository.Models.GemPriceList", b =>
                 {
                     b.HasOne("Repository.Models.Gem", "Gem")
@@ -1267,25 +1238,6 @@ namespace Repository.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("Repository.Models.ProductGem", b =>
-                {
-                    b.HasOne("Repository.Models.Gem", "Gem")
-                        .WithMany("ProductGems")
-                        .HasForeignKey("GemID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Repository.Models.Product", "Product")
-                        .WithMany("ProductGems")
-                        .HasForeignKey("ProductID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Gem");
-
-                    b.Navigation("Product");
-                });
-
             modelBuilder.Entity("Repository.Models.ProductMaterial", b =>
                 {
                     b.HasOne("Repository.Models.Product", "Product")
@@ -1316,11 +1268,6 @@ namespace Repository.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("Repository.Models.Gem", b =>
-                {
-                    b.Navigation("ProductGems");
-                });
-
             modelBuilder.Entity("Repository.Models.Order", b =>
                 {
                     b.Navigation("OrderDetails");
@@ -1328,9 +1275,10 @@ namespace Repository.Migrations
 
             modelBuilder.Entity("Repository.Models.Product", b =>
                 {
-                    b.Navigation("OrderDetails");
+                    b.Navigation("Gem")
+                        .IsRequired();
 
-                    b.Navigation("ProductGems");
+                    b.Navigation("OrderDetails");
 
                     b.Navigation("ProductMaterials");
                 });

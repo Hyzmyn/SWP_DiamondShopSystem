@@ -89,6 +89,7 @@ namespace Service.Services
 		{
 			return _repo.GetAllProduct();
 		}
+
 		public async Task<Product> GetProductByIdAsync(int id)
 		{
 			return await _repo.GetProductByIdAsync(id);

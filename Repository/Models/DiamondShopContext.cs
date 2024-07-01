@@ -28,7 +28,6 @@ namespace Repository.Models
         public DbSet<ProductMaterial> ProductMaterials { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Gem> Gems { get; set; }
-        public DbSet<ProductGem> ProductGems { get; set; }
         public DbSet<MaterialPriceList> MaterialPriceLists { get; set; }
         public DbSet<GemPriceList> GemPriceLists { get; set; }
         public DbSet<Order> Orders { get; set; }
@@ -48,6 +47,13 @@ namespace Repository.Models
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //modelBuilder.Entity<Product>()
+            //    .HasOne(p => p.Gem)
+            //    .WithOne(g => g.Product)
+            //    .HasForeignKey<Product>(p => p.GemID);
+
+            //base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Discount>()
                 .Property(p => p.DiscountAmount)
                 .HasPrecision(12, 2);
@@ -99,6 +105,7 @@ namespace Repository.Models
             modelBuilder.Entity<PriceRateList>()
                 .Property(P => P.PriceRate)
                 .HasPrecision(12, 2);
+
 
 
             //modelBuilder.Entity<Role>().HasData(
@@ -181,13 +188,6 @@ namespace Repository.Models
                 new ProductMaterial { MaterialID = 4, Weight = 22.1m }
             );
 
-            modelBuilder.Entity<ProductGem>().HasData(
-                new ProductGem { ProductID = 1, GemID = 1 },
-                new ProductGem { ProductID = 2, GemID = 2 },
-                new ProductGem { ProductID = 3, GemID = 3 },
-                new ProductGem { ProductID = 4, GemID = 1 }
-            );
-
             modelBuilder.Entity<Order>().HasData(
                 new Order { OrderID = 1, UserID = 1, TotalPrice = 175.0m, TimeOrder = new DateTime(2023, 6, 1), Note = "Express delivery", OrderStatus = true },
                 new Order { OrderID = 2, UserID = 2, TotalPrice = 170.0m, TimeOrder = new DateTime(2023, 6, 5), Note = "Standard delivery", OrderStatus = true },
@@ -216,6 +216,8 @@ namespace Repository.Models
                 new Discount { DiscountID = 3, OrderID = 3, DiscountCode = "HOLIDAYDISCOUNT20", DiscountAmount = 20.0m, DiscountDate = new DateTime(2023, 12, 1), DiscountStatus = true },
                 new Discount { DiscountID = 4, OrderID = 4, DiscountCode = "SPECIALOFFER5", DiscountAmount = 5.0m, DiscountDate = new DateTime(2023, 9, 15), DiscountStatus = true }
             );
+
+
         }
     }
 }

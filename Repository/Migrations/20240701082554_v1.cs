@@ -14,27 +14,6 @@ namespace Repository.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Gems",
-                columns: table => new
-                {
-                    GemID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    GemCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    GemName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Origin = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FourC = table.Column<decimal>(type: "decimal(12,2)", precision: 12, scale: 2, nullable: false),
-                    Proportion = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Polish = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Symmetry = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Fluorescence = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Active = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Gems", x => x.GemID);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "PriceRateLists",
                 columns: table => new
                 {
@@ -91,26 +70,28 @@ namespace Repository.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "GemPriceLists",
+                name: "Gems",
                 columns: table => new
                 {
                     GemID = table.Column<int>(type: "int", nullable: false),
+                    GemCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    GemName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Origin = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CaratWeight = table.Column<decimal>(type: "decimal(8,2)", precision: 8, scale: 2, nullable: false),
-                    Color = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Clarity = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Cut = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(12,2)", precision: 12, scale: 2, nullable: false),
-                    EffDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    FourC = table.Column<decimal>(type: "decimal(12,2)", precision: 12, scale: 2, nullable: false),
+                    Proportion = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Polish = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Symmetry = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Fluorescence = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Active = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_GemPriceLists", x => x.GemID);
+                    table.PrimaryKey("PK_Gems", x => x.GemID);
                     table.ForeignKey(
-                        name: "FK_GemPriceLists_Gems_GemID",
+                        name: "FK_Gems_Products_GemID",
                         column: x => x.GemID,
-                        principalTable: "Gems",
-                        principalColumn: "GemID",
+                        principalTable: "Products",
+                        principalColumn: "ProductID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -133,30 +114,6 @@ namespace Repository.Migrations
                     table.ForeignKey(
                         name: "FK_PriceRateListProduct_Products_PriceRateID",
                         column: x => x.PriceRateID,
-                        principalTable: "Products",
-                        principalColumn: "ProductID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "ProductGems",
-                columns: table => new
-                {
-                    ProductID = table.Column<int>(type: "int", nullable: false),
-                    GemID = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ProductGems", x => x.ProductID);
-                    table.ForeignKey(
-                        name: "FK_ProductGems_Gems_GemID",
-                        column: x => x.GemID,
-                        principalTable: "Gems",
-                        principalColumn: "GemID",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_ProductGems_Products_ProductID",
-                        column: x => x.ProductID,
                         principalTable: "Products",
                         principalColumn: "ProductID",
                         onDelete: ReferentialAction.Cascade);
@@ -200,6 +157,30 @@ namespace Repository.Migrations
                         column: x => x.UserID,
                         principalTable: "Users",
                         principalColumn: "UserID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "GemPriceLists",
+                columns: table => new
+                {
+                    GemID = table.Column<int>(type: "int", nullable: false),
+                    Origin = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CaratWeight = table.Column<decimal>(type: "decimal(8,2)", precision: 8, scale: 2, nullable: false),
+                    Color = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Clarity = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Cut = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(12,2)", precision: 12, scale: 2, nullable: false),
+                    EffDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_GemPriceLists", x => x.GemID);
+                    table.ForeignKey(
+                        name: "FK_GemPriceLists_Gems_GemID",
+                        column: x => x.GemID,
+                        principalTable: "Gems",
+                        principalColumn: "GemID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -308,17 +289,6 @@ namespace Repository.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Gems",
-                columns: new[] { "GemID", "Active", "Fluorescence", "FourC", "GemCode", "GemName", "Origin", "Polish", "Proportion", "Symmetry" },
-                values: new object[,]
-                {
-                    { 1, true, "None", 4.5m, "EMGR-001", "Emerald", "Brazil", "Excellent", "Excellent", "Excellent" },
-                    { 2, true, "Faint", 3.8m, "SAPP-002", "Sapphire", "Australia", "Excellent", "Very Good", "Very Good" },
-                    { 3, true, "None", 4.9m, "DIAM-003", "Diamond", "Canada", "Ideal", "Ideal", "Ideal" },
-                    { 4, true, "Faint", 3.2m, "RUBY-004", "Ruby", "Russia", "Very Good", "Excellent", "Excellent" }
-                });
-
-            migrationBuilder.InsertData(
                 table: "PriceRateLists",
                 columns: new[] { "PriceRateID", "EffDate", "PriceRate" },
                 values: new object[,]
@@ -373,14 +343,14 @@ namespace Repository.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "GemPriceLists",
-                columns: new[] { "GemID", "CaratWeight", "Clarity", "Color", "Cut", "EffDate", "Origin", "Price" },
+                table: "Gems",
+                columns: new[] { "GemID", "Active", "Fluorescence", "FourC", "GemCode", "GemName", "Origin", "Polish", "Proportion", "Symmetry" },
                 values: new object[,]
                 {
-                    { 1, 2.05m, "VVS1", "D", "Brilliant", new DateTime(2023, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Brazil", 10000m },
-                    { 2, 1.8m, "VS2", "E", "Cushion", new DateTime(2023, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Australia", 8500m },
-                    { 3, 3.02m, "IF", "F", "Round Brilliant", new DateTime(2023, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Canada", 25000m },
-                    { 4, 1.2m, "SI1", "J", "Oval", new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Russia", 6000m }
+                    { 1, true, "None", 4.5m, "EMGR-001", "Emerald", "Brazil", "Excellent", "Excellent", "Excellent" },
+                    { 2, true, "Faint", 3.8m, "SAPP-002", "Sapphire", "Australia", "Excellent", "Very Good", "Very Good" },
+                    { 3, true, "None", 4.9m, "DIAM-003", "Diamond", "Canada", "Ideal", "Ideal", "Ideal" },
+                    { 4, true, "Faint", 3.2m, "RUBY-004", "Ruby", "Russia", "Very Good", "Excellent", "Excellent" }
                 });
 
             migrationBuilder.InsertData(
@@ -393,17 +363,6 @@ namespace Repository.Migrations
                     { 3, "Pickup in-store", false, new DateTime(2023, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), 120.0m, 3 },
                     { 4, "Express delivery", true, new DateTime(2023, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), 90.0m, 1 },
                     { 5, "Standard delivery", true, new DateTime(2023, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), 60.0m, 2 }
-                });
-
-            migrationBuilder.InsertData(
-                table: "ProductGems",
-                columns: new[] { "ProductID", "GemID" },
-                values: new object[,]
-                {
-                    { 1, 1 },
-                    { 2, 2 },
-                    { 3, 3 },
-                    { 4, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -426,6 +385,17 @@ namespace Repository.Migrations
                     { 2, 15.0m, "NEWCUSTOMER15", new DateTime(2023, 7, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), true, 2 },
                     { 3, 20.0m, "HOLIDAYDISCOUNT20", new DateTime(2023, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), true, 3 },
                     { 4, 5.0m, "SPECIALOFFER5", new DateTime(2023, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), true, 4 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "GemPriceLists",
+                columns: new[] { "GemID", "CaratWeight", "Clarity", "Color", "Cut", "EffDate", "Origin", "Price" },
+                values: new object[,]
+                {
+                    { 1, 2.05m, "VVS1", "D", "Brilliant", new DateTime(2023, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Brazil", 10000m },
+                    { 2, 1.8m, "VS2", "E", "Cushion", new DateTime(2023, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Australia", 8500m },
+                    { 3, 3.02m, "IF", "F", "Round Brilliant", new DateTime(2023, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Canada", 25000m },
+                    { 4, 1.2m, "SI1", "J", "Oval", new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Russia", 6000m }
                 });
 
             migrationBuilder.InsertData(
@@ -492,11 +462,6 @@ namespace Repository.Migrations
                 column: "PriceRateListsPriceRateID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductGems_GemID",
-                table: "ProductGems",
-                column: "GemID");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Warranties_OrderID",
                 table: "Warranties",
                 column: "OrderID");
@@ -526,19 +491,16 @@ namespace Repository.Migrations
                 name: "PriceRateListProduct");
 
             migrationBuilder.DropTable(
-                name: "ProductGems");
+                name: "Warranties");
 
             migrationBuilder.DropTable(
-                name: "Warranties");
+                name: "Gems");
 
             migrationBuilder.DropTable(
                 name: "ProductMaterials");
 
             migrationBuilder.DropTable(
                 name: "PriceRateLists");
-
-            migrationBuilder.DropTable(
-                name: "Gems");
 
             migrationBuilder.DropTable(
                 name: "Orders");

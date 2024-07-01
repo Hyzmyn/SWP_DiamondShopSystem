@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace Repository.Models
 {
     public class Gem
     {
+        [ForeignKey("Product")]
         [Key]
         public int GemID { get; set; }
         public string GemCode { get; set; }
@@ -21,8 +23,9 @@ namespace Repository.Models
         public string Fluorescence { get; set; }
         public bool Active { get; set; }
 
-      
-        public virtual ICollection<ProductGem> ProductGems { get; set; }
-        
+
+
+        public virtual Product Product { get; set; }
+
     }
 }
