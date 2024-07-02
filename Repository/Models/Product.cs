@@ -19,9 +19,9 @@ namespace Repository.Models
         public string ImageUrl1 { get; set; }
 		public string ImageUrl2 { get; set; }
 		public int GemID { get; set; }
-        public int MaterialID { get; set; }
-        public int CategoryID { get; set; }
-        public decimal ProductionCost { get; set; }
+		public decimal Weight { get; set; }
+		public int CategoryID { get; set; }
+		public decimal ProductionCost { get; set; }
         public decimal PriceRateID { get; set; }
         public decimal TotalCost { get; set; }
 
@@ -29,7 +29,7 @@ namespace Repository.Models
 
         [ForeignKey("PriceRateID")]
         public virtual ICollection<PriceRateList> PriceRateLists { get; set; }
-        public virtual ICollection<ProductMaterial> ProductMaterials { get; set; }
+        public virtual ICollection<MaterialPriceList> MaterialPriceLists { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

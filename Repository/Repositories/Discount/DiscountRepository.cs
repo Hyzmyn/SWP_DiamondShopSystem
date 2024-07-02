@@ -1,12 +1,11 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-using Repository.Interface;
 using Repository.Models;
-using Repository.Repositories.Base;
 
 
 
-namespace Repository
+
+namespace Repository.Repositories
 {
     public class DiscountRepository : BaseRepository<Discount>, IDiscountRepository
     {

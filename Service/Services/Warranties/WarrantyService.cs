@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Repository.Interface;
+using Repository.Repositories;
 using Repository.Models;
 using SelectPdf;
 using System;

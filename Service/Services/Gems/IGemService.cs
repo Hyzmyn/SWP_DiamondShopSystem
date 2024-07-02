@@ -1,7 +1,6 @@
 ﻿
-using Repository.Interface;
-using Repository.Models;
 using Repository.Repositories;
+using Repository.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +15,7 @@ namespace Service.Services
         Task DeleteGemAsync(int id);
         Task AddGemAsync(Gem gem);
         Task UpdateGemAsync(Gem gem);
+        Task<decimal> GetDiamondPrice(string cut, decimal carat, string color, string clarity);
 
-    }
+	}
 }

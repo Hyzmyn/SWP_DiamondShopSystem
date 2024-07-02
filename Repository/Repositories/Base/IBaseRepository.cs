@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository.Repositories.Base
+namespace Repository.Repositories
 {
     public interface IBaseRepository<TEntity> where TEntity : class
     {

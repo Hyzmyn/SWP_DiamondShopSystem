@@ -15,16 +15,15 @@ namespace Repository.Models
         public int UserID { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public string Email { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Address { get; set; }
+        public string? Email { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string? Address { get; set; }
         public int RoleID { get; set; }
         public bool UserStatus { get; set; }
-        public string NiSize { get; set; }
+        public string? NiSize { get; set; }
         public DateTime CreatedAt { get; set; }
 
-        //[ForeignKey("RoleID")]
-        //public virtual Role Role { get; set; }
+
         public virtual ICollection<Order> Orders { get; set; }
     }
 }
