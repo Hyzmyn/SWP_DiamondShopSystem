@@ -25,10 +25,11 @@ namespace Repository.Models
         public decimal PriceRateID { get; set; }
         public decimal TotalCost { get; set; }
 
-        [ForeignKey("PriceRateId")]
-        public virtual PriceRateList PriceRateLists { get; set; }
+        public virtual Gem Gems { get; set; }
+
+        [ForeignKey("PriceRateID")]
+        public virtual ICollection<PriceRateList> PriceRateLists { get; set; }
         public virtual ICollection<ProductMaterial> ProductMaterials { get; set; }
-        public virtual ICollection<ProductGem> ProductGems { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

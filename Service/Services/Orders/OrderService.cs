@@ -1,14 +1,8 @@
-﻿
-using Repository.Interface;
+﻿using Repository.Interface;
 using Repository.Models;
-using Repository.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SelectPdf;
 
-namespace Service.Services.Orders
+namespace Service.Services
 {
     public class OrderService : IOrderService
     {
@@ -37,5 +31,15 @@ namespace Service.Services.Orders
         {
             throw new NotImplementedException();
         }
+        public async Task<IEnumerable<Order>> GetOrdersByUserIdAsync(int userId)
+        {
+            return await _repo.GetOrdersByUserIdAsync(userId);
+        }
+        public async Task<Order> GetOrderByIdAsync(int orderId)
+        {
+            return await _repo.GetByIdAsync(orderId);
+        }
+
+        
     }
 }

@@ -1,0 +1,108 @@
+﻿@model IEnumerable<Repository.Models.OrderDetail>
+@using Repository.Models
+
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    decimal totalPrice = 0;
+    decimal discountAmount = ViewBag.DiscountAmount ?? 0;
+    string discountCode = ViewBag.DiscountCode ?? string.Empty;
+}
+<main role="main" style="padding: 0px 100px;">
+    <style>
+        .flex-container {
+            display: flex;
+            align-items: center;
+            margin-top: -20px;
+        }
+        .flex-item {
+            margin-right: 10px;
+        }
+        .btn-pay-now {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+
+    <table class="table" style="color: wheat; margin: 0px 10px;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>IMAGE</th>
+                <th>NISIZE</th>
+                <th>Quantity</th>
+                <th>PRICE</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                var image = item.Product.ImageUrl1;
+                var itemTotalPrice = item.Product.TotalCost * item.Quantity;
+                totalPrice += itemTotalPrice;
+
+                    <tr>
+                        <td>@item.Product.ProductID</td>
+                        <td>@item.Product.ProductName</td>
+                        <td><img src="@Url.Content("~/images/product/" + image)" style="height: 75px; " /></td>
+                        <td>@item.NiSize</td>
+                        <td>
+                            <div class="flex-container">
+                                <form asp-action="UpdateQuantity" method="post" style="display: flex; align-items: center;">
+                                    <input type="hidden" name="orderDetailId" value="@item.OrderDetailID" />
+                                    <input type="number" name="quantity" value="@item.Quantity" min="1" class="flex-item" style="width: 50px;" />
+                                    <button type="submit" class="btn btn-primary btn-sm flex-item"><i class="bi bi-check-square-fill"></i></button>
+                                </form>
+                            </div>
+                        </td>
+                        <td>@itemTotalPrice</td>
+                        <td>
+                            <form asp-action="RemoveFromCart" method="post" style="display: inline;">
+                                <input type="hidden" name="orderDetailId" value="@item.OrderDetailID" />
+                                <button type="submit" class="btn btn-danger btn-sm flex-item"><i class="bi bi-trash3"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+            }
+            <tr>
+                <td colspan="5" style="text-align: right;font-weight: bold; padding-top: 35px;">DISCOUNT CODE</td>
+                <td colspan="2">
+                    <form asp-action="ApplyDiscount" method="post" style="display: flex; align-items: center;">
+                        <input type="text" name="discountCode" class="form-control flex-item" />
+                        <button type="submit" class="btn btn-primary btn-sm flex-item">Apply</button>
+                    </form>
+                </td>
+            </tr>
+            </tr>
+            @if (!string.IsNullOrEmpty(discountCode))
+            {
+                        <tr>
+                            <td colspan="5" style="text-align: right; font-weight: bold;">APPLIED DISCOUNT CODE</td>
+                            <td colspan="2" style="font-weight: bold;">@discountCode</td>
+                        </tr>
+            }
+            <tr>
+                <td colspan="5" style="text-align: right; font-weight: bold;">TOTAL PRICE</td>
+                <td colspan="3" style="font-weight: bold;">@((totalPrice - (totalPrice * discountAmount / 100))< 0 ? 0 : (totalPrice - (totalPrice*discountAmount/100))) ( YOUR DISCOUNT: @discountAmount %)</td>
+            
+            <tr>
+                <td colspan="7" style="text-align: right;">
+                    <form asp-action="Index" asp-controller="Checkout" method="post" style="display: inline;">
+                        <button type="submit" class="btn-pay-now">PAY PURCHASE</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</main>

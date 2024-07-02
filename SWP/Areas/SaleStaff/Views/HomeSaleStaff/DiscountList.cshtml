@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Repository.Models.Discount>
+
+@{
+    ViewData["Title"] = "Discount List";
+    Layout = "~/Areas/SaleStaff/Views/Shared/_LayoutSaleStaff.cshtml";
+}
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h1>Discount List</h1>
+
+<p>
+    <a asp-action="CreateDiscount">Create New</a>
+</p>
+<p>@TempData["Message"]</p>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+<table class="table">
+    <thead>
+        <tr class="table-warning">
+            <th>
+                @Html.DisplayNameFor(model => model.OrderID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiscountCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiscountAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiscountDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiscountStatus)
+            </th>
+            <th> Action</th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="table-success">
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiscountCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiscountAmount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiscountDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiscountStatus)
+                </td>
+                <td>
+                    <a asp-action="EditDiscount" asp-route-discountId="@item.DiscountID">Edit</a>
+                    <a asp-action="DeleteDiscount" asp-route-discountId="@item.DiscountID" onclick="return confirm('Are you sure you want to delete this discount?')">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

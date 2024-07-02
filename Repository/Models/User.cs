@@ -21,6 +21,7 @@ namespace Repository.Models
         public int RoleID { get; set; }
         public bool UserStatus { get; set; }
         public string NiSize { get; set; }
+        public DateTime CreatedAt { get; set; }
 
         //[ForeignKey("RoleID")]
         //public virtual Role Role { get; set; }

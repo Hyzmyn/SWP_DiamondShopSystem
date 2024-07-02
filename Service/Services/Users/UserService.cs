@@ -2,8 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Repository.Interface;
 using Repository.Models;
+using Repository.Repositories;
 
-namespace Service.Services.Users
+namespace Service.Services
 {
     public class UserService : IUserService
     {
@@ -123,6 +124,10 @@ namespace Service.Services.Users
                 throw new Exception($"Password is incorrect");
             }
             return account;
+        }
+        public async Task<User> GetUserByIdAsync(int userId)
+        {
+            return await _repo.GetUserByIdAsync(userId);
         }
     }
 }

@@ -12,6 +12,7 @@ namespace Repository.Interface
     public interface IUserRepository : IBaseRepository<User>
     {
         Task<User?> GetUsernameAsync(string username);
+        Task<User> GetUserByIdAsync(int userId);
 
     }
 }

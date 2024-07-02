@@ -29,6 +29,8 @@ namespace Repository.Models
 		[Required]
 		public decimal ProductionCost { get; set; }
 		[Required]
-		public decimal PriceRate { get; set; }
-	}
+		public decimal PriceRateID { get; set; }
+        [Required]
+        public decimal TotalCost { get; set; }
+    }
 }

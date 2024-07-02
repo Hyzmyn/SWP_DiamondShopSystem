@@ -1,5 +1,5 @@
 ﻿
-using ervice.Services.OrderDetails;
+using service.Services;
 using Repository.Interface;
 using Repository.Models;
 using Repository.Repositories;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.Services.OrderDetails
+namespace Service.Services
 {
     internal class OrderDetailService : IOrderDetailService
     {

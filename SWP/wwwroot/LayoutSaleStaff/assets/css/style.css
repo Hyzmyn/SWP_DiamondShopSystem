@@ -14451,3 +14451,24 @@ dl {
 }
 
 /*# sourceMappingURL=style.css.map */
+/* Content/ManagerWelcome.css */
+.welcome-container {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .welcome-container h1 {
+        color: #333;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .welcome-container p {
+        color: #666;
+        font-size: 1.2em;
+    }

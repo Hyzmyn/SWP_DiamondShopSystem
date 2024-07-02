@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ervice.Services.OrderDetails
+namespace service.Services
 {
     public interface IOrderDetailService
     {

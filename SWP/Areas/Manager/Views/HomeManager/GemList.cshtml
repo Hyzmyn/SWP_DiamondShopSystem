@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Repository.Models.Gem>
+@{
+    ViewData["Title"] = "GemList";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<h1>Gem List</h1>
+
+<p>
+    <a asp-action="CreateGem">Create New</a>
+</p>
+<p>@TempData["Message"]</p>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+<table class="table">
+    <thead>
+        <tr class="table-warning">
+            <th>
+                @Html.DisplayNameFor(model => model.GemCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Origin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FourC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Proportion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Polish)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symmetry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fluorescence)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var gem in Model)
+        {
+            <tr class="table-success">
+                <td>
+                    @Html.DisplayFor(modelItem => gem.GemCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => gem.GemName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => gem.Origin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => gem.FourC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => gem.Proportion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => gem.Polish)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => gem.Symmetry)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => gem.Fluorescence)
+                </td>
+                <td>
+                    <a asp-action="EditGem" asp-route-gemCode="@gem.GemCode" class="btn btn-primary">Edit</a>
+                    <a asp-action="DeleteGem" asp-route-gemCode="@gem.GemCode" class="btn btn-danger"
+                       onclick="return confirm('Are you sure you want to delete this gem?')">Delete</a>
+                    <a class="btn btn-danger" asp-action="GenerateWarrantyPdf" asp-route-id="@gem.GemID">Download Certificate</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

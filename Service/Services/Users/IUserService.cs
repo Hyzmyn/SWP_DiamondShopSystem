@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.Services.Users 
+namespace Service.Services 
 {
     public interface IUserService
     {
@@ -15,6 +15,7 @@ namespace Service.Services.Users
         Task AddUserAsync(User user);
         Task UpdateUserAsync(User user);
         Task<User> LoginAsync(string username, string password);
+        Task<User> GetUserByIdAsync(int userId);
 
     }
 }
