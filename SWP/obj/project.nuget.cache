@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GipsWuNrRBn3ohb5nPHLLa15FErQqc9DFscejEE/6Wg/+X1iW0QFag5qiXNJF44BJtHzEUO3mVwwfSGJMYyM0A==",
+  "dgSpecHash": "/TTr4gCkp+rHYkN/yL2QcgC8fgElhgY/Ngj4BuYUN4IRL7gKC34xkQy1OxIk4yMnJ9KapUFM/qJT2fxNTDeoNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_Final\\SWP\\SWP.csproj",
+  "projectFilePath": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\SWP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",

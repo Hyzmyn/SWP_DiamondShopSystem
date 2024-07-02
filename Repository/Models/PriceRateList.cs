@@ -11,10 +11,10 @@ namespace Repository.Models
     {
         [Key]
         public int PriceRateID { get; set; }
-        public decimal PriceRate { get; set; }
+        public Decimal PriceRate { get; set; }
         public DateTime EffDate { get; set; }
 
 
-        public virtual Product Product { get; set; }
+        public virtual Product Products { get; set; }
     }
 }

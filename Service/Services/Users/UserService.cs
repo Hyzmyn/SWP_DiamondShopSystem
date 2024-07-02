@@ -1,8 +1,7 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-using Repository.Interface;
-using Repository.Models;
 using Repository.Repositories;
+using Repository.Models;
 
 namespace Service.Services
 {
@@ -83,10 +82,8 @@ namespace Service.Services
             var existingUser = await _repo.GetUsernameAsync(user.Username);
             if (existingUser == null)
             {
-                int maxUserId = await _repo.GetMaxIdAsync();
-                user.UserID = maxUserId + 1;
-                user.RoleID = 5;
                 user.UserStatus = true;
+                user.CreatedAt = DateTime.Now;                                                     
                 await _repo.CreateAsync(user);
                 await _repo.SaveAsync();
             }

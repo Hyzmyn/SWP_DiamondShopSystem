@@ -100,7 +100,7 @@ namespace Repository.Migrations
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime?>("DateTime")
+                    b.Property<DateTime>("DateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Fluorescence")
@@ -144,7 +144,7 @@ namespace Repository.Migrations
                         {
                             GemID = 1,
                             Active = true,
-                            DateTime = new DateTime(2023, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fluorescence = "None",
                             FourC = 4.5m,
                             GemCode = "EMGR-001",
@@ -158,7 +158,7 @@ namespace Repository.Migrations
                         {
                             GemID = 2,
                             Active = true,
-                            DateTime = new DateTime(2023, 1, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fluorescence = "Faint",
                             FourC = 3.8m,
                             GemCode = "SAPP-002",
@@ -172,7 +172,7 @@ namespace Repository.Migrations
                         {
                             GemID = 3,
                             Active = true,
-                            DateTime = new DateTime(2023, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fluorescence = "None",
                             FourC = 4.9m,
                             GemCode = "DIAM-003",
@@ -186,7 +186,7 @@ namespace Repository.Migrations
                         {
                             GemID = 4,
                             Active = true,
-                            DateTime = new DateTime(2023, 1, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fluorescence = "Faint",
                             FourC = 3.2m,
                             GemCode = "RUBY-004",
@@ -284,11 +284,8 @@ namespace Repository.Migrations
 
             modelBuilder.Entity("Repository.Models.MaterialPriceList", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("MaterialID")
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<decimal>("BuyPrice")
                         .HasPrecision(12, 2)
@@ -297,50 +294,41 @@ namespace Repository.Migrations
                     b.Property<DateTime>("EffDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("MaterialID")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("SellPrice")
                         .HasPrecision(12, 2)
                         .HasColumnType("decimal(12,2)");
 
-                    b.HasKey("ID");
-
-                    b.HasIndex("MaterialID");
+                    b.HasKey("MaterialID");
 
                     b.ToTable("MaterialPriceLists");
 
                     b.HasData(
                         new
                         {
-                            ID = 1,
+                            MaterialID = 1,
                             BuyPrice = 18.75m,
                             EffDate = new DateTime(2023, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            MaterialID = 1,
                             SellPrice = 25.0m
                         },
                         new
                         {
-                            ID = 2,
+                            MaterialID = 2,
                             BuyPrice = 14.50m,
                             EffDate = new DateTime(2023, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            MaterialID = 2,
                             SellPrice = 20.0m
                         },
                         new
                         {
-                            ID = 3,
+                            MaterialID = 3,
                             BuyPrice = 16.25m,
                             EffDate = new DateTime(2023, 7, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            MaterialID = 3,
                             SellPrice = 22.0m
                         },
                         new
                         {
-                            ID = 4,
+                            MaterialID = 4,
                             BuyPrice = 19.00m,
                             EffDate = new DateTime(2023, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            MaterialID = 4,
                             SellPrice = 26.0m
                         });
                 });
@@ -561,9 +549,6 @@ namespace Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MaterialID")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("PriceRateID")
                         .HasPrecision(12, 2)
                         .HasColumnType("decimal(12,2)");
@@ -584,6 +569,10 @@ namespace Repository.Migrations
                         .HasPrecision(12, 2)
                         .HasColumnType("decimal(12,2)");
 
+                    b.Property<decimal>("Weight")
+                        .HasPrecision(12, 2)
+                        .HasColumnType("decimal(12,2)");
+
                     b.HasKey("ProductID");
 
                     b.ToTable("Products");
@@ -594,316 +583,280 @@ namespace Repository.Migrations
                             ProductID = 1,
                             CategoryID = 1,
                             GemID = 1,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 1,
+                            ImageUrl1 = "images/diamond_necklace_1.jpg",
+                            ImageUrl2 = "images/diamond_necklace_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P001",
                             ProductName = "Diamond Necklace",
                             ProductionCost = 150.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 20.5m
                         },
                         new
                         {
                             ProductID = 2,
-                            CategoryID = 1,
+                            CategoryID = 2,
                             GemID = 2,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 2,
+                            ImageUrl1 = "images/gold_ring_1.jpg",
+                            ImageUrl2 = "images/gold_ring_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P002",
                             ProductName = "Gold Ring",
                             ProductionCost = 100.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 15.7m
                         },
                         new
                         {
                             ProductID = 3,
-                            CategoryID = 1,
+                            CategoryID = 3,
                             GemID = 3,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 3,
+                            ImageUrl1 = "images/emerald_bracelet_1.jpg",
+                            ImageUrl2 = "images/emerald_bracelet_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P003",
                             ProductName = "Emerald Bracelet",
                             ProductionCost = 120.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 22.1m
                         },
                         new
                         {
                             ProductID = 4,
-                            CategoryID = 1,
+                            CategoryID = 4,
                             GemID = 4,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 4,
+                            ImageUrl1 = "images/silver_earrings_1.jpg",
+                            ImageUrl2 = "images/silver_earrings_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P004",
                             ProductName = "Silver Earrings",
                             ProductionCost = 80.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 18.2m
                         },
                         new
                         {
                             ProductID = 5,
-                            CategoryID = 1,
+                            CategoryID = 3,
                             GemID = 1,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 2,
+                            ImageUrl1 = "images/sapphire_pendant_1.jpg",
+                            ImageUrl2 = "images/sapphire_pendant_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P005",
                             ProductName = "Sapphire Pendant",
                             ProductionCost = 130.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 2.2m
                         },
                         new
                         {
                             ProductID = 6,
-                            CategoryID = 1,
+                            CategoryID = 4,
                             GemID = 2,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 3,
+                            ImageUrl1 = "images/platinum_bracelet_1.jpg",
+                            ImageUrl2 = "images/platinum_bracelet_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P006",
                             ProductName = "Platinum Bracelet",
                             ProductionCost = 200.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 3.1m
                         },
                         new
                         {
                             ProductID = 7,
                             CategoryID = 1,
                             GemID = 3,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 4,
+                            ImageUrl1 = "images/ruby_ring_1.jpg",
+                            ImageUrl2 = "images/ruby_ring_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P007",
                             ProductName = "Ruby Ring",
                             ProductionCost = 90.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 1.2m
                         },
                         new
                         {
                             ProductID = 8,
-                            CategoryID = 1,
+                            CategoryID = 2,
                             GemID = 4,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 1,
+                            ImageUrl1 = "images/amethyst_earrings_1.jpg",
+                            ImageUrl2 = "images/amethyst_earrings_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P008",
                             ProductName = "Amethyst Earrings",
                             ProductionCost = 70.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 1.9m
                         },
                         new
                         {
                             ProductID = 9,
                             CategoryID = 1,
                             GemID = 1,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 3,
+                            ImageUrl1 = "images/topaz_necklace_1.jpg",
+                            ImageUrl2 = "images/topaz_necklace_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P009",
                             ProductName = "Topaz Necklace",
                             ProductionCost = 110.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 3.1m
                         },
                         new
                         {
                             ProductID = 10,
-                            CategoryID = 1,
+                            CategoryID = 2,
                             GemID = 2,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 4,
+                            ImageUrl1 = "images/opal_brooch_1.jpg",
+                            ImageUrl2 = "images/opal_brooch_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P010",
                             ProductName = "Opal Brooch",
                             ProductionCost = 95.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 4m
                         },
                         new
                         {
                             ProductID = 11,
                             CategoryID = 1,
                             GemID = 1,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 1,
+                            ImageUrl1 = "images/diamond_necklace_1.jpg",
+                            ImageUrl2 = "images/diamond_necklace_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P001",
                             ProductName = "Diamond Necklace",
                             ProductionCost = 150.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 1.2m
                         },
                         new
                         {
                             ProductID = 12,
-                            CategoryID = 1,
+                            CategoryID = 2,
                             GemID = 2,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 2,
+                            ImageUrl1 = "images/gold_ring_1.jpg",
+                            ImageUrl2 = "images/gold_ring_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P002",
                             ProductName = "Gold Ring",
                             ProductionCost = 100.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 2.4m
                         },
                         new
                         {
                             ProductID = 13,
-                            CategoryID = 1,
+                            CategoryID = 3,
                             GemID = 3,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 3,
+                            ImageUrl1 = "images/emerald_bracelet_1.jpg",
+                            ImageUrl2 = "images/emerald_bracelet_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P003",
                             ProductName = "Emerald Bracelet",
                             ProductionCost = 120.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 3m
                         },
                         new
                         {
                             ProductID = 14,
-                            CategoryID = 1,
+                            CategoryID = 4,
                             GemID = 4,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 4,
+                            ImageUrl1 = "images/silver_earrings_1.jpg",
+                            ImageUrl2 = "images/silver_earrings_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P004",
                             ProductName = "Silver Earrings",
                             ProductionCost = 80.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 4.5m
                         },
                         new
                         {
                             ProductID = 15,
-                            CategoryID = 1,
+                            CategoryID = 3,
                             GemID = 1,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 2,
+                            ImageUrl1 = "images/sapphire_pendant_1.jpg",
+                            ImageUrl2 = "images/sapphire_pendant_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P005",
                             ProductName = "Sapphire Pendant",
                             ProductionCost = 130.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 2.5m
                         },
                         new
                         {
                             ProductID = 16,
-                            CategoryID = 1,
+                            CategoryID = 4,
                             GemID = 2,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 3,
+                            ImageUrl1 = "images/platinum_bracelet_1.jpg",
+                            ImageUrl2 = "images/platinum_bracelet_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P006",
                             ProductName = "Platinum Bracelet",
                             ProductionCost = 200.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 3.1m
                         },
                         new
                         {
                             ProductID = 17,
                             CategoryID = 1,
                             GemID = 3,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 4,
+                            ImageUrl1 = "images/ruby_ring_1.jpg",
+                            ImageUrl2 = "images/ruby_ring_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P007",
                             ProductName = "Ruby Ring",
                             ProductionCost = 90.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 4.1m
                         },
                         new
                         {
                             ProductID = 18,
-                            CategoryID = 1,
+                            CategoryID = 2,
                             GemID = 4,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 1,
+                            ImageUrl1 = "images/amethyst_earrings_1.jpg",
+                            ImageUrl2 = "images/amethyst_earrings_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P008",
                             ProductName = "Amethyst Earrings",
                             ProductionCost = 70.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 1.8m
                         },
                         new
                         {
                             ProductID = 19,
                             CategoryID = 1,
                             GemID = 1,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 3,
+                            ImageUrl1 = "images/topaz_necklace_1.jpg",
+                            ImageUrl2 = "images/topaz_necklace_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P009",
                             ProductName = "Topaz Necklace",
                             ProductionCost = 110.0m,
-                            TotalCost = 0m
+                            TotalCost = 0m,
+                            Weight = 3.5m
                         },
                         new
                         {
                             ProductID = 20,
-                            CategoryID = 1,
+                            CategoryID = 2,
                             GemID = 2,
-                            ImageUrl1 = "1.jpg",
-                            ImageUrl2 = "2.jpg",
-                            MaterialID = 4,
+                            ImageUrl1 = "images/opal_brooch_1.jpg",
+                            ImageUrl2 = "images/opal_brooch_2.jpg",
                             PriceRateID = 1m,
                             ProductCode = "P010",
                             ProductName = "Opal Brooch",
                             ProductionCost = 95.0m,
-                            TotalCost = 0m
-                        });
-                });
-
-            modelBuilder.Entity("Repository.Models.ProductMaterial", b =>
-                {
-                    b.Property<int>("MaterialID")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("Weight")
-                        .HasPrecision(12, 2)
-                        .HasColumnType("decimal(12,2)");
-
-                    b.HasKey("MaterialID");
-
-                    b.ToTable("ProductMaterials");
-
-                    b.HasData(
-                        new
-                        {
-                            MaterialID = 1,
-                            Weight = 20.5m
-                        },
-                        new
-                        {
-                            MaterialID = 2,
-                            Weight = 15.7m
-                        },
-                        new
-                        {
-                            MaterialID = 3,
-                            Weight = 18.2m
-                        },
-                        new
-                        {
-                            MaterialID = 4,
-                            Weight = 22.1m
+                            TotalCost = 0m,
+                            Weight = 2.6m
                         });
                 });
 
@@ -916,18 +869,15 @@ namespace Repository.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserID"));
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NiSize")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
@@ -935,7 +885,6 @@ namespace Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("RoleID")
@@ -957,7 +906,7 @@ namespace Repository.Migrations
                         {
                             UserID = 1,
                             Address = "Address1",
-                            CreatedAt = new DateTime(2023, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user1@example.com",
                             NiSize = "S",
                             Password = "123",
@@ -970,7 +919,7 @@ namespace Repository.Migrations
                         {
                             UserID = 2,
                             Address = "Address2",
-                            CreatedAt = new DateTime(2023, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user2@example.com",
                             NiSize = "M",
                             Password = "123",
@@ -983,7 +932,7 @@ namespace Repository.Migrations
                         {
                             UserID = 3,
                             Address = "Address3",
-                            CreatedAt = new DateTime(2023, 3, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user3@example.com",
                             NiSize = "M",
                             Password = "123",
@@ -996,7 +945,7 @@ namespace Repository.Migrations
                         {
                             UserID = 4,
                             Address = "Address4",
-                            CreatedAt = new DateTime(2023, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user4@example.com",
                             NiSize = "M",
                             Password = "123",
@@ -1009,7 +958,7 @@ namespace Repository.Migrations
                         {
                             UserID = 5,
                             Address = "Address5",
-                            CreatedAt = new DateTime(2023, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user5@example.com",
                             NiSize = "M",
                             Password = "123",
@@ -1022,7 +971,7 @@ namespace Repository.Migrations
                         {
                             UserID = 6,
                             Address = "Address",
-                            CreatedAt = new DateTime(2023, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user6@example.com",
                             NiSize = "M",
                             Password = "Password",
@@ -1035,7 +984,7 @@ namespace Repository.Migrations
                         {
                             UserID = 7,
                             Address = "Address",
-                            CreatedAt = new DateTime(2023, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user7@example.com",
                             NiSize = "M",
                             Password = "Password",
@@ -1048,7 +997,7 @@ namespace Repository.Migrations
                         {
                             UserID = 8,
                             Address = "Address",
-                            CreatedAt = new DateTime(2023, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user8@example.com",
                             NiSize = "M",
                             Password = "Password",
@@ -1061,7 +1010,7 @@ namespace Repository.Migrations
                         {
                             UserID = 9,
                             Address = "Address",
-                            CreatedAt = new DateTime(2023, 9, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user9@example.com",
                             NiSize = "M",
                             Password = "Password",
@@ -1084,7 +1033,8 @@ namespace Repository.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("Point")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(12, 2)
+                        .HasColumnType("decimal(12,2)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -1212,13 +1162,13 @@ namespace Repository.Migrations
 
             modelBuilder.Entity("Repository.Models.MaterialPriceList", b =>
                 {
-                    b.HasOne("Repository.Models.ProductMaterial", "ProductMaterial")
-                        .WithMany()
+                    b.HasOne("Repository.Models.Product", "Product")
+                        .WithMany("MaterialPriceLists")
                         .HasForeignKey("MaterialID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ProductMaterial");
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("Repository.Models.Order", b =>
@@ -1253,24 +1203,13 @@ namespace Repository.Migrations
 
             modelBuilder.Entity("Repository.Models.PriceRateList", b =>
                 {
-                    b.HasOne("Repository.Models.Product", "Product")
+                    b.HasOne("Repository.Models.Product", "Products")
                         .WithMany("PriceRateLists")
                         .HasForeignKey("PriceRateID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("Repository.Models.ProductMaterial", b =>
-                {
-                    b.HasOne("Repository.Models.Product", "Product")
-                        .WithMany("ProductMaterials")
-                        .HasForeignKey("MaterialID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("Repository.Models.WalletPoint", b =>
@@ -1313,11 +1252,11 @@ namespace Repository.Migrations
                     b.Navigation("Gems")
                         .IsRequired();
 
+                    b.Navigation("MaterialPriceLists");
+
                     b.Navigation("OrderDetails");
 
                     b.Navigation("PriceRateLists");
-
-                    b.Navigation("ProductMaterials");
                 });
 
             modelBuilder.Entity("Repository.Models.User", b =>

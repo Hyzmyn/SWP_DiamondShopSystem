@@ -1,6 +1,5 @@
-﻿using Repository.Interface;
+﻿using Repository.Repositories;
 using Repository.Models;
-using Repository.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +13,9 @@ namespace Service.Services
     public class GemPriceListService : IGemPriceListService
     {
         private IGemPriceListRepository _repo;
-        private readonly HttpClient _httpClient;
-
-        public GemPriceListService(IGemPriceListRepository repo, IHttpClientFactory httpClientFactory)
+        public GemPriceListService(IGemPriceListRepository repo)
         {
             _repo = repo;
-            _httpClient = httpClientFactory.CreateClient();
         }
 
         public Task AddGemPriceListAsync(GemPriceList gemPriceList)
@@ -43,30 +39,45 @@ namespace Service.Services
             throw new NotImplementedException();
         }
 
-        public async Task<decimal> GetDiamondPrice(string cut, decimal carat, string color, string clarity, string make, string certificate)
-        {
-            string apiUrl = $"http://www.idexonline.com/DPService.asp?Cut={cut}&Carat={carat}&Color={color}&Clarity={clarity}&Make={make}&Cert={certificate}";
+		public async Task CalculateAndSavePricesAsync()
+		{
+			var gemPriceLists =  _repo.Get().ToList();
 
-            HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
+			foreach (var gemPrice in gemPriceLists)
+			{
+				decimal colorValue = gemPrice.Color switch
+				{
+					"D" => RandomNumberStore.RandomValues.D,
+					"E" => RandomNumberStore.RandomValues.E,
+					"F" => RandomNumberStore.RandomValues.F,
+					"J" => RandomNumberStore.RandomValues.J,
+					_ => 0
+				};
 
-            if (response.IsSuccessStatusCode)
-            {
-                string responseBody = await response.Content.ReadAsStringAsync();
+				decimal clarityValue = gemPrice.Clarity switch
+				{
+					"IF" => RandomNumberStore.RandomValues.IF,
+					"VVS1" => RandomNumberStore.RandomValues.VVS1,
+					"VVS2" => RandomNumberStore.RandomValues.VVS2,
+					"VS1" => RandomNumberStore.RandomValues.VS1,
+					"VS2" => RandomNumberStore.RandomValues.VS2,
+					_ => 0
+				};
 
-                XDocument xmlDoc = XDocument.Parse(responseBody);
-                XElement priceElement = xmlDoc.Descendants("price").FirstOrDefault();
+				decimal cutValue = gemPrice.Cut switch
+				{
+					"Excellent" => RandomNumberStore.RandomValues.Excellent,
+					"VeryGood" => RandomNumberStore.RandomValues.VeryGood,
+					"Good" => RandomNumberStore.RandomValues.Good,
+					_ => 0
+				};
 
-                if (priceElement != null && decimal.TryParse(priceElement.Value, out decimal price))
-                {
-                    return price;
-                }
+				decimal caratValue = gemPrice.CaratWeight * RandomNumberStore.RandomValues.CaratPrice;
 
-                throw new Exception("Unable to extract price from API response.");
-            }
-            else
-            {
-                throw new Exception($"API request failed with status code: {response.StatusCode}");
-            }
-        }
-    }
+				gemPrice.Price = colorValue + clarityValue + cutValue + caratValue;
+			}
+
+			await _repo.SaveAsync();
+		}
+	}
 }
