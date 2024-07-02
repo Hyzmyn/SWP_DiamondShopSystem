@@ -10,37 +10,37 @@ public class AccountController : Controller
 {
     private readonly IUserService _service;
 
-    public AccountController( IUserService service)
-	{
-		_service = service;
-	}
+    public AccountController(IUserService service)
+    {
+        _service = service;
+    }
 
-	public IActionResult Login()
-	{
-		return View();
-	}
+    public IActionResult Login()
+    {
+        return View();
+    }
 
-	[HttpPost]
-	[ValidateAntiForgeryToken]
-	public async Task<IActionResult> Login(string username, string password)
-	{
-		var user = await _service.LoginAsync(username, password);
-		if (user != null)
-		{
-			HttpContext.Session.SetString("UserId", user.UserID.ToString());
-			HttpContext.Session.SetInt32("RoleID", user.RoleID);
-			HttpContext.Session.SetString("Username", user.Username);
-			TempData["ResetInputs"] = true;
-			return RedirectToAction("Index", "Home");
-		}
-		else
-		{
-			TempData["LoginError"] = "Invalid username or password";
-			TempData["ResetInputs"] = true;
-			return RedirectToAction("Index", "Home");
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Login(string username, string password)
+    {
+        var user = await _service.LoginAsync(username, password);
+        if (user != null)
+        {
+            HttpContext.Session.SetString("UserId", user.UserID.ToString());
+            HttpContext.Session.SetInt32("RoleID", user.RoleID);
+            HttpContext.Session.SetString("Username", user.Username);
+            TempData["ResetInputs"] = true;
+            return RedirectToAction("Index", "Home");
+        }
+        else
+        {
+            TempData["LoginError"] = "Invalid username or password";
+            TempData["ResetInputs"] = true;
+            return RedirectToAction("Index", "Home");
 
-		}
-	}
+        }
+    }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
@@ -48,10 +48,10 @@ public class AccountController : Controller
     {
         try
         {
-			if(password != checkPassword)
-			{
-				throw new Exception("password doesn't match");
-			}
+            if (password != checkPassword)
+            {
+                throw new Exception("password doesn't match");
+            }
 
             var newUser = new User
             {
@@ -72,8 +72,9 @@ public class AccountController : Controller
 
 
     public IActionResult Logout()
-	{
-		HttpContext.Session.Clear();
-		return RedirectToAction("Index", "Home");
-	}
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction("Index", "Home");
+    }
 }
+

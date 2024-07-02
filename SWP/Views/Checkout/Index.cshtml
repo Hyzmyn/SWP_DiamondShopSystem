@@ -1,0 +1,466 @@
+﻿@model Service.ViewModel.UserOrderVM
+@using Service.ViewModel
+
+@{
+    ViewData["Title"] = "Shop Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    decimal totalPrice = 0;
+    decimal discountAmount = ViewBag.DiscountAmount ?? 0;
+    string discountCode = ViewBag.DiscountCode ?? string.Empty;
+}
+
+
+
+
+<section class="mb-lg-14 mb-8 mt-8">
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- col -->
+            <div class="col-12">
+                <div>
+                    <div class="mb-8">
+                        <!-- text -->
+                        <h1 class="fw-bold mb-0 text-white">Checkout</h1>
+                       @*  <p class="mb-0">
+                            Already have an account? Click here to
+                            <a href="#!">Sign in</a>
+                            .
+                        </p> *@
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <!-- row -->
+            <div class="row">
+                <div class="col-lg-7 col-md-12">
+                    <!-- accordion -->
+                    <div class="accordion-flush" id="accordionFlushExample">
+                        <!-- accordion item -->
+                        <div class="accordion-item py-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- heading one -->
+                                <a href="#"
+                                   class="fs-5 text-inherit collapsed h4"
+                                   data-bs-toggle="collapse"
+                                   data-bs-target="#flush-collapseOne"
+                                   aria-expanded="true"
+                                   aria-controls="flush-collapseOne">
+                                    <i class="feather-icon icon-map-pin me-2 "></i>
+                                    Delivery address
+                                </a>
+                               <!-- btn -->
+                                @*  <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addAddressModal">Add a new address</a> *@
+                                <!-- collapse -->
+                            </div>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
+                                <div class="mt-5">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-12 mb-4">
+                                            <!-- form -->
+                                            <div class="card card-body p-6">
+                                                @* <div class="form-check mb-4">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="homeRadio" checked />
+                                                    <label class="form-check-label" for="homeRadio">Home</label>
+                                                </div> *@
+                                                <!-- address -->
+                                                <address>
+                                                    <strong>@Model.User.Username</strong>
+                                                    <br />
+                                                    @Model.User.Address
+                                                   
+                                                    <br />
+
+                                                    <abbr title="Phone">@Model.User.PhoneNumber</abbr>
+                                                </address>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-5 d-flex justify-content-end">
+                                   
+                                    <a href="#" class="btn btn-primary ms-2" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseFour">
+                                        Next
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--accordion-item-->
+                        <div class="accordion-item py-4">
+                            <a href="#" class="text-inherit h5" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseFour">
+                                <i class="feather-icon icon-credit-card me-2 "></i>
+                                Payment Method
+                                <!-- collapse -->
+                            </a>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="mt-5">
+                                    <div>
+                                        <form id="formCheckout" asp-action="Checkout">
+                                            <div class="card card-bordered shadow-none mb-2">
+                                                <!-- card body -->
+                                                <div class="card-body p-6">
+                                                    <div class="d-flex">
+                                                        <div class="form-check">
+                                                            <!-- checkbox -->
+                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="paypal" value="paypal" />
+                                                            <label class="form-check-label ms-2" for="paypal"></label>
+                                                        </div>
+                                                        <div>
+                                                            <!-- title -->
+                                                            <h5 class="mb-1 h6">Payment with Paypal</h5>
+                                                            <p class="mb-0 small">You will be redirected to PayPal website to complete your purchase securely.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card card-bordered shadow-none">
+                                                <div class="card-body p-6">
+                                                    <!-- check input -->
+                                                    <div class="d-flex">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="cashonDelivery" value="cashonDelivery" />
+                                                            <label class="form-check-label ms-2" for="cashonDelivery"></label>
+                                                        </div>
+                                                        <div>
+                                                            <!-- title -->
+                                                            <h5 class="mb-1 h6">Cash on Delivery</h5>
+                                                            <p class="mb-0 small">Pay with cash when your order is delivered.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check mt-4">
+                                                <input class="form-check-input" type="checkbox" name="confirmSize" id="confirmSize" required="Please confirm!" />
+                                                <label class="form-check-label" for="confirmSize">
+                                                    I confirm that I have selected the correct size.
+                                                </label>
+                                            </div>
+                                        </form>
+                                        
+                                        <!-- Button -->
+                                        <div class="mt-5 d-flex justify-content-end">
+                                              <a href="#"
+                                               class="btn btn-outline-gray-400 "
+                                               data-bs-toggle="collapse"
+                                               data-bs-target="#flush-collapseOne"
+                                               aria-expanded="false"
+                                               aria-controls="flush-collapseOne">
+                                                P rev
+                                            </a> 
+                                            <button type="submit" form="formCheckout" class="btn btn-primary ms-2">Place Order</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- accordion item -->
+                        <div class="accordion-item py-4">
+                            <a href="#" class="text-inherit collapsed h5" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <i class="feather-icon icon-search me-2"></i>
+                                Hướng Dẫn Đo Size Nhẫn
+                            </a>
+                            <!-- collapse -->
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="container mt-5">
+                                    <h2 class="mt-5">HƯỚNG DẪN CÁCH ĐO SIZE, KÍCH CỠ NHẪN</h2>
+                                    <p class="lead">Minh Sang Jewelry Store sẽ hướng dẫn bạn cách đo kích thước nhẫn tại nhà & cách bí mật đo nhẫn để tạo bất ngờ cho món quà dành tặng người thân, nhất là đối với những thời khắc đặc biệt trong đời. Với những bí quyết trong bài, bạn có thể dễ dàng mua sắm nhẫn vàng, nhẫn bạc, nhẫn cưới, nhẫn kim cương hay nhẫn đôi ngay trên online mà không còn gì phải lo ngại.</p>
+
+                                    <h2 class="mt-5">A. BẢNG SIZE NHẪN Minh Sang Jewelry Store</h2>
+                                    <div><img src="https://www.Minh Sang Jewelry Store.com.vn/images/image-update/2020/guide_size_ring/a_bang_sizen_nhan.jpg" alt="" srcset=""></div>
+                                    <h2 class="mt-5">B. NHỮNG CÁCH ĐƠN GIẢN NHẤT ĐỂ ĐO SIZE NHẪN</h2>
+                                    <h3 class="mt-3">1. Đo bằng tờ giấy & thước</h3>
+                                    <ul class="list-unstyled">
+                                        <li><strong>Bước 1:</strong> Chuẩn bị một cây thước, 1 cây kéo, 1 cây bút & một tờ giấy.</li>
+                                        <li><strong>Bước 2:</strong> Cắt một mảnh giấy dài khoảng 10 cm và rộng 1 cm.</li>
+                                        <li><img src="https://www.Minh Sang Jewelry Store.com.vn/images/image-update/2020/guide_size_ring/step-b1.jpg" alt=""></li>
+                                        <li><strong>Bước 3:</strong> Sử dụng đoạn giấy vừa cắt để quấn sát quanh ngón tay muốn đo.</li>
+                                        <li><img src="https://www.Minh Sang Jewelry Store.com.vn/images/image-update/2020/guide_size_ring/step-b2.jpg" alt=""></li>
+                                        <li><strong>Bước 4:</strong> Đánh dấu điểm giao nhau.</li>
+                                        <li><img src="https://www.Minh Sang Jewelry Store.com.vn/images/image-update/2020/guide_size_ring/step-b3.jpg" alt=""></li>
+                                        <li><strong>Bước 5:</strong> Tháo ra dùng thước đo chiều dài của đoạn giấy từ điểm đầu cho đến phần đánh dấu. Lấy kết quả đo được chia cho 3,14. Sau đó đối chiếu với <strong>BẢNG SIZE NHẪN</strong>.</li>
+                                        <li><img src="https://www.Minh Sang Jewelry Store.com.vn/images/image-update/2020/guide_size_ring/step-b4.jpg" alt=""></li>
+                                    </ul>
+                                    <h3 class="mt-3">2. Đo theo một chiếc nhẫn có sẵn</h3>
+                                    <ul class="list-unstyled">
+                                        <li><strong>Bước 1:</strong> Chuẩn bị một cây thước cùng chiếc nhẫn muốn đo.</li>
+                                        <li><img src="https://www.Minh Sang Jewelry Store.com.vn/images/image-update/2020/guide_size_ring/do_1.jpg" alt=""></li>
+                                        <li><strong>Bước 2:</strong> Đối chiếu số mm của thước với kích thước trên <strong>BẢNG SIZE NHẪN</strong> bên trên.</li>
+                                        <li><img src="https://www.Minh Sang Jewelry Store.com.vn/images/image-update/2020/guide_size_ring/do_3.jpg" alt=""></li>
+                                        <li>Ví dụ: Đường kính nhẫn 17mm tương ứng size 12.</li>
+                                    </ul>
+                                    <h3 class="mt-3">3. Tới cửa hàng để được tư vấn trực tiếp</h3>
+                                    <p>Để có số đo chính xác nhất, bạn có thể đến hệ thống cửa hàng Minh Sang Jewelry Store chúng tôi để đo trực tiếp size nhẫn. Nếu mua tặng các loại nhẫn như nhẫn cưới, nhẫn vàng hay nhẫn kiểu cho người khác, bạn cũng có thể áp dụng một số mẹo đo size nhẫn mà Minh Sang Jewelry Store gợi ý ở phần sau của bài viết.</p>
+
+                                    <h2 class="mt-5">C. NHỮNG LƯU Ý KHI ĐO</h2>
+                                    <h3 class="mt-3">1. KÍCH CỠ NGÓN TAY PHỤ THUỘC NHIỆT ĐỘ</h3>
+                                    <p>Nhiệt độ là nguyên nhân gây ra việc đo kích thước nhẫn không chính xác. Khi thời tiết lạnh ngón tay của bạn có thể nhỏ hơn bình thường, bạn nên cộng thêm cho chu vi là 1 mm còn khi thời tiết nóng thì ngược lại, trừ đi 1 mm. Trường hợp xương khớp ngón tay của bạn to, thì bạn nên đo chu vi ở gần khớp (không phải trên khớp) sao cho khi đeo nhẫn dễ vào nhưng không bị tuột mất.</p>
+
+                                    <h3 class="mt-3">2. CHÚ Ý ĐỘ DÀY CỦA NHẪN Minh Sang Jewelry Store</h3>
+                                    <p>Độ dày của nhẫn cũng ảnh hưởng đến size ni của mỗi người. Đối với các loại nhẫn như nhẫn vàng, nhẫn bạc đặc biệt là nhẫn cưới của Minh Sang Jewelry Store, độ dày sẽ khác nhau. Do đó, khi tiến hành đo, bạn cần phải chú ý và cho kích thước thêm hoặc bớt đi một khoản để khi đeo nhẫn có thể thoải mái mà không bị gò bó.</p>
+                                    <img src="https://www.Minh Sang Jewelry Store.com.vn/images/image-update/2020/guide_size_ring/do_day_nhan.jpg" alt="">
+                                    <h3 class="mt-3">3. ĐỂ Ý NHỮNG KHỚP TAY</h3>
+                                    <p>Các khớp tay có thể to hơn so với ở phía gốc của ngón. Do đó bạn cần phải đo kích thước ở khớp ngón và gốc ngón, sau đó lấy kích thước giữa 2 phần để chọn size nhẫn phù hợp. Lúc này tay đeo nhẫn của bạn sẽ có cảm giác thoải mái và không bị khó chịu khi co hoặc gập ngón tay. Trong trường hợp khớp xương ngón tay của bạn to, bạn nên đo chu vi ở gần khớp (không phải trên khớp) sao cho khi bạn đeo nhẫn thì nhẫn dễ vào và không bị tuột mất.</p>
+                                    <img src="https://www.Minh Sang Jewelry Store.com.vn/images/image-update/2020/guide_size_ring/khop_tay.jpg" alt="">
+                                    <h3 class="mt-3">4. ĐO LẠI NHIỀU LẦN ĐỂ CÓ SỐ LIỆU CHÍNH XÁC NHẤT</h3>
+                                    <p>Khi đo size tay chắc chắn sẽ có những sai sót, vì vậy hãy cẩn thận đo từ 3-4 lần để tìm ra số đo chính xác nhất. Làm theo cách này, kích cỡ bạn đo được sẽ có độ chính xác cao từ 85-95%.</p>
+
+                                    <h2 class="mt-5">D. NHỮNG MẸO ĐO SIZE NHẪN BÍ MẬT</h2>
+                                    <h3 class="mt-3">1. MƯỢN NHẪN CỦA NGƯỜI MÌNH MUỐN TẶNG</h3>
+                                    <p>Các chàng trai có thể bí mật đo kích cỡ bằng cách giả vờ mượn những chiếc nhẫn của người ấy (nhẫn thường, nhẫn kiểu hay nhẫn đôi đều được), sau đó dùng thước kẻ đo đường kính chu vi phía trong của chiếc nhẫn như hướng dẫn phía trên.</p>
+
+                                    <h3 class="mt-3">2. NHỜ NGƯỜI THÂN</h3>
+                                    <p>Cách đơn giản nhất để biết được size nhẫn của người yêu mà không để nàng phát hiện hay nghi ngờ là nhờ sự trợ giúp từ người thân, có thể là mẹ, chị em gái hoặc là bạn bè. Họ có thể giúp bạn lấy thông tin này một cách tự nhiên và dễ dàng thông qua việc hỏi và nhờ thử giúp những chiếc nhẫn vàng hay nhẫn bạc.</p>
+
+                                    <h3 class="mt-3">3. QUAN SÁT VÀ ƯỚC LƯỢNG</h3>
+                                    <p>Với những ai không biết đo hoặc lý do nào đó chưa đo được thì có thể áng chừng size tay đeo nhẫn qua chiều cao cân nặng theo bảng bên dưới:</p>
+                                    <h5>Name</h5>
+                                    <img src="https://www.Minh Sang Jewelry Store.com.vn/images/image-update/2020/guide_size_ring/for_man.jpg" alt="">
+                                    <h5>Nữ</h5>
+                                    <img src="https://www.Minh Sang Jewelry Store.com.vn/images/image-update/2020/guide_size_ring/for_women.jpg" alt="">
+
+                                    <h3 class="mt-3">4. GIẢ VỜ NHỜ NGƯỜI ẤY THỬ NHẪN ĐỂ GIÚP BẠN MUA TẶNG NGƯỜI KHÁC</h3>
+                                    <p>Đối với cách này, bạn cần phải khéo léo nhờ người ấy giúp bạn thử nhẫn, có thể là nhẫn kiểu đẹp hoặc nhẫn vàng mua tặng cho mẹ hoặc chị gái. Đồng thời, bạn cũng cần phải quan sát và chú ý đến kích cỡ ngón tay của người ấy để bạn có thể dễ dàng mua được nhẫn đôi hoặc nhẫn cưới thích hợp.</p>
+                                    <img src="https://www.Minh Sang Jewelry Store.com.vn/images/image-update/2020/guide_size_ring/thu_nhan.jpg" alt="">
+                                    <h3 class="mt-3">5. BÍ MẬT ĐO MỘT CÁCH TỰ NHIÊN</h3>
+                                    <p>Nếu những cách trên vẫn chưa hiệu quả, bạn có thể thử:</p>
+                                    <ul class="list-unstyled">
+                                        <li><strong>Đo tay khi người ấy đang ngủ:</strong> Ngoài ra, bạn có thể tiến hành cách này, khi cô ấy ngủ, bạn sử dụng dụng cụ dây hoặc sợi chỉ để đo ngón tay. Nếu cô ấy thức giấc, bạn cần phải bình tĩnh và nói rằng bạn đang vuốt ve tay của cô ấy để tránh sự nghi ngờ.</li>
+                                        <li><strong>So sánh ngón tay của mình với người ấy:</strong> Đối với cách này, bạn cần phải có sự quan sát kỹ và cẩn thận đến khớp và phía dưới gốc ngón tay có kích cỡ như thế nào so với ngón tay tương tự của mình để tìm ra size nhẫn chính xác nhất.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- accordion item -->
+                        <div class="accordion-item py-4">
+                            <a href="#" class="text-inherit h5" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <i class="feather-icon icon-search me-2"></i>
+                                Hướng Dẫn Đo Size Lắc
+                                <!-- collapse -->
+                            </a>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                 <div class="container mt-5">
+                                   
+                                    <h2 class="mt-5">
+                                        CÁCH 1: DÙNG THƯỚC ĐO
+                                    </h2>
+                                    <div><img src="https://www.Minh Sang Jewelry Store.com.vn/design/themes/responsive/media/images/dosize/update_huongdanchon-size-lac-desktop_03.jpg" alt="" srcset=""></div>
+                                    <ul class="list-unstyled">
+                                        <li>Bạn dùng thước để đo chiều dài của chiếc lắc tay.</li>
+                                        <li>
+                                            Sau khi có kích thước, bạn đối chiếu số cm của thước với kích thước của bảng kích thước lắc như hình trên.
+                                        </li>
+                                        <li> Kích thước lắc tay của bạn chính là size số ghi dưới đường thẳng. Sau khi chọn size lắc, nhân viên Minh Sang Jewelry Store sẽ gọi điện thoại xác nhận yêu cầu của bạn và tư vấn cụ thể để đảm bảo đáp ứng đúng yêu cầu của bạn</li>
+                                        <li><strong>Lưu ý</strong><br />
+                                            <ul class="list-unstyled">
+                                                <li>Size lắc phổ biến của Minh Sang Jewelry Store thường có đối với lắc tay nữ là size 16,17,18; đối với lắc chân nữ là size 23 - 25 và đối với lắc tay trẻ em là size 13 - 15</li>
+                                                <li>Trường hợp size lắc bạn đo được không có, Minh Sang Jewelry Store sẽ đặt làm trong thời gian tối đa là 2 tuần và chỉ áp dụng cho trang sức bằng vàng.</li>
+                                            </ul>    
+                                        </li>
+                                    </ul>
+                                    <h2 class="mt-5">CÁCH 2: ĐO THỦ CÔNG</h2>
+                                    <h3 class="mt-3">1. Đo bằng tờ giấy & thước</h3>
+                                    <ul class="list-unstyled">
+                                        <li><img src="https://www.Minh Sang Jewelry Store.com.vn/design/themes/responsive/media/images/dosize/vong-cach2-1.jpg" alt="">
+                                            <img src="https://www.Minh Sang Jewelry Store.com.vn/design/themes/responsive/media/images/dosize/vong-cach2-2.jpg" alt="">
+                                            <img src="https://www.Minh Sang Jewelry Store.com.vn/design/themes/responsive/media/images/dosize/vong-cach2-3.jpg" alt="">
+                                        </li>
+                                        <li> Nếu bạn không có một chiếc lắc tay khác để đo, Minh Sang Jewelry Store giới thiệu bạn một cách nhưng lưu ý bạn áp dụng cách này sẽ không đưa ra được kết quả chính xác nhưng có thể sử dụng được</li>
+                                        <li> Bạn sử dụng một miếng giấy nhỏ như trong hình minh họa trên đây, quấn chặt vòng theo vòng tay/vòng chân bạn, đo độ dài bằng thước kẻ như thao tác đã hướng dẫn ở cách 2. Sau khi chọn size lắc, nhân viên Minh Sang Jewelry Store sẽ gọi điện thoại xác nhận yêu cầu của bạn và tư vấn cụ thể để đảm bảo đáp ứng đúng yêu cầu của bạn.</li>
+                                       
+                                       
+                                    </ul>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <!-- accordion item -->
+                        <div class="accordion-item py-4">
+                            <a href="#" class="text-inherit h5" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <i class="feather-icon icon-search me-2"></i>
+                                Hướng Dẫn Đo Size Vòng
+                                <!-- collapse -->
+                            </a>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="container mt-5">
+
+                                    <h2 class="mt-5">
+                                        CÁCH 1: ĐO ĐƯỜNG KÍNH VÒNG TƯƠNG TỰ
+
+                                    </h2>
+                                    <div><img src="https://www.Minh Sang Jewelry Store.com.vn/design/themes/responsive/media/images/dosize/update_Huongdanchon-size-vong-desktop-new1.jpg" alt="" srcset=""></div>
+                                    <p>Bạn dùng thước để đo đường kính bên trong của chiếc vòng tay</p>
+                                    <ul class="list-unstyled">
+                                        <li>Sau khi có kích thước, bạn đối chiếu số mm của thước với kích thước đường kính của bảng kích thước vòng như hình trên.</li>
+                                        <li>
+                                            Kích thước vòng tay của bạn chính là size số ghi dưới vòng tròn. Sau khi chọn size vòng, nhân viên Minh Sang Jewelry Store sẽ gọi điện thoại xác nhận yêu cầu của bạn và tư vấn cụ thể để đảm bảo đáp ứng đúng yêu cầu của bạn.
+                                        </li>
+                                       <li>
+                                            <strong>Lưu ý</strong><br />
+                                            <ul class="list-unstyled">
+                                                <li>Size vòng phổ biến của Minh Sang Jewelry Store thường có đối với vòng tay nữ là size 52 - 55, đối với vòng tay nam là size 56 - 60 và đối với vòng tay trẻ em là size 36 - 42</li>
+                                                <li>Trường hợp size vòng bạn đo được không có, Minh Sang Jewelry Store sẽ đặt làm trong thời gian tối đa là 2 tuần và chỉ áp dụng cho trang sức bằng vàng.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <h2 class="mt-5">CÁCH 2: ĐO THỦ CÔNG</h2>
+                                    <h3 class="mt-3">1. Đo bằng tờ giấy & thước</h3>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <img src="https://www.Minh Sang Jewelry Store.com.vn/design/themes/responsive/media/images/dosize/vong-cach2-1.jpg" alt="">
+                                            <img src="https://www.Minh Sang Jewelry Store.com.vn/design/themes/responsive/media/images/dosize/vong-cach2-2.jpg" alt="">
+                                            <img src="https://www.Minh Sang Jewelry Store.com.vn/design/themes/responsive/media/images/dosize/vong-cach2-3.jpg" alt="">
+                                        </li>
+                                        <li><strong>Vòng tròn:</strong>
+                                            <ul>
+                                                
+                                                <li>Bước 1: Dùng một sợi dây (hoặc thước dây/ chỉ/giấy bản nhỏ) quấn quanh cổ tay đeo vòng, đánh dấu chỗ tiếp giáp.</li>
+                                                <li>Bước 2: Đo chiều dài sợi dây giữa 1 chỗ tiếp giáp.</li>
+                                                <li>Bước 3: Lấy chiều dài đó chia cho 3.14 là sẽ ra đường kính vòng.</li>
+                                                <li>Bước 4: Bạn đối chiếu đường kính bạn vừa đo (theo mm) với bảng kích thước vòng bên trên. Kích thước vòng của bạn tương ứng với size số ghi dưới vòng tròn.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Vòng Oval:</strong>
+                                            <ul>
+                                                <li>
+                                                    Bạn có thể đo chiều ngang cổ tay
+                                                </li>
+                                                <li>
+                                                    Kích thước vòng tay của bạn chính là size số ghi dưới vòng tròn.
+                                                </li>
+                                            </ul></li>
+                                        
+                                       
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item py-4">
+                            <a href="#" class="text-inherit h5" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <i class="feather-icon icon-search me-2"></i>
+                                Hướng Dẫn Đo Size Vòng
+                                <!-- collapse -->
+                            </a>
+                            <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="container mt-5">
+
+                                    <h2 class="mt-5">
+                                        Cách 1: Dùng thước dây để đo
+
+                                    </h2>
+                                    <div><img src="https://www.Minh Sang Jewelry Store.com.vn/design/themes/responsive/media/images/dosize/huongdanchon-size-dayco-desktop_03.png" alt="" srcset=""></div>
+                                    <p>Nên có một chiếc dây chuyền/dây cổ khác để đo, cách chính xác nhất là bạn dùng một chiếc dây chuyền/dây cổ có độ rộng và kiểu dáng tương tự chiếc bạn định mua và làm theo các bước sau:</p>
+                                    <ul class="list-unstyled">
+                                        <li>Bạn dùng thước để đo chiều dài đoạn dây.</li>
+                                        <li>
+                                            Sau khi có kích thước, bạn đối chiếu số cm của thước với kích thước minh họa như hình trên
+                                        </li>
+                                        <li>
+                                            Kích thước dây chuyền của bạn chính là size số ghi bên dưới đường thẳng. Sau khi chọn size dây tương ứng, nhân viên Minh Sang Jewelry Store sẽ gọi điện thoại xác nhận yêu cầu của bạn và tư vấn cụ thể để đảm bảo đáp ứng đúng yêu cầu của bạn.
+                                        </li>
+                                        <li>
+                                            <strong>Lưu ý</strong><br />
+                                            <ul class="list-unstyled">
+                                                <li>Size dây phổ biến của Minh Sang Jewelry Store thường có đối với dây chuyền bạc là size 42 và các size chênh lệch trong khoảng [40-42], đối với dây chuyền vàng là size 42 hoặc size 45 và đối với dây cổ bạc là size 42.</li>
+                                                <li>Trường hợp size dây bạn đo được không có, Minh Sang Jewelry Store sẽ đặt làm trong thời gian tối đa là 2 tuần và chỉ áp dụng cho trang sức bằng vàng.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <h2 class="mt-5">Cách 2: Đo thủ công</h2>
+                                   
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <img src="https://www.Minh Sang Jewelry Store.com.vn/design/themes/responsive/media/images/dosize/cach2_day.png" alt="">
+                                           
+                                        </li>
+                                        <li>
+                                            
+                                            Nếu bạn không có một dây chuyền/dây cổ khác để đo, Minh Sang Jewelry Store giới thiệu bạn một cách nhưng lưu ý bạn áp dụng cách này sẽ không đưa ra được kết quả chính xác nhưng có thể sử dụng được.
+                                        </li>
+                                        <li>
+                                            Bạn sử dụng một miếng giấy nhỏ, quấn chừng quanh cổ theo vòng dây mà bạn muốn đeo, sau đó đo độ dài bằng thước kẻ như thao tác đã hướng dẫn ở cách 2. Sau khi chọn size dây chuyền/dây cổ, nhân viên Minh Sang Jewelry Store sẽ gọi điện thoại xác nhận yêu cầu của bạn và tư vấn cụ thể để đảm bảo đáp ứng đúng yêu cầu của bạn.
+                                        </li>
+
+
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 offset-lg-1 col-lg-4">
+                    <div class="mt-4 mt-lg-0">
+                        <div class="card shadow-sm">
+                            <h5 class="px-6 py-4 bg-transparent mb-0">Order Details</h5>
+                            <ul class="list-group list-group-flush">
+                                @if(Model.OrderDetail != null)
+                                {
+                                   
+                                    @foreach (var item in Model.OrderDetail)
+                                    {
+                                        <!-- list group item -->
+                                        <li class="list-group-item px-4 py-3">
+                                            <div class="row align-items-center">
+                                                <div class="col-2 col-md-2">
+                                                    <img src="@item.Product.ImageUrl1" alt="Diamond" class="img-fluid" />
+                                                </div>
+                                                <div class="col-5 col-md-5">
+                                                    <h6 class="mb-0">@item.Product.ProductName</h6>
+                                                    <span><small class="">@item.NiSize</small></span>
+                                                </div>
+                                                <div class="col-2 col-md-2 text-center ">
+                                                    <span>@item.Quantity</span>
+                                                </div>
+                                                <div class="col-3 text-lg-end text-start text-md-end col-md-3">
+                                                    <span class="fw-bold">@item.Price</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        totalPrice += item.Price;
+                                    }
+                                }                      
+                                <!-- list group item -->
+                                <li class="list-group-item px-4 py-3">
+                                    <div class="d-flex align-items-center justify-content-between mb-2">
+                                        <div>Item Subtotal</div>
+                                        <div class="fw-bold">@totalPrice</div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            Discount
+                                            <i class="feather-icon icon-info " data-bs-toggle="tooltip" title="Default tooltip"></i>
+                                        </div>
+                                        <div class="fw-bold">@discountAmount</div>
+                                    </div>
+                                </li>
+                                <!-- list group item -->
+                                @{
+                                    decimal total = totalPrice - discountAmount;
+                                }
+                                <li class="list-group-item px-4 py-3">
+                                    <div class="d-flex align-items-center justify-content-between fw-bold">
+                                        <div>Subtotal</div>
+                                        <div>@total</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+<!-- Libs JS -->
+<!-- <script src="../assets/libs/jquery/dist/jquery.min.js"></script> -->
+<script src="~/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/simplebar/dist/simplebar.min.js"></script>
+
+<!-- Theme JS -->
+<script src="~/assets/js/theme.min.js"></script>

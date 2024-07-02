@@ -1,0 +1,99 @@
+﻿@model Repository.Models.Gem
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Certificate</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;         
+        }
+        .certificate {
+            font-family: 'Arial', sans-serif;
+            width: 600px;
+            background-color: #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            color: #2d2d2d;
+            font-size: 14px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .certificate-header {
+            background: #2d2d2d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+            .certificate-header h5 {
+                font-size: 1.5em;
+                color: #a8741a;
+                margin: 0;
+            }
+
+        .certificate-logo {
+            width: 80px;
+            height: 80px;
+            background-image: url('/images/logo/MS.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 0;
+        }
+
+        .gem-info {
+            margin-top: 20px;
+        }
+
+            .gem-info p {
+                margin-bottom: 10px;
+                font-size: 1em;
+            }
+
+            .gem-info .title {
+                font-weight: bold;
+                color: #2d2d2d;
+            }
+
+        .issued-date {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <div class="certificate-header">
+            <h5>Diamond Certificate</h5>
+            <div class="certificate-logo"></div>
+        </div>
+        <div class="gem-info row">
+            <div class="col-md-6">
+                <p><span class="title">Gem Code:</span> @Model.GemCode</p>
+                <p><span class="title">Gem Name:</span> @Model.GemName</p>
+                <p><span class="title">Origin:</span> @Model.Origin</p>
+                <p><span class="title">FourC:</span> @Model.FourC</p>
+            </div>
+            <div class="col-md-6">
+                <p><span class="title">Proportion:</span> @Model.Proportion</p>
+                <p><span class="title">Polish:</span> @Model.Polish</p>
+                <p><span class="title">Symmetry:</span> @Model.Symmetry</p>
+                <p><span class="title">Fluorescence:</span> @Model.Fluorescence</p>
+            </div>
+        </div>
+        <div class="issued-date">
+            <p><span class="title">Issued Date:</span> @Model.DateTime</p>
+        </div>
+    </div>
+</body>
+</html>
+

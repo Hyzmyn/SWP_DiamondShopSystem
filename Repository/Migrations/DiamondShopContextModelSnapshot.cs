@@ -22,21 +22,6 @@ namespace Repository.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("PriceRateListProduct", b =>
-                {
-                    b.Property<int>("PriceRateID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PriceRateListsPriceRateID")
-                        .HasColumnType("int");
-
-                    b.HasKey("PriceRateID", "PriceRateListsPriceRateID");
-
-                    b.HasIndex("PriceRateListsPriceRateID");
-
-                    b.ToTable("PriceRateListProduct");
-                });
-
             modelBuilder.Entity("Repository.Models.Discount", b =>
                 {
                     b.Property<int>("DiscountID")
@@ -115,6 +100,9 @@ namespace Repository.Migrations
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
 
+                    b.Property<DateTime?>("DateTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Fluorescence")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -156,6 +144,7 @@ namespace Repository.Migrations
                         {
                             GemID = 1,
                             Active = true,
+                            DateTime = new DateTime(2023, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fluorescence = "None",
                             FourC = 4.5m,
                             GemCode = "EMGR-001",
@@ -169,6 +158,7 @@ namespace Repository.Migrations
                         {
                             GemID = 2,
                             Active = true,
+                            DateTime = new DateTime(2023, 1, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fluorescence = "Faint",
                             FourC = 3.8m,
                             GemCode = "SAPP-002",
@@ -182,6 +172,7 @@ namespace Repository.Migrations
                         {
                             GemID = 3,
                             Active = true,
+                            DateTime = new DateTime(2023, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fluorescence = "None",
                             FourC = 4.9m,
                             GemCode = "DIAM-003",
@@ -195,6 +186,7 @@ namespace Repository.Migrations
                         {
                             GemID = 4,
                             Active = true,
+                            DateTime = new DateTime(2023, 1, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Fluorescence = "Faint",
                             FourC = 3.2m,
                             GemCode = "RUBY-004",
@@ -507,10 +499,7 @@ namespace Repository.Migrations
             modelBuilder.Entity("Repository.Models.PriceRateList", b =>
                 {
                     b.Property<int>("PriceRateID")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PriceRateID"));
 
                     b.Property<DateTime>("EffDate")
                         .HasColumnType("datetime2");
@@ -605,8 +594,8 @@ namespace Repository.Migrations
                             ProductID = 1,
                             CategoryID = 1,
                             GemID = 1,
-                            ImageUrl1 = "images/diamond_necklace_1.jpg",
-                            ImageUrl2 = "images/diamond_necklace_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 1,
                             PriceRateID = 1m,
                             ProductCode = "P001",
@@ -617,10 +606,10 @@ namespace Repository.Migrations
                         new
                         {
                             ProductID = 2,
-                            CategoryID = 2,
+                            CategoryID = 1,
                             GemID = 2,
-                            ImageUrl1 = "images/gold_ring_1.jpg",
-                            ImageUrl2 = "images/gold_ring_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 2,
                             PriceRateID = 1m,
                             ProductCode = "P002",
@@ -631,10 +620,10 @@ namespace Repository.Migrations
                         new
                         {
                             ProductID = 3,
-                            CategoryID = 3,
+                            CategoryID = 1,
                             GemID = 3,
-                            ImageUrl1 = "images/emerald_bracelet_1.jpg",
-                            ImageUrl2 = "images/emerald_bracelet_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 3,
                             PriceRateID = 1m,
                             ProductCode = "P003",
@@ -645,10 +634,10 @@ namespace Repository.Migrations
                         new
                         {
                             ProductID = 4,
-                            CategoryID = 4,
+                            CategoryID = 1,
                             GemID = 4,
-                            ImageUrl1 = "images/silver_earrings_1.jpg",
-                            ImageUrl2 = "images/silver_earrings_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 4,
                             PriceRateID = 1m,
                             ProductCode = "P004",
@@ -659,10 +648,10 @@ namespace Repository.Migrations
                         new
                         {
                             ProductID = 5,
-                            CategoryID = 3,
+                            CategoryID = 1,
                             GemID = 1,
-                            ImageUrl1 = "images/sapphire_pendant_1.jpg",
-                            ImageUrl2 = "images/sapphire_pendant_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 2,
                             PriceRateID = 1m,
                             ProductCode = "P005",
@@ -673,10 +662,10 @@ namespace Repository.Migrations
                         new
                         {
                             ProductID = 6,
-                            CategoryID = 4,
+                            CategoryID = 1,
                             GemID = 2,
-                            ImageUrl1 = "images/platinum_bracelet_1.jpg",
-                            ImageUrl2 = "images/platinum_bracelet_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 3,
                             PriceRateID = 1m,
                             ProductCode = "P006",
@@ -689,8 +678,8 @@ namespace Repository.Migrations
                             ProductID = 7,
                             CategoryID = 1,
                             GemID = 3,
-                            ImageUrl1 = "images/ruby_ring_1.jpg",
-                            ImageUrl2 = "images/ruby_ring_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 4,
                             PriceRateID = 1m,
                             ProductCode = "P007",
@@ -701,10 +690,10 @@ namespace Repository.Migrations
                         new
                         {
                             ProductID = 8,
-                            CategoryID = 2,
+                            CategoryID = 1,
                             GemID = 4,
-                            ImageUrl1 = "images/amethyst_earrings_1.jpg",
-                            ImageUrl2 = "images/amethyst_earrings_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 1,
                             PriceRateID = 1m,
                             ProductCode = "P008",
@@ -717,8 +706,8 @@ namespace Repository.Migrations
                             ProductID = 9,
                             CategoryID = 1,
                             GemID = 1,
-                            ImageUrl1 = "images/topaz_necklace_1.jpg",
-                            ImageUrl2 = "images/topaz_necklace_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 3,
                             PriceRateID = 1m,
                             ProductCode = "P009",
@@ -729,10 +718,10 @@ namespace Repository.Migrations
                         new
                         {
                             ProductID = 10,
-                            CategoryID = 2,
+                            CategoryID = 1,
                             GemID = 2,
-                            ImageUrl1 = "images/opal_brooch_1.jpg",
-                            ImageUrl2 = "images/opal_brooch_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 4,
                             PriceRateID = 1m,
                             ProductCode = "P010",
@@ -745,8 +734,8 @@ namespace Repository.Migrations
                             ProductID = 11,
                             CategoryID = 1,
                             GemID = 1,
-                            ImageUrl1 = "images/diamond_necklace_1.jpg",
-                            ImageUrl2 = "images/diamond_necklace_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 1,
                             PriceRateID = 1m,
                             ProductCode = "P001",
@@ -757,10 +746,10 @@ namespace Repository.Migrations
                         new
                         {
                             ProductID = 12,
-                            CategoryID = 2,
+                            CategoryID = 1,
                             GemID = 2,
-                            ImageUrl1 = "images/gold_ring_1.jpg",
-                            ImageUrl2 = "images/gold_ring_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 2,
                             PriceRateID = 1m,
                             ProductCode = "P002",
@@ -771,10 +760,10 @@ namespace Repository.Migrations
                         new
                         {
                             ProductID = 13,
-                            CategoryID = 3,
+                            CategoryID = 1,
                             GemID = 3,
-                            ImageUrl1 = "images/emerald_bracelet_1.jpg",
-                            ImageUrl2 = "images/emerald_bracelet_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 3,
                             PriceRateID = 1m,
                             ProductCode = "P003",
@@ -785,10 +774,10 @@ namespace Repository.Migrations
                         new
                         {
                             ProductID = 14,
-                            CategoryID = 4,
+                            CategoryID = 1,
                             GemID = 4,
-                            ImageUrl1 = "images/silver_earrings_1.jpg",
-                            ImageUrl2 = "images/silver_earrings_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 4,
                             PriceRateID = 1m,
                             ProductCode = "P004",
@@ -799,10 +788,10 @@ namespace Repository.Migrations
                         new
                         {
                             ProductID = 15,
-                            CategoryID = 3,
+                            CategoryID = 1,
                             GemID = 1,
-                            ImageUrl1 = "images/sapphire_pendant_1.jpg",
-                            ImageUrl2 = "images/sapphire_pendant_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 2,
                             PriceRateID = 1m,
                             ProductCode = "P005",
@@ -813,10 +802,10 @@ namespace Repository.Migrations
                         new
                         {
                             ProductID = 16,
-                            CategoryID = 4,
+                            CategoryID = 1,
                             GemID = 2,
-                            ImageUrl1 = "images/platinum_bracelet_1.jpg",
-                            ImageUrl2 = "images/platinum_bracelet_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 3,
                             PriceRateID = 1m,
                             ProductCode = "P006",
@@ -829,8 +818,8 @@ namespace Repository.Migrations
                             ProductID = 17,
                             CategoryID = 1,
                             GemID = 3,
-                            ImageUrl1 = "images/ruby_ring_1.jpg",
-                            ImageUrl2 = "images/ruby_ring_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 4,
                             PriceRateID = 1m,
                             ProductCode = "P007",
@@ -841,10 +830,10 @@ namespace Repository.Migrations
                         new
                         {
                             ProductID = 18,
-                            CategoryID = 2,
+                            CategoryID = 1,
                             GemID = 4,
-                            ImageUrl1 = "images/amethyst_earrings_1.jpg",
-                            ImageUrl2 = "images/amethyst_earrings_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 1,
                             PriceRateID = 1m,
                             ProductCode = "P008",
@@ -857,8 +846,8 @@ namespace Repository.Migrations
                             ProductID = 19,
                             CategoryID = 1,
                             GemID = 1,
-                            ImageUrl1 = "images/topaz_necklace_1.jpg",
-                            ImageUrl2 = "images/topaz_necklace_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 3,
                             PriceRateID = 1m,
                             ProductCode = "P009",
@@ -869,10 +858,10 @@ namespace Repository.Migrations
                         new
                         {
                             ProductID = 20,
-                            CategoryID = 2,
+                            CategoryID = 1,
                             GemID = 2,
-                            ImageUrl1 = "images/opal_brooch_1.jpg",
-                            ImageUrl2 = "images/opal_brooch_2.jpg",
+                            ImageUrl1 = "1.jpg",
+                            ImageUrl2 = "2.jpg",
                             MaterialID = 4,
                             PriceRateID = 1m,
                             ProductCode = "P010",
@@ -930,6 +919,9 @@ namespace Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -965,6 +957,7 @@ namespace Repository.Migrations
                         {
                             UserID = 1,
                             Address = "Address1",
+                            CreatedAt = new DateTime(2023, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user1@example.com",
                             NiSize = "S",
                             Password = "123",
@@ -977,6 +970,7 @@ namespace Repository.Migrations
                         {
                             UserID = 2,
                             Address = "Address2",
+                            CreatedAt = new DateTime(2023, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user2@example.com",
                             NiSize = "M",
                             Password = "123",
@@ -989,6 +983,7 @@ namespace Repository.Migrations
                         {
                             UserID = 3,
                             Address = "Address3",
+                            CreatedAt = new DateTime(2023, 3, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user3@example.com",
                             NiSize = "M",
                             Password = "123",
@@ -1001,6 +996,7 @@ namespace Repository.Migrations
                         {
                             UserID = 4,
                             Address = "Address4",
+                            CreatedAt = new DateTime(2023, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user4@example.com",
                             NiSize = "M",
                             Password = "123",
@@ -1013,6 +1009,7 @@ namespace Repository.Migrations
                         {
                             UserID = 5,
                             Address = "Address5",
+                            CreatedAt = new DateTime(2023, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user5@example.com",
                             NiSize = "M",
                             Password = "123",
@@ -1025,6 +1022,7 @@ namespace Repository.Migrations
                         {
                             UserID = 6,
                             Address = "Address",
+                            CreatedAt = new DateTime(2023, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user6@example.com",
                             NiSize = "M",
                             Password = "Password",
@@ -1037,6 +1035,7 @@ namespace Repository.Migrations
                         {
                             UserID = 7,
                             Address = "Address",
+                            CreatedAt = new DateTime(2023, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user7@example.com",
                             NiSize = "M",
                             Password = "Password",
@@ -1049,6 +1048,7 @@ namespace Repository.Migrations
                         {
                             UserID = 8,
                             Address = "Address",
+                            CreatedAt = new DateTime(2023, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user8@example.com",
                             NiSize = "M",
                             Password = "Password",
@@ -1061,6 +1061,7 @@ namespace Repository.Migrations
                         {
                             UserID = 9,
                             Address = "Address",
+                            CreatedAt = new DateTime(2023, 9, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user9@example.com",
                             NiSize = "M",
                             Password = "Password",
@@ -1069,6 +1070,33 @@ namespace Repository.Migrations
                             UserStatus = true,
                             Username = "User9"
                         });
+                });
+
+            modelBuilder.Entity("Repository.Models.WalletPoint", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("Point")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("WalletPoints");
                 });
 
             modelBuilder.Entity("Repository.Models.Warranty", b =>
@@ -1149,21 +1177,6 @@ namespace Repository.Migrations
                         });
                 });
 
-            modelBuilder.Entity("PriceRateListProduct", b =>
-                {
-                    b.HasOne("Repository.Models.Product", null)
-                        .WithMany()
-                        .HasForeignKey("PriceRateID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Repository.Models.PriceRateList", null)
-                        .WithMany()
-                        .HasForeignKey("PriceRateListsPriceRateID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Repository.Models.Discount", b =>
                 {
                     b.HasOne("Repository.Models.Order", "Order")
@@ -1178,7 +1191,7 @@ namespace Repository.Migrations
             modelBuilder.Entity("Repository.Models.Gem", b =>
                 {
                     b.HasOne("Repository.Models.Product", "Product")
-                        .WithOne("Gem")
+                        .WithOne("Gems")
                         .HasForeignKey("Repository.Models.Gem", "GemID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1238,6 +1251,17 @@ namespace Repository.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("Repository.Models.PriceRateList", b =>
+                {
+                    b.HasOne("Repository.Models.Product", "Product")
+                        .WithMany("PriceRateLists")
+                        .HasForeignKey("PriceRateID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Repository.Models.ProductMaterial", b =>
                 {
                     b.HasOne("Repository.Models.Product", "Product")
@@ -1247,6 +1271,17 @@ namespace Repository.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Repository.Models.WalletPoint", b =>
+                {
+                    b.HasOne("Repository.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Repository.Models.Warranty", b =>
@@ -1275,10 +1310,12 @@ namespace Repository.Migrations
 
             modelBuilder.Entity("Repository.Models.Product", b =>
                 {
-                    b.Navigation("Gem")
+                    b.Navigation("Gems")
                         .IsRequired();
 
                     b.Navigation("OrderDetails");
+
+                    b.Navigation("PriceRateLists");
 
                     b.Navigation("ProductMaterials");
                 });

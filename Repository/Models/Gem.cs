@@ -21,8 +21,8 @@ namespace Repository.Models
         public string Polish { get; set; }
         public string Symmetry { get; set; }
         public string Fluorescence { get; set; }
+        public DateTime? DateTime { get; set; }
         public bool Active { get; set; }
-
 
 
         public virtual Product Product { get; set; }

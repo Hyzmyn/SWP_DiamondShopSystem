@@ -79,6 +79,7 @@
                     <a asp-action="EditGem" asp-route-gemCode="@gem.GemCode" class="btn btn-primary">Edit</a>
                     <a asp-action="DeleteGem" asp-route-gemCode="@gem.GemCode" class="btn btn-danger"
                        onclick="return confirm('Are you sure you want to delete this gem?')">Delete</a>
+                    <a class="btn btn-danger" asp-action="GenerateWarrantyPdf" asp-route-id="@gem.GemID">Download Certificate</a>
                 </td>
             </tr>
         }
