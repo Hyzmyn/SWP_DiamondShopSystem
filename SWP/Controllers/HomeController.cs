@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using Repository.Models;
-using Repository.Repositories.Base;
 using Service;
 
 using Service.Service.ViewModels;

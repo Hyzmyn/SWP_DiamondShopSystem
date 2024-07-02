@@ -15,8 +15,7 @@ using SWP.Helper;
 namespace SWP.Areas.Manager.Controllers
 {
     [Area("manager")]
-    [Route("manager")]
-    [Route("manager/warranty")]
+
     public class WarrantiesController : Controller
     {
         private readonly DiamondShopContext _context;
@@ -36,8 +35,8 @@ namespace SWP.Areas.Manager.Controllers
 
 
         // GET: Manager/Warranties
-        [Route("")]
-        [Route("index")]
+   
+        [HttpGet("/warranty/")]
         public async Task<IActionResult> Index()
         {
             var diamondShopContext = _context.Warranties.Include(w => w.Order).ThenInclude(u => u.User)
@@ -46,8 +45,8 @@ namespace SWP.Areas.Manager.Controllers
         }
 
         // GET: Manager/Warranties/Details/5
-        [Route("details/{id}")]
-        [HttpGet]
+       
+        [HttpGet("/warrantydetails/{id}")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -69,8 +68,8 @@ namespace SWP.Areas.Manager.Controllers
 
 
         // GET: Manager/Warranties/Edit/5
-        [Route("edit")]
-        [HttpGet]
+        
+        [HttpGet("/editwarranty/")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -91,8 +90,8 @@ namespace SWP.Areas.Manager.Controllers
         // POST: Manager/Warranties/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Route("edit")]
-        [HttpPost]
+       
+        [HttpPost("/editwarranty/")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Warranty warranty)
         {
@@ -165,8 +164,8 @@ namespace SWP.Areas.Manager.Controllers
         {
             return _context.Warranties.Any(e => e.WarrantyID == id);
         }
-        [Route("genpdf/{id}")]
-        [HttpGet]
+       
+        [HttpGet("/genpdf/{id}")]
         public async Task<IActionResult> GenerateWarrantyPdf(int id)
         {
             // Example: Generate the HTML for the PDF
@@ -178,7 +177,7 @@ namespace SWP.Areas.Manager.Controllers
             // Redirect to the download action
             return RedirectToAction("DownloadWarrantyPdf", new { id = model.WarrantyID.ToString() });
         }
-        [Route("download/{id}")]
+        [Route("/download/{id}")]
         [HttpGet]
         public async Task<IActionResult> DownloadWarrantyPdf(string id)
         {

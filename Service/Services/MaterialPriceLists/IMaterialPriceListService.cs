@@ -14,6 +14,7 @@ namespace Service.Services
         Task DeleteMaterialPriceListAsync(int id);
         Task AddMaterialPriceListAsync(MaterialPriceList materialPriceList);
         Task UpdateMaterialPriceListAsync(MaterialPriceList materialPriceList);
+		//Task<decimal> GetMaterialPrice(decimal Weight);
 
-    }
+	}
 }

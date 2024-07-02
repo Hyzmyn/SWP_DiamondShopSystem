@@ -10,14 +10,13 @@ namespace Repository.Models
 {
     public class MaterialPriceList
     {
-        [Key]
-        public int ID { get; set; }
+		[ForeignKey("Product")]
+		[Key]
         public int MaterialID { get; set; }
         public decimal BuyPrice { get; set; }
         public decimal SellPrice { get; set; }
         public DateTime EffDate { get; set; }
 
-        [ForeignKey("MaterialID")]
-        public virtual ProductMaterial ProductMaterial { get; set; }
-    }
+		public virtual Product Product { get; set; }
+	}
 }

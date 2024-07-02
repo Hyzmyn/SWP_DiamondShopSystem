@@ -23,7 +23,7 @@ namespace Repository.Models
 		[Required]
 		public int GemID { get; set; }
 		[Required]
-		public int MaterialID { get; set; }
+		public decimal Weight { get; set; }
 		[Required]
 		public int CategoryID { get; set; }
 		[Required]

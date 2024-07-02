@@ -8,39 +8,43 @@ using Service.Services;
 
 public class AccountController : Controller
 {
-    private readonly IUserService _service;
 
-    public AccountController(IUserService service)
-    {
-        _service = service;
-    }
+	private readonly DiamondShopContext db;
+	private readonly IUserService userService;
+	public AccountController(DiamondShopContext dbContext, IUserService user)
+	{
+		db = dbContext;
+		userService = user;
 
-    public IActionResult Login()
-    {
-        return View();
-    }
+	}
 
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Login(string username, string password)
-    {
-        var user = await _service.LoginAsync(username, password);
+	public IActionResult Login()
+	{
+		return View();
+	}
+
+	[HttpPost]
+	[ValidateAntiForgeryToken]
+	public async Task<IActionResult> Login(string username, string password)
+	{
+		var user = await userService.LoginAsync(username, password);
+
         if (user != null)
-        {
-            HttpContext.Session.SetString("UserId", user.UserID.ToString());
-            HttpContext.Session.SetInt32("RoleID", user.RoleID);
+		{
+			HttpContext.Session.SetString("UserId", user.UserID.ToString());
+			HttpContext.Session.SetInt32("RoleID", (int)user.RoleID);
             HttpContext.Session.SetString("Username", user.Username);
             TempData["ResetInputs"] = true;
-            return RedirectToAction("Index", "Home");
-        }
-        else
-        {
-            TempData["LoginError"] = "Invalid username or password";
-            TempData["ResetInputs"] = true;
-            return RedirectToAction("Index", "Home");
+			return RedirectToAction("Index", "Home");
+		}
+		else
+		{
+			TempData["LoginError"] = "Invalid username or password";
+			TempData["ResetInputs"] = true;
+			return RedirectToAction("Index", "Home");
 
-        }
-    }
+		}
+	}
 
     [HttpPost]
     [ValidateAntiForgeryToken]
@@ -59,7 +63,7 @@ public class AccountController : Controller
                 Password = password
             };
 
-            await _service.AddUserAsync(newUser);
+            await userService.AddUserAsync(newUser);
             return RedirectToAction("Index", "Home");
         }
         catch (Exception ex)
@@ -70,11 +74,9 @@ public class AccountController : Controller
     }
 
 
-
     public IActionResult Logout()
-    {
-        HttpContext.Session.Clear();
-        return RedirectToAction("Index", "Home");
-    }
+	{
+		HttpContext.Session.Clear();
+		return RedirectToAction("Index", "Home");
+	}
 }
-
