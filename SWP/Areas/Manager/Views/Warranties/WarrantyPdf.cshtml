@@ -1,0 +1,92 @@
+﻿@model Repository.Models.Warranty
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giấy Bảo Hành</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .warranty-card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .warranty-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .warranty-content {
+            margin-bottom: 20px;
+        }
+
+        .warranty-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="warranty-card">
+        <div class="warranty-header">
+            <h1>Giấy Bảo Hành</h1>
+            <p>Ngày phát hành: <strong>@Model.BuyDate.ToString("dd/MM/yyy")</strong></p>
+            <p>Instance: <strong>@Model.Instance</strong></p>
+        </div>
+
+        <div class="warranty-content">
+            <p><strong>Thông tin khách hàng:</strong></p>
+            <p>Họ và tên: <strong>@Model.Order.User.Username</strong></p>
+            <p>Số điện thoại: <strong>@Model.Order.User.PhoneNumber</strong></p>
+            <p>Email: <strong>@Model.Order.User.Email</strong></p>
+
+            <hr>
+            <div class="d-flex">
+                <div class="flex-grow-1">
+                    <p><strong>Thông tin sản phẩm:</strong></p>
+                    <p>Tên sản phẩm: <strong>@Model.Product?.ProductName</strong></p>
+                    <p>Mã sản phẩm: <strong>@Model.Product?.ProductCode</strong></p>
+                    <p>Ngày mua: <strong>@Model.BuyDate.ToString("dd/MM/yyyy")</strong></p>
+                    <p>Ngày hết hạn bảo hành: <strong>@Model.EndDate.ToString("dd/MM/yyyy")</strong></p>
+                </div>
+                <div class="flex-grow-1">
+                    <p><strong>Thông tin Gem:</strong></p>
+                    <p>Tên: <strong>@Model.Product?.Gems?.GemName</strong></p>
+                    <p>Mã: <strong>@Model.Product?.Gems?.GemCode</strong></p>
+                    <p>Origin: <strong>@Model.Product?.Gems?.Origin</strong></p>
+                    <p>Four'C: <strong>@Model.Product?.Gems?.FourC</strong></p>
+                </div>
+            </div>
+           
+
+            <hr>
+
+            <p><strong>Điều kiện bảo hành:</strong></p>
+            <ul>
+                <li>Sản phẩm còn trong thời hạn bảo hành.</li>
+                <li>Hỏng hóc do lỗi của nhà sản xuất.</li>
+                <li>Có giấy bảo hành nguyên vẹn.</li>
+            </ul>
+        </div>
+
+        <div class="warranty-footer">
+            <p>Cảm ơn bạn đã sử dụng sản phẩm của chúng tôi!</p>
+            <p><strong>DiamondShop</strong></p>
+            <p>Địa chỉ: 123 Đường ABC, Phường XYZ, Quận 1, TP.HCM</p>
+            <p>Điện thoại: 0987654321</p>
+            <p>Email: support@abc.com</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

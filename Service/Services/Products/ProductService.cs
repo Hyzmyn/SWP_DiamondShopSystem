@@ -6,32 +6,26 @@ using static Microsoft.AspNetCore.Hosting.Internal.HostingApplication;
 
 namespace Service.Services
 {
-	public class ProductService : IProductService
-	{
-		private IProductRepository _repo;  
-        private IGemPriceListService _gemPriceListService;
-        private IProductMaterialService _productMaterialService;
-
-
-        public ProductService(IProductRepository repo, IGemPriceListService gemPriceListService, IProductMaterialService productMaterialService)
+    public class ProductService : IProductService
+    {
+        private IProductRepository _repo;
+        public ProductService(IProductRepository repo)
         {
             _repo = repo;
-            _gemPriceListService = gemPriceListService;
-            _productMaterialService = productMaterialService;
         }
 
         public async Task AddProductAsync(Product product)
-		{
-			throw new NotImplementedException();
-		}
+        {
+            throw new NotImplementedException();
+        }
 
-		public async Task DeleteProductAsync(int id)
-		{
-			throw new NotImplementedException();
-		}
+        public async Task DeleteProductAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
 
-		public async Task<List<Product>> GetProductsAsync(string keyword, int pageNumber, int pageSize, string sortBy)
-		{
+        public async Task<List<Product>> GetProductsAsync(string keyword, int pageNumber, int pageSize, string sortBy)
+        {
 			int defaultPageSize = 10;
 			if (pageNumber <= 0 && pageSize <= 0)
 			{
@@ -76,10 +70,10 @@ namespace Service.Services
 			return productlist;
 		}
 
-		public async Task UpdateProductAsync(Product product)
-		{
-			throw new NotImplementedException();
-		}
+        public async Task UpdateProductAsync(Product product)
+        {
+            throw new NotImplementedException();
+        }
 
 		public List<Product> GetProducts()
 		{
@@ -92,15 +86,6 @@ namespace Service.Services
 		public async Task<Product> GetProductByIdAsync(int id)
 		{
 			return await _repo.GetProductByIdAsync(id);
-
 		}
-
-        public async Task<decimal> GetProductPrice(decimal Weight, string cut, decimal carat, string color, string clarity)
-        {
-            var gemPrice = await _gemPriceListService.GetDiamondPrice(cut, carat, color, clarity);
-            var materialPrice = await _productMaterialService.GetMaterialPrice(Weight);
-
-            return gemPrice + materialPrice;
-        }
-    }
+	}
 }

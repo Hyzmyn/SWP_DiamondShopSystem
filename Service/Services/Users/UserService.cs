@@ -125,8 +125,6 @@ namespace Service.Services
             }
             return account;
         }
-
-
         public async Task<User> GetUserByIdAsync(int userId)
         {
             return await _repo.GetUserByIdAsync(userId);

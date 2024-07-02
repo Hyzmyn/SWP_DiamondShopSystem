@@ -1,0 +1,62 @@
+﻿@model Repository.Models.Warranty
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div class="card warranty-card">
+    <div class="card-header">
+        <h1 class="card-title">Giấy Bảo Hành</h1>
+        <p class="card-subtitle mb-2 text-muted">Ngày phát hành: <strong>@Model.BuyDate.ToString("dd/MM/yyyy")</strong></p>
+    </div>
+
+    <div class="card-body">
+        <h5 class="card-title"><strong>Thông tin khách hàng:</strong></h5>
+        <p class="card-text">Họ và tên: <strong>@Model.Order.User.Username</strong></p>
+        <p class="card-text">Số điện thoại: <strong>@Model.Order.User.PhoneNumber</strong></p>
+        <p class="card-text">Email: <strong>@Model.Order.User.Email</strong></p>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h5 class="card-title"><strong>Thông tin sản phẩm:</strong></h5>
+                <p class="card-text">Tên sản phẩm: <strong>@Model.Product?.ProductName</strong></p>
+                <p class="card-text">Mã sản phẩm: <strong>@Model.Product?.ProductCode</strong></p>
+                <p class="card-text">Ngày mua: <strong>@Model.BuyDate.ToString("dd/MM/yyyy")</strong></p>
+                <p class="card-text">Ngày hết hạn bảo hành: <strong>@Model.EndDate.ToString("dd/MM/yyyy")</strong></p>
+            </div>
+            <div class="col-md-6">
+                <h5 class="card-title"><strong>Thông tin Gem:</strong></h5>
+                <p class="card-text">Tên: <strong>@Model.Product?.Gems?.GemName</strong></p>
+                <p class="card-text">Mã: <strong>@Model.Product?.Gems?.GemCode</strong></p>
+                <p class="card-text">Origin: <strong>@Model.Product?.Gems?.Origin</strong></p>
+                <p class="card-text">Four'C: <strong>@Model.Product?.Gems?.FourC</strong></p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h5 class="card-title"><strong>Điều kiện bảo hành:</strong></h5>
+        <ul class="card-text">
+            <li>Sản phẩm còn trong thời hạn bảo hành.</li>
+            <li>Hỏng hóc do lỗi của nhà sản xuất.</li>
+            <li>Có giấy bảo hành nguyên vẹn.</li>
+        </ul>
+    </div>
+
+    <div class="card-footer text-muted">
+        <p>Cảm ơn bạn đã sử dụng sản phẩm của chúng tôi!</p>
+        <p><strong>DiamondShop</strong></p>
+        <p>Địa chỉ: 123 Đường ABC, Phường XYZ, Quận 1, TP.HCM</p>
+        <p>Điện thoại: 0987654321</p>
+        <p>Email: support@abc.com</p>
+    </div>
+</div>
+
+<div class="mt-3">
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.WarrantyID">Edit</a>
+    <a class="btn btn-secondary" asp-action="Index">Back to List</a>
+</div>

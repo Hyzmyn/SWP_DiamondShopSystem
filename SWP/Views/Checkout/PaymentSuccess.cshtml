@@ -1,0 +1,93 @@
+﻿@model List<Repository.Models.Warranty>
+@using Repository.Models
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            @foreach (var item in Model)
+            {
+                <div class="warranty-card" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px; border-radius: 10px; background-color: #f9f9f9; color: #000;">
+                    <div class="warranty-header" style="text-align: center; margin-bottom: 20px;">
+                        <img src="~/images/logo/MS.svg" alt="Logo" class="warranty-logo" style="max-width: 150px; margin-bottom: 20px;">
+                        <h1 style="color: #000;">Giấy Bảo Hành</h1>
+                        <p style="color: #000;">Ngày phát hành: <strong>@item.BuyDate.ToString("dd/MM/yyyy")</strong></p>
+                        <p style="color: #000;">Instance: <strong>@item.Instance</strong></p>
+                    </div>
+
+                    <div class="warranty-content" style="margin-bottom: 20px; color: #000;">
+                        <p style="color: #000;"><strong>Thông tin khách hàng:</strong></p>
+                        <p style="color: #000;">Họ và tên: <strong>@item.Order.User.Username</strong></p>
+                        <p style="color: #000;">Số điện thoại: <strong>@item.Order.User.PhoneNumber</strong></p>
+                        <p style="color: #000;">Email: <strong>@item.Order.User.Email</strong></p>
+
+                        <hr>
+                        <div class="d-flex">
+                            <div class="flex-grow-1">
+                                <p style="color: #000;"><strong>Thông tin sản phẩm:</strong></p>
+                                <p style="color: #000;">Tên sản phẩm: <strong>@item.Product?.ProductName</strong></p>
+                                <p style="color: #000;">Mã sản phẩm: <strong>@item.Product?.ProductCode</strong></p>
+                                <p style="color: #000;">Ngày mua: <strong>@item.BuyDate.ToString("dd/MM/yyyy")</strong></p>
+                                <p style="color: #000;">Ngày hết hạn bảo hành: <strong>@item.EndDate.ToString("dd/MM/yyyy")</strong></p>
+                            </div>
+                            <div class="flex-grow-1">
+                                <p style="color: #000;"><strong>Thông tin Gem:</strong></p>
+                                <p style="color: #000;">Tên: <strong>@item.Product?.Gems?.GemName</strong></p>
+                                <p style="color: #000;">Mã: <strong>@item.Product?.Gems?.GemCode</strong></p>
+                                <p style="color: #000;">Origin: <strong>@item.Product?.Gems?.Origin</strong></p>
+                                <p style="color: #000;">Four'C: <strong>@item.Product?.Gems?.FourC</strong></p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <p><strong>Điều kiện bảo hành:</strong></p>
+                        <ul>
+                            <li>Sản phẩm còn trong thời hạn bảo hành.</li>
+                            <li>Hỏng hóc do lỗi của nhà sản xuất.</li>
+                            <li>Có giấy bảo hành nguyên vẹn.</li>
+                        </ul>
+                    </div>
+
+                    <div class="warranty-footer" style="text-align: center; margin-top: 20px; color: #000;">
+                        <p style="color: #000;">Cảm ơn bạn đã sử dụng sản phẩm của chúng tôi!</p>
+                        <p style="color: #000;"><strong>DiamondShop</strong></p>
+                        <p style="color: #000;">Địa chỉ: 123 Đường ABC, Phường XYZ, Quận 1, TP.HCM</p>
+                        <p style="color: #000;">Điện thoại: 0987654321</p>
+                        <p style="color: #000;">Email: support@abc.com</p>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="col-md-5">
+            @foreach (var item in Model)
+            {
+                <div class="certificate" style="font-family: 'Arial', sans-serif; margin-bottom: 20px; background-color: #ccc; padding: 20px; border-radius: 10px; color: #2d2d2d; font-size: 14px; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+                    <div class="certificate-header" style="background: #2d2d2d; display: flex; justify-content: space-between; align-items: center; padding: 10px; border-radius: 5px;">
+                        <h5 style="font-size: 1.5em; color: #a8741a; margin: 0;">Diamond Certificate</h5>
+                        <div class="certificate-logo" style="width: 80px; height: 80px; background-image: url('/images/logo/MS.svg'); background-size: contain; background-repeat: no-repeat; margin: 0;"></div>
+                    </div>
+                    <div class="gem-info row" style="margin-top: 20px;">
+                        <div class="col-md-6">
+                            <p><span class="title" style="font-weight: bold; color: #2d2d2d;">Gem Code:</span> @item.Product.Gems.GemCode</p>
+                            <p><span class="title" style="font-weight: bold; color: #2d2d2d;">Gem Name:</span> @item.Product.Gems.GemName</p>
+                            <p><span class="title" style="font-weight: bold; color: #2d2d2d;">Origin:</span> @item.Product.Gems.Origin</p>
+                            <p><span class="title" style="font-weight: bold; color: #2d2d2d;">FourC:</span> @item.Product.Gems.FourC</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><span class="title" style="font-weight: bold; color: #2d2d2d;">Proportion:</span> @item.Product.Gems.Proportion</p>
+                            <p><span class="title" style="font-weight: bold; color: #2d2d2d;">Polish:</span> @item.Product.Gems.Polish</p>
+                            <p><span class="title" style="font-weight: bold; color: #2d2d2d;">Symmetry:</span> @item.Product.Gems.Symmetry</p>
+                            <p><span class="title" style="font-weight: bold; color: #2d2d2d;">Fluorescence:</span> @item.Product.Gems.Fluorescence</p>
+                        </div>
+                    </div>
+                    <div class="issued-date" style="text-align: right; margin-top: 20px; font-size: 0.9em;">
+                        <p><span class="title" style="font-weight: bold; color: #2d2d2d;">Issued Date:</span> @item.Product.Gems.DateTime</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+ 

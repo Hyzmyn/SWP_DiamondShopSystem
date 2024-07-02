@@ -95,27 +95,3 @@ namespace Service.Services
     }
 }
 
-
-/*              cách call function này
-MyClass myObject = new MyClass();
-List<MyClass> datesWithValues = myObject.RandomMatetialPriceValue();
-
-foreach (var date in datesWithValues)
-{
-Console.WriteLine($"Effect Date: {date.EffectDate}");
-Console.WriteLine($"BuyPrice: {date.BuyPrice}");
-Console.WriteLine($"SellPrice: {date.SellPrice}");
-Console.WriteLine();
-
-// Accessing color and shape individually
-string BuyPrice = date.BuyPrice;
-string SellPrice = date.SellPrice;
-
-Console.WriteLine($"BuyPrice: {BuyPrice}");
-Console.WriteLine($"SellPrice: {SellPrice}");
-Console.WriteLine();
-}
-*/
-
-
-

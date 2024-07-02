@@ -16,8 +16,7 @@ namespace Service.Services
         public List<Product> GetProducts();
         public List<Product> GetAllProducts();
 		Task<Product> GetProductByIdAsync(int id);
-        Task<decimal> GetProductPrice(decimal Weight, string cut, decimal carat, string color, string clarity);
 
 
-    }
+	}
 }
