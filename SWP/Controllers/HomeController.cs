@@ -7,6 +7,7 @@ using Service;
 using Service.Service.ViewModels;
 using Service.Services;
 using System.Diagnostics;
+using System.Text.Json;
 
 
 namespace SWP.Controllers
@@ -44,25 +45,27 @@ namespace SWP.Controllers
 
 			return View(products);
 		}
-		public async Task<IActionResult> QuickView(int id)
-		{
-			var product = await _productService.GetProductByIdAsync(id);
-			if (product == null)
-			{
-				return NotFound();
-			}
-			return Json(new
-			{
-				productID = product.ProductID,
-				productName = product.ProductName,
-                TotalCost = product.TotalCost,
-				
-				imageUrl1 = product.ImageUrl1,
-				imageUrl2 = product.ImageUrl2
-			});
-		}
+        public async Task<IActionResult> QuickView(int id)
+        {
+            var product = await _productService.GetProductByIdAsync(id);
+            if (product == null)
+            {
+                _logger.LogWarning($"Product with ID {id} not found");
+                return NotFound();
+            }
+            _logger.LogInformation($"Product found: {JsonSerializer.Serialize(product)}");
+            return Json(new
+            {
+                productID = product.ProductID,
+                productName = product.ProductName,
+                totalCost = product.TotalCost,
+                imageUrl1 = product.ImageUrl1,
+                imageUrl2 = product.ImageUrl2,
+            });
+        }
 
-		public IActionResult Privacy()
+
+        public IActionResult Privacy()
 		{
 			return View();
 		}
