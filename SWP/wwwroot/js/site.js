@@ -283,21 +283,31 @@ $(document).ready(function () {
             data: { id: productId },
             dataType: 'json',
             success: function (product) {
+                console.log("Full product data:", product);
+                console.log("Product name:", product.productName);
+                console.log("Total cost:", product.totalCost);
+                console.log("Image URL 1:", product.imageUrl1);
+                console.log("Image URL 2:", product.imageUrl2);
+
                 $('#quickview-title').text(product.productName);
-                $('#quickview-price').text(product.totalPrice.toFixed(2) + ' $');
-                $('#quickview-old-price').text((product.totalPrice * 1.2).toFixed(2) + ' $');
-                $('#quickview-description').text(product.description);
+                $('#quickview-price').text(product.totalCost.toFixed(2) + ' $');
+                $('#quickview-old-price').text((product.totalCost * 1.2).toFixed(2) + ' $');
                 $('#quickview-product-id').val(product.productID);
 
-                $('#quickview-img-1, #quickview-thumb-1').attr('src', '/images/product/' + product.imageUrl1);
-                $('#quickview-img-2, #quickview-thumb-2').attr('src', '/images/product/' + product.imageUrl2);
+                var img1Src = '/images/product/' + product.imageUrl1;
+                var img2Src = '/images/product/' + product.imageUrl2;
 
-                $('#quickview-img-1, #quickview-thumb-1, #quickview-img-2, #quickview-thumb-2').attr('alt', product.productName);
+                console.log("Setting image 1 src to:", img1Src);
+                console.log("Setting image 2 src to:", img2Src);
 
-                modal.modal('show');
+                $('#quickview-img-1, #quickview-thumb-1').attr('src', img1Src);
+                $('#quickview-img-2, #quickview-thumb-2').attr('src', img2Src);
+
+                $('#modal_box').modal('show');
             },
-            error: function () {
-                alert('Error loading product information.');
+            error: function (xhr, status, error) {
+                console.error("Ajax error:", status, error);
+                console.log("Response text:", xhr.responseText);
             }
         });
     });
@@ -307,3 +317,4 @@ $(document).ready(function () {
         // Implement your add to cart logic here
     });
 });
+

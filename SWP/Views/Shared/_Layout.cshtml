@@ -7,7 +7,6 @@
 
 	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 	<link rel="stylesheet" href="~/DiamondShopSystem.styles.css" asp-append-version="true" />
-
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
@@ -15,12 +14,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-	<link href="~/assets/libs/feather-webfont/dist/feather-icons.css" rel="stylesheet">
-	<link href="~/assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet">
-
-
-	<!-- Theme CSS -->
-	<link rel="stylesheet" href="~/assets/css/theme.min.css">
 </head>
 <body>
 	@{
@@ -55,12 +48,9 @@
 
 						<div class="col-lg-5 col-md-7 col-6">
 							<div class="middel_right">
-								<ul class="d-flex list-unstyled">
-									@if (string.IsNullOrEmpty(userId))
-									{
-										<li>
-											<div href="">
-												<button b-e9hm209d39="" class="login-btn" style="
+								@if (string.IsNullOrEmpty(userId))
+								{
+									<li><div href=""><button b-e9hm209d39="" class="login-btn" style="
 										font-weight: 500;
 										/* margin-top: 25px; */
 										/* color: #fff; */
@@ -77,18 +67,12 @@
 										text-transform: uppercase;
 										font-size: 13px;
 										border-radius: 5px;
-												">
-													LOG IN
-												</button>
-											</div>
-										</li>
-									}
-									@if (role == 5)
-									{
-										<form asp-controller="Cart" asp-action="Cart">
-										<li>
-											<div style="margin-right: 10px;">
-												<button b-e9hm209d39="" class="profile-btn" style="
+											">LOG IN</button></div></li>
+								}
+								@if(role==5)
+								{
+															<form asp-controller="Cart" asp-action="Cart"><li><div style="margin-right: 10px;">
+												<button b-e9hm209d39="" class="profile-btn"  style="
 										font-weight: 500;
 
 										/* margin-top: 25px; */
@@ -106,15 +90,51 @@
 										text-transform: uppercase;
 										font-size: 13px;
 										border-radius: 5px;
-													">
-													<i class="bi bi-cart"></i> YOUR CART
-												</button>
-											</div>
-										</li></form>
-										<form asp-area="customer" asp-controller="HomeCustomer" asp-action="Index">
-										<li>
-											<div style="margin-right: 10px;">
-												<button b-e9hm209d39="" class="profile-btn" style="
+												"><i class="bi bi-cart"></i> YOUR CART</button></div></li></form>
+													<form asp-area="customer" asp-controller="HomeCustomer" asp-action="Index"><li><div style="margin-right: 10px;">
+											<button b-e9hm209d39="" class="profile-btn"  style="
+										font-weight: 500;
+										
+										/* margin-top: 25px; */
+										/* color: #fff; */
+										/* height: 50px; */
+										/* line-height: 50px; */
+										/* padding: 0 35px; */
+										background: #a8741a;
+										box-shadow: none;
+										color: #fff;
+										display: inline-block;
+										height: 45px;
+										line-height: 45px;
+										padding: 0px 22px;
+										text-transform: uppercase;
+										font-size: 13px;
+										border-radius: 5px;
+										"><i class="bi bi-person-circle"></i> PROFILE</button></div></li></form>
+											<form asp-action="Logout" asp-controller="Account" method="post">	<li><div><button b-e9hm209d39="" class="logout-btn" style="
+										font-weight: 500;
+										/* margin-top: 25px; */
+										/* color: #fff; */
+										/* height: 50px; */
+										/* line-height: 50px; */
+										/* padding: 0 35px; */
+										background: #a8741a;
+										box-shadow: none;
+										color: #fff;
+										display: inline-block;
+										height: 45px;
+										line-height: 45px;
+										padding: 0px 22px;
+										text-transform: uppercase;
+										font-size: 13px;
+										border-radius: 5px;
+													">LOG OUT</button></div></li></form>
+								}
+								@if (role == 2)
+								{
+																
+														<form asp-area="manager" asp-controller="HomeManager" asp-action="Index"><li><div style="margin-right: 10px;">
+												<button b-e9hm209d39="" class="profile-btn"  style="
 										font-weight: 500;
 
 										/* margin-top: 25px; */
@@ -132,15 +152,8 @@
 										text-transform: uppercase;
 										font-size: 13px;
 										border-radius: 5px;
-											">
-													<i class="bi bi-person-circle"></i> PROFILE
-												</button>
-											</div>
-										</li></form>
-										<form asp-action="Logout" asp-controller="Account" method="post">
-										<li>
-											<div>
-												<button b-e9hm209d39="" class="logout-btn" style="
+											"><i class="bi bi-person-circle"></i> PROFILE</button></div></li></form>
+												<form asp-action="Logout" asp-controller="Account" method="post">	<li><div><button b-e9hm209d39="" class="logout-btn" style="
 										font-weight: 500;
 										/* margin-top: 25px; */
 										/* color: #fff; */
@@ -157,19 +170,13 @@
 										text-transform: uppercase;
 										font-size: 13px;
 										border-radius: 5px;
-														">
-													LOG OUT
-												</button>
-											</div>
-										</li></form>
-									}
-									@if (role == 2)
-									{
-
-										<form asp-area="manager" asp-controller="HomeManager" asp-action="Index">
-										<li>
-											<div style="margin-right: 10px;">
-												<button b-e9hm209d39="" class="profile-btn" style="
+														">LOG OUT</button></div></li></form>
+								}
+								@if (role == 3)
+								{
+																
+															<form asp-area="salestaff" asp-controller="HomeSaleStaff" asp-action="homesalestaff"><li><div style="margin-right: 10px;">
+												<button b-e9hm209d39="" class="profile-btn"  style="
 										font-weight: 500;
 
 										/* margin-top: 25px; */
@@ -187,15 +194,8 @@
 										text-transform: uppercase;
 										font-size: 13px;
 										border-radius: 5px;
-												">
-													<i class="bi bi-person-circle"></i> PROFILE
-												</button>
-											</div>
-										</li></form>
-										<form asp-action="Logout" asp-controller="Account" method="post">
-										<li>
-											<div>
-												<button b-e9hm209d39="" class="logout-btn" style="
+											"><i class="bi bi-person-circle"></i> PROFILE</button></div></li></form>
+												<form asp-action="Logout" asp-controller="Account" method="post">	<li><div><button b-e9hm209d39="" class="logout-btn" style="
 										font-weight: 500;
 										/* margin-top: 25px; */
 										/* color: #fff; */
@@ -212,70 +212,9 @@
 										text-transform: uppercase;
 										font-size: 13px;
 										border-radius: 5px;
-															">
-													LOG OUT
-												</button>
-											</div>
-										</li></form>
-									}
-									@if (role == 3)
-									{
+														">LOG OUT</button></div></li></form>
+								}
 
-										<form asp-area="salestaff" asp-controller="HomeSaleStaff" asp-action="homesalestaff">
-										<li>
-											<div style="margin-right: 10px;">
-												<button b-e9hm209d39="" class="profile-btn" style="
-										font-weight: 500;
-
-										/* margin-top: 25px; */
-										/* color: #fff; */
-										/* height: 50px; */
-										/* line-height: 50px; */
-										/* padding: 0 35px; */
-										background: #a8741a;
-										box-shadow: none;
-										color: #fff;
-										display: inline-block;
-										height: 45px;
-										line-height: 45px;
-										padding: 0px 22px;
-										text-transform: uppercase;
-										font-size: 13px;
-										border-radius: 5px;
-												">
-													<i class="bi bi-person-circle"></i> PROFILE
-												</button>
-											</div>
-										</li></form>
-										<form asp-action="Logout" asp-controller="Account" method="post">
-										<li>
-											<div>
-												<button b-e9hm209d39="" class="logout-btn" style="
-										font-weight: 500;
-										/* margin-top: 25px; */
-										/* color: #fff; */
-										/* height: 50px; */
-										/* line-height: 50px; */
-										/* padding: 0 35px; */
-										background: #a8741a;
-										box-shadow: none;
-										color: #fff;
-										display: inline-block;
-										height: 45px;
-										line-height: 45px;
-										padding: 0px 22px;
-										text-transform: uppercase;
-										font-size: 13px;
-										border-radius: 5px;
-															">
-													LOG OUT
-												</button>
-											</div>
-										</li></form>
-									}
-
-								</ul>
-								
 
 							</div>
 						</div>
@@ -363,24 +302,25 @@
 					</div>
 					<div class="form-content">
 						<h2>SIGNUP</h2>
-						<form asp-action="Register" asp-controller="Account" method="post">
+						<form action="#">
 							<div class="input-field">
-								<input type="text" name="username" required>
+								<input type="text" required>
 								<label>Enter your username</label>
 							</div>
 							<div class="input-field">
-								<input type="password" name="password" required>
+								<input type="password" required>
 								<label>Create password</label>
 							</div>
 							<div class="input-field">
-								<input type="password" name="checkPassword" required>
+								<input type="password" required>
 								<label>Confirm password</label>
 							</div>
+
 							<button type="submit">Sign Up</button>
 						</form>
 						<div class="bottom-link">
 							Already have an account?
-							<a id="login-link">Login</a>
+							<a  id="login-link">Login</a>
 						</div>
 					</div>
 				</div>

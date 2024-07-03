@@ -94,8 +94,7 @@
               "RelativeToolTip": "SWP\\Controllers\\CheckoutController.cs",
               "ViewState": "AQIAAGUAAAAAAAAAAAAAAIoAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T21:13:40.198Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T21:13:40.198Z"
             },
             {
               "$type": "Document",
@@ -107,8 +106,7 @@
               "RelativeToolTip": "Service\\Services\\VNPay\\VnPayService.cs",
               "ViewState": "AQIAAEAAAAAAAAAAAAAqwGUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T21:08:57.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T21:08:57.76Z"
             },
             {
               "$type": "Document",
@@ -132,8 +130,7 @@
               "RelativeToolTip": "Service\\PriceCalculationHostedService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T20:52:35.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T20:52:35.608Z"
             },
             {
               "$type": "Document",
@@ -155,7 +152,7 @@
               "RelativeDocumentMoniker": "Service\\Services\\GemPriceLists\\GemPriceListService.cs",
               "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\Service\\Services\\GemPriceLists\\GemPriceListService.cs",
               "RelativeToolTip": "Service\\Services\\GemPriceLists\\GemPriceListService.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAcwEcAAAALAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T20:15:48.029Z",
               "EditorCaption": ""
@@ -230,8 +227,7 @@
               "RelativeToolTip": "Service\\Services\\RandomizeValue.cs",
               "ViewState": "AQIAADMAAAAAAAAAAAAiwAsAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T20:04:50.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T20:04:50.031Z"
             },
             {
               "$type": "Document",
