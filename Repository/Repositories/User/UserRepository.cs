@@ -17,9 +17,9 @@ namespace Repository.Repositories
             _db = context;
         }
 
-        public async Task<User?> GetUsernameAsync(string username)
+        public async Task<User?> GetLoginAsync(string username, string password)
         {
-            return await _db.Users.FirstOrDefaultAsync(x => x.Username == username);
+            return await _db.Users.FirstOrDefaultAsync(x => x.Username == username && x.Password == password);
         }
         public async Task<User> GetUserByIdAsync(int userId)
         {
