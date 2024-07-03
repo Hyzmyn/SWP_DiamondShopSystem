@@ -13,5 +13,7 @@ namespace Service.Services
         Task DeleteProductCatergoryAsync(int id);
         Task AddProductCatergoryAsync(PriceRateList productCatergory);
         Task UpdateProductCatergoryAsync(PriceRateList productCatergory);
-    }
+        Task<decimal?> GetPriceRate();
+
+	}
 }

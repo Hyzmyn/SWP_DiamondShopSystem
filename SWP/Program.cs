@@ -2,10 +2,8 @@
 using Repository.Repositories;
 using Repository.Models;
 using Service.Services;
-using Repository;
 using Service.Services.VNPay;
 using service.Services;
-using Service;
 
 public class Program
 {

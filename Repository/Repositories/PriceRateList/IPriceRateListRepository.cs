@@ -12,5 +12,7 @@ namespace Repository.Repositories
 {
     public interface IPriceRateListRepository : IBaseRepository<PriceRateList>
     {
-    }
+		Task<decimal?> GetPriceRateAsync();
+
+	}
 }

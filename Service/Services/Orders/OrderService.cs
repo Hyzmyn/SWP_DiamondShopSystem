@@ -14,8 +14,20 @@ namespace Service.Services
 
         public Task AddOrderAsync(Order order)
         {
-            throw new NotImplementedException();
-        }
+			//var existingOrder = _repo.GetAsync(order.OrderID);
+			//if (existingOrder == null)
+			//{
+			//	order
+			//	order
+			//	await _repo.CreateAsync(user);
+			//	await _repo.SaveAsync();
+			//}
+			//else
+			//{
+			//	user = null;
+			//}
+			throw new NotImplementedException();
+		}
 
         public Task DeleteOrderAsync(int id)
         {

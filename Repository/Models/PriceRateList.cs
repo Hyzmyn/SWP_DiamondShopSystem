@@ -11,7 +11,7 @@ namespace Repository.Models
     {
         [Key]
         public int PriceRateID { get; set; }
-        public Decimal PriceRate { get; set; }
+        public decimal PriceRate { get; set; }
         public DateTime EffDate { get; set; }
 
 

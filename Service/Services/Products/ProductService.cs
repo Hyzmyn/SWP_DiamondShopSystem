@@ -10,15 +10,17 @@ namespace Service.Services
 	public class ProductService : IProductService
 	{
 		private IProductRepository _repo;
-		private IGemPriceListService _gemPriceListService;
-		private IMaterialPriceListRepository _materialPriceListRepository;
+		private IGemPriceListRepository _gemPriceListRepo;
+		private IMaterialPriceListRepository _materialPriceListRepo;
+		private IPriceRateListService _priceRateListService;
 
 
-		public ProductService(IProductRepository repo, IGemPriceListService gemPriceListService, IMaterialPriceListRepository materialPriceList)
+		public ProductService(IProductRepository repo, IGemPriceListRepository gemPriceListRepository, IMaterialPriceListRepository materialPriceList, IPriceRateListService priceRateListService)
 		{
 			_repo = repo;
-			_gemPriceListService = gemPriceListService;
-			_materialPriceListRepository = materialPriceList;
+			_gemPriceListRepo = gemPriceListRepository;
+			_materialPriceListRepo = materialPriceList;
+			_priceRateListService = priceRateListService;
 		}
 
 		public async Task AddProductAsync(Product product)
@@ -88,12 +90,35 @@ namespace Service.Services
 
 		}
 
-		//public async Task<decimal> GetProductPrice(decimal Weight, string cut, decimal carat, string color, string clarity)
-		//{
-		//	var gemPrice = await _gemPriceListService.GetDiamondPrice(cut, carat, color, clarity);
-		//	var materialPrice = await _materialPriceListRepository.GetMaterialPrice(Weight);
+		public async Task CalculateAndSaveProductPricesAsync()
+		{
+			var products = await _repo.Get().ToListAsync();
+			var materialPriceLists = await _materialPriceListRepo.Get().ToListAsync();
+			var priceRate = await _priceRateListService.GetPriceRate();
+			var gemPrices = await _gemPriceListRepo.Get().ToListAsync();
 
-		//	return gemPrice + materialPrice;
-		//}
+			foreach (var product in products)
+			{
+				// Get the applicable material price
+				var applicableMaterialPrice = materialPriceLists
+					.Where(mpl => mpl.EffDate <= DateTime.Now)
+					.OrderByDescending(mpl => mpl.EffDate)
+					.FirstOrDefault();
+
+				// Get the gem price by GemID
+				var applicableGemPrice = gemPrices
+					.Where(gp => gp.GemID == product.GemID)
+					.FirstOrDefault();
+
+				if (applicableMaterialPrice != null && applicableGemPrice != null && priceRate.HasValue)
+				{
+					product.TotalCost = (applicableMaterialPrice.SellPrice + applicableGemPrice.Price + product.ProductionCost) + 
+						((applicableMaterialPrice.SellPrice + applicableGemPrice.Price + product.ProductionCost) * (priceRate.Value / 100));
+				}
+			}
+
+			await _repo.SaveAsync();
+		}
+
 	}
 }
