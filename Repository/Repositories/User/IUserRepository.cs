@@ -11,7 +11,7 @@ namespace Repository.Repositories
 {
     public interface IUserRepository : IBaseRepository<User>
     {
-        Task<User?> GetLoginAsync(string username, string password);
+		Task<User?> GetUsernameAsync(string username);
 
 		Task<User> GetUserByIdAsync(int userId);
 
