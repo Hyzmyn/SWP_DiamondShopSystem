@@ -95,7 +95,10 @@ namespace Repository.Migrations
             modelBuilder.Entity("Repository.Models.Gem", b =>
                 {
                     b.Property<int>("GemID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GemID"));
 
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
@@ -201,8 +204,7 @@ namespace Repository.Migrations
             modelBuilder.Entity("Repository.Models.GemPriceList", b =>
                 {
                     b.Property<int>("GemID")
-                        .HasColumnType("int")
-                        .HasColumnOrder(0);
+                        .HasColumnType("int");
 
                     b.Property<decimal>("CaratWeight")
                         .HasPrecision(8, 2)
@@ -574,6 +576,8 @@ namespace Repository.Migrations
                         .HasColumnType("decimal(12,2)");
 
                     b.HasKey("ProductID");
+
+                    b.HasIndex("GemID");
 
                     b.ToTable("Products");
 
@@ -1138,22 +1142,11 @@ namespace Repository.Migrations
                     b.Navigation("Order");
                 });
 
-            modelBuilder.Entity("Repository.Models.Gem", b =>
-                {
-                    b.HasOne("Repository.Models.Product", "Product")
-                        .WithOne("Gems")
-                        .HasForeignKey("Repository.Models.Gem", "GemID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-                });
-
             modelBuilder.Entity("Repository.Models.GemPriceList", b =>
                 {
                     b.HasOne("Repository.Models.Gem", "Gem")
-                        .WithMany()
-                        .HasForeignKey("GemID")
+                        .WithOne("GemPriceList")
+                        .HasForeignKey("Repository.Models.GemPriceList", "GemID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1212,6 +1205,17 @@ namespace Repository.Migrations
                     b.Navigation("Products");
                 });
 
+            modelBuilder.Entity("Repository.Models.Product", b =>
+                {
+                    b.HasOne("Repository.Models.Gem", "Gems")
+                        .WithMany("Products")
+                        .HasForeignKey("GemID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Gems");
+                });
+
             modelBuilder.Entity("Repository.Models.WalletPoint", b =>
                 {
                     b.HasOne("Repository.Models.User", "User")
@@ -1242,6 +1246,14 @@ namespace Repository.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("Repository.Models.Gem", b =>
+                {
+                    b.Navigation("GemPriceList")
+                        .IsRequired();
+
+                    b.Navigation("Products");
+                });
+
             modelBuilder.Entity("Repository.Models.Order", b =>
                 {
                     b.Navigation("OrderDetails");
@@ -1249,9 +1261,6 @@ namespace Repository.Migrations
 
             modelBuilder.Entity("Repository.Models.Product", b =>
                 {
-                    b.Navigation("Gems")
-                        .IsRequired();
-
                     b.Navigation("MaterialPriceLists");
 
                     b.Navigation("OrderDetails");

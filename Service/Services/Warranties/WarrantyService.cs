@@ -64,7 +64,7 @@ namespace Service.Services
                         OrderID = order.OrderID,
                         ProductID = orderDetail.ProductID,
                         BuyDate = DateTime.Now,
-                        EndDate = DateTime.Now.AddMonths(12),
+                        EndDate = DateTime.Now.AddMonths(36),
                         Instance = instance
                     };
 

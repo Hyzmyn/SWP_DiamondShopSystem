@@ -17,7 +17,16 @@ namespace Repository.Repositories
         {
             _db = context;
         }
+		public async Task<decimal?> GetPriceRateAsync()
+		{
+			var today = DateTime.Today;
+			var priceRate = await _db.PriceRateLists
+				.Where(pr => pr.EffDate <= today)
+				.OrderByDescending(pr => pr.EffDate)
+				.FirstOrDefaultAsync();
 
+			return priceRate?.PriceRate;
+		}
 
-    }
+	}
 }

@@ -79,7 +79,7 @@ namespace Service.Services
 
         public async Task AddUserAsync(User user)
         {
-            var existingUser = await _repo.GetLoginAsync(user.Username, user.Password);
+            var existingUser = await _repo.GetUsernameAsync(user.Username);
             if (existingUser == null)
             {
                 user.UserStatus = true;
@@ -108,12 +108,21 @@ namespace Service.Services
             }
         }
 
-        public async Task<User> LoginAsync(string username, string password)
-        {
-            User account = await _repo.GetLoginAsync(username, password);
-            return account;
-        }
-        public async Task<User> GetUserByIdAsync(int userId)
+		public async Task<User> LoginAsync(string username, string password)
+		{
+			User account = await _repo.GetUsernameAsync(username);
+
+			if (account == null)
+			{
+				account = null;
+			}
+			else if (account.Password != password)
+			{
+				account = null;
+			}
+			return account;
+		}
+		public async Task<User> GetUserByIdAsync(int userId)
         {
             return await _repo.GetUserByIdAsync(userId);
         }

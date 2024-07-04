@@ -130,10 +130,10 @@ namespace Repository.Models
             );
 
             modelBuilder.Entity<GemPriceList>().HasData(
-                new GemPriceList { GemID = 1, Origin = "Brazil", CaratWeight = 2.05m, Color = "D", Clarity = "VVS1", Cut = "Brilliant", Price = 10000m, EffDate = new DateTime(2023, 6, 1) },
-                new GemPriceList { GemID = 2, Origin = "Australia", CaratWeight = 1.8m, Color = "E", Clarity = "VS2", Cut = "Cushion", Price = 8500m, EffDate = new DateTime(2023, 7, 15) },
-                new GemPriceList { GemID = 3, Origin = "Canada", CaratWeight = 3.02m, Color = "F", Clarity = "IF", Cut = "Round Brilliant", Price = 25000m, EffDate = new DateTime(2023, 8, 30) },
-                new GemPriceList { GemID = 4, Origin = "Russia", CaratWeight = 1.2m, Color = "J", Clarity = "SI1", Cut = "Oval", Price = 6000m, EffDate = new DateTime(2023, 9, 1) }
+                new GemPriceList { GemID = 1, Origin = "Brazil", CaratWeight = 2.05m, Color = "D", Clarity = "VVS1", Cut = "Brilliant", Price = 10000m },
+                new GemPriceList { GemID = 2, Origin = "Australia", CaratWeight = 1.8m, Color = "E", Clarity = "VS2", Cut = "Cushion", Price = 8500m },
+                new GemPriceList { GemID = 3, Origin = "Canada", CaratWeight = 3.02m, Color = "F", Clarity = "IF", Cut = "Round Brilliant", Price = 25000m },
+                new GemPriceList { GemID = 4, Origin = "Russia", CaratWeight = 1.2m, Color = "J", Clarity = "SI1", Cut = "Oval", Price = 6000m }
             );
 
             modelBuilder.Entity<MaterialPriceList>().HasData(

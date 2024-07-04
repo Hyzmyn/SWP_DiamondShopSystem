@@ -16,6 +16,7 @@ namespace Service.Services
         public List<Product> GetProducts();
         public List<Product> GetAllProducts();
 		Task<Product> GetProductByIdAsync(int id);
+        Task CalculateAndSaveProductPricesAsync();
 
 
 	}
