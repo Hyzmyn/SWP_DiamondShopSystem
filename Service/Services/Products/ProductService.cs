@@ -73,7 +73,17 @@ namespace Service.Services
 
 		public async Task UpdateProductAsync(Product product)
 		{
-			throw new NotImplementedException();
+			var existingProduct = await _repo.GetAsync(product.ProductID);
+			if (existingProduct != null)
+			{
+				product.ProductID = existingProduct.ProductID;
+				_repo.Update(product);
+				await _repo.SaveAsync();
+			}
+			else
+			{
+				product = null;
+			}
 		}
 
 		public List<Product> GetProducts()
