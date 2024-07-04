@@ -12,7 +12,6 @@ namespace Repository.Models
 	{
 		[Key, ForeignKey("Gem")]
 		public int GemID { get; set; }
-		public string Origin { get; set; }
 		public decimal CaratWeight { get; set; }
 		public string Color { get; set; }
 		public string Clarity { get; set; }

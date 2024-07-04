@@ -9,7 +9,7 @@ namespace Service.Services
 {
     public interface IOrderService
     {
-        Task<List<Order>> GetOrdersAsync(string keyword, int pageNumber, int pageSize, int defaultPageSize, string sortBy);
+        Task<List<Order>> GetOrdersAsync(string keyword, int pageNumber, int pageSize, string sortBy);
         Task DeleteOrderAsync(int id);
         Task AddOrderAsync(Order order);
         Task UpdateOrderAsync(Order order);
