@@ -1,0 +1,291 @@
+﻿@{
+    ViewData["Title"] = "Admin Index";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@if (ViewData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewData["ErrorMessage"]
+    </div>
+}
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title">
+            <span class="page-title-icon bg-gradient-primary text-white me-2">
+                <i class="mdi mdi-home"></i>
+            </span> Dashboard
+        </h3>
+        <div class="btn-group">
+
+            <form id="formStatistic" asp-area="manager" asp-action="Statictis" method="post" class="form-horizontal mt-4">
+                <div class="form-group row">
+                    <label for="startDate" class="col-sm-2 col-form-label">Start Date:</label>
+                    <div class="col-sm-3">
+                        <input type="date" class="form-control" id="startDate" name="startDate" value="@ViewBag.StartDate" required>
+                    </div>
+                    <label for="endDate" class="col-sm-2 col-form-label">End Date:</label>
+                    <div class="col-sm-3">
+                        <input type="date" class="form-control" id="endDate" name="endDate" value="@ViewBag.EndDate" required>
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-danger card-img-holder text-white">
+                <div class="card-body">
+                    <img src="~/AdminAssets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">
+                        Sales <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+                    </h4>
+                <h2 class="mb-5">@ViewBag.CurrentPeriodTotal $</h2>
+                    <h6 class="card-text">Ratio @ViewBag.PercentageChange %</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-info card-img-holder text-white">
+                <div class="card-body">
+                    <img src="~/AdminAssets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">
+                        Orders <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
+                    </h4>
+                    <h2 class="mb-5">@ViewBag.OrdersCount</h2>
+                    <h6 class="card-text">Ratio @ViewBag.OrderPercnet%</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-success card-img-holder text-white">
+                <div class="card-body">
+                    <img src="~/AdminAssets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">
+                        Accounts <i class="mdi mdi-diamond mdi-24px float-right"></i>
+                    </h4>
+                <h2 class="mb-5">@ViewBag.TotalUserCount</h2>
+                    <h6 class="card-text">Ratio @ViewBag.PrecentAcc</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="clearfix">
+                        <h4 class="card-title float-left">Visit And Sales Statistics</h4>
+                        <select id="selectyear" class="form-control mb-4" style="width: 100px;">
+                            @foreach (var item in ViewBag.AccountYear)
+                            {
+                                <option value="@item">@item</option>
+                            }
+                        </select>
+                        
+                        <div id="visit-sale-chart-legend" class="rounded-legend legend-horizontal legend-top-right float-right"></div>
+                    </div>
+                    <div id="dvChart"></div>
+                </div>
+            </div>
+        </div>
+        @section Scripts {
+            <script src="~/AdminAssets/js/dashboard.js"></script>
+            <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var form = document.getElementById("formStatistic");
+
+                form.addEventListener("submit", function (event) {
+                    var startDateValue = document.getElementById("startDate").value;
+                    var endDateValue = document.getElementById("endDate").value;
+
+                  
+                    var startDate = new Date(startDateValue);
+                    var endDate = new Date(endDateValue);
+
+                  
+                    if (startDate > endDate) {
+                       
+                        event.preventDefault();
+
+                     
+                        alert("Start Date must be less than End Date!");
+                    }
+                });
+            });
+                $('#selectyear').on('change', function(){
+                    var year = $(this).val();
+                    var url = '@Url.Action("GetDataChart", "Dashboard", new { area = "manager", year = "YEAR_PLACEHOLDER" })';
+                    url = url.replace('YEAR_PLACEHOLDER', year);
+                    $.get(url, function (resp) {
+                        
+                        ChartAccount(resp);
+                    });
+                });
+                var chartData = @Html.Raw(ViewBag.JsonData);
+
+                console.log(chartData);
+                if (chartData != null) {
+
+                    ChartAccount(chartData);
+                }
+
+                function ChartAccount(data) {
+                    $("canvas#visit-sale-chart").remove();
+                    $("#dvChart").html('<canvas id="visit-sale-chart" class="mt-4"></canvas>');
+
+                    var lsDataOrders = [];
+                    var lsDataTotalAmount = [];
+
+                    if (data.item1 != null) {
+                        $.each(data.item1, function (index, item) {
+                            lsDataOrders.push(item.totalOrders);
+                            lsDataTotalAmount.push(item.totalAmount);
+                        });
+                    } else {
+                        for (var i = 0; i < data["Item1"].length; i++) {
+                            lsDataOrders.push(data["Item1"][i].TotalOrders);
+                            lsDataTotalAmount.push(data["Item1"][i].TotalAmount);
+                        }
+                    }
+
+                    console.log(lsDataOrders);
+                    console.log(lsDataTotalAmount);
+                    if ($("#visit-sale-chart").length) {
+                        Chart.defaults.global.legend.labels.usePointStyle = true;
+                        var canvas = document.getElementById('visit-sale-chart');
+                        var ctx = canvas.getContext("2d");
+
+                        var gradientStrokeViolet = ctx.createLinearGradient(0, 0, 0, 181);
+                        gradientStrokeViolet.addColorStop(0, 'rgba(218, 140, 255, 1)');
+                        gradientStrokeViolet.addColorStop(1, 'rgba(154, 85, 255, 1)');
+                        var gradientLegendViolet = 'linear-gradient(to right, rgba(218, 140, 255, 1), rgba(154, 85, 255, 1))';
+
+                        var gradientStrokeBlue = ctx.createLinearGradient(0, 0, 0, 360);
+                        gradientStrokeBlue.addColorStop(0, 'rgba(54, 215, 232, 1)');
+                        gradientStrokeBlue.addColorStop(1, 'rgba(177, 148, 250, 1)');
+                        var gradientLegendBlue = 'linear-gradient(to right, rgba(54, 215, 232, 1), rgba(177, 148, 250, 1))';
+
+                        var myChart = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+                                datasets: [
+                                    {
+                                        label: "Total Orders",
+                                        borderColor: gradientStrokeViolet,
+                                        backgroundColor: gradientStrokeViolet,
+                                        hoverBackgroundColor: gradientStrokeViolet,
+                                        legendColor: gradientLegendViolet,
+                                        pointRadius: 0,
+                                        fill: false,
+                                        borderWidth: 2,
+                                        fill: 'origin',
+                                        data: lsDataOrders,
+                                        yAxisID: 'y-axis-1'
+                                    },
+                                    {
+                                        label: "Total Amount",
+                                        borderColor: gradientStrokeBlue,
+                                        backgroundColor: gradientStrokeBlue,
+                                        hoverBackgroundColor: gradientStrokeBlue,
+                                        legendColor: gradientLegendBlue,
+                                        pointRadius: 0,
+                                        fill: false,
+                                        borderWidth: 2,
+                                        fill: 'origin',
+                                        data: lsDataTotalAmount,
+                                        yAxisID: 'y-axis-2'
+                                    }
+                                ]
+                            },
+                            options: {
+                                responsive: true,
+                                legend: false,
+                                legendCallback: function (chart) {
+                                    var text = [];
+                                    text.push('<ul>');
+                                    for (var i = 0; i < chart.data.datasets.length; i++) {
+                                        text.push('<li><span class="legend-dots" style="background:' +
+                                            chart.data.datasets[i].legendColor +
+                                            '"></span>');
+                                        if (chart.data.datasets[i].label) {
+                                            text.push(chart.data.datasets[i].label);
+                                        }
+                                        text.push('</li>');
+                                    }
+                                    text.push('</ul>');
+                                    return text.join('');
+                                },
+                                scales: {
+                                    yAxes: [{
+                                        id: 'y-axis-1',
+                                        position: 'left',
+                                        ticks: {
+                                            min: 0,
+                                            stepSize: Math.ceil(Math.max(...lsDataOrders) / 10),
+                                            max: Math.max(...lsDataOrders) + 5
+                                        },
+                                        gridLines: {
+                                            drawBorder: false,
+                                            color: 'rgba(235,237,242,1)',
+                                            zeroLineColor: 'rgba(235,237,242,1)'
+                                        }
+                                    }, {
+                                        id: 'y-axis-2',
+                                        position: 'right',
+                                        ticks: {
+                                            min: 0,
+                                            stepSize: Math.ceil(Math.max(...lsDataTotalAmount) / 10),
+                                            max: Math.max(...lsDataTotalAmount) + 500
+                                        },
+                                        gridLines: {
+                                            drawBorder: false,
+                                            color: 'rgba(235,237,242,1)',
+                                            zeroLineColor: 'rgba(235,237,242,1)'
+                                        }
+                                    }],
+                                    xAxes: [{
+                                        gridLines: {
+                                            display: false,
+                                            drawBorder: false,
+                                            color: 'rgba(0,0,0,1)',
+                                            zeroLineColor: 'rgba(235,237,242,1)'
+                                        },
+                                        ticks: {
+                                            padding: 20,
+                                            fontColor: "#9c9fa6",
+                                            autoSkip: true,
+                                        },
+                                        categoryPercentage: 0.5,
+                                        barPercentage: 0.5
+                                    }]
+                                }
+                            },
+                            elements: {
+                                point: {
+                                    radius: 0
+                                }
+                            }
+                        });
+
+                        $("#visit-sale-chart-legend").html(myChart.generateLegend());
+                    }
+                }
+
+
+            
+              
+            </script>
+        }
+       
+</div>

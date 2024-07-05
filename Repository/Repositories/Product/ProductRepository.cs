@@ -1,8 +1,6 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-using Repository.Interface;
 using Repository.Models;
-using Repository.Repositories.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,5 +34,28 @@ namespace Repository.Repositories
         {
             return await _db.Products.FindAsync(id);
         }
-    }
+        public async Task<Product> GetProductByIdAsync2(int id)
+        {
+            return await _db.Products.FirstOrDefaultAsync(p => p.ProductID == id);
+        }
+
+        public async Task<Gem> GetGemByProductIdAsync(int gemId)
+        {
+            return await _db.Gems.FirstOrDefaultAsync(g => g.GemID == gemId);
+        }
+		public async Task<GemPriceList> GetGemPriceListByProductIdAsync(int gemId)
+		{
+			var gemPriceList = await _db.GemPriceLists.FirstOrDefaultAsync(g => g.GemID == gemId);
+			if (gemPriceList != null)
+			{
+			
+				Console.WriteLine($"GemPriceList Data: {gemPriceList.CaratWeight}, {gemPriceList.Color}, {gemPriceList.Clarity}, {gemPriceList.Cut}");
+			}
+			else
+			{
+				Console.WriteLine("GemPriceList Data: null");
+			}
+			return gemPriceList;
+		}
+	}
 }

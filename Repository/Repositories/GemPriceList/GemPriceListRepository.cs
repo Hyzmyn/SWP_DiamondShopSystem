@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-using Repository.Interface;
 using Repository.Models;
-using Repository.Repositories.Base;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,5 +18,6 @@ namespace Repository.Repositories
         {
             _db = context;
         }
-    }
+
+	}
 }

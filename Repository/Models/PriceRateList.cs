@@ -15,6 +15,6 @@ namespace Repository.Models
         public DateTime EffDate { get; set; }
 
 
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual Product Products { get; set; }
     }
 }

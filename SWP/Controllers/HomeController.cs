@@ -2,11 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using Repository.Models;
-using Repository.Repositories.Base;
 using Service;
 
 using Service.Service.ViewModels;
 using Service.Services;
+using System;
 using System.Diagnostics;
 using System.Text.Json;
 
@@ -46,27 +46,88 @@ namespace SWP.Controllers
 
 			return View(products);
 		}
-        public async Task<IActionResult> QuickView(int id)
-        {
-            var product = await _productService.GetProductByIdAsync(id);
-            if (product == null)
-            {
-                _logger.LogWarning($"Product with ID {id} not found");
-                return NotFound();
-            }
-            _logger.LogInformation($"Product found: {JsonSerializer.Serialize(product)}");
-            return Json(new
-            {
-                productID = product.ProductID,
-                productName = product.ProductName,
-                totalCost = product.TotalCost,
-                imageUrl1 = product.ImageUrl1,
-                imageUrl2 = product.ImageUrl2,
-            });
-        }
+		[HttpGet]
+		public async Task<IActionResult> GetGemByProductId(int productId)
+		{
+			var product = await _productService.GetProductByIdAsync2(productId);
+			if (product == null)
+			{
+				return NotFound();
+			}
+
+			var gem = await _productService.GetGemByProductIdAsync(product.GemID);
+			if (gem == null)
+			{
+				return NotFound();
+			}
+
+			var result = new
+			{
+				gem.GemID,
+				gem.GemCode,
+				gem.GemName,
+				gem.Origin,
+				gem.FourC,
+				gem.Proportion,
+				gem.Polish,
+				gem.Symmetry,
+				gem.Fluorescence
+			};
+
+			return Json(result);
+		}
+		[HttpGet]
+		public async Task<IActionResult> GetGemPriceListByProductId(int productId)
+		{
+			var product = await _productService.GetProductByIdAsync2(productId);
+			if (product == null)
+			{
+				_logger.LogWarning($"Product with ID {productId} not found");
+				return NotFound();
+			}
+			var gemPriceList = await _productService.GetGemPriceListByProductIdAsync(product.GemID);
+			if (gemPriceList == null)
+			{
+				_logger.LogWarning($"GemPriceList for GemID {product.GemID} not found");
+				return NotFound();
+			}
+			var result = new
+			{
+				CaratWeight = gemPriceList.CaratWeight,
+				Color = gemPriceList.Color,
+				Clarity = gemPriceList.Clarity,
+				Cut = gemPriceList.Cut,
+			};
+			_logger.LogInformation($"GemPriceList data: {JsonSerializer.Serialize(result)}");
+			return Json(result);
+		}
+		public async Task<IActionResult> QuickView(int id)
+		{
+			var product = await _productService.GetProductByIdAsync(id);
+
+			if (product == null)
+			{
+				_logger.LogWarning($"Product with ID {id} not found");
+				return NotFound();
+			}
+
+ 
+
+			_logger.LogInformation($"Product found: {JsonSerializer.Serialize(product)}");
+
+			return Json(new
+			{
+				productID = product.ProductID,
+				productName = product.ProductName,
+				totalCost = product.TotalCost,
+				imageUrl1 = product.ImageUrl1,
+				imageUrl2 = product.ImageUrl2,
+				
+			});
+		}
 
 
-        public IActionResult Privacy()
+		public IActionResult Privacy()
 		{
 			return View();
 		}

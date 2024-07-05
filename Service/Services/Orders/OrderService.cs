@@ -1,12 +1,6 @@
-﻿
-using Repository.Interface;
+﻿using Repository.Repositories;
 using Repository.Models;
-using Repository.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SelectPdf;
 
 namespace Service.Services
 {
@@ -46,5 +40,6 @@ namespace Service.Services
             return await _repo.GetByIdAsync(orderId);
         }
 
+        
     }
 }

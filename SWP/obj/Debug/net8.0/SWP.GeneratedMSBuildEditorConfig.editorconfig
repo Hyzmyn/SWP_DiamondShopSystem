@@ -30,6 +30,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZUN1c3RvbWVyXENoYW5nZVBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Customer/Views/HomeCustomer/CustomerInformation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZUN1c3RvbWVyXEN1c3RvbWVySW5mb3JtYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Customer/Views/HomeCustomer/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZUN1c3RvbWVyXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,6 +56,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hhcmVkXF9MYXlvdXRDdXN0b21lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Manager/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xEYXNoYm9hcmRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Manager/Views/HomeManager/Certificate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lTWFuYWdlclxDZXJ0aWZpY2F0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Manager/Views/HomeManager/CreateDiscount.cshtml]
@@ -126,6 +138,34 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX0xheW91dE1hbmFnZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Manager/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Manager/Views/Warranties/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xXYXJyYW50aWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Manager/Views/Warranties/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xXYXJyYW50aWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Manager/Views/Warranties/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xXYXJyYW50aWVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Manager/Views/Warranties/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xXYXJyYW50aWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Manager/Views/Warranties/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xXYXJyYW50aWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Manager/Views/Warranties/WarrantyPdf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xXYXJyYW50aWVzXFdhcnJhbnR5UGRmLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/SaleStaff/Views/HomeSaleStaff/CreateDiscount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcQ3JlYXRlRGlzY291bnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -166,6 +206,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcSG9tZVNhbGVTdGFmZi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/SaleStaff/Views/HomeSaleStaff/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/SaleStaff/Views/HomeSaleStaff/OrderDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcT3JkZXJEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -184,6 +228,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Views/Cart/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Views/Checkout/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Views/Checkout/PaymentSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcUGF5bWVudFN1Y2Nlc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Views/Home/diamondjewelery.cshtml]

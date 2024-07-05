@@ -1,8 +1,7 @@
 ﻿
 using Repository.Models;
-using Repository.Repositories.Base;
 
-namespace Repository.Interface
+namespace Repository.Repositories
 {
     public interface IDiscountRepository : IBaseRepository<Discount>
     {

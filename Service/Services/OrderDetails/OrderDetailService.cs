@@ -1,8 +1,7 @@
 ﻿
 using service.Services;
-using Repository.Interface;
-using Repository.Models;
 using Repository.Repositories;
+using Repository.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Service.Services
 {
-    internal class OrderDetailService : IOrderDetailService
+    public class OrderDetailService : IOrderDetailService
     {
         private IOrderDetailRepository _repo;
 

@@ -1,6 +1,5 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-using Repository.Interface;
 using Repository.Models;
 using Repository.Repositories;
 
@@ -80,19 +79,17 @@ namespace Service.Services
 
         public async Task AddUserAsync(User user)
         {
-            var existingUser = await _repo.GetUsernameAsync(user.Username);
+            var existingUser = await _repo.GetLoginAsync(user.Username, user.Password);
             if (existingUser == null)
             {
-                int maxUserId = await _repo.GetMaxIdAsync();
-                user.UserID = maxUserId + 1;
-                user.RoleID = 5;
                 user.UserStatus = true;
+                user.CreatedAt = DateTime.Now;                                                     
                 await _repo.CreateAsync(user);
                 await _repo.SaveAsync();
             }
             else
             {
-                throw new Exception($"Username: {user.Username} already exists");
+                user = null;
             }
         }
 
@@ -113,16 +110,7 @@ namespace Service.Services
 
         public async Task<User> LoginAsync(string username, string password)
         {
-            User account = await _repo.GetUsernameAsync(username);
-
-            if (account == null)
-            {
-                throw new Exception($"Username does not exist");
-            }
-            else if (account.Password != password)
-            {
-                throw new Exception($"Password is incorrect");
-            }
+            User account = await _repo.GetLoginAsync(username, password);
             return account;
         }
         public async Task<User> GetUserByIdAsync(int userId)

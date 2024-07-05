@@ -99,7 +99,7 @@ namespace SWP.Areas.SaleStaff.Controllers
                 ImageUrl1 = newFileName1,
                 ImageUrl2 = newFileName2,
                 GemID = productDto.GemID,
-                MaterialID = productDto.MaterialID,
+                Weight = productDto.Weight,
                 CategoryID = productDto.CategoryID,
                 ProductionCost = productDto.ProductionCost,
                 PriceRateID = productDto.PriceRateID,
@@ -127,7 +127,7 @@ namespace SWP.Areas.SaleStaff.Controllers
                 ProductCode = product.ProductCode,
                 ProductName = product.ProductName,
                 GemID = product.GemID,
-                MaterialID = product.MaterialID,
+                Weight = product.Weight,
                 CategoryID = product.CategoryID,
                 ProductionCost = product.ProductionCost,
                 PriceRateID = product.PriceRateID,
@@ -213,7 +213,7 @@ namespace SWP.Areas.SaleStaff.Controllers
             product.ImageUrl1 = newFileName1;
             product.ImageUrl2 = newFileName2;
             product.GemID = productDto.GemID;
-            product.MaterialID = productDto.MaterialID;
+            product.Weight = productDto.Weight;
             product.CategoryID = productDto.CategoryID;
             product.ProductionCost = productDto.ProductionCost;
             product.PriceRateID = productDto.PriceRateID;

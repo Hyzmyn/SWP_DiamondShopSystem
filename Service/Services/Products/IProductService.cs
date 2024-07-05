@@ -15,8 +15,11 @@ namespace Service.Services
         Task UpdateProductAsync(Product product);
         public List<Product> GetProducts();
         public List<Product> GetAllProducts();
-		Task<Product> GetProductByIdAsync(int id);
+        Task<Product> GetProductByIdAsync(int id);
+        Task<Gem> GetGemByProductIdAsync(int id);
+		Task<Product> GetProductByIdAsync2(int id);
+        Task<GemPriceList> GetGemPriceListByProductIdAsync(int id);
 
 
-	}
+    }
 }

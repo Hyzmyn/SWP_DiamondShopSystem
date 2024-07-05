@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Microsoft.EntityFrameworkCore;
 using Repository.Models;
+using Service.Services;
+using SWP.Helper;
 
 namespace SWP.Areas.Manager.Controllers
 {
@@ -12,12 +15,18 @@ namespace SWP.Areas.Manager.Controllers
         private readonly DiamondShopContext context;
         private readonly IWebHostEnvironment environment;
         DiamondShopContext db = new DiamondShopContext();
-        public HomeManagerController(DiamondShopContext context, IWebHostEnvironment environment)
+        private readonly ICompositeViewEngine _viewEngine;
+        private readonly IServiceProvider _serviceProvider;
+        private readonly IWarrantyService _warrantyService;
+
+        public HomeManagerController(DiamondShopContext context, IWebHostEnvironment environment, DiamondShopContext db, ICompositeViewEngine viewEngine, IServiceProvider serviceProvider, IWarrantyService warrantyService)
         {
             this.context = context;
             this.environment = environment;
-
-
+            this.db = db;
+            _viewEngine = viewEngine;
+            _serviceProvider = serviceProvider;
+            _warrantyService = warrantyService;
         }
 
         [Route("")]
@@ -56,6 +65,52 @@ namespace SWP.Areas.Manager.Controllers
 			}
 			return View(gem);
 		}
+        [Route("genpdf/{id}")]
+        [HttpGet]
+        public async Task<IActionResult> GenerateWarrantyPdf(int id)
+        {
+
+          
+            var model = await context.Gems.FirstOrDefaultAsync(o => o.GemID == id);
+
+            await _warrantyService.ExPortPdf(HtmlAsync(model), id.ToString(), "Certificate");
+
+            return RedirectToAction("DownloadWarrantyPdf", new { id = id.ToString() });
+        }
+        [Route("download/{id}")]
+        [HttpGet]
+        public async Task<IActionResult> DownloadWarrantyPdf(string id)
+        {
+            if (id == null)
+            {
+                return BadRequest("Invalid ID");
+            }
+
+
+            string baseDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
+            string wwwrootPath = Path.Combine(baseDirectory, "wwwroot", "Certificate");
+
+            string filePath = Path.Combine(wwwrootPath, $"Certificate{id}.pdf");
+            // Return the PDF file
+            var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            return new FileStreamResult(stream, "application/pdf")
+            {
+                FileDownloadName = $"Certificate{id}.pdf"
+            };
+        }
+        public async Task<string> HtmlAsync(Gem model)
+        {
+            try
+            {
+                string partialViewHtml = await ViewRenderer.RenderPartialViewToStringAsync(this, "Certificate", model, _viewEngine, _serviceProvider);
+                return partialViewHtml;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error rendering HTML: {ex.Message}");
+                throw;
+            }
+        }
 
         [Route("editgem")]
         [HttpGet]
@@ -310,7 +365,7 @@ namespace SWP.Areas.Manager.Controllers
                 ImageUrl1 = newFileName1,
                 ImageUrl2 = newFileName2,
                 GemID = productDto.GemID,
-                MaterialID = productDto.MaterialID,
+				Weight = productDto.Weight,
                 CategoryID = productDto.CategoryID,
                 ProductionCost = productDto.ProductionCost,
                 PriceRateID = productDto.PriceRateID,
@@ -339,7 +394,7 @@ namespace SWP.Areas.Manager.Controllers
                 ProductCode = product.ProductCode,
                 ProductName = product.ProductName,
                 GemID = product.GemID,
-                MaterialID = product.MaterialID,
+                Weight = product.Weight,
                 CategoryID = product.CategoryID,
                 ProductionCost = product.ProductionCost,
                 PriceRateID = product.PriceRateID,
@@ -425,7 +480,7 @@ namespace SWP.Areas.Manager.Controllers
             product.ImageUrl1 = newFileName1;
             product.ImageUrl2 = newFileName2;
             product.GemID = productDto.GemID;
-            product.MaterialID = productDto.MaterialID;
+            product.Weight = productDto.Weight;
             product.CategoryID = productDto.CategoryID;
             product.ProductionCost = productDto.ProductionCost;
             product.PriceRateID = productDto.PriceRateID;

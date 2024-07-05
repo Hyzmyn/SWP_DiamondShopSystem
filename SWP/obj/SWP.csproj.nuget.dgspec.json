@@ -155,6 +155,10 @@
               "target": "Package",
               "version": "[2.2.7, )"
             },
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
               "version": "[2.2.2, )"
@@ -163,9 +167,21 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Extensions.Http": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Select.Pdf.NetCore": {
+              "target": "Package",
+              "version": "[18.4.0, )"
             }
           },
           "imports": [
@@ -236,6 +252,10 @@
             "BCrypt.Net-Core": {
               "target": "Package",
               "version": "[1.6.0, )"
+            },
+            "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
+              "target": "Package",
+              "version": "[8.0.4, )"
             },
             "Microsoft.AspNetCore.Session": {
               "target": "Package",

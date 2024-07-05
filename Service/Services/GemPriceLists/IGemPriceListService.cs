@@ -13,5 +13,7 @@ namespace Service.Services
         Task DeleteGemPriceListAsync(int id);
         Task AddGemPriceListAsync(GemPriceList gemPriceList);
         Task UpdateGemPriceListAsync(GemPriceList gemPriceList);
-    }
+        Task CalculateAndSavePricesAsync();
+
+	}
 }
