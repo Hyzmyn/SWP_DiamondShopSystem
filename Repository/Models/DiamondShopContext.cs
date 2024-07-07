@@ -34,8 +34,9 @@ namespace Repository.Models
 		public DbSet<Discount> Discounts { get; set; }
 		public DbSet<Warranty> Warranties { get; set; }
 		public DbSet<WalletPoint> WalletPoints { get; set; }
+        public object Gem { get; set; }
 
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 			=> optionsBuilder.UseSqlServer(GetConnectionString());
 
 		private string? GetConnectionString()

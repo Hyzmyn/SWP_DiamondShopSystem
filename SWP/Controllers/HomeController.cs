@@ -93,8 +93,20 @@ namespace SWP.Controllers
 			return View(user);
 		}
 		//[Route("DIAMONDJEWELERY")]
+		public IActionResult AboutStore()
+		{
+			return View() ;
+		}
+
+		public IActionResult HowToMeasureRingSize()
+		{
+			return View();
+		}
+		public IActionResult Contact()
+		{
+			return View();
+		}
 
 
-
-	}
+    }
 }

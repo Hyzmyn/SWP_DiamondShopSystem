@@ -843,7 +843,16 @@ namespace SWP.Areas.Manager.Controllers
             return RedirectToAction("DiscountList");
         }
 
+        
 
+        [Route("informationuser")]
+        public IActionResult InformationUser()
+        {
+            var informationUser = context.Users.Where(u => u.RoleID == 5).ToList();
+            return View(informationUser);
+        }
+
+        
 
 
     }
