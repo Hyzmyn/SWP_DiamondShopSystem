@@ -154,29 +154,37 @@ namespace SWP.Controllers
 
 			return View(user);
 		}
-		//[Route("DIAMONDJEWELERY")]
-
+        //[Route("DIAMONDJEWELERY")]
 		[HttpGet]
-		public async Task<IActionResult> Search(string keyword, int currentPage = 1, int pageSize = 10)
-		{
-			try
-			{
-				var products = await _productService.GetProductByNameAndOrigin(keyword, currentPage, pageSize);
-				var totalProducts = _productService.GetTotalProductsByNameAndOrigin(keyword);
-				var totalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
+		
+		
+        public async Task<IActionResult> Search(string? productCode, string? origin, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice, int currentPage = 1, int pageSize = 10)
+        {
+            try
+            {
+                var products = await _productService.GetProductsByFieldAsync(productCode, origin, color, clarity, cut, startPrice, endPrice, currentPage, pageSize);
+                var totalProducts = _productService.GetTotalProductsByField(productCode, origin, color, clarity, cut, startPrice, endPrice);
+                var totalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
 
-				ViewBag.Keyword = keyword;
-				ViewBag.CurrentPage = currentPage;
-				ViewBag.TotalPages = totalPages;
+                ViewBag.ProductCode = productCode;
+                ViewBag.Origin = origin;
+                ViewBag.Color = color;
+                ViewBag.Clarity = clarity;
+                ViewBag.Cut = cut;
+                ViewBag.StartPrice = startPrice;
+                ViewBag.EndPrice = endPrice;
+                ViewBag.CurrentPage = currentPage;
+                ViewBag.TotalPages = totalPages;
 
-				return View("DiamondJewelery", products);
-			}
-			catch (Exception ex)
-			{
-				_logger.LogError($"Error searching products: {ex.Message}");
-				return StatusCode(500, "Internal server error");
-			}
-		}
+                return View("DiamondJewelery", products);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error searching products: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
 
-	}
+
+    }
 }

@@ -423,7 +423,8 @@
                                         </li>
                                         totalPrice += item.Price;
                                     }
-                                }                      
+                                }
+                                
                                 <!-- list group item -->
                                 <li class="list-group-item px-4 py-3">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -435,12 +436,12 @@
                                             Discount
                                             <i class="feather-icon icon-info " data-bs-toggle="tooltip" title="Default tooltip"></i>
                                         </div>
-                                        <div class="fw-bold">@discountAmount</div>
+                                        <div class="fw-bold">@(((int)Math.Round(discountAmount)).ToString())%</div>
                                     </div>
                                 </li>
                                 <!-- list group item -->
                                 @{
-                                    decimal total = totalPrice - discountAmount;
+                                    decimal total = totalPrice*((100-discountAmount)/100);
                                 }
                                 <li class="list-group-item px-4 py-3">
                                     <div class="d-flex align-items-center justify-content-between fw-bold">

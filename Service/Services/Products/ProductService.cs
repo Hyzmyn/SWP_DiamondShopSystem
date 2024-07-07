@@ -100,40 +100,40 @@ namespace Service.Services
 			return await _repo.GetProductByIdAsync2(id);
 
 		}
-		public async Task<List<Product>> GetProductByNameAndOrigin(string keyword, int pageNumber, int pageSize)
-		{
-			int defaultPageSize = 10;
+        public async Task<List<Product>> GetProductsByFieldAsync(string? productCode, string? origin, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice, int pageNumber, int pageSize)
+        {
+            int defaultPageSize = 10;
 
-			if (pageNumber <= 0 || pageSize <= 0)
-			{
-				pageSize = defaultPageSize;
-				pageNumber = 1;
-			}
+            if (pageNumber <= 0 || pageSize <= 0)
+            {
+                pageSize = defaultPageSize;
+                pageNumber = 1;
+            }
 
-			List<Product> productList;
+            List<Product> productList;
 
-			if (!string.IsNullOrEmpty(keyword))
-			{
-				productList = await _repo.GetProductByNameAndOrigin(keyword, pageNumber, pageSize);
-			}
-			else
-			{
-				productList = _repo.GetAllProduct();
-			}
-			return productList;
-		}
+            if (!string.IsNullOrEmpty(productCode) || !string.IsNullOrEmpty(origin) || !string.IsNullOrEmpty(color) || !string.IsNullOrEmpty(clarity) || !string.IsNullOrEmpty(cut) || startPrice.HasValue || endPrice.HasValue)
+            {
+                productList = await _repo.GetProductByField(productCode, origin, color, clarity, cut, startPrice, endPrice, pageNumber, pageSize);
+            }
+            else
+            {
+                productList = _repo.GetAllProduct();
+            }
+            return productList;
+        }
 
-		public int GetTotalProductsByNameAndOrigin(string keyword)
-		{
-			return _repo.GetTotalProductsByNameAndOrigin(keyword);
-		}
+        public int GetTotalProductsByField(string? productCode, string? origin, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice)
+        {
+            return _repo.GetTotalProductByField(productCode, origin, color, clarity, cut, startPrice, endPrice);
+        }
 
-		//public async Task<decimal> GetProductPrice(decimal Weight, string cut, decimal carat, string color, string clarity)
-		//{
-		//	var gemPrice = await _gemPriceListService.GetDiamondPrice(cut, carat, color, clarity);
-		//	var materialPrice = await _materialPriceListRepository.GetMaterialPrice(Weight);
+        //public async Task<decimal> GetProductPrice(decimal Weight, string cut, decimal carat, string color, string clarity)
+        //{
+        //	var gemPrice = await _gemPriceListService.GetDiamondPrice(cut, carat, color, clarity);
+        //	var materialPrice = await _materialPriceListRepository.GetMaterialPrice(Weight);
 
-		//	return gemPrice + materialPrice;
-		//}
-	}
+        //	return gemPrice + materialPrice;
+        //}
+    }
 }

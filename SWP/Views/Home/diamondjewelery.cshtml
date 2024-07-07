@@ -14,16 +14,22 @@
         <div class="row">
             <div class="col-12">
                 <div class="product_area">
-                     <div class="container mt-5">
+                    <div class="container mt-5">
                         <div class="row d-flex justify-content-left ">
-                             <form asp-controller="Home" asp-action="Search" method="get" class="mb-4" style="display: flex; align-items: center;">
-                                 <input type="text" id="searchKeyword" name="keyword" class="form-control flex-item" placeholder="Search for products" style="width: 200px">
-                                 <button type="submit" class="btn btn-primary btn-sm flex-item" style="margin-left: 10px; width: 100px">
-                                     <i class="bi bi-search"></i> Search
-                                 </button>
-                             </form>
-                         </div>
-                     </div>
+                            <form asp-controller="Home" asp-action="Search" method="get" class="mb-4" style="display: flex; align-items: center; flex-wrap: wrap;">
+                                <input type="number" id="startPrice" name="startPrice" class="form-control flex-item" placeholder="Start Price" style="width: 120px; margin-right: 10px; margin-bottom: 10px;" value="@ViewBag.StartPrice">
+                                <input type="number" id="endPrice" name="endPrice" class="form-control flex-item" placeholder="End Price" style="width: 120px; margin-right: 10px; margin-bottom: 10px;" value="@ViewBag.EndPrice">
+                                <input type="text" id="searchProductCode" name="productCode" class="form-control flex-item" placeholder="Product Code" style="width: 150px; margin-right: 10px; margin-bottom: 10px;" value="@ViewBag.ProductCode">
+                                <input type="text" id="searchOrigin" name="origin" class="form-control flex-item" placeholder="Origin" style="width: 150px; margin-right: 10px; margin-bottom: 10px;" value="@ViewBag.Origin">
+                                <input type="text" id="searchColor" name="color" class="form-control flex-item" placeholder="Color" style="width: 150px; margin-right: 10px; margin-bottom: 10px;" value="@ViewBag.Color">
+                                <input type="text" id="searchClarity" name="clarity" class="form-control flex-item" placeholder="Clarity" style="width: 150px; margin-right: 10px; margin-bottom: 10px;" value="@ViewBag.Clarity">
+                                <input type="text" id="searchCut" name="cut" class="form-control flex-item" placeholder="Cut" style="width: 150px; margin-right: 10px; margin-bottom: 10px;" value="@ViewBag.Cut">
+                                <button type="submit" class="btn btn-primary btn-sm flex-item" style="width: 100px;">
+                                    <i class="bi bi-search"></i> Search
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                     <div class="product_tab_button"></div>
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="featured" role="tabpane1">
@@ -32,59 +38,59 @@
                                     @foreach (var product in Model)
                                     {
                                         var oldPrice = product.TotalCost * 1.20m;
-                                        <div class="custom-col-5">
-                                            <div class="single_product">
-                                                <div class="product_thumb">
-                                                    <a class="primary_img">
-                                                        <img src="@Url.Content("~/images/product/" + product.ImageUrl1)" alt="product1">
-                                                    </a>
-                                                    <a class="secondary_img">
+                                            <div class="custom-col-5">
+                                                <div class="single_product">
+                                                    <div class="product_thumb">
+                                                        <a class="primary_img">
+                                                            <img src="@Url.Content("~/images/product/" + product.ImageUrl1)" alt="product1">
+                                                        </a>
+                                                        <a class="secondary_img">
                                                             <img src="@Url.Content("~/images/product/" + product.ImageUrl2)" alt="product1">
                                                         </a>
-                                                    <div class="quick_button" style="color: white ">
-                                                        <a href="#" class="quick-view-btn" data-product-id="@product.ProductID" data-toggle="modal" data-target="#modal_box" data-placement="top" data-original-title="quick view">Quick View</a>
+                                                        <div class="quick_button" style="color: white ">
+                                                            <a href="#" class="quick-view-btn" data-product-id="@product.ProductID" data-toggle="modal" data-target="#modal_box" data-placement="top" data-original-title="quick view">Quick View</a>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="product_content" style="color: white">
-                                                    <div class="tag_cate">
-                                                        <a>@product.ProductCode</a>
+                                                    <div class="product_content" style="color: white">
+                                                        <div class="tag_cate">
+                                                            <a>@product.ProductCode</a>
 
-                                                    </div>
-                                                    <h3><a>@product.ProductName</a></h3>
-                                                    <div class="price_box">
-                                                        <span class="old_price">@oldPrice $</span>
-                                                        <span class="">@product.TotalCost $</span>
-                                                    </div>
-                                                    <div class="product_hover">
+                                                        </div>
+                                                        <h3><a>@product.ProductName</a></h3>
+                                                        <div class="price_box">
+                                                            <span class="old_price">@oldPrice $</span>
+                                                            <span class="">@product.TotalCost $</span>
+                                                        </div>
+                                                        <div class="product_hover">
 
 
-                                                        <div class="action_links">
-                                                            <ul>
-                                                                <li>
-                                                                    <a data-placement="top"
-                                                                       title="Add to Wishlist"
-                                                                       data-toggle="tooltip">
-                                                                        <span class="ion-heart"></span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="add_to_cart">
-                                                                    <form asp-controller="Cart" asp-action="AddToCart" method="post" style="display: inline;">
-                                                                        <input type="hidden" name="productId" value="@product.ProductID" />
-                                                                        <input type="hidden" name="quantity" value="1" />
-                                                                        <a onclick="this.closest('form').submit(); return false;" title="Add to Cart">Add to Cart</a>
-                                                                    </form>
-                                                                </li>
-                                                                <li>
-                                                                    <a title="Compare">
-                                                                        <i class="ion-ios-settings-strong"></i>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
+                                                            <div class="action_links">
+                                                                <ul>
+                                                                    <li>
+                                                                        <a data-placement="top"
+                                                                           title="Add to Wishlist"
+                                                                           data-toggle="tooltip">
+                                                                            <span class="ion-heart"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="add_to_cart">
+                                                                        <form asp-controller="Cart" asp-action="AddToCart" method="post" style="display: inline;">
+                                                                            <input type="hidden" name="productId" value="@product.ProductID" />
+                                                                            <input type="hidden" name="quantity" value="1" />
+                                                                            <a onclick="this.closest('form').submit(); return false;" title="Add to Cart">Add to Cart</a>
+                                                                        </form>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a title="Compare">
+                                                                            <i class="ion-ios-settings-strong"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
                                     }
 
                                 </div>
@@ -92,44 +98,68 @@
                                     <ul class="pagination">
                                         @if (ViewBag.CurrentPage > 1)
                                         {
-                                                <li class="page-item" style="color: white; background-color: #a8741a;">
-                                                @if (string.IsNullOrEmpty(ViewBag.Keyword))
+                                            <li class="page-item" style="color: white; background-color: #a8741a;">
+                                                @if (string.IsNullOrEmpty(ViewBag.ProductCode) && string.IsNullOrEmpty(ViewBag.Origin) && string.IsNullOrEmpty(ViewBag.Color) && string.IsNullOrEmpty(ViewBag.Clarity) && string.IsNullOrEmpty(ViewBag.Cut) && ViewBag.StartPrice == null && ViewBag.EndPrice == null)
                                                 {
-                                                            <a class="page-link" asp-action="DiamondJewelery" asp-route-pageNumber="@(ViewBag.CurrentPage - 1)" style="color: #a8741a; background-color: black;">Previous</a>
+                                                    <a class="page-link" asp-action="DiamondJewelery" asp-route-pageNumber="@(ViewBag.CurrentPage - 1)" style="color: #a8741a; background-color: black;">Previous</a>
                                                 }
                                                 else
                                                 {
-                                                            <a class="page-link" asp-action="Search" asp-route-keyword="@ViewBag.Keyword" asp-route-currentPage="@(ViewBag.CurrentPage - 1)" style="color: #a8741a; background-color: black;">Previous</a>
+                                                    <a class="page-link" asp-action="Search"
+                                                       asp-route-productCode="@ViewBag.ProductCode"
+                                                       asp-route-origin="@ViewBag.Origin"
+                                                       asp-route-color="@ViewBag.Color"
+                                                       asp-route-clarity="@ViewBag.Clarity"
+                                                       asp-route-cut="@ViewBag.Cut"
+                                                       asp-route-startPrice="@ViewBag.StartPrice"
+                                                       asp-route-endPrice="@ViewBag.EndPrice"
+                                                       asp-route-currentPage="@(ViewBag.CurrentPage - 1)" style="color: #a8741a; background-color: black;">Previous</a>
                                                 }
-                                                </li>
+                                            </li>
                                         }
 
                                         @for (int i = 1; i <= ViewBag.TotalPages; i++)
                                         {
-                                                <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")" style="color: white; background-color: #a8741a;">
-                                                @if (string.IsNullOrEmpty(ViewBag.Keyword))
+                                            <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")" style="color: white; background-color: #a8741a;">
+                                                @if (string.IsNullOrEmpty(ViewBag.ProductCode) && string.IsNullOrEmpty(ViewBag.Origin) && string.IsNullOrEmpty(ViewBag.Color) && string.IsNullOrEmpty(ViewBag.Clarity) && string.IsNullOrEmpty(ViewBag.Cut) && ViewBag.StartPrice == null && ViewBag.EndPrice == null)
                                                 {
-                                                            <a class="page-link" asp-action="DiamondJewelery" asp-route-pageNumber="@i" style="color: #a8741a; background-color: black;">@i</a>
+                                                    <a class="page-link" asp-action="DiamondJewelery" asp-route-pageNumber="@i" style="color: #a8741a; background-color: black;">@i</a>
                                                 }
                                                 else
                                                 {
-                                                            <a class="page-link" asp-action="Search" asp-route-keyword="@ViewBag.Keyword" asp-route-currentPage="@i" style="color: #a8741a; background-color: black;">@i</a>
+                                                    <a class="page-link" asp-action="Search"
+                                                       asp-route-productCode="@ViewBag.ProductCode"
+                                                       asp-route-origin="@ViewBag.Origin"
+                                                       asp-route-color="@ViewBag.Color"
+                                                       asp-route-clarity="@ViewBag.Clarity"
+                                                       asp-route-cut="@ViewBag.Cut"
+                                                       asp-route-startPrice="@ViewBag.StartPrice"
+                                                       asp-route-endPrice="@ViewBag.EndPrice"
+                                                       asp-route-currentPage="@i" style="color: #a8741a; background-color: black;">@i</a>
                                                 }
-                                                </li>
+                                            </li>
                                         }
 
                                         @if (ViewBag.CurrentPage < ViewBag.TotalPages)
                                         {
-                                                <li class="page-item" style="color: white; background-color: #a8741a;">
-                                                @if (string.IsNullOrEmpty(ViewBag.Keyword))
+                                            <li class="page-item" style="color: white; background-color: #a8741a;">
+                                                @if (string.IsNullOrEmpty(ViewBag.ProductCode) && string.IsNullOrEmpty(ViewBag.Origin) && string.IsNullOrEmpty(ViewBag.Color) && string.IsNullOrEmpty(ViewBag.Clarity) && string.IsNullOrEmpty(ViewBag.Cut) && ViewBag.StartPrice == null && ViewBag.EndPrice == null)
                                                 {
-                                                            <a class="page-link" asp-action="DiamondJewelery" asp-route-pageNumber="@(ViewBag.CurrentPage + 1)" style="color: #a8741a; background-color: black;">Next</a>
+                                                    <a class="page-link" asp-action="DiamondJewelery" asp-route-pageNumber="@(ViewBag.CurrentPage + 1)" style="color: #a8741a; background-color: black;">Next</a>
                                                 }
                                                 else
                                                 {
-                                                            <a class="page-link" asp-action="Search" asp-route-keyword="@ViewBag.Keyword" asp-route-currentPage="@(ViewBag.CurrentPage + 1)" style="color: #a8741a; background-color: black;">Next</a>
+                                                    <a class="page-link" asp-action="Search"
+                                                       asp-route-productCode="@ViewBag.ProductCode"
+                                                       asp-route-origin="@ViewBag.Origin"
+                                                       asp-route-color="@ViewBag.Color"
+                                                       asp-route-clarity="@ViewBag.Clarity"
+                                                       asp-route-cut="@ViewBag.Cut"
+                                                       asp-route-startPrice="@ViewBag.StartPrice"
+                                                       asp-route-endPrice="@ViewBag.EndPrice"
+                                                       asp-route-currentPage="@(ViewBag.CurrentPage + 1)" style="color: #a8741a; background-color: black;">Next</a>
                                                 }
-                                                </li>
+                                            </li>
                                         }
                                     </ul>
                                 </nav>
@@ -186,10 +216,10 @@
                                 <div class="modal_title mb-10">
                                     <h2 id="quickview-title"></h2>
                                 </div>
-                            <div style="display: flex;">
-                            <div id="gemInfo"></div>
-                            <strong><div style="margin-left: 120px;" id="gemPriceList"></div></strong>
-                            </div>
+                                 <div style="display: flex;">
+                                    <div id="gemInfo"></div>
+                                    <strong><div style="margin-left: 120px;" id="gemPriceList"></div></strong>
+                                    </div>
                                 <div class="modal_price mb-10">
                                     <span class="new_price" id="quickview-price"></span>
                                     <span class="old_price" id="quickview-old-price"></span>
