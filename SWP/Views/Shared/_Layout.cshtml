@@ -286,8 +286,8 @@
 							{
 									<p class="login-error" style ="color: red;">@TempData["LoginError"]</p>
 							}
-
-							<a  class="forgot-pass">Forgot Password?</a>
+							
+							<a class="forgot-pass" asp-controller="Account" asp-action="ForgotPassword">Forgot Password?</a>
 							<button type="submit">Log In</button>
 						</form>
 						

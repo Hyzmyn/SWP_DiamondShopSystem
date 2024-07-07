@@ -39,6 +39,10 @@ namespace Service.Services
         {
             return await _repo.GetDiscountByCodeAsync(discountCode);
         }
+        public async Task<List<Discount>> GetDiscountsByUserPointAsync(int userId)
+        {
+            return await _repo.GetDiscountsByUserPointAsync(userId);
+        }
 
     }
 }

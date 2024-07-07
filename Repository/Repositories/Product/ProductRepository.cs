@@ -57,5 +57,32 @@ namespace Repository.Repositories
 			}
 			return gemPriceList;
 		}
+		public async Task<List<Product>> GetProductByNameAndOrigin(string keyword, int pageNumber, int pageSize)
+		{
+			return await _db.Products
+				.Include(p => p.Gems)
+					.ThenInclude(g => g.GemPriceList)
+				.Where(p => p.ProductName.Contains(keyword) ||
+							p.Gems.GemPriceList.Origin.Contains(keyword) ||
+							p.Gems.GemPriceList.Color.Contains(keyword) ||
+							p.Gems.GemPriceList.Clarity.Contains(keyword) ||
+							p.Gems.GemPriceList.Cut.Contains(keyword))
+				.Skip((pageNumber - 1) * pageSize)
+				.Take(pageSize)
+				.ToListAsync();
+		}
+
+		public int GetTotalProductsByNameAndOrigin(string keyword)
+		{
+			return _db.Products
+				.Include(p => p.Gems)
+					.ThenInclude(g => g.GemPriceList)
+				.Where(p => p.ProductName.Contains(keyword) ||
+							p.Gems.GemPriceList.Origin.Contains(keyword) ||
+							p.Gems.GemPriceList.Color.Contains(keyword) ||
+							p.Gems.GemPriceList.Clarity.Contains(keyword) ||
+							p.Gems.GemPriceList.Cut.Contains(keyword))
+				.Count();
+		}
 	}
 }

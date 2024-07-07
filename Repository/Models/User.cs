@@ -22,7 +22,8 @@ namespace Repository.Models
         public bool UserStatus { get; set; }
         public string? NiSize { get; set; }
         public DateTime CreatedAt { get; set; }
-
+        public string? ResetToken { get; set; }
+        public DateTime? ResetTokenExpires { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
     }

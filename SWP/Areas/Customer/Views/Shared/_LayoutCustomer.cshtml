@@ -54,15 +54,15 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-area="customer" asp-controller="HomeCustomer" asp-action="OrderOfCustomer">
-                            <span class="menu-title">Order</span>
+                            <span class="menu-title">z</span>
                             <i class="mdi mdi-contacts menu-icon"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="customer" asp-controller="HomeCustomer" asp-action="ChangePassword">
-                            <span class="menu-title">Change Password</span>
-                            <i class="mdi mdi-format-list-bulleted menu-icon"></i>
-                        </a>
+                       <a class="nav-link" asp-area="customer" asp-controller="HomeCustomer" asp-action="ChangePassword">
+                        <span class="menu-title">Change Password</span>
+                        <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+                    </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-area="customer" asp-controller="Home" asp-action="Index">
@@ -89,6 +89,6 @@
     <script src="../../LayoutCustomer/assets/js/off-canvas.js"></script>
     <script src="../../LayoutCustomer/assets/js/hoverable-collapse.js"></script>
     <script src="../../LayoutCustomer/assets/js/misc.js"></script>
-    
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

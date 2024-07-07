@@ -19,7 +19,8 @@ namespace Service.Services
         Task<Gem> GetGemByProductIdAsync(int id);
 		Task<Product> GetProductByIdAsync2(int id);
         Task<GemPriceList> GetGemPriceListByProductIdAsync(int id);
+		Task<List<Product>> GetProductByNameAndOrigin(string keyword, int pageNumber, int pageSize);
+		int GetTotalProductsByNameAndOrigin(string keyword);
 
-
-    }
+	}
 }

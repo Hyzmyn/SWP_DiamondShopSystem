@@ -100,7 +100,33 @@ namespace Service.Services
 			return await _repo.GetProductByIdAsync2(id);
 
 		}
+		public async Task<List<Product>> GetProductByNameAndOrigin(string keyword, int pageNumber, int pageSize)
+		{
+			int defaultPageSize = 10;
 
+			if (pageNumber <= 0 || pageSize <= 0)
+			{
+				pageSize = defaultPageSize;
+				pageNumber = 1;
+			}
+
+			List<Product> productList;
+
+			if (!string.IsNullOrEmpty(keyword))
+			{
+				productList = await _repo.GetProductByNameAndOrigin(keyword, pageNumber, pageSize);
+			}
+			else
+			{
+				productList = _repo.GetAllProduct();
+			}
+			return productList;
+		}
+
+		public int GetTotalProductsByNameAndOrigin(string keyword)
+		{
+			return _repo.GetTotalProductsByNameAndOrigin(keyword);
+		}
 
 		//public async Task<decimal> GetProductPrice(decimal Weight, string cut, decimal carat, string color, string clarity)
 		//{

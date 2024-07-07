@@ -15,5 +15,7 @@ namespace Service.Services
         Task AddDiscountAsync(Discount discount);
         Task UpdateDiscountAsync(Discount discount);
         Task<Discount> GetDiscountAsync(string discountCode);
+        Task<List<Discount>> GetDiscountsByUserPointAsync(int userId);
+
     }
 }

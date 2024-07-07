@@ -7,6 +7,7 @@ using Service.Services.VNPay;
 using service.Services;
 using Service;
 using Repository.Repositories;
+using Microsoft.AspNetCore.Identity;
 
 public class Program
 {
@@ -51,9 +52,10 @@ public class Program
 		builder.Services.AddHostedService<PriceCalculationHostedService>();
 
 		builder.Services.AddDistributedMemoryCache();
-		
-		
-		builder.Services.AddSession(options =>
+        builder.Services.AddScoped<IUserService, UserService>();
+        builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+
+        builder.Services.AddSession(options =>
 		{
 			options.IdleTimeout = TimeSpan.FromMinutes(30);
 			options.Cookie.HttpOnly = true;
@@ -61,8 +63,9 @@ public class Program
 		});
 		builder.Services.AddHttpClient();
 		builder.Services.AddSingleton<IVnPayService, VnPayService>();
+		builder.Services.AddSingleton<EmailService>();
 
-        var app = builder.Build();
+		var app = builder.Build();
 
 		// Cấu hình pipeline yêu cầu HTTP.
 		if (!app.Environment.IsDevelopment())

@@ -12,6 +12,12 @@ namespace Repository.Repositories
         Task<User?> GetLoginAsync(string username, string password);
 
         Task<User> GetUserByIdAsync(int userId);
+        Task SaveAsync();
+
+        Task<User?> FindByEmailAsync(string email);
+        Task SavePasswordResetTokenAsync(string email, string token);
+        Task<User?> GetUserByResetTokenAsync(string token);
+        Task<bool> ResetPasswordAsync(string token, string email, string newPassword);
 
     }
 }

@@ -156,7 +156,27 @@ namespace SWP.Controllers
 		}
 		//[Route("DIAMONDJEWELERY")]
 
+		[HttpGet]
+		public async Task<IActionResult> Search(string keyword, int currentPage = 1, int pageSize = 10)
+		{
+			try
+			{
+				var products = await _productService.GetProductByNameAndOrigin(keyword, currentPage, pageSize);
+				var totalProducts = _productService.GetTotalProductsByNameAndOrigin(keyword);
+				var totalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
 
+				ViewBag.Keyword = keyword;
+				ViewBag.CurrentPage = currentPage;
+				ViewBag.TotalPages = totalPages;
+
+				return View("DiamondJewelery", products);
+			}
+			catch (Exception ex)
+			{
+				_logger.LogError($"Error searching products: {ex.Message}");
+				return StatusCode(500, "Internal server error");
+			}
+		}
 
 	}
 }

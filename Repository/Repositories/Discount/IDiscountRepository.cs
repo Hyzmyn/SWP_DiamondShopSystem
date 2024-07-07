@@ -7,5 +7,7 @@ namespace Repository.Repositories
     {
 
         Task<Discount> GetDiscountByCodeAsync(string discountCode);
+        Task<List<Discount>> GetDiscountsByUserPointAsync(int userId);
+
     }
 }
