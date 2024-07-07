@@ -6,6 +6,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     decimal totalPrice = 0;
     decimal discountAmount = ViewBag.DiscountAmount ?? 0;
+    decimal total = 0;
     string discountCode = ViewBag.DiscountCode ?? string.Empty;
 }
 
@@ -136,6 +137,7 @@
                                                     I confirm that I have selected the correct size.
                                                 </label>
                                             </div>
+
                                         </form>
                                         
                                         <!-- Button -->
@@ -440,7 +442,7 @@
                                 </li>
                                 <!-- list group item -->
                                 @{
-                                    decimal total = totalPrice - discountAmount;
+                                    total = (totalPrice - (totalPrice * discountAmount / 100)) < 0 ? 0 : (totalPrice - (totalPrice * discountAmount / 100));
                                 }
                                 <li class="list-group-item px-4 py-3">
                                     <div class="d-flex align-items-center justify-content-between fw-bold">
