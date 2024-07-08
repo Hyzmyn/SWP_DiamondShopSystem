@@ -36,5 +36,9 @@ namespace Service.Services
         {
             throw new NotImplementedException();
         }
-    }
+		public async Task<decimal?> GetPriceRate()
+		{
+			return await _repo.GetPriceRateAsync();
+		}
+	}
 }

@@ -15,8 +15,16 @@ namespace Service.Services
         Task UpdateProductAsync(Product product);
         public List<Product> GetProducts();
         public List<Product> GetAllProducts();
-		Task<Product> GetProductByIdAsync(int id);
+
+        Task CalculateAndSaveProductPricesAsync();
 
 
-	}
+
+        Task<Product> GetProductByIdAsync(int id);
+        Task<Gem> GetGemByProductIdAsync(int id);
+		Task<Product> GetProductByIdAsync2(int id);
+        Task<GemPriceList> GetGemPriceListByProductIdAsync(int id);
+        Task<List<Product>> GetProductsByFieldAsync(string? productCode, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice, int pageNumber, int pageSize);
+        int GetTotalProductsByField(string? productCode, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice);
+    }
 }

@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace Repository.Models
 {
-    public class MaterialPriceList
-    {
+	public class MaterialPriceList
+	{
 		[ForeignKey("Product")]
 		[Key]
-        public int MaterialID { get; set; }
-        public decimal BuyPrice { get; set; }
-        public decimal SellPrice { get; set; }
-        public DateTime EffDate { get; set; }
+		public int MaterialID { get; set; }
+		public decimal BuyPrice { get; set; }
+		public decimal SellPrice { get; set; }
+		public DateTime EffDate { get; set; }
 
 		public virtual Product Product { get; set; }
-	}
+    }
 }

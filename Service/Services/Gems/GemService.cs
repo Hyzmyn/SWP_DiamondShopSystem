@@ -36,7 +36,10 @@ namespace Service.Services
 		{
 			throw new NotImplementedException();
 		}
-
+		public Task<Gem> GetByID(int id)
+		{
+			return _repo.GetAsync(id);
+		}
 		public Task UpdateGemAsync(Gem gem)
 		{
 			throw new NotImplementedException();

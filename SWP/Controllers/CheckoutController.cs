@@ -35,9 +35,11 @@ namespace SWP.Controllers
 			_warrantyService = warrantyService;
 		}
 
-		public async Task<IActionResult> IndexAsync()
+		public async Task<IActionResult> IndexAsync(decimal totalPrice, int orderId)
 		{
-			if (HttpContext.Session.GetString("UserId") == null)
+			await _cartService.UpdateOrder(orderId, totalPrice);
+
+            if (HttpContext.Session.GetString("UserId") == null)
 			{
 				return RedirectToAction("Index", "Home");
 			}
@@ -69,7 +71,8 @@ namespace SWP.Controllers
 		[HttpPost]
 		public async Task<IActionResult> CheckoutAsync([FromForm] string flexRadioDefault)
 		{
-			if (HttpContext.Session.GetString("UserId") == null)
+
+            if (HttpContext.Session.GetString("UserId") == null)
 			{
 				return RedirectToAction("Index", "Home");
 			}
@@ -90,8 +93,10 @@ namespace SWP.Controllers
 			{
 				return RedirectToAction("Index", "Home");
 			}
+            
 
-			if (flexRadioDefault == "paypal")
+
+            if (flexRadioDefault == "paypal")
 			{
 				var paymentUrl = _vnPayService.CreatePaymentUrl(HttpContext, order);
 				return Redirect(paymentUrl);
@@ -148,7 +153,10 @@ namespace SWP.Controllers
 			{
 				var points = amount / 100000;
 				var wallet = await _walletService.GetWalletPointByUserIdAsync(userId);
-				if (wallet != null)
+                string discountCode = HttpContext.Session.GetString("DiscountCode");
+                await _discountService.SubtractUserPointAsync(discountCode, userId);
+                HttpContext.Session.Remove("DiscountCode");
+                if (wallet != null)
 				{
 					await _walletService.UpdatWalletPointAsync(userId, points);
 				}

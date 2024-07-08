@@ -1,18 +1,22 @@
 ﻿
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Repository.Repositories;
 using Repository.Models;
+using Repository.Repositories;
+using static Microsoft.AspNetCore.Hosting.Internal.HostingApplication;
 
 namespace Service.Services
 {
     public class UserService : IUserService
     {
         private IUserRepository _repo;
+        private readonly IPasswordHasher<User> _passwordHasher;
 
 
-        public UserService(IUserRepository repo)
+        public UserService(IUserRepository repo, IPasswordHasher<User> passwordHasher)
         {
             _repo = repo;
+            _passwordHasher = _passwordHasher;
         }
 
 
@@ -79,7 +83,7 @@ namespace Service.Services
 
         public async Task AddUserAsync(User user)
         {
-            var existingUser = await _repo.GetUsernameAsync(user.Username);
+            var existingUser = await _repo.GetLoginAsync(user.Username, user.Password);
             if (existingUser == null)
             {
                 user.UserStatus = true;
@@ -89,7 +93,7 @@ namespace Service.Services
             }
             else
             {
-                throw new Exception($"Username: {user.Username} already exists");
+                user = null;
             }
         }
 
@@ -107,24 +111,67 @@ namespace Service.Services
                 throw new Exception($"User with id: {user.UserID} doesn't exist");
             }
         }
-
+        
         public async Task<User> LoginAsync(string username, string password)
         {
-            User account = await _repo.GetUsernameAsync(username);
+            User account = await _repo.GetLoginAsync(username, password);
 
-            if (account == null)
-            {
-                throw new Exception($"Username does not exist");
-            }
-            else if (account.Password != password)
-            {
-                throw new Exception($"Password is incorrect");
-            }
             return account;
         }
         public async Task<User> GetUserByIdAsync(int userId)
         {
             return await _repo.GetUserByIdAsync(userId);
         }
+
+
+        public async Task<bool> VerifyPasswordAsync(int userId, string currentPassword)
+        {
+            var user = await GetUserByIdAsync(userId);
+            if (user == null)
+            {
+                return false;
+            }
+            if (user.Password == currentPassword)
+            {
+                return true;
+            }
+            else { return false; }
+            
+        }
+
+        public async Task<bool> ChangePasswordAsync(int userId, string newPassword)
+        {
+            var user = await GetUserByIdAsync(userId);
+            if (user == null)
+            {
+                return false;
+            }
+
+            user.Password = newPassword;
+            _repo.Update(user);
+            await _repo.SaveAsync();
+            return true;
+        }
+        public async Task<User?> FindByEmailAsync(string email)
+        {
+            return await _repo.FindByEmailAsync(email);
+        }
+
+        public async Task SavePasswordResetTokenAsync(string email, string token)
+        {
+            await _repo.SavePasswordResetTokenAsync(email, token);
+        }
+
+        public async Task<User?> GetUserByResetTokenAsync(string token)
+        {
+            return await _repo.GetUserByResetTokenAsync(token);
+        }
+
+        public async Task<bool> ResetPasswordAsync(string token, string email, string newPassword)
+        {
+            return await _repo.ResetPasswordAsync(token, email, newPassword);
+        }
+
+
     }
 }

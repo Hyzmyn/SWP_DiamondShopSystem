@@ -59,19 +59,19 @@ namespace Service.Services
 			RandomValues = new RandomizeValue
 			{
 				// Set random values for each property
-				D = Math.Round(random.Next(2500000, 2700001) / 10000m) * 10000,
-				E = Math.Round(random.Next(2300000, 2400001) / 10000m) * 10000,
-				F = Math.Round(random.Next(2100000, 2200001) / 10000m) * 10000,
-				J = Math.Round(random.Next(1800000, 2000001) / 10000m) * 10000,
-				IF = Math.Round(random.Next(2600000, 2700001) / 10000m) * 10000,
-				VVS1 = Math.Round(random.Next(2400000, 2500001) / 10000m) * 10000,
-				VVS2 = Math.Round(random.Next(2200000, 2300001) / 10000m) * 10000,
-				VS1 = Math.Round(random.Next(2000000, 2100001) / 10000m) * 10000,
-				VS2 = Math.Round(random.Next(1800000, 1900001) / 10000m) * 10000,
-				Excellent = Math.Round(random.Next(2500000, 2700001) / 10000m) * 10000,
-				VeryGood = Math.Round(random.Next(2200000, 2400001) / 10000m) * 10000,
-				Good = Math.Round(random.Next(1900000, 2100001) / 10000m) * 10000,
-				CaratPrice = Math.Round(random.Next(2400000, 2600001) / 10000m) * 10000,
+				D = Math.Round(random.Next(2500, 2701) / 100m) * 100,
+				E = Math.Round(random.Next(2300, 2401) / 100m) * 100,
+				F = Math.Round(random.Next(2100, 2201) / 100m) * 100,
+				J = Math.Round(random.Next(1800, 2001) / 100m) * 100,
+				IF = Math.Round(random.Next(2600, 2701) / 100m) * 100,
+				VVS1 = Math.Round(random.Next(2400, 2501) / 100m) * 100,
+				VVS2 = Math.Round(random.Next(2200, 2301) / 100m) * 100,
+				VS1 = Math.Round(random.Next(2, 2101) / 100m) * 100,
+				VS2 = Math.Round(random.Next(1800, 1901) / 100m) * 100,
+				Excellent = Math.Round(random.Next(2500, 2701) / 100m) * 100,
+				VeryGood = Math.Round(random.Next(2200, 2401) / 100m) * 100,
+				Good = Math.Round(random.Next(1900, 2101) / 100m) * 100,
+				CaratPrice = Math.Round(random.Next(2400, 2601) / 100m) * 100,
 			};
 		}
 	}

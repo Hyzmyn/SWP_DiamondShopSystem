@@ -1,6 +1,7 @@
 ﻿using Repository.Repositories;
 using Repository.Models;
 using SelectPdf;
+using Microsoft.EntityFrameworkCore;
 
 namespace Service.Services
 {
@@ -12,7 +13,7 @@ namespace Service.Services
             _repo = repo;
         }
 
-        public Task AddOrderAsync(Order order)
+        public async Task AddOrderAsync(Order order)
         {
             throw new NotImplementedException();
         }
@@ -22,15 +23,52 @@ namespace Service.Services
             throw new NotImplementedException();
         }
 
-        public Task<List<Order>> GetOrdersAsync(string keyword, int pageNumber, int pageSize, int defaultPageSize, string sortBy)
+        public async Task<List<Order>> GetOrdersAsync(string keyword, int pageNumber, int pageSize, string sortBy)
         {
-            throw new NotImplementedException();
-        }
+			int defaultPageSize = 10;
+			if (pageNumber <= 0 && pageSize <= 0)
+			{
+				pageSize = defaultPageSize;
+				pageNumber = 1;
+			}
 
-        public Task UpdateOrderAsync(Order order)
+			List<Order> orders = _repo.Get().ToList();
+
+			if (!string.IsNullOrEmpty(keyword))
+			{
+				orders = orders.Where(x =>
+					x.OrderID.ToString().Contains(keyword.ToLower())).ToList();
+			}
+
+            var ordersList = orders.OrderBy(x => x.TimeOrder)
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize).ToList();
+
+			var totalOrders = ordersList.Count;
+			var totalPages = pageSize > 0 ? (int)Math.Ceiling((double)totalOrders / pageSize) : 0;
+
+			if (pageNumber > totalPages)
+			{
+				pageNumber = totalPages;
+			}
+
+			return ordersList;
+		}
+
+        public async Task UpdateOrderAsync(Order order)
         {
-            throw new NotImplementedException();
-        }
+			var existingOrder = await _repo.GetAsync(order.OrderID);
+			if (existingOrder != null)
+			{
+				order.OrderID = existingOrder.OrderID;
+				_repo.Update(order);
+				await _repo.SaveAsync();
+			}
+			else
+			{
+				order = null;
+			}
+		}
         public async Task<IEnumerable<Order>> GetOrdersByUserIdAsync(int userId)
         {
             return await _repo.GetOrdersByUserIdAsync(userId);
