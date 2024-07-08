@@ -57,7 +57,7 @@ namespace Repository.Repositories
 			}
 			return gemPriceList;
 		}
-        public async Task<List<Product>> GetProductByField(string? productCode, string? origin, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice, int pageNumber, int pageSize)
+        public async Task<List<Product>> GetProductByField(string? productCode, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice, int pageNumber, int pageSize)
         {
             var query = _db.Products
                 .Include(p => p.Gems)
@@ -67,11 +67,6 @@ namespace Repository.Repositories
             if (!string.IsNullOrEmpty(productCode))
             {
                 query = query.Where(p => p.ProductCode.Contains(productCode));
-            }
-
-            if (!string.IsNullOrEmpty(origin))
-            {
-                query = query.Where(p => p.Gems.GemPriceList.Origin.Contains(origin));
             }
 
             if (!string.IsNullOrEmpty(color))
@@ -105,7 +100,7 @@ namespace Repository.Repositories
                 .ToListAsync();
         }
 
-        public int GetTotalProductByField(string? productCode, string? origin, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice)
+        public int GetTotalProductByField(string? productCode, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice)
         {
             var query = _db.Products
                 .Include(p => p.Gems)
@@ -115,11 +110,6 @@ namespace Repository.Repositories
             if (!string.IsNullOrEmpty(productCode))
             {
                 query = query.Where(p => p.ProductCode.Contains(productCode));
-            }
-
-            if (!string.IsNullOrEmpty(origin))
-            {
-                query = query.Where(p => p.Gems.GemPriceList.Origin.Contains(origin));
             }
 
             if (!string.IsNullOrEmpty(color))

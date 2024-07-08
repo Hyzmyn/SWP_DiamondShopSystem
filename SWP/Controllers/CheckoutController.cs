@@ -35,9 +35,11 @@ namespace SWP.Controllers
 			_warrantyService = warrantyService;
 		}
 
-		public async Task<IActionResult> IndexAsync()
+		public async Task<IActionResult> IndexAsync(decimal totalPrice, int orderId)
 		{
-			if (HttpContext.Session.GetString("UserId") == null)
+			await _cartService.UpdateOrder(orderId, totalPrice);
+
+            if (HttpContext.Session.GetString("UserId") == null)
 			{
 				return RedirectToAction("Index", "Home");
 			}
@@ -69,7 +71,8 @@ namespace SWP.Controllers
 		[HttpPost]
 		public async Task<IActionResult> CheckoutAsync([FromForm] string flexRadioDefault)
 		{
-			if (HttpContext.Session.GetString("UserId") == null)
+
+            if (HttpContext.Session.GetString("UserId") == null)
 			{
 				return RedirectToAction("Index", "Home");
 			}

@@ -158,16 +158,15 @@ namespace SWP.Controllers
 		[HttpGet]
 		
 		
-        public async Task<IActionResult> Search(string? productCode, string? origin, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice, int currentPage = 1, int pageSize = 10)
+        public async Task<IActionResult> Search(string? productCode, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice, int currentPage = 1, int pageSize = 10)
         {
             try
             {
-                var products = await _productService.GetProductsByFieldAsync(productCode, origin, color, clarity, cut, startPrice, endPrice, currentPage, pageSize);
-                var totalProducts = _productService.GetTotalProductsByField(productCode, origin, color, clarity, cut, startPrice, endPrice);
+                var products = await _productService.GetProductsByFieldAsync(productCode, color, clarity, cut, startPrice, endPrice, currentPage, pageSize);
+                var totalProducts = _productService.GetTotalProductsByField(productCode, color, clarity, cut, startPrice, endPrice);
                 var totalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
 
                 ViewBag.ProductCode = productCode;
-                ViewBag.Origin = origin;
                 ViewBag.Color = color;
                 ViewBag.Clarity = clarity;
                 ViewBag.Cut = cut;

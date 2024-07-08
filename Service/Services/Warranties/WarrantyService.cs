@@ -12,69 +12,18 @@ namespace Service.Services
 {
     public class WarrantyService : IWarrantyService
     {
-        private readonly DiamondShopContext _dbContext;
         private readonly IWarrantyRepository _repo;
 
         
-        public WarrantyService(DiamondShopContext dbContext, IWarrantyRepository repo)
+        public WarrantyService(IWarrantyRepository repo)
         {
-            _dbContext = dbContext;
             _repo = repo;
             
         }
 
         public async Task AddWarrantyAsync(int userId)
         {
-            var order = await _dbContext.Orders
-                .Include(o => o.OrderDetails)
-                .ThenInclude(o => o.Product)
-                .ThenInclude(o => o.Gems)
-                .FirstOrDefaultAsync(o => o.UserID == userId && !o.OrderStatus);
-
-            if (order == null) return;
-
-            var warranties = new List<Warranty>();
-
-            foreach (var orderDetail in order.OrderDetails)
-            {
-                string instance = $"{orderDetail.Product.ProductCode} {orderDetail.Product.Gems.GemCode}";
-                decimal pricePerUnit = orderDetail.Price / orderDetail.Quantity;
-
-                switch (pricePerUnit)
-                {
-                    case <= 100:
-                        instance += " BASIC-04";
-                        break;
-                    case <= 200:
-                        instance += " ELITE-03";
-                        break;
-                    case <= 300:
-                        instance += " TECH-02";
-                        break;
-                    default:
-                        instance += " ACME-01";
-                        break;
-                }
-
-                for (int i = 0; i < orderDetail.Quantity; i++)
-                {
-                    var warranty = new Warranty
-                    {
-                        WarrantyStatus = true,
-                        OrderID = order.OrderID,
-                        ProductID = orderDetail.ProductID,
-                        BuyDate = DateTime.Now,
-                        EndDate = DateTime.Now.AddMonths(12),
-                        Instance = instance
-                    };
-
-                    warranties.Add(warranty);
-                }
-            }
-
-            await _dbContext.Warranties.AddRangeAsync(warranties);
-            order.OrderStatus = true;
-            await _dbContext.SaveChangesAsync();
+            await _repo.AddWarrantyAsync(userId);
         }
 
         public async Task ExPortPdf(Task<string> htmlTask, string id, string type)

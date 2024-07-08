@@ -58,6 +58,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hhcmVkXF9MYXlvdXRDdXN0b21lci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Delivery/Views/HomeDelivery/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGVsaXZlcnlcVmlld3NcSG9tZURlbGl2ZXJ5XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Delivery/Views/HomeDelivery/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGVsaXZlcnlcVmlld3NcSG9tZURlbGl2ZXJ5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Delivery/Views/Shared/_LayoutDelivery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGVsaXZlcnlcVmlld3NcU2hhcmVkXF9MYXlvdXREZWxpdmVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Admin/Desktop/Final_SWP/SWP_Final/SWP/Areas/Manager/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xEYXNoYm9hcmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

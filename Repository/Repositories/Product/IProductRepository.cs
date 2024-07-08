@@ -19,8 +19,9 @@ namespace Repository.Repositories
 		Task<Product> GetProductByIdAsync2(int id);
 		Task<GemPriceList> GetGemPriceListByProductIdAsync(int gemId);
 
-        Task<List<Product>> GetProductByField(string? productCode, string? origin, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice, int pageNumber, int pageSize);
-		int GetTotalProductByField(string? productCode, string? origin, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice);
+		Task<List<Product>> GetProductByField(string? productCode, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice, int pageNumber, int pageSize);
+
+		int GetTotalProductByField(string? productCode, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice);
 
     }
 }
