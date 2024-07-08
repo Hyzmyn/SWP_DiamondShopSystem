@@ -12,5 +12,6 @@ namespace Repository.Repositories
     public interface IWarrantyRepository : IBaseRepository<Warranty>
     {
         Task AddWarrantyAsync(int userId);
+        Task<Warranty> GetWarrantyByProductAndOrderAsync(int productId, int orderId);
     }
 }

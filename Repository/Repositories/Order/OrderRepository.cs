@@ -27,6 +27,11 @@ namespace Repository.Repositories
         {
             return await _db.Orders.Include(o => o.OrderDetails).ThenInclude(od => od.Product).FirstOrDefaultAsync(o => o.OrderID == orderId);
         }
-
+        public async Task<Order> GetOrderByUserIdAndProductIdAsync(int userId, int productId)
+        {
+            return await _db.Orders
+                                 .Include(o => o.OrderDetails)
+                                 .FirstOrDefaultAsync(o => o.UserID == userId && o.OrderDetails.Any(od => od.ProductID == productId));
+        }
     }
 }

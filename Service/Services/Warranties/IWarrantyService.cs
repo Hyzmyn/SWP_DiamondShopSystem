@@ -16,6 +16,6 @@ namespace Service.Services
         Task UpdateWarrantyAsync(Warranty Warranty);
 
         Task ExPortPdf(Task<string> html, string id, string type);
-
+        Task<Warranty> GetWarrantyByProductAndOrderAsync(int productId, int orderId);
     }
 }
