@@ -6,7 +6,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     decimal totalPrice = 0;
     decimal discountAmount = ViewBag.DiscountAmount ?? 0;
-    decimal total = 0;
     string discountCode = ViewBag.DiscountCode ?? string.Empty;
 }
 
@@ -409,7 +408,7 @@
                                         <li class="list-group-item px-4 py-3">
                                             <div class="row align-items-center">
                                                 <div class="col-2 col-md-2">
-                                                    <img src="@item.Product.ImageUrl1" alt="Diamond" class="img-fluid" />
+                                                    <img src="~/images/product @item.Product.ImageUrl1" alt="Diamond" class="img-fluid" />
                                                 </div>
                                                 <div class="col-5 col-md-5">
                                                     <h6 class="mb-0">@item.Product.ProductName</h6>
@@ -425,7 +424,8 @@
                                         </li>
                                         totalPrice += item.Price;
                                     }
-                                }                      
+                                }
+                                
                                 <!-- list group item -->
                                 <li class="list-group-item px-4 py-3">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -437,12 +437,12 @@
                                             Discount
                                             <i class="feather-icon icon-info " data-bs-toggle="tooltip" title="Default tooltip"></i>
                                         </div>
-                                        <div class="fw-bold">@discountAmount</div>
+                                        <div class="fw-bold">@(((int)Math.Round(discountAmount)).ToString())%</div>
                                     </div>
                                 </li>
                                 <!-- list group item -->
                                 @{
-                                    total = (totalPrice - (totalPrice * discountAmount / 100)) < 0 ? 0 : (totalPrice - (totalPrice * discountAmount / 100));
+                                    decimal total = totalPrice*((100-discountAmount)/100);
                                 }
                                 <li class="list-group-item px-4 py-3">
                                     <div class="d-flex align-items-center justify-content-between fw-bold">

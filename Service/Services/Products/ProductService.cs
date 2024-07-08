@@ -99,6 +99,46 @@ namespace Service.Services
 			return await _repo.GetProductByIdAsync(id);
 
 		}
+		public async Task<Gem> GetGemByProductIdAsync(int id)
+		{
+			return await _repo.GetGemByProductIdAsync(id);
+		}
+        public async Task<GemPriceList> GetGemPriceListByProductIdAsync(int id)
+        {
+            return await _repo.GetGemPriceListByProductIdAsync(id);
+        }
+        public async Task<Product> GetProductByIdAsync2(int id)
+		{
+			return await _repo.GetProductByIdAsync2(id);
+
+		}
+        public async Task<List<Product>> GetProductsByFieldAsync(string? productCode, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice, int pageNumber, int pageSize)
+        {
+            int defaultPageSize = 10;
+
+            if (pageNumber <= 0 || pageSize <= 0)
+            {
+                pageSize = defaultPageSize;
+                pageNumber = 1;
+            }
+
+            List<Product> productList;
+
+            if (!string.IsNullOrEmpty(productCode) || !string.IsNullOrEmpty(color) || !string.IsNullOrEmpty(clarity) || !string.IsNullOrEmpty(cut) || startPrice.HasValue || endPrice.HasValue)
+            {
+                productList = await _repo.GetProductByField(productCode, color, clarity, cut, startPrice, endPrice, pageNumber, pageSize);
+            }
+            else
+            {
+                productList = _repo.GetAllProduct();
+            }
+            return productList;
+        }
+
+        public int GetTotalProductsByField(string? productCode, string? color, string? clarity, string? cut, decimal? startPrice, decimal? endPrice)
+        {
+            return _repo.GetTotalProductByField(productCode, color, clarity, cut, startPrice, endPrice);
+        }
 
 		public async Task CalculateAndSaveProductPricesAsync()
 		{
@@ -129,6 +169,12 @@ namespace Service.Services
 
 			await _repo.SaveAsync();
 		}
+        //public async Task<decimal> GetProductPrice(decimal Weight, string cut, decimal carat, string color, string clarity)
+        //{
+        //	var gemPrice = await _gemPriceListService.GetDiamondPrice(cut, carat, color, clarity);
+        //	var materialPrice = await _materialPriceListRepository.GetMaterialPrice(Weight);
 
-	}
+        //	return gemPrice + materialPrice;
+        //}
+    }
 }

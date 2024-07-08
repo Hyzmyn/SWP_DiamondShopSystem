@@ -42,6 +42,8 @@ namespace SWP.Controllers
 
             ViewBag.OrderId = await _cartService.GetOrderId(userId);
 
+            var discounts = await _discountService.GetDiscountsByUserPointAsync(userId);
+            ViewBag.Discounts = discounts;
             ViewBag.DiscountAmount = HttpContext.Session.GetDecimal("DiscountAmount") ?? 0;
             ViewBag.DiscountCode = HttpContext.Session.GetString("DiscountCode") ?? string.Empty;
             return View(cartItems);

@@ -369,6 +369,7 @@ namespace SWP.Areas.Manager.Controllers
                 CategoryID = productDto.CategoryID,
                 ProductionCost = productDto.ProductionCost,
                 PriceRateID = productDto.PriceRateID,
+                
             };
 
             context.Products.Add(product);

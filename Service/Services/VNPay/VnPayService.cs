@@ -6,6 +6,7 @@ using Service.ViewModel;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Repository.Models;
 
 namespace Service.Services.VNPay
 {
@@ -13,6 +14,7 @@ namespace Service.Services.VNPay
     {
         private readonly IConfiguration _config;
         private readonly ILogger<VnPayService> _logger;
+        
 
         public VnPayService(IConfiguration config, ILogger<VnPayService> logger)
         {
@@ -30,7 +32,7 @@ namespace Service.Services.VNPay
                 vnpay.AddRequestData("vnp_Version", _config["VnPay:Version"]);
                 vnpay.AddRequestData("vnp_Command", _config["VnPay:Command"]);
                 vnpay.AddRequestData("vnp_TmnCode", _config["VnPay:TmnCode"]);
-                vnpay.AddRequestData("vnp_Amount", Convert.ToInt64(model.TotalPrice * 2450000).ToString());
+                vnpay.AddRequestData("vnp_Amount", Convert.ToInt64(model.TotalPrice * 2450000 ).ToString());
                 vnpay.AddRequestData("vnp_CreateDate", model.TimeOrder.ToString("yyyyMMddHHmmss"));
                 vnpay.AddRequestData("vnp_CurrCode", _config["VnPay:CurrCode"]);
                 vnpay.AddRequestData("vnp_IpAddr", Utils.GetIpAddress(context));

@@ -93,8 +93,10 @@ namespace SWP.Controllers
 			{
 				return RedirectToAction("Index", "Home");
 			}
+            
 
-			if (flexRadioDefault == "paypal")
+
+            if (flexRadioDefault == "paypal")
 			{
 				var paymentUrl = _vnPayService.CreatePaymentUrl(HttpContext, order);
 				return Redirect(paymentUrl);
@@ -151,7 +153,10 @@ namespace SWP.Controllers
 			{
 				var points = amount / 100000;
 				var wallet = await _walletService.GetWalletPointByUserIdAsync(userId);
-				if (wallet != null)
+                string discountCode = HttpContext.Session.GetString("DiscountCode");
+                await _discountService.SubtractUserPointAsync(discountCode, userId);
+                HttpContext.Session.Remove("DiscountCode");
+                if (wallet != null)
 				{
 					await _walletService.UpdatWalletPointAsync(userId, points);
 				}

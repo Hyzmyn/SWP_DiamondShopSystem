@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Repository.Models
 {
+
 	public class Product
 	{
 		[Key]
