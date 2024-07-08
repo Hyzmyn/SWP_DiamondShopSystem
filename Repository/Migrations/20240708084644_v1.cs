@@ -49,7 +49,9 @@ namespace Repository.Migrations
                     RoleID = table.Column<int>(type: "int", nullable: false),
                     UserStatus = table.Column<bool>(type: "bit", nullable: false),
                     NiSize = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ResetToken = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ResetTokenExpires = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -61,13 +63,11 @@ namespace Repository.Migrations
                 columns: table => new
                 {
                     GemID = table.Column<int>(type: "int", nullable: false),
-                    Origin = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CaratWeight = table.Column<decimal>(type: "decimal(8,2)", precision: 8, scale: 2, nullable: false),
                     Color = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Clarity = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cut = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(12,2)", precision: 12, scale: 2, nullable: false),
-                    EffDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    Price = table.Column<decimal>(type: "decimal(12,2)", precision: 12, scale: 2, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -280,36 +280,36 @@ namespace Repository.Migrations
                 values: new object[,]
                 {
                     { 1, true, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "None", 4.5m, "EMGR-001", "Emerald", "Brazil", "Excellent", "Excellent", "Excellent" },
-                    { 2, true, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Faint", 3.8m, "SAPP-002", "Sapphire", "Australia", "Excellent", "Very Good", "Very Good" },
+                    { 2, true, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Faint", 3.8m, "SAPP-002", "Sapphire", "Australia", "Excellent", "VeryGood", "Very Good" },
                     { 3, true, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "None", 4.9m, "DIAM-003", "Diamond", "Canada", "Ideal", "Ideal", "Ideal" },
                     { 4, true, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Faint", 3.2m, "RUBY-004", "Ruby", "Russia", "Very Good", "Excellent", "Excellent" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Users",
-                columns: new[] { "UserID", "Address", "CreatedAt", "Email", "NiSize", "Password", "PhoneNumber", "RoleID", "UserStatus", "Username" },
+                columns: new[] { "UserID", "Address", "CreatedAt", "Email", "NiSize", "Password", "PhoneNumber", "ResetToken", "ResetTokenExpires", "RoleID", "UserStatus", "Username" },
                 values: new object[,]
                 {
-                    { 1, "Address1", new DateTime(2023, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "user1@example.com", "S", "123", "1234567890", 1, true, "User1" },
-                    { 2, "Address2", new DateTime(2023, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "user2@example.com", "M", "123", "0987654321", 2, true, "User2" },
-                    { 3, "Address3", new DateTime(2023, 3, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "user3@example.com", "M", "123", "0987654321", 3, true, "User3" },
-                    { 4, "Address4", new DateTime(2023, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "user4@example.com", "M", "123", "0987654321", 4, true, "User4" },
-                    { 5, "Address5", new DateTime(2023, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "user5@example.com", "M", "123", "0987654321", 5, true, "User5" },
-                    { 6, "Address", new DateTime(2023, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "user6@example.com", "M", "Password", "0987654321", 5, true, "User6" },
-                    { 7, "Address", new DateTime(2023, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "user7@example.com", "M", "Password", "0987654321", 5, true, "User7" },
-                    { 8, "Address", new DateTime(2023, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "user8@example.com", "M", "Password", "0987654321", 5, true, "User8" },
-                    { 9, "Address", new DateTime(2023, 9, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "user9@example.com", "M", "Password", "0987654321", 5, true, "User9" }
+                    { 1, "Address1", new DateTime(2023, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "user1@example.com", "S", "123", "1234567890", null, null, 1, true, "User1" },
+                    { 2, "Address2", new DateTime(2023, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "user2@example.com", "M", "123", "0987654321", null, null, 2, true, "User2" },
+                    { 3, "Address3", new DateTime(2023, 3, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "user3@example.com", "M", "123", "0987654321", null, null, 3, true, "User3" },
+                    { 4, "Address4", new DateTime(2023, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "user4@example.com", "M", "123", "0987654321", null, null, 4, true, "User4" },
+                    { 5, "Address5", new DateTime(2023, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "user5@example.com", "M", "123", "0987654321", null, null, 5, true, "User5" },
+                    { 6, "Address", new DateTime(2023, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "user6@example.com", "M", "Password", "0987654321", null, null, 5, true, "User6" },
+                    { 7, "Address", new DateTime(2023, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "user7@example.com", "M", "Password", "0987654321", null, null, 5, true, "User7" },
+                    { 8, "Address", new DateTime(2023, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "user8@example.com", "M", "Password", "0987654321", null, null, 5, true, "User8" },
+                    { 9, "Address", new DateTime(2023, 9, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "user9@example.com", "M", "Password", "0987654321", null, null, 5, true, "User9" }
                 });
 
             migrationBuilder.InsertData(
                 table: "GemPriceLists",
-                columns: new[] { "GemID", "CaratWeight", "Clarity", "Color", "Cut", "EffDate", "Origin", "Price" },
+                columns: new[] { "GemID", "CaratWeight", "Clarity", "Color", "Cut", "Price" },
                 values: new object[,]
                 {
-                    { 1, 2.05m, "VVS1", "D", "Brilliant", new DateTime(2023, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Brazil", 10000m },
-                    { 2, 1.8m, "VS2", "E", "Cushion", new DateTime(2023, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Australia", 8500m },
-                    { 3, 3.02m, "IF", "F", "Round Brilliant", new DateTime(2023, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Canada", 25000m },
-                    { 4, 1.2m, "SI1", "J", "Oval", new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Russia", 6000m }
+                    { 1, 2.05m, "VVS1", "D", "Excellent", 0m },
+                    { 2, 1.8m, "VS2", "E", "VeryGood", 0m },
+                    { 3, 3.02m, "IF", "F", "Good", 0m },
+                    { 4, 1.2m, "SI1", "J", "Excellent", 0m }
                 });
 
             migrationBuilder.InsertData(

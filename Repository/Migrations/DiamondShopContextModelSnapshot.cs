@@ -168,7 +168,7 @@ namespace Repository.Migrations
                             GemName = "Sapphire",
                             Origin = "Australia",
                             Polish = "Excellent",
-                            Proportion = "Very Good",
+                            Proportion = "VeryGood",
                             Symmetry = "Very Good"
                         },
                         new
@@ -222,13 +222,6 @@ namespace Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("EffDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Origin")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<decimal>("Price")
                         .HasPrecision(12, 2)
                         .HasColumnType("decimal(12,2)");
@@ -244,10 +237,8 @@ namespace Repository.Migrations
                             CaratWeight = 2.05m,
                             Clarity = "VVS1",
                             Color = "D",
-                            Cut = "Brilliant",
-                            EffDate = new DateTime(2023, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Origin = "Brazil",
-                            Price = 10000m
+                            Cut = "Excellent",
+                            Price = 0m
                         },
                         new
                         {
@@ -255,10 +246,8 @@ namespace Repository.Migrations
                             CaratWeight = 1.8m,
                             Clarity = "VS2",
                             Color = "E",
-                            Cut = "Cushion",
-                            EffDate = new DateTime(2023, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Origin = "Australia",
-                            Price = 8500m
+                            Cut = "VeryGood",
+                            Price = 0m
                         },
                         new
                         {
@@ -266,10 +255,8 @@ namespace Repository.Migrations
                             CaratWeight = 3.02m,
                             Clarity = "IF",
                             Color = "F",
-                            Cut = "Round Brilliant",
-                            EffDate = new DateTime(2023, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Origin = "Canada",
-                            Price = 25000m
+                            Cut = "Good",
+                            Price = 0m
                         },
                         new
                         {
@@ -277,10 +264,8 @@ namespace Repository.Migrations
                             CaratWeight = 1.2m,
                             Clarity = "SI1",
                             Color = "J",
-                            Cut = "Oval",
-                            EffDate = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Origin = "Russia",
-                            Price = 6000m
+                            Cut = "Excellent",
+                            Price = 0m
                         });
                 });
 

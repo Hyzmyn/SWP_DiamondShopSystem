@@ -59,19 +59,19 @@ namespace Service.Services
 			RandomValues = new RandomizeValue
 			{
 				// Set random values for each property
-				D = Math.Round(random.Next(2500, 2701) / 100m) * 100,
-				E = Math.Round(random.Next(2300, 2401) / 100m) * 100,
-				F = Math.Round(random.Next(2100, 2201) / 100m) * 100,
-				J = Math.Round(random.Next(1800, 2001) / 100m) * 100,
-				IF = Math.Round(random.Next(2600, 2701) / 100m) * 100,
-				VVS1 = Math.Round(random.Next(2400, 2501) / 100m) * 100,
-				VVS2 = Math.Round(random.Next(2200, 2301) / 100m) * 100,
-				VS1 = Math.Round(random.Next(2, 2101) / 100m) * 100,
-				VS2 = Math.Round(random.Next(1800, 1901) / 100m) * 100,
-				Excellent = Math.Round(random.Next(2500, 2701) / 100m) * 100,
-				VeryGood = Math.Round(random.Next(2200, 2401) / 100m) * 100,
-				Good = Math.Round(random.Next(1900, 2101) / 100m) * 100,
-				CaratPrice = Math.Round(random.Next(2400, 2601) / 100m) * 100,
+				D = random.Next(25, 27),
+				E = random.Next(23, 24),
+				F = random.Next(21, 22),
+				J = random.Next(18, 20),
+				IF = random.Next(260, 271),
+				VVS1 = random.Next(240, 251),
+				VVS2 = random.Next(220, 231),
+				VS1 = random.Next(200, 211),
+				VS2 = random.Next(180, 191),
+                Excellent = random.Next(250, 271),
+				VeryGood = random.Next(220, 241),
+				Good = random.Next(190, 211),
+				CaratPrice = random.Next(240, 261),
 			};
 		}
 	}
