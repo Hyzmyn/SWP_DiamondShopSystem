@@ -56,6 +56,19 @@ namespace SWP.Controllers
             return RedirectToAction("Cart");
         }
 
+        public async Task<IActionResult> UpdateNi(int orderDetailId, int NiSize)
+        {
+            if (NiSize < 6 && NiSize > 20)
+            {
+                return RedirectToAction("Cart");
+            }
+            string Ni = Convert.ToString(NiSize);
+
+            await _cartService.UpdateNiAsync(orderDetailId, Ni);
+
+            return RedirectToAction("Cart");
+        }
+
         [HttpPost]
         public async Task<IActionResult> UpdateQuantity(int orderDetailId, int quantity)
         {

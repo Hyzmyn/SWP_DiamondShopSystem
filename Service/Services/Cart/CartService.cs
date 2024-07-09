@@ -94,6 +94,15 @@ namespace Service.Services
                 await _context.SaveChangesAsync();
             }
         }
+        public async Task UpdateNiAsync(int orderDetailId, string ni)
+        {
+            var orderDetail = await _context.OrderDetails.FindAsync(orderDetailId);
+            if (orderDetail != null)
+            {
+                orderDetail.NiSize = ni;
+                await _context.SaveChangesAsync();
+            }
+        }
 
         private async Task UpdateOrderTotalPrice(int orderId)
         {

@@ -1,0 +1,204 @@
+﻿
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="contact">
+    <div class="getin">
+        <h2>Diamond Stores</h2>
+        <p>The jewelry store was born to bring beauty to everyone.</p>
+
+        <div class="getin-details">
+            <h3>Headquarters</h3>
+            <div>
+                <i class="fa-solid fa-house get"></i>
+                <p> Vinhomes Grand Park District 9</p>
+            </div>
+            <h3>Phone</h3>
+            <div>
+                <i class="fa-solid fa-phone get"></i>
+                <p> (+84) 877 939 939 <br> (+125) 939 439 479</p>
+            </div>
+            <h3>Support</h3>
+            <div>
+                <i class="fa-solid fa-envelope get"></i>
+                <p> hodinhbinh2503@gmail.com <br> binhhdse173136@fpt.edu.vn</p>
+            </div>
+            <h3>Follow US</h3>
+            <div class="pro-links">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="form">
+        <h4>Contact Now</h4>
+        <p>Register now for information to receive specific advice .</p>
+        <div class="form-row">
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="E-mail">
+        </div>
+        <div class="form-col">
+            <input type="text" placeholder="Subject">
+        </div>
+        <div class="form-col">
+            <textarea name="" id="" cols="30" rows="8" placeholder="How can we help ?"></textarea>
+        </div>
+        <div class="form-col">
+            <button class="sub">Send Message</button>
+        </div>
+    </div>
+
+</section>
+
+<section id="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123966.92476585114!2d109.0870247801107!3d13.841055505891294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316f136c7cd36973%3A0xd851b0352ac318e5!2zVHV5IFBoxrDhu5tjLCBCw6xuaCDEkOG7i25oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1652966062344!5m2!1svi!2s"
+            width="600" height="450"
+            style="border:0;" allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</section>
+<style>
+    #contact {
+        padding: 8vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+        #contact .getin {
+            width: 350px;
+        }
+
+            #contact .getin h2 {
+                color: white;
+                font-size: 30px;
+                font-weight: 800;
+                line-height: .8;
+                margin-bottom: 16px;
+            }
+
+            #contact .getin p {
+                color: #757373;
+                line-height: 24px;
+                margin-bottom: 33px;
+                padding-bottom: 25px;
+                border-bottom: 1px solid #e5e4ed;
+            }
+
+            #contact .getin h3 {
+                color: white;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 26px;
+                margin-bottom: 16px;
+            }
+
+            #contact .getin .getin-details div {
+                display: flex;
+            }
+
+                #contact .getin .getin-details div .get {
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: white;
+                    margin-right: 20px;
+                }
+
+                #contact .getin .getin-details div p {
+                    font-size: 14px;
+                    border-bottom: none;
+                    line-height: 22px;
+                    margin-bottom: 15px;
+                }
+
+                #contact .getin .getin-details div .pro-links i {
+                    margin-right: 8px;
+                }
+
+        #contact .form {
+            width: 60%;
+            background: #f7f6fa;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+            #contact .form h4 {
+                color: #0E185F;
+                color: #2c234d;
+                line-height: 30px;
+                margin-bottom: 8px;
+            }
+
+
+            #contact .form p {
+                color: #757373;
+                line-height: 24px;
+                padding-bottom: 25px;
+            }
+
+            #contact .form .form-row {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+                #contact .form .form-row input {
+                    width: 48%;
+                    font-size: 14px;
+                    font-weight: 400;
+                    border-radius: 3px;
+                    border: none;
+                    background: white;
+                    color: #757373;
+                    outline: none;
+                    padding: 20px 30px;
+                    margin-bottom: 20px;
+                }
+
+
+
+            #contact .form .form-col input,
+            #contact .form .form-col textarea {
+                width: 100%;
+                font-size: 14px;
+                font-weight: 400;
+                border-radius: 3px;
+                border: none;
+                background: white;
+                color: #757373;
+                outline: none;
+                padding: 20px 30px;
+                margin-bottom: 20px;
+            }
+
+            #contact .form .sub {
+                font-size: .9rem;
+                padding: 13px 25px;
+                background: #000c4b;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                font-weight: 600;
+                cursor: pointer;
+                color: white;
+            }
+
+    #map {
+        width: 100%;
+        height: 70vh;
+    }
+
+        #map iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+</style>
+

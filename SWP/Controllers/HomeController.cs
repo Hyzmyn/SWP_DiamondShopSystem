@@ -183,7 +183,20 @@ namespace SWP.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+        //[Route("DIAMONDJEWELERY")]
+        public IActionResult AboutStore()
+        {
+            return View();
+        }
 
+        public IActionResult HowToMeasureRingSize()
+        {
+            return View();
+        }
+        public IActionResult Contact()
+        {
+            return View();
+        }
 
     }
 }

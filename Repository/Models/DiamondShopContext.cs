@@ -34,8 +34,9 @@ namespace Repository.Models
 		public DbSet<Discount> Discounts { get; set; }
 		public DbSet<Warranty> Warranties { get; set; }
 		public DbSet<WalletPoint> WalletPoints { get; set; }
+        public object Gem { get; set; }
 
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 			=> optionsBuilder.UseSqlServer(GetConnectionString());
 
 		private string? GetConnectionString()
@@ -116,10 +117,10 @@ namespace Repository.Models
 						new User { UserID = 3, Username = "User3", Password = "123", Email = "user3@example.com", PhoneNumber = "0987654321", Address = "Address3", RoleID = 3, UserStatus = true, NiSize = "M", CreatedAt = DateTime.Parse("2023-03-25") },
 						new User { UserID = 4, Username = "User4", Password = "123", Email = "user4@example.com", PhoneNumber = "0987654321", Address = "Address4", RoleID = 4, UserStatus = true, NiSize = "M", CreatedAt = DateTime.Parse("2023-04-30") },
 						new User { UserID = 5, Username = "User5", Password = "123", Email = "user5@example.com", PhoneNumber = "0987654321", Address = "Address5", RoleID = 5, UserStatus = true, NiSize = "M", CreatedAt = DateTime.Parse("2023-05-05") },
-						new User { UserID = 6, Username = "User6", Password = "Password", Email = "user6@example.com", PhoneNumber = "0987654321", Address = "Address", RoleID = 5, UserStatus = true, NiSize = "M", CreatedAt = DateTime.Parse("2023-06-10") },
-						new User { UserID = 7, Username = "User7", Password = "Password", Email = "user7@example.com", PhoneNumber = "0987654321", Address = "Address", RoleID = 5, UserStatus = true, NiSize = "M", CreatedAt = DateTime.Parse("2023-07-15") },
-						new User { UserID = 8, Username = "User8", Password = "Password", Email = "user8@example.com", PhoneNumber = "0987654321", Address = "Address", RoleID = 5, UserStatus = true, NiSize = "M", CreatedAt = DateTime.Parse("2023-08-20") },
-						new User { UserID = 9, Username = "User9", Password = "Password", Email = "user9@example.com", PhoneNumber = "0987654321", Address = "Address", RoleID = 5, UserStatus = true, NiSize = "M", CreatedAt = DateTime.Parse("2023-09-25") }
+						new User { UserID = 6, Username = "User6", Password = "1", Email = "user6@example.com", PhoneNumber = "0987654321", Address = "Address", RoleID = 5, UserStatus = true, NiSize = "M", CreatedAt = DateTime.Parse("2023-06-10") },
+						new User { UserID = 7, Username = "User7", Password = "1", Email = "user7@example.com", PhoneNumber = "0987654321", Address = "Address", RoleID = 5, UserStatus = true, NiSize = "M", CreatedAt = DateTime.Parse("2023-07-15") },
+						new User { UserID = 8, Username = "User8", Password = "1", Email = "user8@example.com", PhoneNumber = "0987654321", Address = "Address", RoleID = 5, UserStatus = true, NiSize = "M", CreatedAt = DateTime.Parse("2023-08-20") },
+						new User { UserID = 9, Username = "User9", Password = "1", Email = "user9@example.com", PhoneNumber = "0987654321", Address = "Address", RoleID = 5, UserStatus = true, NiSize = "M", CreatedAt = DateTime.Parse("2023-09-25") }
 					);
 
 			modelBuilder.Entity<Gem>().HasData(

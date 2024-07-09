@@ -57,7 +57,15 @@
                     <td>@item.Product.ProductID</td>
                     <td>@item.Product.ProductName</td>
                     <td><img src="@Url.Content("~/images/product/" + image)" style="height: 75px; " /></td>
-                    <td>@item.NiSize</td>
+                    <td>
+                        <div class="flex-container">
+                            <form asp-action="UpdateNi" method="post" style="display: flex; align-items: center;">
+                                <input type="hidden" name="orderDetailId" value="@item.OrderDetailID" />
+                                <input type="number" name="NiSize" value="@item.NiSize" min="6" max="20" class="flex-item" style="width: 50px;" />
+                                <button type="submit" class="btn btn-primary btn-sm flex-item"><i class="bi bi-check-square-fill"></i></button>
+                            </form>
+                        </div>
+                    </td>
                     <td>
                         <div class="flex-container">
                             <form asp-action="UpdateQuantity" method="post" style="display: flex; align-items: center;">

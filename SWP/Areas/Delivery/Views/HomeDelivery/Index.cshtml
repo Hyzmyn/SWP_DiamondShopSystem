@@ -22,57 +22,92 @@
     </div>
 }
 
-<table class="table">
-    <thead>
-        <tr class="table-warning">
-            <th>
-                @Html.DisplayNameFor(model => model.OrderID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TotalPrice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TimeOrder)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Note)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OrderStatus)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User)
-            </th>
-            <th> Action</th>
-
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr class="table-success">
-                <td>
-                    @Html.DisplayFor(modelItem => item.OrderID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TotalPrice)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TimeOrder)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Note)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.OrderStatus)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.User.Username)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-orderId="@item.OrderID">Edit</a>
-                </td>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <table class="table">
+        <thead>
+            <tr class="table-warning">
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TimeOrder)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Note)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.User)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliveryStatus)
+                </th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="table-success">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TimeOrder)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Note)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.Username)
+                    </td>
+                    <td>
+                        <input type="checkbox" data-id="@item.OrderID" class="delivery-status-checkbox" @(item.DeliveryStatus ? "checked" : "") />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".delivery-status-checkbox").change(function () {
+            var checkbox = $(this);
+            var orderId = checkbox.data("id");
+            var deliveryStatus = checkbox.is(":checked");
+
+            $.ajax({
+                type: "POST",
+                url: "/delivery/homedelivery/UpdateDeliveryStatus",
+                data: {
+                    orderID: orderId,
+                    deliveryStatus: deliveryStatus,
+                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                },
+                success: function (response) {
+                    if (response.success) {
+                        alert("Delivery status updated successfully.");
+                    } else {
+                        alert("Failed to update delivery status.");
+                        // Revert the checkbox state in case of failure
+                        checkbox.prop("checked", !deliveryStatus);
+                    }
+                },
+                error: function () {
+                    alert("An error occurred while updating delivery status.");
+                    // Revert the checkbox state in case of error
+                    checkbox.prop("checked", !deliveryStatus);
+                }
+            });
+        });
+    });
+</script>

@@ -278,158 +278,11 @@ namespace SWP.Areas.SaleStaff.Controllers
         [Route("orderlist")]
         public IActionResult OrderList()
         {
-            var orders = context.Orders.ToList();
+            var orders = context.Orders.Where(o => o.OrderStatus == false).ToList();
             return View(orders);
         }
 
-        [Route("createorder")]
-        [HttpGet]
-        public IActionResult CreateOrder()
-        {
-            return View();
-        }
-
-        // POST: CreateOrder[
-        [Route("createorder")]
-        [HttpPost]
-        public IActionResult CreateOrder(OrderDto orderDto)
-        {
-            // Log input data
-            Console.WriteLine($"Received OrderDto: {Newtonsoft.Json.JsonConvert.SerializeObject(orderDto)}");
-
-            if (!ModelState.IsValid)
-            {
-                Console.WriteLine("ModelState is not valid. Errors:");
-                foreach (var modelState in ModelState.Values)
-                {
-                    foreach (var error in modelState.Errors)
-                    {
-                        Console.WriteLine(error.ErrorMessage);
-                    }
-                }
-                return View(orderDto);
-            }
-
-            try
-            {
-                var order = new Order
-                {
-                    UserID = orderDto.UserID,
-                    TotalPrice = orderDto.TotalPrice,
-                    TimeOrder = orderDto.TimeOrder,
-                    Note = orderDto.Note,
-                    OrderStatus = orderDto.OrderStatus
-                };
-
-                // Log the order object
-                Console.WriteLine($"Created Order object: {Newtonsoft.Json.JsonConvert.SerializeObject(order)}");
-
-                context.Orders.Add(order);
-                var changes = context.SaveChanges();
-
-                Console.WriteLine($"Changes saved to database: {changes}");
-
-                if (changes > 0)
-                {
-                    TempData["SuccessMessage"] = "Order created successfully.";
-                    return RedirectToAction(nameof(OrderList));
-                }
-                else
-                {
-                    ModelState.AddModelError("", "No changes were saved to the database.");
-                    return View(orderDto);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Exception occurred: {ex}");
-                ModelState.AddModelError("", "Error saving order: " + ex.Message);
-                return View(orderDto);
-            }
-
-        }
-
-        [Route("editorder")]
-        public IActionResult EditOrder(int orderId)
-        {
-            var order = context.Orders.FirstOrDefault(o => o.OrderID == orderId);
-            if (order == null)
-            {
-                return RedirectToAction("OrderList", "HomeSaleStaff");
-            }
-
-            var orderDto = new OrderDto
-            {
-                OrderID = order.OrderID,
-                UserID = order.UserID,
-                TotalPrice = order.TotalPrice,
-                TimeOrder = order.TimeOrder,
-                Note = order.Note,
-                OrderStatus = order.OrderStatus
-            };
-
-            ViewData["OrderID"] = order.OrderID;
-
-            return View(orderDto);
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Route("editorder")]
-        public IActionResult EditOrder(int orderId, OrderDto orderDto)
-        {
-            var order = context.Orders.FirstOrDefault(o => o.OrderID == orderId);
-            if (order == null)
-            {
-                return RedirectToAction("OrderList", "HomeSaleStaff");
-            }
-
-            if (!ModelState.IsValid)
-            {
-                ViewData["OrderID"] = order.OrderID;
-                return View(orderDto);
-            }
-
-            order.UserID = orderDto.UserID;
-            order.TotalPrice = orderDto.TotalPrice;
-            order.TimeOrder = orderDto.TimeOrder;
-            order.Note = orderDto.Note;
-            order.OrderStatus = orderDto.OrderStatus;
-
-            context.SaveChanges();
-
-            TempData["Message"] = "Order updated successfully.";
-            return RedirectToAction("OrderList", "HomeSaleStaff");
-        }
-
-
-        [Route("deleteorder")]
-        public IActionResult DeleteOrder(int orderId)
-        {
-            try
-            {
-                var order = context.Orders.Find(orderId);
-                if (order == null)
-                {
-                    TempData["ErrorMessage"] = "Order not found.";
-                    return RedirectToAction("OrderList", "HomeSaleStaff");
-                }
-
-                context.Orders.Remove(order);
-                context.SaveChanges();
-
-                TempData["SuccessMessage"] = "Order deleted successfully.";
-            }
-            catch (Exception ex)
-            {
-                TempData["ErrorMessage"] = $"An error occurred while deleting the order: {ex.Message}";
-                // Log the exception here for further analysis if needed
-            }
-
-            return RedirectToAction("OrderList", "HomeSaleStaff");
-        }
-
-
-
+        
         [Route("historyorder")]
         public IActionResult HistoryOrder()
         {
@@ -603,7 +456,27 @@ namespace SWP.Areas.SaleStaff.Controllers
             return RedirectToAction("DiscountList");
         }
 
+        [Route("gempricelist")]
+        public IActionResult GemPriceList()
+        {
+            var gemPriceList = context.GemPriceLists.ToList();
+            return View(gemPriceList);
+        }
 
-    
+        [Route("materialpricelist")]
+        public IActionResult MaterialPriceList()
+        {
+            var materialPriceList = context.MaterialPriceLists.ToList();
+            return View(materialPriceList);
+        }
+
+        [Route("gem")]
+        public IActionResult Gem()
+        {
+            
+            return View();
+        }
+
+
 }
 }

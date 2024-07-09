@@ -26,6 +26,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Admin/Views/HomeAdmin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Admin/Views/HomeAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Admin/Views/HomeAdmin/InformationUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEluZm9ybWF0aW9uVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Customer/Views/HomeCustomer/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcSG9tZUN1c3RvbWVyXENoYW5nZVBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -58,10 +74,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJcVmlld3NcU2hhcmVkXF9MYXlvdXRDdXN0b21lci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Delivery/Views/HomeDelivery/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGVsaXZlcnlcVmlld3NcSG9tZURlbGl2ZXJ5XEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Delivery/Views/HomeDelivery/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGVsaXZlcnlcVmlld3NcSG9tZURlbGl2ZXJ5XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -88,6 +100,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Manager/Views/HomeManager/CreateGemPriceList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lTWFuYWdlclxDcmVhdGVHZW1QcmljZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Manager/Views/HomeManager/CreateMaterialPrice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lTWFuYWdlclxDcmVhdGVNYXRlcmlhbFByaWNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Manager/Views/HomeManager/CreateOrder.cshtml]
@@ -138,6 +154,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lTWFuYWdlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Manager/Views/HomeManager/InformationUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lTWFuYWdlclxJbmZvcm1hdGlvblVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Manager/Views/HomeManager/OrderList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lTWFuYWdlclxPcmRlckxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -182,10 +202,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcQ3JlYXRlRGlzY291bnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/CreateOrder.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcQ3JlYXRlT3JkZXIuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/CreateProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcQ3JlYXRlUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -202,12 +218,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcRWRpdERpc2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/EditOrder.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcRWRpdE9yZGVyLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/EditProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcRWRpdFByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/GemPriceList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcR2VtUHJpY2VMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/HistoryOrder.cshtml]
@@ -220,6 +236,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/MaterialPriceList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2FsZVN0YWZmXFZpZXdzXEhvbWVTYWxlU3RhZmZcTWF0ZXJpYWxQcmljZUxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/SaleStaff/Views/HomeSaleStaff/OrderDetails.cshtml]
@@ -262,8 +282,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcUGF5bWVudFN1Y2Nlc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Views/Home/AboutStore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFN0b3JlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Views/Home/diamondjewelery.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxkaWFtb25kamV3ZWxlcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Views/Home/HowToMeasureRingSize.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb3dUb01lYXN1cmVSaW5nU2l6ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Views/Home/Index.cshtml]

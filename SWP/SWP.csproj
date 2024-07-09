@@ -22,6 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Customer\Data\" />
     <Folder Include="Areas\Customer\Models\" />
     <Folder Include="Areas\Delivery\Data\" />
@@ -35,6 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\LayoutAdmin\.DS_Store" />
     <None Include="wwwroot\LayoutCustomer\.DS_Store" />
     <None Include="wwwroot\LayoutManager\.DS_Store" />
     <None Include="wwwroot\LayoutSaleStaff\.DS_Store" />
