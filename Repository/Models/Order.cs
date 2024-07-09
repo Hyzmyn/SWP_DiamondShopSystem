@@ -17,6 +17,7 @@ namespace Repository.Models
         public DateTime TimeOrder { get; set; }
         public string Note { get; set; } = "";
 		public bool OrderStatus { get; set; }
+        public bool DeliveryStatus { get; set; }
 
         [ForeignKey("UserID")]
         public virtual User User { get; set; }

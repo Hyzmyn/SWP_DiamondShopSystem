@@ -5,17 +5,19 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Service.Services;
+using Service.ViewModel;
 
 public class AccountController : Controller
 {
 
 	private readonly DiamondShopContext db;
 	private readonly IUserService userService;
-	public AccountController(DiamondShopContext dbContext, IUserService user)
+    private readonly EmailService _emailService;
+	public AccountController(DiamondShopContext dbContext, IUserService user, EmailService emailService)
 	{
 		db = dbContext;
 		userService = user;
-
+        _emailService = emailService;
 	}
 
 	public IActionResult Login()
@@ -29,7 +31,7 @@ public class AccountController : Controller
 	{
 		var user = await userService.LoginAsync(username, password);
 
-        if (user != null)
+        if (user != null && user.UserStatus == true)
 		{
 			HttpContext.Session.SetString("UserId", user.UserID.ToString());
 			HttpContext.Session.SetInt32("RoleID", (int)user.RoleID);
@@ -79,4 +81,60 @@ public class AccountController : Controller
 		HttpContext.Session.Clear();
 		return RedirectToAction("Index", "Home");
 	}
+    [HttpGet]
+    public IActionResult ForgotPassword()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View(model);
+        }
+
+        var user = await userService.FindByEmailAsync(model.Email);
+        if (user == null)
+        {
+            return RedirectToAction("ForgotPassword");
+        }
+
+        var token = Guid.NewGuid().ToString();
+        await userService.SavePasswordResetTokenAsync(user.Email.ToString(), token);
+
+        var callbackUrl = Url.Action("ResetPassword", "Account", new { token }, protocol: Request.Scheme);
+        var message = $"Please reset your password by clicking <a href='{callbackUrl}'>here</a>";
+
+        await _emailService.SendEmailAsync(model.Email, "Reset Password", message);
+
+        return View("ForgotPasswordConfirmation");
+    }
+
+    [HttpGet]
+    public IActionResult ResetPassword(string token)
+    {
+        var model = new ResetPasswordViewModel { Token = token };
+        return View(model);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View(model);
+        }
+
+        var result = await userService.ResetPasswordAsync(model.Token, model.Email, model.Password);
+        if (result)
+        {
+            return RedirectToAction("Index", "Home");
+        }
+
+        ModelState.AddModelError(string.Empty, "Invalid token or email.");
+        return View(model);
+    }
+
 }

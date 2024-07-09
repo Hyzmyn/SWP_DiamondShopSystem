@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Repository.Models;
 using Service.Services;
 using SWP.Controllers;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace SWP.Areas.Customer.Controllers
@@ -14,13 +18,14 @@ namespace SWP.Areas.Customer.Controllers
 		private readonly ICartService _cartService;
 		private readonly IDiscountService _discountService;
         private readonly IOrderService _orderService;
-
-        public HomeCustomerController(IUserService userService, ICartService cartService, IDiscountService discountService, IOrderService orderService)
+        private readonly IWarrantyService _warrantyService;
+        public HomeCustomerController(IUserService userService, ICartService cartService, IDiscountService discountService, IOrderService orderService, IWarrantyService warrantyService)
         {
             _userService = userService;
             _cartService = cartService;
 			_discountService = discountService;
             _orderService = orderService;
+            _warrantyService = warrantyService;
 
         }
 
@@ -182,28 +187,70 @@ namespace SWP.Areas.Customer.Controllers
             var orders = await _orderService.GetOrdersByUserIdAsync(int.Parse(userId));
             return View(orders);
 		}
+        [HttpGet]
+        [Route("changepassword")]
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("changepassword")]
+        public async Task<IActionResult> ChangePassword(string currentPassword, string newPassword, string confirmPassword)
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (userId == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            int parsedUserId;
+            if (!int.TryParse(userId, out parsedUserId))
+            {
+                ModelState.AddModelError(string.Empty, "Invalid user ID.");
+                return View();
+            }
+
+            if (string.IsNullOrEmpty(currentPassword))
+            {
+                ModelState.AddModelError("currentPassword", "Current password is required.");
+            }
+            if (string.IsNullOrEmpty(newPassword))
+            {
+                ModelState.AddModelError("newPassword", "Please add new password");
+            }
+            if (newPassword != confirmPassword)
+            {
+                ModelState.AddModelError("confirmPassword", "The new password and confirmation password do not match.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            bool isCurrentPasswordValid = await _userService.VerifyPasswordAsync(parsedUserId, currentPassword);
+            if (!isCurrentPasswordValid)
+            {
+                ModelState.AddModelError("currentPassword", "Current password is incorrect.");
+                return View();
+            }
+
+            bool isPasswordChanged = await _userService.ChangePasswordAsync(parsedUserId, newPassword);
+            if (isPasswordChanged)
+            {
+                ViewBag.Message = "Password has been changed successfully.";
+            }
+            else
+            {
+                ModelState.AddModelError(string.Empty, "Failed to change the password.");
+            }
+
+            return View();
+        }
 
 
 
-		[HttpPost]
-		[Route("changepassword")]
-		public async Task<IActionResult> ChangePassword(string Pass)
-		{
-			var userId = HttpContext.Session.GetString("UserId");
-			if (userId == null)
-			{
-				return RedirectToAction("Index", "Home");
-			}
-
-			var user = await _userService.GetUserByIdAsync(int.Parse(userId));
-			if (user == null)
-			{
-				return NotFound();
-			}
-
-			ViewBag.Field = Pass;
-			return View(user);
-		}
         [Route("orderdetails")]
         public async Task<IActionResult> OrderDetails(int orderId)
         {
@@ -221,6 +268,31 @@ namespace SWP.Areas.Customer.Controllers
 
             return View(order);
         }
+        [Route("warranty")]
+        public async Task<IActionResult> ViewWarranty(int productId)
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            var order = await _orderService.GetOrderByUserIdAndProductIdAsync(int.Parse(userId), productId);
+            if (order == null || !order.OrderStatus)
+            {
+                return NotFound();
+            }
+
+            var warranty = await _warrantyService.GetWarrantyByProductAndOrderAsync(productId, order.OrderID);
+            if (warranty == null)
+            {
+                return NotFound();
+            }
+
+            return View(warranty);
+        }
+
+
 
 
 

@@ -179,6 +179,10 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
             "Select.Pdf.NetCore": {
               "target": "Package",
               "version": "[18.4.0, )"

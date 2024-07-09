@@ -96,7 +96,7 @@
 																	<a  class="secondary_img"><img
 																	src="images/product/@product.ImageUrl2" alt="product1"></a>
 																	<div class="quick_button" style="color: white ">
-																		<a href="#" class="quick-view-btn" data-product-id="@product.ProductID" data-toggle="modal" data-target="#modal_box" data-placement="top" data-original-title="quick view">Quick View</a>
+																			<a href="#" class="quick-view-btn" data-product-id="@product.ProductID" data-toggle="modal" data-target="#modal_box" data-placement="top" data-original-title="quick view">Quick View</a>
 																	</div>
 															</div>
 															<div class="product_content" style="color: white">
@@ -153,7 +153,7 @@
 					<div class="row">
 						<div class="col-12">
 							<div class="section_title">
-								<h2>Minh Sang Updates</h2>
+								<h2>Minh Sang Founder</h2>
 							</div>
 						</div>
 					</div>
@@ -165,7 +165,7 @@
 										<a ><img src="images/blog/4.jpg" alt="blog 4"></a>
 									</div>
 									<div class="blog_content">
-										<h3><a >Earrings for Navratri</a></h3>
+										<h3><a >Binh Ho</a></h3>
 										<div class="author_name">
 											<p>
 												<span>by</span>
@@ -296,84 +296,68 @@
 			<!-- banner area ends -->
 			<div class="modal fade" id="modal_box" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				<div class="modal_body">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-5 col-md-5 col-sm-12">
-								<div class="modal_tab">
-									<div class="tab-content product-details-large">
-										<div class="tab-pane fade show active" id="tab1" role="tabpanel">
-											<div class="modal_tab_img">
-												<a><img src="" alt="" id="quickview-img-1"></a>
-											</div>
-										</div>
-										<div class="tab-pane fade" id="tab2" role="tabpanel">
-											<div class="modal_tab_img">
-												<a><img src="" alt="" id="quickview-img-2"></a>
-											</div>
-										</div>
+	<div class="modal-content">
+		<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<div class="modal_body">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-md-5 col-sm-12">
+						<div class="modal_tab">
+							<div class="tab-content product-details-large">
+								<div class="tab-pane fade show active" id="tab1" role="tabpanel">
+									<div class="modal_tab_img">
+										<a><img src="" alt="" id="quickview-img-1"></a>
 									</div>
-									<div class="modal_tab_button">
-										<ul class="nav product_navactive owl-carousel" role="tablist">
-											<li>
-												<a href="#tab1" class="nav-link active" data-toggle="tab" role="tab" aria-controls="tab1" aria-selected="false">
-													<img src="" alt="" id="quickview-thumb-1">
-												</a>
-											</li>
-											<li>
-												<a href="#tab2" class="nav-link" data-toggle="tab" role="tab" aria-controls="tab2" aria-selected="false">
-													<img src="" alt="" id="quickview-thumb-2">
-												</a>
-											</li>
-										</ul>
+								</div>
+								<div class="tab-pane fade" id="tab2" role="tabpanel">
+									<div class="modal_tab_img">
+										<a><img src="" alt="" id="quickview-img-2"></a>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-7 col-md-7 col-sm-12">
-								<div class="modal_right">
-									<div class="modal_title mb-10">
-										<h2 id="quickview-title"></h2>
-									</div>
-									<div class="modal_price mb-10">
-										<span class="new_price" id="quickview-price"></span>
-										<span class="old_price" id="quickview-old-price"></span>
-									</div>
-									<div class="modal_add_to_cart mb-15" style="
-										font-weight: 500;
-										/* margin-top: 25px; */
-										/* color: #fff; */
-										/* height: 50px; */
-										/* line-height: 50px; */
-										/* padding: 0 35px; */
-										background: #a8741a;
-										box-shadow: none;
-										color: #fff;
-										display: inline-block;
-										height: 45px;
-										line-height: 45px;
-										padding: 0px 22px;
-										text-transform: uppercase;
-										font-size: 13px;
-										border-radius: 5px;
-											">
-											<form asp-controller="Cart" asp-action="AddToCart" method="post" style="display: inline;">
-										<input type="hidden" name="productId" id="quickview-product-id" />
-										<input type="hidden" name="quantity" value="1" />
-										<a onclick="this.closest('form').submit(); return false;" title="Add to Cart">Add to Cart</a>
-										</form>
-									</div>
-									<div class="modal_description mb-15">
-										<p id="quickview-description"></p>
-									</div>
-									<div class="modal_social">
-										<h2>Share this Product</h2>
-
-									</div>
-								</div>
+							<div class="modal_tab_button">
+								<ul class="nav product_navactive owl-carousel" role="tablist">
+									<li>
+										<a href="#tab1" class="nav-link active" data-toggle="tab" role="tab" aria-controls="tab1" aria-selected="false">
+											<img src="" alt="" id="quickview-thumb-1">
+										</a>
+									</li>
+									<li>
+										<a href="#tab2" class="nav-link" data-toggle="tab" role="tab" aria-controls="tab2" aria-selected="false">
+											<img src="" alt="" id="quickview-thumb-2">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-7 col-md-7 col-sm-12">
+						<div class="modal_right">
+							<div class="modal_title mb-10">
+								<h2 id="quickview-title"></h2>
+							</div>
+							<div style="display: flex;">
+							<div id="gemInfo"></div>
+							<strong><div style="margin-left: 120px;" id="gemPriceList"></div></strong>
+							</div>
+							<div class="modal_price mb-10">
+								<span class="new_price" id="quickview-price"></span>
+								<span class="old_price" id="quickview-old-price"></span>
+							</div>
+							<div class="modal_add_to_cart mb-15" style="font-weight: 500; background: #a8741a; box-shadow: none; color: #fff; display: inline-block; height: 45px; line-height: 45px; padding: 0px 22px; text-transform: uppercase; font-size: 13px; border-radius: 5px;">
+								<form asp-controller="Cart" asp-action="AddToCart" method="post" style="display: inline;">
+									<input type="hidden" name="productId" id="quickview-product-id" />
+									<input type="hidden" name="quantity" value="1" />
+									<a onclick="this.closest('form').submit(); return false;" title="Add to Cart">Add to Cart</a>
+								</form>
+							</div>
+							<div class="modal_description mb-15">
+								<p id="quickview-description"></p>
+							</div>
+							<div class="modal_social">
+								<h2>Share this Product</h2>
 							</div>
 						</div>
 					</div>
@@ -381,4 +365,6 @@
 			</div>
 		</div>
 	</div>
+</div>
+
 

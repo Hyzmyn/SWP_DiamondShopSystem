@@ -369,6 +369,7 @@ namespace SWP.Areas.Manager.Controllers
                 CategoryID = productDto.CategoryID,
                 ProductionCost = productDto.ProductionCost,
                 PriceRateID = productDto.PriceRateID,
+                
             };
 
             context.Products.Add(product);
@@ -843,7 +844,16 @@ namespace SWP.Areas.Manager.Controllers
             return RedirectToAction("DiscountList");
         }
 
+        
 
+        [Route("informationuser")]
+        public IActionResult InformationUser()
+        {
+            var informationUser = context.Users.Where(u => u.RoleID == 5).ToList();
+            return View(informationUser);
+        }
+
+        
 
 
     }
