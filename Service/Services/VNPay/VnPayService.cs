@@ -6,7 +6,6 @@ using Service.ViewModel;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Repository.Models;
 
 namespace Service.Services.VNPay
 {
@@ -14,7 +13,6 @@ namespace Service.Services.VNPay
     {
         private readonly IConfiguration _config;
         private readonly ILogger<VnPayService> _logger;
-        
 
         public VnPayService(IConfiguration config, ILogger<VnPayService> logger)
         {
@@ -32,13 +30,13 @@ namespace Service.Services.VNPay
                 vnpay.AddRequestData("vnp_Version", _config["VnPay:Version"]);
                 vnpay.AddRequestData("vnp_Command", _config["VnPay:Command"]);
                 vnpay.AddRequestData("vnp_TmnCode", _config["VnPay:TmnCode"]);
-                vnpay.AddRequestData("vnp_Amount", Convert.ToInt64(model.TotalPrice * 2450000 ).ToString());
+                vnpay.AddRequestData("vnp_Amount", Convert.ToInt64(model.TotalPrice * 2450000).ToString());
                 vnpay.AddRequestData("vnp_CreateDate", model.TimeOrder.ToString("yyyyMMddHHmmss"));
                 vnpay.AddRequestData("vnp_CurrCode", _config["VnPay:CurrCode"]);
                 vnpay.AddRequestData("vnp_IpAddr", Utils.GetIpAddress(context));
                 vnpay.AddRequestData("vnp_Locale", _config["VnPay:Local"]);
                 vnpay.AddRequestData("vnp_OrderInfo", "Thanh toan don hang:" + model.OrderID);
-                vnpay.AddRequestData("vnp_OrderType", "other"); 
+                vnpay.AddRequestData("vnp_OrderType", "other");
                 vnpay.AddRequestData("vnp_ReturnUrl", _config["VnPay:PaymentBackUrl"]);
                 vnpay.AddRequestData("vnp_TxnRef", model.OrderID.ToString() + tick);
 
@@ -65,8 +63,8 @@ namespace Service.Services.VNPay
                     }
                 }
 
-                
-              
+
+
                 var vnp_SecureHash = collections.FirstOrDefault(p => p.Key == "vnp_SecureHash").Value;
                 var vnp_ResponseCode = vnpay.GetResponseData("vnp_ResponseCode");
                 var vnp_OrderInfo = vnpay.GetResponseData("vnp_OrderInfo");
@@ -81,13 +79,13 @@ namespace Service.Services.VNPay
                         Success = false
                     };
                 }
-
+                _logger.LogInformation($"PaymentExecute - Amount: {vnp_Amount}");
                 return new VnPaymentResponseModel
                 {
                     Success = true,
                     PaymentMethod = "VnPay",
                     OrderDescription = vnp_OrderInfo,
-                  
+
                     Token = vnp_SecureHash,
                     VnPayResponseCode = vnp_ResponseCode,
                     Amount = vnp_Amount

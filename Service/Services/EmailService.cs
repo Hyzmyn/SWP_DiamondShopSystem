@@ -17,7 +17,7 @@ namespace Service.Services
             _smtpClient = new SmtpClient("smtp.gmail.com")
             {
                 Port = 587,
-                Credentials = new NetworkCredential("minhsangdiamondshop@gmail.com", "aaghgliopkmegwdi"),
+                Credentials = new NetworkCredential("taipdse172357@fpt.edu.vn", "pvceiavrhppdypcp"),
                 EnableSsl = true,
             };
         }
@@ -26,7 +26,7 @@ namespace Service.Services
         {
             var mailMessage = new MailMessage
             {
-                From = new MailAddress("minhsangdiamondshop@gmail.com"),
+                From = new MailAddress("taipdse172357@fpt.edu.vn"),
                 Subject = subject,
                 Body = message,
                 IsBodyHtml = true,

@@ -77,7 +77,10 @@ namespace Service.Services
         {
             return await _repo.GetByIdAsync(orderId);
         }
+        public async Task<Order> GetOrderByUserIdAndProductIdAsync(int userId, int productId)
+        {
+            return await _repo.GetOrderByUserIdAndProductIdAsync(userId, productId);
+        }
 
-        
     }
 }

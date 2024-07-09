@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using static Microsoft.AspNetCore.Hosting.Internal.HostingApplication;
 
 namespace Service.Services
 {
@@ -80,6 +81,10 @@ namespace Service.Services
         public Task UpdateWarrantyAsync(Warranty warranty)
         {
             throw new NotImplementedException();
+        }
+        public async Task<Warranty> GetWarrantyByProductAndOrderAsync(int productId, int orderId)
+        {
+            return await _repo.GetWarrantyByProductAndOrderAsync(productId, orderId);
         }
     }
 }

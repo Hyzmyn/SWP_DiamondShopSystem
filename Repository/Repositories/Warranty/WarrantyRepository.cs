@@ -69,5 +69,12 @@ namespace Repository.Repositories
             order.OrderStatus = true;
             await _db.SaveChangesAsync();
         }
+        public async Task<Warranty> GetWarrantyByProductAndOrderAsync(int productId, int orderId)
+        {
+            return await _db.Warranties
+                                 .Include(w => w.Order)
+                                 .Include(w => w.Product)
+                                 .FirstOrDefaultAsync(w => w.ProductID == productId && w.OrderID == orderId);
+        }
     }
 }
