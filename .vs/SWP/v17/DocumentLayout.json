@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\service\\services\\users\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|solutionrelative:service\\services\\users\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\service\\services\\users\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|solutionrelative:service\\services\\users\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\checkout\\paymentsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\checkout\\paymentsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\cart\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\cart\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -67,10 +99,6 @@
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\manager\\controllers\\homemanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\checkout\\paymentsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\checkout\\paymentsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\account\\forgotpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\account\\forgotpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -123,20 +151,12 @@
       "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\repositories\\walletpoint\\iwalletpointrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -161,10 +181,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\manager\\views\\homemanager\\gemlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\manager\\views\\homemanager\\gemlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\models\\diamondshopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -201,10 +217,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\customer\\views\\homecustomer\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\customer\\views\\homecustomer\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\cart\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\cart\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\service\\services\\products\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -255,20 +267,8 @@
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\manager\\views\\warranties\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\repositories\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\service\\services\\users\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|solutionrelative:service\\services\\users\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\service\\services\\users\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|solutionrelative:service\\services\\users\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\models\\gem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -310,20 +310,159 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IWalletService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\WalletPoint\\IWalletService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\WalletPoint\\IWalletService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\WalletPoint\\IWalletService.cs",
-              "RelativeToolTip": "Service\\Services\\WalletPoint\\IWalletService.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAwA0AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T18:06:23.309Z",
+              "DocumentIndex": 6,
+              "Title": "Cart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Cart\\Cart.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Views\\Cart\\Cart.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Cart\\Cart.cshtml",
+              "RelativeToolTip": "SWP\\Views\\Cart\\Cart.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAEMAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-05T09:13:17.752Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Checkout\\Index.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Views\\Checkout\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Checkout\\Index.cshtml",
+              "RelativeToolTip": "SWP\\Views\\Checkout\\Index.cshtml",
+              "ViewState": "AQIAAJMBAAAAAAAAAAAuwKUBAABvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-07T11:52:28.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PaymentSuccess.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Checkout\\PaymentSuccess.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Views\\Checkout\\PaymentSuccess.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Checkout\\PaymentSuccess.cshtml",
+              "RelativeToolTip": "SWP\\Views\\Checkout\\PaymentSuccess.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-05T09:19:05.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "SWP\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "SWP\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAB8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T14:26:01.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Users\\IUserService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\Users\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Users\\IUserService.cs",
+              "RelativeToolTip": "Service\\Services\\Users\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T12:52:51.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\User\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\User\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\User\\UserRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\User\\UserRepository.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAzwBcAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T06:53:45.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Users\\UserService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\Users\\UserService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Users\\UserService.cs",
+              "RelativeToolTip": "Service\\Services\\Users\\UserService.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAowJ0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T12:45:31.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "SWP\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\CartController.cs",
+              "RelativeToolTip": "SWP\\Controllers\\CartController.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAswCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T07:21:26.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WarrantyService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Warranties\\WarrantyService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\Warranties\\WarrantyService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Warranties\\WarrantyService.cs",
+              "RelativeToolTip": "Service\\Services\\Warranties\\WarrantyService.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAABoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-08T10:14:12.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "WalletPointRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\WalletPoint\\WalletPointRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\WalletPoint\\WalletPointRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\WalletPoint\\WalletPointRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\WalletPoint\\WalletPointRepository.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwCYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-08T07:41:16.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WalletPointService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\WalletPoint\\WalletPointService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\WalletPoint\\WalletPointService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\WalletPoint\\WalletPointService.cs",
+              "RelativeToolTip": "Service\\Services\\WalletPoint\\WalletPointService.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAiwDMAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-08T07:27:18.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "VnPayLibrary .cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\VNPay\\VnPayLibrary .cs",
+              "RelativeDocumentMoniker": "Service\\Services\\VNPay\\VnPayLibrary .cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\VNPay\\VnPayLibrary .cs",
+              "RelativeToolTip": "Service\\Services\\VNPay\\VnPayLibrary .cs",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAAAHIAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T12:33:20.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "CheckoutController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\CheckoutController.cs",
               "RelativeDocumentMoniker": "SWP\\Controllers\\CheckoutController.cs",
@@ -336,59 +475,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "VnPayLibrary .cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\VNPay\\VnPayLibrary .cs",
-              "RelativeDocumentMoniker": "Service\\Services\\VNPay\\VnPayLibrary .cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\VNPay\\VnPayLibrary .cs",
-              "RelativeToolTip": "Service\\Services\\VNPay\\VnPayLibrary .cs",
-              "ViewState": "AQIAAIcAAAAAAAAAAAAAAHIAAAAQAAAA",
+              "DocumentIndex": 10,
+              "Title": "IWalletService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\WalletPoint\\IWalletService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\WalletPoint\\IWalletService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\WalletPoint\\IWalletService.cs",
+              "RelativeToolTip": "Service\\Services\\WalletPoint\\IWalletService.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAwA0AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T12:33:20.302Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T18:06:23.309Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WalletPointService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\WalletPoint\\WalletPointService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\WalletPoint\\WalletPointService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\WalletPoint\\WalletPointService.cs",
-              "RelativeToolTip": "Service\\Services\\WalletPoint\\WalletPointService.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAiwDMAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T07:27:18.088Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WalletPointRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\WalletPoint\\WalletPointRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\WalletPoint\\WalletPointRepository.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\WalletPoint\\WalletPointRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\WalletPoint\\WalletPointRepository.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwCYAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T07:41:16.962Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WarrantyService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Warranties\\WarrantyService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\Warranties\\WarrantyService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Warranties\\WarrantyService.cs",
-              "RelativeToolTip": "Service\\Services\\Warranties\\WarrantyService.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAAABoAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T10:14:12.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "IWarrantyRepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Warranty\\IWarrantyRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Warranty\\IWarrantyRepository.cs",
@@ -396,12 +495,11 @@
               "RelativeToolTip": "Repository\\Repositories\\Warranty\\IWarrantyRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T10:16:33.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T10:16:33.707Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "VnPayService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\VNPay\\VnPayService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\VNPay\\VnPayService.cs",
@@ -409,12 +507,11 @@
               "RelativeToolTip": "Service\\Services\\VNPay\\VnPayService.cs",
               "ViewState": "AQIAADQAAAAAAAAAAAA+wD0AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T16:39:47.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T16:39:47.649Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "WarrantyRepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Warranty\\WarrantyRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Warranty\\WarrantyRepository.cs",
@@ -422,12 +519,11 @@
               "RelativeToolTip": "Repository\\Repositories\\Warranty\\WarrantyRepository.cs",
               "ViewState": "AQIAADEAAAAAAAAAAAAuwEYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T10:16:45.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T10:16:45.321Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "HomeManagerController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Controllers\\HomeManagerController.cs",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Controllers\\HomeManagerController.cs",
@@ -435,12 +531,11 @@
               "RelativeToolTip": "SWP\\Areas\\Manager\\Controllers\\HomeManagerController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T14:29:40.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T14:29:40.315Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "DiscountRepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Discount\\DiscountRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Discount\\DiscountRepository.cs",
@@ -448,12 +543,11 @@
               "RelativeToolTip": "Repository\\Repositories\\Discount\\DiscountRepository.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAcwC8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T07:17:04.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T07:17:04.834Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "Discount.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Models\\Discount.cs",
               "RelativeDocumentMoniker": "Repository\\Models\\Discount.cs",
@@ -461,12 +555,11 @@
               "RelativeToolTip": "Repository\\Models\\Discount.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAQwBgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T14:35:48.288Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T14:35:48.288Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "IVnPayService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\VNPay\\IVnPayService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\VNPay\\IVnPayService.cs",
@@ -474,12 +567,11 @@
               "RelativeToolTip": "Service\\Services\\VNPay\\IVnPayService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T12:33:19.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T12:33:19.435Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\ViewModel\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Service\\ViewModel\\ErrorViewModel.cs",
@@ -487,12 +579,11 @@
               "RelativeToolTip": "Service\\ViewModel\\ErrorViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T15:53:27.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T15:53:27.855Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "VnPaymentResponseModel.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\ViewModel\\VnPaymentResponseModel.cs",
               "RelativeDocumentMoniker": "Service\\ViewModel\\VnPaymentResponseModel.cs",
@@ -500,12 +591,11 @@
               "RelativeToolTip": "Service\\ViewModel\\VnPaymentResponseModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T11:52:11.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T11:52:11.587Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "WarrantiesController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Controllers\\WarrantiesController.cs",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Controllers\\WarrantiesController.cs",
@@ -513,25 +603,11 @@
               "RelativeToolTip": "SWP\\Areas\\Manager\\Controllers\\WarrantiesController.cs",
               "ViewState": "AQIAAMQAAAAAAAAAAADwv80AAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T08:50:11.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T08:50:11.691Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "PaymentSuccess.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Checkout\\PaymentSuccess.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Views\\Checkout\\PaymentSuccess.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Checkout\\PaymentSuccess.cshtml",
-              "RelativeToolTip": "SWP\\Views\\Checkout\\PaymentSuccess.cshtml",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-05T09:19:05.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "ForgotPasswordConfirmation.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
@@ -539,12 +615,11 @@
               "RelativeToolTip": "SWP\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-07T07:06:16.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T07:06:16.304Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "Warranty.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\HomeCustomer\\Warranty.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Views\\HomeCustomer\\Warranty.cshtml",
@@ -552,12 +627,11 @@
               "RelativeToolTip": "SWP\\Areas\\Customer\\Views\\HomeCustomer\\Warranty.cshtml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-08T10:37:37.487Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T10:37:37.487Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Orders\\OrderService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\Orders\\OrderService.cs",
@@ -565,12 +639,11 @@
               "RelativeToolTip": "Service\\Services\\Orders\\OrderService.cs",
               "ViewState": "AQIAADoAAAAAAAAAAAAkwFEAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T11:36:40.382Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T11:36:40.382Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "HomeCustomerController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Controllers\\HomeCustomerController.cs",
               "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Controllers\\HomeCustomerController.cs",
@@ -578,12 +651,11 @@
               "RelativeToolTip": "SWP\\Areas\\Customer\\Controllers\\HomeCustomerController.cs",
               "ViewState": "AQIAAAgBAAAAAAAAAADwvw4BAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T15:35:08.287Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-05T15:35:08.287Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\Shared\\_Layout.cshtml",
@@ -591,12 +663,11 @@
               "RelativeToolTip": "SWP\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAALIAAAAAAAAAAAAuwNwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-07T07:03:08.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T07:03:08.349Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "IOrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Order\\IOrderRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Order\\IOrderRepository.cs",
@@ -608,7 +679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "_LayoutCustomer.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
@@ -620,7 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "IOrderService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Orders\\IOrderService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\Orders\\IOrderService.cs",
@@ -632,7 +703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Order\\OrderRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Order\\OrderRepository.cs",
@@ -644,7 +715,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "IWarrantyService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Warranties\\IWarrantyService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\Warranties\\IWarrantyService.cs",
@@ -656,7 +727,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\HomeCustomer\\Index.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Views\\HomeCustomer\\Index.cshtml",
@@ -668,19 +739,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "SWP\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "SWP\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAYwCcAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T14:26:01.872Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Models\\User.cs",
               "RelativeDocumentMoniker": "Repository\\Models\\User.cs",
@@ -692,7 +751,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "EmailService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\EmailService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\EmailService.cs",
@@ -704,7 +763,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 37,
               "Title": "ResetPassword.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Account\\ResetPassword.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\Account\\ResetPassword.cshtml",
@@ -716,7 +775,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 38,
               "Title": "ForgotPassword.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Account\\ForgotPassword.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\Account\\ForgotPassword.cshtml",
@@ -728,19 +787,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Checkout\\Index.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Views\\Checkout\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Checkout\\Index.cshtml",
-              "RelativeToolTip": "SWP\\Views\\Checkout\\Index.cshtml",
-              "ViewState": "AQIAALYBAAAAAAAAAAAuwLsBAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-07T11:52:28.436Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "IWalletPointRepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\WalletPoint\\IWalletPointRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\WalletPoint\\IWalletPointRepository.cs",
@@ -752,7 +799,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "IDiscountService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Discounts\\IDiscountService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\Discounts\\IDiscountService.cs",
@@ -764,7 +811,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "GemPriceList.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Models\\GemPriceList.cs",
               "RelativeDocumentMoniker": "Repository\\Models\\GemPriceList.cs",
@@ -776,7 +823,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 42,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "SWP\\Controllers\\HomeController.cs",
@@ -788,7 +835,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 43,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Program.cs",
               "RelativeDocumentMoniker": "SWP\\Program.cs",
@@ -800,7 +847,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 44,
               "Title": "GemList.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\HomeManager\\GemList.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\GemList.cshtml",
@@ -812,19 +859,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "SWP\\Controllers\\CartController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\CartController.cs",
-              "RelativeToolTip": "SWP\\Controllers\\CartController.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAswCAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T07:21:26.424Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 45,
               "Title": "DiamondShopContext.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Models\\DiamondShopContext.cs",
               "RelativeDocumentMoniker": "Repository\\Models\\DiamondShopContext.cs",
@@ -836,7 +871,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\appsettings.json",
               "RelativeDocumentMoniker": "SWP\\appsettings.json",
@@ -848,7 +883,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 48,
               "Title": "20240708070549_v2.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Migrations\\20240708070549_v2.cs",
               "RelativeDocumentMoniker": "Repository\\Migrations\\20240708070549_v2.cs",
@@ -872,7 +907,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 47,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Products\\ProductService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\Products\\ProductService.cs",
@@ -884,7 +919,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 49,
               "Title": "20240708070205_v11.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Migrations\\20240708070205_v11.cs",
               "RelativeDocumentMoniker": "Repository\\Migrations\\20240708070205_v11.cs",
@@ -896,7 +931,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 50,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\Home\\Index.cshtml",
@@ -920,7 +955,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 51,
               "Title": "WarrantyPdf.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\Warranties\\WarrantyPdf.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\Warranties\\WarrantyPdf.cshtml",
@@ -932,7 +967,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 52,
               "Title": "CustomerInformation.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\HomeCustomer\\CustomerInformation.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Views\\HomeCustomer\\CustomerInformation.cshtml",
@@ -944,7 +979,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 53,
               "Title": "ChangePassword.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\HomeCustomer\\ChangePassword.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Views\\HomeCustomer\\ChangePassword.cshtml",
@@ -956,19 +991,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "Cart.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Cart\\Cart.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Views\\Cart\\Cart.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Cart\\Cart.cshtml",
-              "RelativeToolTip": "SWP\\Views\\Cart\\Cart.cshtml",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAAAEoAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-05T09:13:17.752Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 55,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Product\\IProductRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Product\\IProductRepository.cs",
@@ -980,7 +1003,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 54,
               "Title": "IProductService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Products\\IProductService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\Products\\IProductService.cs",
@@ -992,7 +1015,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 56,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Product\\ProductRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Product\\ProductRepository.cs",
@@ -1004,7 +1027,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 57,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\Home\\Privacy.cshtml",
@@ -1016,7 +1039,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 58,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\_ViewStart.cshtml",
@@ -1028,7 +1051,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 59,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\_ViewImports.cshtml",
@@ -1040,7 +1063,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 60,
               "Title": "ForgotPasswordViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\ViewModel\\ForgotPasswordViewModel.cs",
               "RelativeDocumentMoniker": "Service\\ViewModel\\ForgotPasswordViewModel.cs",
@@ -1052,7 +1075,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 61,
               "Title": "ResetPasswordViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\ViewModel\\ResetPasswordViewModel.cs",
               "RelativeDocumentMoniker": "Service\\ViewModel\\ResetPasswordViewModel.cs",
@@ -1064,7 +1087,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 63,
               "Title": "IDiscountRepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\Discount\\IDiscountRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Discount\\IDiscountRepository.cs",
@@ -1076,7 +1099,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 62,
               "Title": "DiscountService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Discounts\\DiscountService.cs",
               "RelativeDocumentMoniker": "Service\\Services\\Discounts\\DiscountService.cs",
@@ -1088,7 +1111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 64,
               "Title": "_LayoutManager.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
@@ -1100,19 +1123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\User\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repositories\\User\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\User\\UserRepository.cs",
-              "RelativeToolTip": "Repository\\Repositories\\User\\UserRepository.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAADwvzAAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T06:53:45.049Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 65,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\Warranties\\Index.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\Warranties\\Index.cshtml",
@@ -1124,31 +1135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Users\\IUserService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\Users\\IUserService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Users\\IUserService.cs",
-              "RelativeToolTip": "Service\\Services\\Users\\IUserService.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAADwvxgAAABWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T12:52:51.178Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 66,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Users\\UserService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\Users\\UserService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\Users\\UserService.cs",
-              "RelativeToolTip": "Service\\Services\\Users\\UserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJ0AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T12:45:31.496Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Repositories\\User\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\User\\IUserRepository.cs",
