@@ -3293,6 +3293,14 @@
       "PackagePath": "staticwebassets\\images\\blog\\4.jpg"
     },
     {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\home\\1.png",
+      "PackagePath": "staticwebassets\\images\\home\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\home\\4cups.png",
+      "PackagePath": "staticwebassets\\images\\home\\4cups.png"
+    },
+    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\icon\\icon_phone.png",
       "PackagePath": "staticwebassets\\images\\icon\\icon_phone.png"
     },
