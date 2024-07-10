@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Repository.Models;
+using Service.Enum;
 using System.Threading.Tasks;
 
 namespace SWP.Areas.Delivery.Controllers
@@ -21,6 +22,7 @@ namespace SWP.Areas.Delivery.Controllers
         [Route("index")]
         public IActionResult Index()
         {
+            
             var orders = context.Orders
                                 .Include(o => o.User)
                                 .Where(o => o.OrderStatus == true)

@@ -21,7 +21,13 @@
     <link rel="shortcut icon" href="../../LayoutSaleStaff/assets/images/favicon.ico" />
 </head>
 <body>
-    <div class="container-scroller">
+    @{
+        var userId = Context.Session.GetString("UserId");
+        var role = Context.Session.GetInt32("RoleID");
+    }
+    @if (role == 4)
+    {
+        <div class="container-scroller">
 
         <div class="container-fluid page-body-wrapper">
             <!-- partial:../../partials/_sidebar.html -->
@@ -59,7 +65,7 @@
             <!-- main-panel ends -->
         </div>
         <!-- page-body-wrapper ends -->
-    </div>
+    </div>}
     <!-- container-scroller -->
     <!-- plugins:js -->
     <script src="../../LayoutSaleStaff/assets/vendors/js/vendor.bundle.base.js"></script>

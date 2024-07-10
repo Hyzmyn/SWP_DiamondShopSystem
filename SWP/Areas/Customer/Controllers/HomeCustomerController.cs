@@ -58,69 +58,115 @@ namespace SWP.Areas.Customer.Controllers
         }
 
         [Route("edit")]
-		public async Task<IActionResult> Edit(string field)
+        public async Task<IActionResult> Edit(string field)
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            var user = await _userService.GetUserByIdAsync(int.Parse(userId));
+            if (user == null)
+            {
+                return NotFound();
+            }
+            ViewBag.Field = field;
+            return View(user);
+        }
+
+        [HttpPost]
+        [Route("edit")]
+        public async Task<IActionResult> Edit(string field, string newValue)
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            var user = await _userService.GetUserByIdAsync(int.Parse(userId));
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            switch (field.ToLower())
+            {
+                case "username":
+                    if (string.IsNullOrWhiteSpace(newValue))
+                    {
+                        ModelState.AddModelError("", "Username cannot be empty.");
+                        return View(user);
+                    }
+                    user.Username = newValue;
+                    break;
+                case "email":
+                    
+                    user.Email = newValue;
+                    break;
+                case "phonenumber":
+                    if (!IsValidPhoneNumber(newValue))
+                    {
+                        ModelState.AddModelError("", "Phone number should contain only digits.");
+                        return View(user);
+                    }
+                    user.PhoneNumber = newValue;
+                    break;
+                case "address":
+                    if (string.IsNullOrWhiteSpace(newValue))
+                    {
+                        ModelState.AddModelError("", "Address cannot be empty.");
+                        return View(user);
+                    }
+                    user.Address = newValue;
+                    break;
+                case "nisize":
+                    if (!IsValidNiSize(newValue))
+                    {
+                        ModelState.AddModelError("", "NiSize should be a number between 6 and 20.");
+                        return View(user);
+                    }
+                    user.NiSize = newValue;
+                    break;
+                default:
+                    return BadRequest("Invalid field");
+            }
+
+            if (ModelState.IsValid)
+            {
+                await _userService.UpdateUserAsync(user);
+                UpdateSession(user);
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.Field = field;
+            return View(user);
+        }
+
+
+
+		private bool IsValidPhoneNumber(string phoneNumber)
 		{
-			var userId = HttpContext.Session.GetString("UserId");
-			if (userId == null)
-			{
-				return RedirectToAction("Index", "Home");
-			}
-
-			var user = await _userService.GetUserByIdAsync(int.Parse(userId));
-			if (user == null)
-			{
-				return NotFound();
-			}
-
-			ViewBag.Field = field;
-			return View(user);
+			System.Diagnostics.Debug.WriteLine("Phone number entered: " + phoneNumber);
+			return !string.IsNullOrWhiteSpace(phoneNumber) && phoneNumber.All(char.IsDigit);
 		}
 
-		[HttpPost]
-		[Route("edit")]
-		public async Task<IActionResult> Edit(string field, string newValue)
-		{
-			var userId = HttpContext.Session.GetString("UserId");
-			if (userId == null)
-			{
-				return RedirectToAction("Index", "Home");
-			}
+		private bool IsValidNiSize(string niSize)
+        {
+            if (int.TryParse(niSize, out int size))
+            {
+                return size >= 6 && size <= 20;
+            }
+            return false;
+        }
 
-			var user = await _userService.GetUserByIdAsync(int.Parse(userId));
-			if (user == null)
-			{
-				return NotFound();
-			}
-
-			switch (field.ToLower())
-			{
-				case "username":
-					user.Username = newValue;
-					break;
-				case "email":
-					user.Email = newValue;
-					break;
-				case "phonenumber":
-					user.PhoneNumber = newValue;
-					break;
-				case "address":
-					user.Address = newValue;
-					break;
-				case "nisize":
-					user.NiSize = newValue;
-					break;
-				default:
-					return BadRequest("Invalid field");
-			}
-			HttpContext.Session.SetString("Username", user.Username);
-			HttpContext.Session.SetString("Email", user.Email);
-			HttpContext.Session.SetString("PhoneNumber", user.PhoneNumber);
-			HttpContext.Session.SetString("Address", user.Address);
-			HttpContext.Session.SetString("NiSize", user.NiSize);
-
-			await _userService.UpdateUserAsync(user);
-            return RedirectToAction("Index");
-		}
+        private void UpdateSession(User user)
+        {
+            HttpContext.Session.SetString("Username", user.Username);
+            HttpContext.Session.SetString("Email", user.Email);
+            HttpContext.Session.SetString("PhoneNumber", user.PhoneNumber);
+            HttpContext.Session.SetString("Address", user.Address);
+            HttpContext.Session.SetString("NiSize", user.NiSize);
+        }
         [HttpPost]
         [Route("updatequantity")]
         public async Task<IActionResult> UpdateQuantity(int orderDetailId, int quantity)

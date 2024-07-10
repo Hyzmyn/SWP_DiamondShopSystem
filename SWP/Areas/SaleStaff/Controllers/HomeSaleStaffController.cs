@@ -103,8 +103,9 @@ namespace SWP.Areas.SaleStaff.Controllers
                 CategoryID = productDto.CategoryID,
                 ProductionCost = productDto.ProductionCost,
                 PriceRateID = productDto.PriceRateID,
+                
             };
-
+            
             context.Products.Add(product);
             context.SaveChanges();
 

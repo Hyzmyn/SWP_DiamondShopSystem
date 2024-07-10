@@ -1,0 +1,138 @@
+﻿@model Service.ViewModel.GemPriceViewModel
+
+@{
+    ViewData["Title"] = "GemPriceTable";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    decimal Cut = ViewBag.Cut ?? Model.Excellent;
+    decimal weight = ViewBag.Weight ?? 1;
+}
+
+<style>
+    .table-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    table {
+        width: 80%;
+        max-width: 800px;
+        border-collapse: collapse;
+        margin: 0 auto;
+        border: 2px solid #ccc;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #444;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #555;
+    }
+</style>
+
+<div style="text-align: center;">
+    <h1>GemPriceTable</h1>
+</div>
+
+<div class="table-container">
+    <div style="display: flex; flex-direction: row; align-items: center;">
+        <form method="post" action="/Home/GemPriceTable">
+            <div style="margin-right: 40px;">
+                <label style="margin-right: 10px;">Select Cut:</label>
+                <select id="cutSelect" name="Cut">
+                    <option value="@Model.Excellent">Excellent</option>
+                    <option value="@Model.VeryGood">Very Good</option>
+                    <option value="@Model.Good">Good</option>
+                </select>
+            </div>
+
+            <div style="margin-right: 20px; width: 330px;">
+                <label style="margin-right: 10px;">Select Carat Weight:</label>
+                <input type="range" id="caratSlider" name="Weight" min="1" max="5" step="0.01" value="1" oninput="document.getElementById('caratValue').innerText = this.value">
+                <span id="caratValue" style="margin-left: 10px;">1</span>
+            </div>
+
+            <div>
+                <button type="submit" style="
+										font-weight: 500;
+
+										/* margin-top: 25px; */
+										/* color: #fff; */
+										/* height: 50px; */
+										/* line-height: 50px; */
+										/* padding: 0 35px; */
+										background: #a8741a;
+										box-shadow: none;
+										color: #fff;
+										display: inline-block;
+										height: 45px;
+										line-height: 45px;
+										padding: 0px 22px;
+										text-transform: uppercase;
+										font-size: 13px;
+										border-radius: 5px;
+                                                        ">
+                    Apply
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>IF</th>
+                <th>VVS1</th>
+                <th>VVS2</th>
+                <th>VS1</th>
+                <th>VS2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>D</td>
+                <td>@(Model.D + Model.IF + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.D + Model.VVS1 + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.D + Model.VVS2 + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.D + Model.VS1 + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.D + Model.VS2 + Cut + (Model.CaratPrice * weight)) $</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>@(Model.E + Model.IF + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.E + Model.VVS1 + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.E + Model.VVS2 + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.E + Model.VS1 + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.E + Model.VS2 + Cut + (Model.CaratPrice * weight)) $</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>@(Model.F + Model.IF + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.F + Model.VVS1 + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.F + Model.VVS2 + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.F + Model.VS1 + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.F + Model.VS2 + Cut + (Model.CaratPrice * weight)) $</td>
+            </tr>
+            <tr>
+                <td>J</td>
+                <td>@(Model.J + Model.IF + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.J + Model.VVS1 + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.J + Model.VVS2 + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.J + Model.VS1 + Cut + (Model.CaratPrice * weight)) $</td>
+                <td>@(Model.J + Model.VS2 + Cut + (Model.CaratPrice * weight)) $</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

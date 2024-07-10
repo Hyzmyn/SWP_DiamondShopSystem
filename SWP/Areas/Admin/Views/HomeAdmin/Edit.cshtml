@@ -1,14 +1,12 @@
 ﻿@model Repository.Models.User
-
 @{
-    ViewData["Title"] = "Edit User";
+    ViewData["Title"] = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-
 <h1>Edit User</h1>
-
-<form asp-action="Edit">
+<form asp-action="Edit" asp-route-id="@Model.UserID">
+    <input type="hidden" asp-for="UserID" />
     <div class="form-group">
         <label asp-for="Username" class="control-label"></label>
         <input asp-for="Username" class="form-control" />
@@ -57,7 +55,7 @@
         <input type="submit" value="Save" class="btn btn-primary" />
     </div>
 </form>
-
 <div>
     <a asp-action="InformationUser">Back to List</a>
 </div>
+

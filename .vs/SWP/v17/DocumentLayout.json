@@ -3,108 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\customer\\views\\homecustomer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\customer\\views\\homecustomer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\home\\diamondjewelery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\home\\diamondjewelery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\admin\\views\\admindashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\admin\\views\\admindashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\admin\\controllers\\admindashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\admin\\controllers\\admindashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\service\\services\\pricecalculationhostedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|solutionrelative:service\\services\\pricecalculationhostedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\service\\services\\randomizevalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|solutionrelative:service\\services\\randomizevalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Migrations\\20240710084334_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repository\\Migrations\\20240710084334_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\customer\\views\\homecustomer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\customer\\views\\homecustomer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\customer\\views\\shared\\_layoutcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\customer\\views\\shared\\_layoutcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\customer\\controllers\\homecustomercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\customer\\controllers\\homecustomercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\repository\\models\\walletpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\walletpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\customer\\views\\homecustomer\\historyofcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\customer\\views\\homecustomer\\historyofcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\salestaff\\views\\shared\\_layoutsalestaff.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\salestaff\\views\\shared\\_layoutsalestaff.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\customer\\views\\homecustomer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\customer\\views\\homecustomer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\customer\\views\\homecustomer\\orderofcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\customer\\views\\homecustomer\\orderofcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\manager\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\manager\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\manager\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\manager\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\manager\\views\\shared\\_layoutmanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\manager\\views\\shared\\_layoutmanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\admin\\views\\homeadmin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\admin\\views\\homeadmin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\delivery\\views\\shared\\_layoutdelivery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\delivery\\views\\shared\\_layoutdelivery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\admin\\controllers\\homeadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\admin\\controllers\\homeadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\salestaff\\views\\homesalestaff\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\salestaff\\views\\homesalestaff\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -127,330 +63,132 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CheckoutController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\CheckoutController.cs",
-              "RelativeDocumentMoniker": "SWP\\Controllers\\CheckoutController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Controllers\\CheckoutController.cs",
-              "RelativeToolTip": "SWP\\Controllers\\CheckoutController.cs",
-              "ViewState": "AQIAAJIAAAAAAAAAAAAAAJcAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T10:42:18.435Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAACwAAABbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T09:43:16.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "SWP\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T09:41:16.609Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "SWP\\Views\\_ViewImports.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T09:41:37.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "SWP\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAEwAgAAABXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T09:41:19.66Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Contact.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Home\\Contact.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Views\\Home\\Contact.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Home\\Contact.cshtml",
-              "RelativeToolTip": "SWP\\Views\\Home\\Contact.cshtml",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T09:40:42.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "diamondjewelery.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Home\\diamondjewelery.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Views\\Home\\diamondjewelery.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Home\\diamondjewelery.cshtml",
-              "RelativeToolTip": "SWP\\Views\\Home\\diamondjewelery.cshtml",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAQwGcAAADOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T09:33:01.033Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "Repository\\Models\\Product.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Models\\Product.cs",
-              "RelativeToolTip": "Repository\\Models\\Product.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAA9wCAAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T09:14:39.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PriceCalculationHostedService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\PriceCalculationHostedService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\PriceCalculationHostedService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\PriceCalculationHostedService.cs",
-              "RelativeToolTip": "Service\\Services\\PriceCalculationHostedService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T09:01:05.107Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RandomizeValue.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\RandomizeValue.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\RandomizeValue.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Service\\Services\\RandomizeValue.cs",
-              "RelativeToolTip": "Service\\Services\\RandomizeValue.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAA+wEgAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T08:58:03.623Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AdminDashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Admin\\Controllers\\AdminDashboardController.cs",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Admin\\Controllers\\AdminDashboardController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Admin\\Controllers\\AdminDashboardController.cs",
-              "RelativeToolTip": "SWP\\Areas\\Admin\\Controllers\\AdminDashboardController.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAmwBIAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T00:21:57.48Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Admin\\Views\\AdminDashboard\\Index.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Admin\\Views\\AdminDashboard\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Admin\\Views\\AdminDashboard\\Index.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Admin\\Views\\AdminDashboard\\Index.cshtml",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwH4AAABoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T00:10:30.531Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "20240710084334_v1.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Migrations\\20240710084334_v1.cs",
-              "RelativeDocumentMoniker": "Repository\\Migrations\\20240710084334_v1.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Migrations\\20240710084334_v1.cs",
-              "RelativeToolTip": "Repository\\Migrations\\20240710084334_v1.cs",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T08:43:34.583Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Program.cs",
-              "RelativeDocumentMoniker": "SWP\\Program.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Program.cs",
-              "RelativeToolTip": "SWP\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T08:42:08.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\appsettings.json",
-              "RelativeDocumentMoniker": "SWP\\appsettings.json",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\appsettings.json",
-              "RelativeToolTip": "SWP\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-10T08:42:10.659Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "WalletPoint.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Models\\WalletPoint.cs",
-              "RelativeDocumentMoniker": "Repository\\Models\\WalletPoint.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\Repository\\Models\\WalletPoint.cs",
-              "RelativeToolTip": "Repository\\Models\\WalletPoint.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAowBgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T03:20:14.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\HomeCustomer\\Edit.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Views\\HomeCustomer\\Edit.cshtml",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\HomeCustomer\\Edit.cshtml",
               "RelativeToolTip": "SWP\\Areas\\Customer\\Views\\HomeCustomer\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACQAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T03:11:31.164Z"
+              "WhenOpened": "2024-07-10T19:53:59.141Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "HistoryOfCustomer.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\HomeCustomer\\HistoryOfCustomer.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Views\\HomeCustomer\\HistoryOfCustomer.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\HomeCustomer\\HistoryOfCustomer.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Customer\\Views\\HomeCustomer\\HistoryOfCustomer.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T03:11:28.221Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\HomeCustomer\\Index.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Views\\HomeCustomer\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\HomeCustomer\\Index.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Customer\\Views\\HomeCustomer\\Index.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAiwCsAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T03:09:53.586Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 2,
               "Title": "HomeCustomerController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Controllers\\HomeCustomerController.cs",
               "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Controllers\\HomeCustomerController.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Controllers\\HomeCustomerController.cs",
               "RelativeToolTip": "SWP\\Areas\\Customer\\Controllers\\HomeCustomerController.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAASwDgAAAAcAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAqwE8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T03:09:41.776Z"
+              "WhenOpened": "2024-07-10T19:53:50.179Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "OrderOfCustomer.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\HomeCustomer\\OrderOfCustomer.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Views\\HomeCustomer\\OrderOfCustomer.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\HomeCustomer\\OrderOfCustomer.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Customer\\Views\\HomeCustomer\\OrderOfCustomer.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "_LayoutCustomer.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
+              "RelativeToolTip": "SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T03:11:40.041Z"
+              "WhenOpened": "2024-07-10T19:51:53.43Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "SWP\\Areas\\Manager\\Controllers\\DashboardController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T02:19:58.915Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\Dashboard\\Index.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\Dashboard\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\Dashboard\\Index.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Manager\\Views\\Dashboard\\Index.cshtml",
-              "ViewState": "AQIAAAwBAAAAAAAAAAAkwCIBAAAGAAAA",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SWP\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T02:01:17.449Z"
+              "WhenOpened": "2024-07-10T19:43:40.505Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Admin\\Views\\HomeAdmin\\Edit.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Admin\\Views\\HomeAdmin\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Admin\\Views\\HomeAdmin\\Edit.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Admin\\Views\\HomeAdmin\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAAABwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T02:01:07.515Z"
+              "WhenOpened": "2024-07-10T19:42:25.922Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "HomeAdminController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
-              "RelativeToolTip": "SWP\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAAE4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T00:01:20.255Z"
+              "DocumentIndex": 7,
+              "Title": "_LayoutDelivery.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Delivery\\Views\\Shared\\_LayoutDelivery.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Areas\\Delivery\\Views\\Shared\\_LayoutDelivery.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Delivery\\Views\\Shared\\_LayoutDelivery.cshtml",
+              "RelativeToolTip": "SWP\\Areas\\Delivery\\Views\\Shared\\_LayoutDelivery.cshtml",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAEMAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T19:41:54.096Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 6,
               "Title": "_LayoutManager.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
               "RelativeToolTip": "SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
-              "ViewState": "AQIAAGYAAAAAgwGLQ6AhwAAAAAAAAAAA",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAAG8AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T02:35:48.469Z"
+              "WhenOpened": "2024-07-10T19:41:33.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_LayoutSaleStaff.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\SaleStaff\\Views\\Shared\\_LayoutSaleStaff.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\Shared\\_LayoutSaleStaff.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\SaleStaff\\Views\\Shared\\_LayoutSaleStaff.cshtml",
+              "RelativeToolTip": "SWP\\Areas\\SaleStaff\\Views\\Shared\\_LayoutSaleStaff.cshtml",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAYwGMAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T19:40:18.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
+              "RelativeToolTip": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T19:40:04.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SWP\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAA4BAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T19:39:41.064Z",
+              "EditorCaption": ""
             }
           ]
         }

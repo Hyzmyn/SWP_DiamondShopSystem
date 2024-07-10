@@ -6,6 +6,7 @@ using Service;
 
 using Service.Service.ViewModels;
 using Service.Services;
+using Service.ViewModel;
 using System;
 using System.Diagnostics;
 using System.Text.Json;
@@ -196,6 +197,63 @@ namespace SWP.Controllers
         public IActionResult Contact()
         {
             return View();
+        }
+        [HttpGet]
+        public IActionResult GemPriceTable()
+        {
+            // Fetch initial values from your service or set default values
+            var randomValues = RandomNumberStore.RandomValues;
+
+            var model = new GemPriceViewModel
+            {
+                D = randomValues.D,
+                E = randomValues.E,
+                F = randomValues.F,
+                J = randomValues.J,
+                IF = randomValues.IF,
+                VVS1 = randomValues.VVS1,
+                VVS2 = randomValues.VVS2,
+                VS1 = randomValues.VS1,
+                VS2 = randomValues.VS2,
+                Excellent = randomValues.Excellent,
+                VeryGood = randomValues.VeryGood,
+                Good = randomValues.Good,
+                CaratPrice = randomValues.CaratPrice
+            };
+
+            ViewBag.Cut = ViewBag.Cut ?? model.Excellent; // Default value for Cut
+            ViewBag.Weight = ViewBag.Weight ?? 1; // Default value for Weight
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult GemPriceTable(decimal Cut, decimal Weight)
+        {
+            // Fetch updated values from your service or set random values
+            var randomValues = RandomNumberStore.RandomValues;
+
+            var model = new GemPriceViewModel
+            {
+                D = randomValues.D,
+                E = randomValues.E,
+                F = randomValues.F,
+                J = randomValues.J,
+                IF = randomValues.IF,
+                VVS1 = randomValues.VVS1,
+                VVS2 = randomValues.VVS2,
+                VS1 = randomValues.VS1,
+                VS2 = randomValues.VS2,
+                Excellent = randomValues.Excellent,
+                VeryGood = randomValues.VeryGood,
+                Good = randomValues.Good,
+                CaratPrice = randomValues.CaratPrice
+            };
+
+            ViewBag.Cut = Cut;
+            ViewBag.Weight = Weight;
+
+            return View(model);
         }
 
     }
