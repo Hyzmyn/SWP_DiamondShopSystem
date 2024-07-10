@@ -24,6 +24,7 @@ namespace SWP.Areas.Customer.Controllers
         private readonly ICompositeViewEngine _viewEngine;
         private readonly IServiceProvider _serviceProvider;
         private readonly DiamondShopContext _dbContext;
+        
         public HomeCustomerController(IUserService userService, ICartService cartService, IDiscountService discountService, IOrderService orderService, IWarrantyService warrantyService, DiamondShopContext context, ICompositeViewEngine viewEngine, IServiceProvider serviceProvider, DiamondShopContext dbContext)
         {
             _userService = userService;
@@ -39,20 +40,24 @@ namespace SWP.Areas.Customer.Controllers
         }
 
         [Route("")]
-		[Route("customer")]
-		public async Task<IActionResult> Index()
-		{
-			var userId = HttpContext.Session.GetString("UserId");
-			if (userId == null)
-			{
-				return RedirectToAction("Index", "Home");
-			}
+        [Route("customer")]
+        public async Task<IActionResult> Index()
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (userId == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
 
-			var user = await _userService.GetUserByIdAsync(int.Parse(userId));
-			return View(user);
-		}
+            var user = await _userService.GetUserByIdAsync(int.Parse(userId));
+            var walletPoint = await _context.WalletPoints.FirstOrDefaultAsync(w => w.UserID == int.Parse(userId));
 
-		[Route("edit")]
+            ViewBag.WalletPoint = walletPoint;
+
+            return View(user);
+        }
+
+        [Route("edit")]
 		public async Task<IActionResult> Edit(string field)
 		{
 			var userId = HttpContext.Session.GetString("UserId");

@@ -12,7 +12,7 @@ using Repository.Models;
 namespace Repository.Migrations
 {
     [DbContext(typeof(DiamondShopContext))]
-    [Migration("20240709133520_v1")]
+    [Migration("20240710084334_v1")]
     partial class v1
     {
         /// <inheritdoc />
