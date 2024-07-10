@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Microsoft.EntityFrameworkCore;
 using Repository.Models;
 using Service.Services;
@@ -19,13 +20,21 @@ namespace SWP.Areas.Customer.Controllers
 		private readonly IDiscountService _discountService;
         private readonly IOrderService _orderService;
         private readonly IWarrantyService _warrantyService;
-        public HomeCustomerController(IUserService userService, ICartService cartService, IDiscountService discountService, IOrderService orderService, IWarrantyService warrantyService)
+        private readonly DiamondShopContext _context;
+        private readonly ICompositeViewEngine _viewEngine;
+        private readonly IServiceProvider _serviceProvider;
+        private readonly DiamondShopContext _dbContext;
+        public HomeCustomerController(IUserService userService, ICartService cartService, IDiscountService discountService, IOrderService orderService, IWarrantyService warrantyService, DiamondShopContext context, ICompositeViewEngine viewEngine, IServiceProvider serviceProvider, DiamondShopContext dbContext)
         {
             _userService = userService;
             _cartService = cartService;
 			_discountService = discountService;
             _orderService = orderService;
             _warrantyService = warrantyService;
+            _context = context;
+            _viewEngine = viewEngine;
+            _serviceProvider = serviceProvider;
+            _dbContext = dbContext;
 
         }
 
@@ -268,34 +277,42 @@ namespace SWP.Areas.Customer.Controllers
 
             return View(order);
         }
-        [Route("warranty")]
-        public async Task<IActionResult> ViewWarranty(int productId)
+        [Route("warranties")]
+        public async Task<IActionResult> Warranties()
         {
             var userId = HttpContext.Session.GetString("UserId");
             if (string.IsNullOrEmpty(userId))
             {
                 return RedirectToAction("Index", "Home");
             }
+            var warranties = await _context.Warranties
+                .Include(w => w.Order)
+                .Include(w => w.Product)
+                .Where(w => w.Order.UserID == int.Parse(userId) && w.Order.OrderStatus == true)
+                .ToListAsync();
+            return View(warranties);
+        }
 
-            var order = await _orderService.GetOrderByUserIdAndProductIdAsync(int.Parse(userId), productId);
-            if (order == null || !order.OrderStatus)
+        [Route("warranty-detail/{id}")]
+        public async Task<IActionResult> WarrantyDetails(int id)
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
             {
-                return NotFound();
+                return RedirectToAction("Index", "Home");
             }
-
-            var warranty = await _warrantyService.GetWarrantyByProductAndOrderAsync(productId, order.OrderID);
+            var warranty = await _context.Warranties
+                .Include(w => w.Order)
+                    .ThenInclude(o => o.User)
+                .Include(w => w.Product)
+                    .ThenInclude(p => p.Gems)
+                .FirstOrDefaultAsync(w => w.WarrantyID == id && w.Order.UserID == int.Parse(userId) && w.Order.OrderStatus == true);
             if (warranty == null)
             {
                 return NotFound();
             }
-
             return View(warranty);
         }
-
-
-
-
-
 
     }
 }
