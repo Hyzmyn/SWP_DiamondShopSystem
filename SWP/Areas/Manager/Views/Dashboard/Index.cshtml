@@ -127,7 +127,7 @@
                     var url = '@Url.Action("GetDataChart", "Dashboard", new { area = "manager", year = "YEAR_PLACEHOLDER" })';
                     url = url.replace('YEAR_PLACEHOLDER', year);
                     $.get(url, function (resp) {
-                        
+                                        console.log(resp);
                         ChartAccount(resp);
                     });
                 });
@@ -146,12 +146,12 @@
                     var lsDataOrders = [];
                     var lsDataTotalAmount = [];
 
-                    if (data.item1 != null) {
-                        $.each(data.item1, function (index, item) {
-                            lsDataOrders.push(item.totalOrders);
-                            lsDataTotalAmount.push(item.totalAmount);
-                        });
-                    } else {
+                        if (data.item1 && data.item1.$values) {
+                                    $.each(data.item1.$values, function(index, item) {
+                                            lsDataOrders.push(item.totalOrders);
+                                            lsDataTotalAmount.push(item.totalAmount);
+                             });
+		                } else {
                         for (var i = 0; i < data["Item1"].length; i++) {
                             lsDataOrders.push(data["Item1"][i].TotalOrders);
                             lsDataTotalAmount.push(data["Item1"][i].TotalAmount);

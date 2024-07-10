@@ -7,15 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Customer</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="../../LayoutCustomer/assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="../../LayoutCustomer/assets/vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="../../LayoutCustomer/assets/css/style.css">
+    <link rel="stylesheet" href="~/LayoutCustomer/assets/vendors/mdi/css/materialdesignicons.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/LayoutCustomer/assets/vendors/css/vendor.bundle.base.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/LayoutCustomer/assets/css/style.css" asp-append-version="true">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="../../LayoutCustomer/assets/images/favicon.ico" />
 </head>
@@ -53,7 +47,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="customer" asp-controller="HomeCustomer" asp-action="ViewWarranty">
+                        <a class="nav-link" asp-area="customer" asp-controller="HomeCustomer" asp-action="Warranties">
                             <span class="menu-title">Warranty</span>
                             <i class="mdi mdi-contacts menu-icon"></i>
                         </a>

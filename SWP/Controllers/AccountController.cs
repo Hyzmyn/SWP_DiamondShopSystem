@@ -31,7 +31,7 @@ public class AccountController : Controller
 	{
 		var user = await userService.LoginAsync(username, password);
 
-        if (user != null)
+        if (user != null && user.UserStatus == true)
 		{
 			HttpContext.Session.SetString("UserId", user.UserID.ToString());
 			HttpContext.Session.SetInt32("RoleID", (int)user.RoleID);

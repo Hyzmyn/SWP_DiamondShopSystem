@@ -1,0 +1,34 @@
+﻿@model Repository.Models.MaterialPriceListDto
+
+@{
+    ViewData["Title"] = "Create Material Price List";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h1>Create Material Price List</h1>
+
+<form asp-action="CreateMaterialPrice" method="post">
+    <div class="form-group">
+        <label asp-for="BuyPrice" class="control-label"></label>
+        <input asp-for="BuyPrice" class="form-control" />
+        <span asp-validation-for="BuyPrice" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SellPrice" class="control-label"></label>
+        <input asp-for="SellPrice" class="form-control" />
+        <span asp-validation-for="SellPrice" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="EffDate" class="control-label"></label>
+        <input asp-for="EffDate" class="form-control" />
+        <span asp-validation-for="EffDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="MaterialPriceList">Back to List</a>
+</div>
+

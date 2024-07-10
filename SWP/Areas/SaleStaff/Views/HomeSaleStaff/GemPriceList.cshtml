@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Repository.Models.GemPriceList>
+
+@{
+    ViewData["Title"] = "GemPriceList";
+    Layout = "~/Areas/SaleStaff/Views/Shared/_LayoutSaleStaff.cshtml";
+}
+
+<h1>GemPriceList</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GemID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CaratWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clarity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GemID)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaratWeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clarity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            
+            
+        </tr>
+}
+    </tbody>
+</table>
