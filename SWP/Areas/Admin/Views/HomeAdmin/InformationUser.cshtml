@@ -7,7 +7,12 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 <h1>InformationUser</h1>
-
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
 
 <table class="table">
     <thead>

@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Shop Checkout";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    decimal price = 0;
     decimal totalPrice = 0;
     decimal discountAmount = ViewBag.DiscountAmount ?? 0;
     string discountCode = ViewBag.DiscountCode ?? string.Empty;
@@ -255,24 +256,27 @@
                                     @foreach (var item in Model.OrderDetail)
                                     {
                                         <!-- list group item -->
+                                        price = @item.Price * @item.Quantity;
                                         <li class="list-group-item px-4 py-3">
                                             <div class="row align-items-center">
                                                 <div class="col-2 col-md-2">
-                                                    <img src="~/images/product @item.Product.ImageUrl1" alt="Diamond" class="img-fluid" />
+                                                    <img src="~/images/product/@item.Product.ImageUrl1" alt="Diamond" class="img-fluid" />
                                                 </div>
                                                 <div class="col-5 col-md-5">
                                                     <h6 class="mb-0">@item.Product.ProductName</h6>
+                                                    <span>NiSize:</span>
                                                     <span><small class="">@item.NiSize</small></span>
                                                 </div>
                                                 <div class="col-2 col-md-2 text-center ">
+                                                    <span>Q:</span>
                                                     <span>@item.Quantity</span>
                                                 </div>
                                                 <div class="col-3 text-lg-end text-start text-md-end col-md-3">
-                                                    <span class="fw-bold">@item.Price</span>
+                                                    <span class="fw-bold">@price</span>
                                                 </div>
                                             </div>
                                         </li>
-                                        totalPrice += item.Price;
+                                        totalPrice += price;
                                     }
                                 }
                                 

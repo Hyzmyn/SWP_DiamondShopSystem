@@ -42,12 +42,15 @@ namespace Service.Services
             {
                 var product = await _context.Products.FindAsync(productId);
                 var user = await _context.Users.FindAsync(userId);
+
+                var price = CalculateAdjustedPrice(product.TotalCost, user.NiSize);
+
                 orderDetail = new OrderDetail
                 {
                     OrderID = order.OrderID,
                     ProductID = productId,
                     Quantity = quantity,
-                    Price = product.TotalCost,
+                    Price = price,
                     NiSize = user.NiSize
                 };
                 _context.OrderDetails.Add(orderDetail);
@@ -96,12 +99,29 @@ namespace Service.Services
         }
         public async Task UpdateNiAsync(int orderDetailId, string ni)
         {
-            var orderDetail = await _context.OrderDetails.FindAsync(orderDetailId);
+            var orderDetail = await _context.OrderDetails
+    .Include(od => od.Product)
+    .FirstOrDefaultAsync(od => od.OrderDetailID == orderDetailId);
             if (orderDetail != null)
             {
+                var price = CalculateAdjustedPrice(orderDetail.Product.TotalCost, ni);
                 orderDetail.NiSize = ni;
+                orderDetail.Price = price;
+
                 await _context.SaveChangesAsync();
             }
+        }
+
+        private decimal CalculateAdjustedPrice(decimal basePrice, string ringSizeStr)
+        {
+            if (!int.TryParse(ringSizeStr, out int ringSize))
+                throw new ArgumentException("Ring size must be a valid number between 6 and 20.");
+
+            if (ringSize < 6 || ringSize > 20)
+                throw new ArgumentOutOfRangeException("Ring size must be between 6 and 20.");
+
+            decimal increasePercentage = ((decimal)(ringSize - 6) / (20 - 6)) * 10;
+            return basePrice * (1 + increasePercentage / 100);
         }
 
         private async Task UpdateOrderTotalPrice(int orderId)

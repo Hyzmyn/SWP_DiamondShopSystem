@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Repository.Models.Warranty>
+@{
+    ViewData["Title"] = "Danh sách bảo hành của tôi";
+    Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml";
+}
+
+<h2>Danh sách bảo hành của tôi</h2>
+
+@if (Model.Any())
+{
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Ngày mua</th>
+                    <th>Ngày hết hạn</th>
+                    <th>Trạng thái</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var warranty in Model)
+            {
+                        <tr>
+                            <td>@warranty.Product.ProductName</td>
+                            <td>@warranty.BuyDate.ToString("dd/MM/yyyy")</td>
+                            <td>@warranty.EndDate.ToString("dd/MM/yyyy")</td>
+                            <td>
+                        @if (DateTime.Now <= warranty.EndDate)
+                        {
+                                        <span class="text-success">Còn hiệu lực</span>
+                        }
+                        else
+                        {
+                                        <span class="text-danger">Hết hạn</span>
+                        }
+                            </td>
+                            <td>
+                                        <a class="btn btn-primary" href="@Url.Action("WarrantyDetails", "HomeCustomer", new { id = warranty.WarrantyID })">Xem chi tiết</a>
+                            </td>
+                        </tr>
+            }
+            </tbody>
+        </table>
+}
+else
+{
+        <p>Bạn chưa có bảo hành nào.</p>
+}
+
+@section Scripts {
+        <!-- Your custom scripts if any -->
+}

@@ -50,9 +50,6 @@ namespace SWP.Areas.Manager.Controllers
             return Json(chart);
         }
 
-
-
-
         private double CalculatePercentageChange(decimal oldValue, decimal newValue)
         {
             if (oldValue == newValue)
@@ -134,17 +131,16 @@ namespace SWP.Areas.Manager.Controllers
         public Tuple<List<MonthlyOrderTotal>> Chart(int year)
         {
             var distinctYears = _context.Orders
-                .Where(o => o.TimeOrder != null) 
-                .Select(o => o.TimeOrder.Year) 
-                .Distinct() 
-                .OrderByDescending(year => year) 
-                .ToList();
+       .Where(o => o.TimeOrder != null && o.OrderStatus == true)
+       .Select(o => o.TimeOrder.Year)
+       .Distinct()
+       .OrderByDescending(y => y)
+       .ToList();
 
             ViewBag.AccountYear = distinctYears;
 
-            ViewBag.AccountYear = distinctYears;
             var totalOrdersPerMonth = _context.Orders
-                .Where(o => o.TimeOrder.Year == year)  
+                .Where(o => o.TimeOrder.Year == year)
                 .GroupBy(o => new { o.TimeOrder.Year, o.TimeOrder.Month })
                 .Select(g => new MonthlyOrderTotal
                 {
@@ -153,12 +149,33 @@ namespace SWP.Areas.Manager.Controllers
                     TotalAmount = g.Sum(o => o.TotalPrice),
                     TotalOrders = g.Count()
                 })
+                .ToList();
+
+            var allMonths = Enumerable.Range(1, 12)
+                .Select(month => new MonthlyOrderTotal
+                {
+                    Year = year,
+                    Month = month,
+                    TotalAmount = 0,
+                    TotalOrders = 0
+                })
+                .ToList();
+
+            foreach (var monthlyOrder in totalOrdersPerMonth)
+            {
+                var month = allMonths.First(m => m.Month == monthlyOrder.Month);
+                month.TotalAmount = monthlyOrder.TotalAmount;
+                month.TotalOrders = monthlyOrder.TotalOrders;
+            }
+
+            var sortedMonthlyOrders = allMonths
                 .OrderBy(result => result.Year)
                 .ThenBy(result => result.Month)
                 .ToList();
+
             ViewBag.Year = year;
 
-            return Tuple.Create(totalOrdersPerMonth);
+            return Tuple.Create(sortedMonthlyOrders);
         }
 
     }

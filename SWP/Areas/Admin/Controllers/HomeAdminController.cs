@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Repository.Models;
 using Service.Services;
+using Service.ViewModel;
+using System.Diagnostics;
 
 namespace SWP.Areas.Admin.Controllers
 {
@@ -36,7 +38,7 @@ namespace SWP.Areas.Admin.Controllers
         [Route("edituser")]
         public IActionResult Edit(int id)
         {
-            var user = context.Users.FirstOrDefault(u => u.UserID == id);
+            var user = context.Users.Find(id);
             if (user == null)
             {
                 return NotFound();
@@ -46,38 +48,41 @@ namespace SWP.Areas.Admin.Controllers
 
         [HttpPost]
         [Route("edituser")]
-        public IActionResult Edit(User user)
+        public IActionResult Edit(int id, User updatedUser)
         {
-            if (ModelState.IsValid)
+            
+            var user = context.Users.Find(id);
+            if (user == null)
             {
-                var existingUser = context.Users.FirstOrDefault(u => u.UserID == user.UserID);
-                if (existingUser != null)
-                {
-                    existingUser.Username = user.Username;
-                    existingUser.Password = user.Password;
-                    existingUser.Email = user.Email;
-                    existingUser.PhoneNumber = user.PhoneNumber;
-                    existingUser.Address = user.Address;
-                    existingUser.RoleID = user.RoleID;
-                    existingUser.UserStatus = user.UserStatus;
-                    existingUser.NiSize = user.NiSize;
-                    existingUser.CreatedAt = user.CreatedAt;
-
-                    try
-                    {
-                        context.SaveChanges();
-                        return RedirectToAction("InformationUser");
-                    }
-                    catch (Exception ex)
-                    {
-                        ModelState.AddModelError("", $"Unable to save changes: {ex.Message}");
-                    }
-                }
+                return NotFound();
             }
-            return View(user);
+
+            // Chỉ cập nhật các trường được chỉnh sửa
+            if (!string.IsNullOrWhiteSpace(updatedUser.Username))
+                user.Username = updatedUser.Username;
+            if (!string.IsNullOrWhiteSpace(updatedUser.Email))
+                user.Email = updatedUser.Email;
+            if (!string.IsNullOrWhiteSpace(updatedUser.PhoneNumber))
+                user.PhoneNumber = updatedUser.PhoneNumber;
+            if (!string.IsNullOrWhiteSpace(updatedUser.Address))
+                user.Address = updatedUser.Address;
+            if (updatedUser.NiSize != null)
+                user.NiSize = updatedUser.NiSize;
+            if (!string.IsNullOrWhiteSpace(updatedUser.Password))
+                user.Password = updatedUser.Password;
+            if (updatedUser.RoleID != 0)
+                user.RoleID = updatedUser.RoleID;
+            if (updatedUser.UserStatus != null)
+                user.UserStatus = updatedUser.UserStatus;
+
+            context.Users.Update(user);
+            context.SaveChanges();
+
+            TempData["SuccessMessage"] = "User updated successfully.";
+            return RedirectToAction("InformationUser");
         }
 
-       
+        
 
     }
 }
