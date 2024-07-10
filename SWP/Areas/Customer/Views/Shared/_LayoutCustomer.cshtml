@@ -7,15 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Customer</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="../../LayoutCustomer/assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="../../LayoutCustomer/assets/vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="../../LayoutCustomer/assets/css/style.css">
+    <link rel="stylesheet" href="~/LayoutCustomer/assets/vendors/mdi/css/materialdesignicons.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/LayoutCustomer/assets/vendors/css/vendor.bundle.base.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/LayoutCustomer/assets/css/style.css" asp-append-version="true">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="../../LayoutCustomer/assets/images/favicon.ico" />
 </head>
@@ -53,16 +47,16 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="customer" asp-controller="HomeCustomer" asp-action="OrderOfCustomer">
-                            <span class="menu-title">Order</span>
+                        <a class="nav-link" asp-area="customer" asp-controller="HomeCustomer" asp-action="Warranties">
+                            <span class="menu-title">Warranty</span>
                             <i class="mdi mdi-contacts menu-icon"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="customer" asp-controller="HomeCustomer" asp-action="ChangePassword">
-                            <span class="menu-title">Change Password</span>
-                            <i class="mdi mdi-format-list-bulleted menu-icon"></i>
-                        </a>
+                       <a class="nav-link" asp-area="customer" asp-controller="HomeCustomer" asp-action="ChangePassword">
+                        <span class="menu-title">Change Password</span>
+                        <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+                    </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-area="customer" asp-controller="Home" asp-action="Index">
@@ -89,6 +83,6 @@
     <script src="../../LayoutCustomer/assets/js/off-canvas.js"></script>
     <script src="../../LayoutCustomer/assets/js/hoverable-collapse.js"></script>
     <script src="../../LayoutCustomer/assets/js/misc.js"></script>
-    
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

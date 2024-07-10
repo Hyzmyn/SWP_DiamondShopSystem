@@ -20,7 +20,7 @@ namespace Service.Services
             _context = context;
         }
 
-        public async Task AddWalletPointAsync(int userId, int point)
+        public async Task AddWalletPointAsync(int userId, decimal point)
         {
             WalletPoint wallet = null;
 

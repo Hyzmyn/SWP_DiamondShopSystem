@@ -14,6 +14,6 @@ namespace Repository.Repositories
 
         Task<IEnumerable<Order>> GetOrdersByUserIdAsync(int userId);
         Task<Order> GetByIdAsync(int orderId);
-
+        Task<Order> GetOrderByUserIdAndProductIdAsync(int userId, int productId);
     }
 }

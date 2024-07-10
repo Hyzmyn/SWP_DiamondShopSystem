@@ -13,5 +13,8 @@ namespace Service.Services
 		Task<List<OrderDetail>> GetCartItemsAsync(int userId);
 		Task RemoveFromCartAsync(int orderDetailId);
 		Task UpdateQuantityAsync(int orderDetailId, int quantity);
-	}
+		Task UpdateNiAsync(int orderDetailId, string ni);
+        Task UpdateOrder(int orderId, decimal price);
+        Task<int> GetOrderId(int userId);
+    }
 }

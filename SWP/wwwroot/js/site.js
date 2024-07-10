@@ -277,6 +277,7 @@ $(document).ready(function () {
         var productId = $(this).data('product-id');
         console.log("Quick View clicked for product ID:", productId);
 
+        // Lấy thông tin sản phẩm
         $.ajax({
             url: '/Home/QuickView',
             type: 'GET',
@@ -284,10 +285,6 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (product) {
                 console.log("Full product data:", product);
-                console.log("Product name:", product.productName);
-                console.log("Total cost:", product.totalCost);
-                console.log("Image URL 1:", product.imageUrl1);
-                console.log("Image URL 2:", product.imageUrl2);
 
                 $('#quickview-title').text(product.productName);
                 $('#quickview-price').text(product.totalCost.toFixed(2) + ' $');
@@ -297,13 +294,11 @@ $(document).ready(function () {
                 var img1Src = '/images/product/' + product.imageUrl1;
                 var img2Src = '/images/product/' + product.imageUrl2;
 
-                console.log("Setting image 1 src to:", img1Src);
-                console.log("Setting image 2 src to:", img2Src);
-
                 $('#quickview-img-1, #quickview-thumb-1').attr('src', img1Src);
                 $('#quickview-img-2, #quickview-thumb-2').attr('src', img2Src);
 
-                $('#modal_box').modal('show');
+                // Lấy thông tin gem riêng biệt nếu cần
+                getGemByProductId(productId);
             },
             error: function (xhr, status, error) {
                 console.error("Ajax error:", status, error);
@@ -316,5 +311,64 @@ $(document).ready(function () {
         e.preventDefault();
         // Implement your add to cart logic here
     });
+
+    // Hàm để lấy thông tin gem dựa vào productId
+    function getGemByProductId(productId) {
+        $.ajax({
+            url: '/Home/GetGemByProductId',
+            type: 'GET',
+            data: { productId: productId },
+            success: function (data) {
+                if (data) {
+                    // Hiển thị thông tin gem
+                    $('#gemInfo').html(`
+                        <strong><p style="color: black;">Gem Code: ${data.gemCode}</p></strong>
+                        <strong><p style="color: black;">Gem Name: ${data.gemName}</p></strong>
+                        <strong><p style="color: black;">Origin: ${data.origin}</p></strong>
+                        <strong><p style="color: black;">Proportion: ${data.proportion}</p></strong>
+                        <strong><p style="color: black;">Polish: ${data.polish}</p></strong>
+                        <strong><p style="color: black;">Symmetry: ${data.symmetry}</p></strong>
+                        <strong><p style="color: black;">Fluorescence: ${data.fluorescence}</p></strong>
+                    `);
+
+                    // Gọi hàm để lấy thông tin Gem Price List
+                    getGemPriceListByProductId(productId);
+                } else {
+                    $('#gemInfo').html('<p>No gem data found.</p>');
+                }
+            },
+            error: function () {
+                $('#gemInfo').html('<p>Error retrieving gem data.</p>');
+            }
+        });
+    }
+
+    function getGemPriceListByProductId(productId) {
+        $.ajax({
+            url: '/Home/GetGemPriceListByProductId',
+            type: 'GET',
+            data: { productId: productId },
+            dataType: 'json',
+            success: function (data) {
+                console.log("Gem Price List data received:", data);  // Log the data to check the values
+                if (data) {
+                    // Hiển thị thông tin Gem Price List
+                    $('#gemPriceList').html(`
+                    <p style="color: black;">Carat Weight: ${data.caratWeight || 'N/A'}</p>
+                    <p style="color: black;">Color: ${data.color || 'N/A'}</p>
+                    <p style="color: black;">Clarity: ${data.clarity || 'N/A'}</p>
+                    <p style="color: black;">Cut: ${data.cut || 'N/A'}</p>
+                `);
+                } else {
+                    $('#gemPriceList').html('<p>No gem price list data found.</p>');
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error("Ajax error:", status, error);
+                console.log("Response text:", xhr.responseText);
+                $('#gemPriceList').html('<p>Error retrieving gem price list data.</p>');
+            }
+        });
+    }
 });
 

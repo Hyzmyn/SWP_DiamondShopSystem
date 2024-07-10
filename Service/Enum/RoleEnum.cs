@@ -1,6 +1,4 @@
-﻿
-
-namespace Service.Enum
+﻿namespace Service.Enum
 {
     public enum RoleEnum
     {

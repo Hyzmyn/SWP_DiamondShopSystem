@@ -10,13 +10,7 @@
 <p>
     <a asp-action="CreateGem">Create New</a>
 </p>
-<p>@TempData["Message"]</p>
-@if (TempData["SuccessMessage"] != null)
-{
-    <div class="alert alert-success" role="alert">
-        @TempData["SuccessMessage"]
-    </div>
-}
+
 <table class="table">
     <thead>
         <tr class="table-warning">

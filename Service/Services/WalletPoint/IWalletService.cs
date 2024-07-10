@@ -11,7 +11,7 @@ namespace Service.Services
     {
         Task<List<WalletPoint>> GetWalletPointsAsync(string keyword, int pageNumber, int pageSize, int defaultPageSize, string sortBy);
         Task DeleteWalletPointAsync(int id);
-        Task AddWalletPointAsync(int userId, int point);
+        Task AddWalletPointAsync(int userId, decimal point);
         Task UpdatWalletPointAsync(int id, decimal point);
         Task<WalletPoint> GetWalletPointByUserIdAsync(int userId);
         Task<WalletPoint> GetWalletPointByIdAsync(int walletPoint);

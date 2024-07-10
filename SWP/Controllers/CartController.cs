@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Repository.Models;
 using Service.Services;
 using System.Threading.Tasks;
 
@@ -38,6 +39,12 @@ namespace SWP.Controllers
         {
             var userId = int.Parse(HttpContext.Session.GetString("UserId"));
             var cartItems = await _cartService.GetCartItemsAsync(userId);
+
+            ViewBag.OrderId = await _cartService.GetOrderId(userId);
+
+            var discounts = await _discountService.GetDiscountsByUserPointAsync(userId);
+
+            ViewBag.Discounts = discounts;
             ViewBag.DiscountAmount = HttpContext.Session.GetDecimal("DiscountAmount") ?? 0;
             ViewBag.DiscountCode = HttpContext.Session.GetString("DiscountCode") ?? string.Empty;
             return View(cartItems);
@@ -47,6 +54,20 @@ namespace SWP.Controllers
         public async Task<IActionResult> RemoveFromCart(int orderDetailId)
         {
             await _cartService.RemoveFromCartAsync(orderDetailId);
+            return RedirectToAction("Cart");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateNi(int orderDetailId, int NiSize)
+        {
+            if (NiSize < 6 && NiSize > 20)
+            {
+                return RedirectToAction("Cart");
+            }
+            string Ni = Convert.ToString(NiSize);
+
+            await _cartService.UpdateNiAsync(orderDetailId, Ni);
+
             return RedirectToAction("Cart");
         }
 

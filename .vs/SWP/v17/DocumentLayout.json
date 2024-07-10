@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\swp\\areas\\admin\\views\\homeadmin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\repository\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\dell\\desktop\\swppppp\\swp_diamondshopsystem\\swp\\areas\\admin\\views\\homeadmin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\admin\\views\\homeadmin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\swp\\areas\\admin\\controllers\\homeadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\admin\\controllers\\homeadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Migrations\\20240710111751_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repository\\Migrations\\20240710111751_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\swp\\areas\\admin\\views\\homeadmin\\informationuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -23,11 +35,11 @@
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\salestaff\\views\\shared\\_layoutsalestaff.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\dell\\desktop\\swppppp\\swp_diamondshopsystem\\swp\\areas\\salestaff\\views\\homesalestaff\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\swp\\areas\\salestaff\\views\\homesalestaff\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\salestaff\\views\\homesalestaff\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\dell\\desktop\\swppppp\\swp_diamondshopsystem\\swp\\areas\\customer\\views\\shared\\_layoutcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\swp\\areas\\customer\\views\\shared\\_layoutcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\customer\\views\\shared\\_layoutcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -39,15 +51,15 @@
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\salestaff\\controllers\\homesalestaffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\swppppp\\swp_diamondshopsystem\\repository\\models\\gem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\repository\\models\\gem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\gem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\swppppp\\swp_diamondshopsystem\\repository\\models\\gemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\repository\\models\\gemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\gemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\swppppp\\swp_diamondshopsystem\\repository\\models\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\repository\\models\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -55,11 +67,11 @@
       "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|c:\\users\\dell\\desktop\\swppppp\\swp_diamondshopsystem\\repository\\models\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\repository\\models\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\dell\\desktop\\swppppp\\swp_diamondshopsystem\\swp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\swp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -77,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\repository\\models\\materialpricelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\materialpricelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\dell\\desktop\\swppppp\\swp_diamondshopsystem\\swp\\areas\\admin\\controllers\\homeadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\admin\\controllers\\homeadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\swp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -113,10 +121,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\repository\\models\\diamondshopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\diamondshopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\repository\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\swp\\areas\\salestaff\\views\\homesalestaff\\editdiscount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -243,10 +247,6 @@
       "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\models\\gempricelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\repository\\migrations\\20240704072843_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C868C9DA-2171-45FD-B906-EE84D8F7487D}|Repository\\Repository.csproj|solutionrelative:repository\\migrations\\20240704072843_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\service\\services\\orders\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|solutionrelative:service\\services\\orders\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -269,6 +269,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\service\\services\\orders\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A408762F-783E-4E8F-8B0E-31DFC99066E5}|Service\\Service.csproj|solutionrelative:service\\services\\orders\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\repository\\migrations\\20240704072843_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:repository\\migrations\\20240704072843_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -278,7 +282,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 255,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -286,72 +290,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T10:36:32.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAADAAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-07T21:29:41.269Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Gem.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\Gem.cs",
-              "RelativeDocumentMoniker": "Repository\\Models\\Gem.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\Gem.cs",
-              "RelativeToolTip": "Repository\\Models\\Gem.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "20240710111751_v1.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Migrations\\20240710111751_v1.cs",
+              "RelativeDocumentMoniker": "Repository\\Migrations\\20240710111751_v1.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Migrations\\20240710111751_v1.cs",
+              "RelativeToolTip": "Repository\\Migrations\\20240710111751_v1.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAiwDYAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T09:48:26.395Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_LayoutCustomer.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAC0AAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T09:48:52.087Z",
+              "WhenOpened": "2024-07-10T11:17:51.405Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "_LayoutManager.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAwwFQAAABTAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-04T20:46:05.64Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "_LayoutSaleStaff.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\SaleStaff\\Views\\Shared\\_LayoutSaleStaff.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\Shared\\_LayoutSaleStaff.cshtml",
@@ -359,12 +311,11 @@
               "RelativeToolTip": "SWP\\Areas\\SaleStaff\\Views\\Shared\\_LayoutSaleStaff.cshtml",
               "ViewState": "AQIAAB4AAAAAAAAAAAAAAEUAAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-04T19:31:03.242Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T19:31:03.242Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\Shared\\_Layout.cshtml",
@@ -372,25 +323,24 @@
               "RelativeToolTip": "SWP\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAG0BAAAAAAAAAAAhwHkBAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-04T09:41:45.241Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T09:41:45.241Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Admin\\Views\\HomeAdmin\\Edit.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Admin\\Views\\HomeAdmin\\Edit.cshtml",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Admin\\Views\\HomeAdmin\\Edit.cshtml",
               "RelativeToolTip": "SWP\\Areas\\Admin\\Views\\HomeAdmin\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAzAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAADEAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-09T17:35:13.734Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Admin\\Views\\HomeAdmin\\Index.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Admin\\Views\\HomeAdmin\\Index.cshtml",
@@ -398,12 +348,11 @@
               "RelativeToolTip": "SWP\\Areas\\Admin\\Views\\HomeAdmin\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-07T21:35:18.042Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T21:35:18.042Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "InformationUser.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Admin\\Views\\HomeAdmin\\InformationUser.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Admin\\Views\\HomeAdmin\\InformationUser.cshtml",
@@ -411,12 +360,97 @@
               "RelativeToolTip": "SWP\\Areas\\Admin\\Views\\HomeAdmin\\InformationUser.cshtml",
               "ViewState": "AQIAAEIAAAAAAAAAAAAAAA4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-07T21:43:52.288Z",
+              "WhenOpened": "2024-07-07T21:43:52.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeAdminController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
+              "RelativeDocumentMoniker": "SWP\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
+              "RelativeToolTip": "SWP\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAAAFgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T21:32:22.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 9,
+              "Title": "_LayoutCustomer.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
+              "RelativeToolTip": "SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAC0AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T09:48:52.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Repository\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\User.cs",
+              "RelativeToolTip": "Repository\\Models\\User.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAuwCAAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T21:06:52.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_LayoutManager.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
+              "RelativeToolTip": "SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAwwFQAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-04T20:46:05.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Gem.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\Gem.cs",
+              "RelativeDocumentMoniker": "Repository\\Models\\Gem.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\Gem.cs",
+              "RelativeToolTip": "Repository\\Models\\Gem.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T09:48:26.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADAAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-07T21:29:41.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
+              "RelativeToolTip": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T10:36:32.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "Contact.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Views\\Home\\Contact.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\Home\\Contact.cshtml",
@@ -424,12 +458,11 @@
               "RelativeToolTip": "SWP\\Views\\Home\\Contact.cshtml",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAACYAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-04T19:14:07.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T19:14:07.322Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "HomeSaleStaffController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\SaleStaff\\Controllers\\HomeSaleStaffController.cs",
               "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Controllers\\HomeSaleStaffController.cs",
@@ -437,12 +470,11 @@
               "RelativeToolTip": "SWP\\Areas\\SaleStaff\\Controllers\\HomeSaleStaffController.cs",
               "ViewState": "AQIAAMIBAAAAAAAAAAAmwKEBAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T19:34:10.892Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T19:34:10.892Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\_ViewImports.cshtml",
@@ -450,12 +482,11 @@
               "RelativeToolTip": "SWP\\Views\\_ViewImports.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T09:41:50.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T09:41:50.595Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "OrderDto.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\OrderDto.cs",
               "RelativeDocumentMoniker": "Repository\\Models\\OrderDto.cs",
@@ -463,12 +494,11 @@
               "RelativeToolTip": "Repository\\Models\\OrderDto.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T09:46:20.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T09:46:20.378Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "ProductDto.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\ProductDto.cs",
               "RelativeDocumentMoniker": "Repository\\Models\\ProductDto.cs",
@@ -476,12 +506,11 @@
               "RelativeToolTip": "Repository\\Models\\ProductDto.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAAwBUAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T09:46:47.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T09:46:47.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "GemDto.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\GemDto.cs",
               "RelativeDocumentMoniker": "Repository\\Models\\GemDto.cs",
@@ -489,12 +518,11 @@
               "RelativeToolTip": "Repository\\Models\\GemDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T09:47:03.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T09:47:03.936Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\Home\\Index.cshtml",
@@ -506,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Controllers\\DashboardController.cs",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Controllers\\DashboardController.cs",
@@ -518,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "AboutStore.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Views\\Home\\AboutStore.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\Home\\AboutStore.cshtml",
@@ -530,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\Order.cs",
               "RelativeDocumentMoniker": "Repository\\Models\\Order.cs",
@@ -538,25 +566,11 @@
               "RelativeToolTip": "Repository\\Models\\Order.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T08:58:03.039Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-03T08:58:03.039Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "HomeAdminController.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
-              "RelativeToolTip": "SWP\\Areas\\Admin\\Controllers\\HomeAdminController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAkwFQAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T21:32:22.602Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
               "Title": "ProductList.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\ProductList.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\ProductList.cshtml",
@@ -564,12 +578,11 @@
               "RelativeToolTip": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\ProductList.cshtml",
               "ViewState": "AQIAADAAAAAAAAAAAAAkwGEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-04T19:38:00.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T19:38:00.171Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "MaterialPriceList.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\MaterialPriceList.cs",
               "RelativeDocumentMoniker": "Repository\\Models\\MaterialPriceList.cs",
@@ -577,12 +590,11 @@
               "RelativeToolTip": "Repository\\Models\\MaterialPriceList.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T20:14:10.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T20:14:10.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\Home\\Privacy.cshtml",
@@ -594,7 +606,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "HowToMeasureRingSize.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Views\\Home\\HowToMeasureRingSize.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\Home\\HowToMeasureRingSize.cshtml",
@@ -606,7 +618,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\Dashboard\\Index.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\Dashboard\\Index.cshtml",
@@ -618,7 +630,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "HomeCustomerController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Customer\\Controllers\\HomeCustomerController.cs",
               "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Controllers\\HomeCustomerController.cs",
@@ -630,7 +642,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "DiamondShopContext.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\DiamondShopContext.cs",
               "RelativeDocumentMoniker": "Repository\\Models\\DiamondShopContext.cs",
@@ -642,19 +654,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Repository\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\User.cs",
-              "RelativeToolTip": "Repository\\Models\\User.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAiwBEAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T21:06:52.961Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "EditDiscount.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\EditDiscount.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\EditDiscount.cshtml",
@@ -666,7 +666,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "EditOrder.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\HomeManager\\EditOrder.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\EditOrder.cshtml",
@@ -678,7 +678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "EditProduct.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\HomeManager\\EditProduct.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\EditProduct.cshtml",
@@ -690,7 +690,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "HomeManagerController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Controllers\\HomeManagerController.cs",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Controllers\\HomeManagerController.cs",
@@ -702,7 +702,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "EditGem.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\HomeManager\\EditGem.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\EditGem.cshtml",
@@ -714,7 +714,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "EditProduct.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\EditProduct.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\EditProduct.cshtml",
@@ -726,7 +726,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "EditDiscount.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\HomeManager\\EditDiscount.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\EditDiscount.cshtml",
@@ -738,7 +738,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "diamondjewelery.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Views\\Home\\diamondjewelery.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\Home\\diamondjewelery.cshtml",
@@ -750,7 +750,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "ProductList.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\HomeManager\\ProductList.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\ProductList.cshtml",
@@ -762,7 +762,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "CreateMaterialPrice.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\HomeManager\\CreateMaterialPrice.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\CreateMaterialPrice.cshtml",
@@ -774,7 +774,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "ScaffoldingReadMe.txt",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\ScaffoldingReadMe.txt",
               "RelativeDocumentMoniker": "SWP\\ScaffoldingReadMe.txt",
@@ -786,7 +786,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\HomeManager\\Index.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\Index.cshtml",
@@ -798,7 +798,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "CheckoutController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Controllers\\CheckoutController.cs",
               "RelativeDocumentMoniker": "SWP\\Controllers\\CheckoutController.cs",
@@ -810,7 +810,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Views\\Checkout\\Index.cshtml",
               "RelativeDocumentMoniker": "SWP\\Views\\Checkout\\Index.cshtml",
@@ -822,7 +822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "WarrantiesController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Controllers\\WarrantiesController.cs",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Controllers\\WarrantiesController.cs",
@@ -835,7 +835,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "MaterialPriceListDto.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\MaterialPriceListDto.cs",
               "RelativeDocumentMoniker": "Repository\\Models\\MaterialPriceListDto.cs",
@@ -847,7 +847,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "MaterialPriceList.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\MaterialPriceList.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\MaterialPriceList.cshtml",
@@ -859,7 +859,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "GemPriceList.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\GemPriceList.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\GemPriceList.cshtml",
@@ -871,7 +871,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "GemList.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\HomeManager\\GemList.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\GemList.cshtml",
@@ -883,7 +883,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "SWP\\Controllers\\HomeController.cs",
@@ -895,7 +895,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "CreateGemPriceList.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\HomeManager\\CreateGemPriceList.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\CreateGemPriceList.cshtml",
@@ -907,7 +907,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "InformationUser.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\HomeManager\\InformationUser.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\InformationUser.cshtml",
@@ -919,7 +919,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -931,7 +931,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "WarrantyPdf.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\Warranties\\WarrantyPdf.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\Warranties\\WarrantyPdf.cshtml",
@@ -943,7 +943,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\Warranties\\Index.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\Warranties\\Index.cshtml",
@@ -955,7 +955,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "GemPriceList.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\HomeManager\\GemPriceList.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\GemPriceList.cshtml",
@@ -967,7 +967,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\Manager\\Views\\Warranties\\Details.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\Warranties\\Details.cshtml",
@@ -979,7 +979,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "OrderList.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\OrderList.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\OrderList.cshtml",
@@ -991,7 +991,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "OrderDetails.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\OrderDetails.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\OrderDetails.cshtml",
@@ -1003,7 +1003,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "HistoryOrder.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\HistoryOrder.cshtml",
               "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\HistoryOrder.cshtml",
@@ -1015,7 +1015,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "GemPriceList.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Models\\GemPriceList.cs",
               "RelativeDocumentMoniker": "Repository\\Models\\GemPriceList.cs",
@@ -1027,7 +1027,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 67,
               "Title": "20240704072843_v1.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\swppppp\\SWP_DiamondShopSystem\\Repository\\Migrations\\20240704072843_v1.cs",
               "RelativeDocumentMoniker": "Repository\\Migrations\\20240704072843_v1.cs",
@@ -1035,7 +1035,7 @@
               "RelativeToolTip": "Repository\\Migrations\\20240704072843_v1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T07:28:44.494Z"
+              "WhenOpened": "2024-07-10T11:14:19.564Z"
             },
             {
               "$type": "Document",

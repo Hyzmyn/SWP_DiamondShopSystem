@@ -16,6 +16,7 @@ namespace Service.Services
         Task AddGemAsync(Gem gem);
         Task UpdateGemAsync(Gem gem);
         Task<decimal> GetDiamondPrice(string cut, decimal carat, string color, string clarity);
+        Task<Gem> GetByID(int id);
 
 	}
 }

@@ -26,5 +26,4 @@ namespace Repository.Models
 		public virtual ICollection<Product> Products { get; set; }
 		public virtual GemPriceList GemPriceList { get; set; }
 	}
-
 }

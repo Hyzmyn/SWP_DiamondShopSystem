@@ -16,6 +16,13 @@ namespace Service.Services
         Task UpdateUserAsync(User user);
         Task<User> LoginAsync(string username, string password);
         Task<User> GetUserByIdAsync(int userId);
+        
+        Task<bool> VerifyPasswordAsync(int userId, string password);
+        Task<bool> ChangePasswordAsync(int userId, string newPassword);
+        Task<User?> FindByEmailAsync(string email);
+        Task SavePasswordResetTokenAsync(string email, string token);
+        Task<User?> GetUserByResetTokenAsync(string token);
+        Task<bool> ResetPasswordAsync(string token, string email, string newPassword);
 
     }
 }

@@ -12,7 +12,7 @@ using Repository.Models;
 namespace Repository.Migrations
 {
     [DbContext(typeof(DiamondShopContext))]
-    [Migration("20240704072843_v1")]
+    [Migration("20240710111751_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -331,6 +331,9 @@ namespace Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderID"));
 
+                    b.Property<bool>("DeliveryStatus")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Note")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -358,6 +361,7 @@ namespace Repository.Migrations
                         new
                         {
                             OrderID = 1,
+                            DeliveryStatus = false,
                             Note = "Express delivery",
                             OrderStatus = true,
                             TimeOrder = new DateTime(2023, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -367,6 +371,7 @@ namespace Repository.Migrations
                         new
                         {
                             OrderID = 2,
+                            DeliveryStatus = false,
                             Note = "Standard delivery",
                             OrderStatus = true,
                             TimeOrder = new DateTime(2023, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -376,6 +381,7 @@ namespace Repository.Migrations
                         new
                         {
                             OrderID = 3,
+                            DeliveryStatus = false,
                             Note = "Pickup in-store",
                             OrderStatus = false,
                             TimeOrder = new DateTime(2023, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -385,6 +391,7 @@ namespace Repository.Migrations
                         new
                         {
                             OrderID = 4,
+                            DeliveryStatus = false,
                             Note = "Express delivery",
                             OrderStatus = true,
                             TimeOrder = new DateTime(2023, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -394,6 +401,7 @@ namespace Repository.Migrations
                         new
                         {
                             OrderID = 5,
+                            DeliveryStatus = false,
                             Note = "Standard delivery",
                             OrderStatus = true,
                             TimeOrder = new DateTime(2023, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -879,6 +887,12 @@ namespace Repository.Migrations
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ResetToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ResetTokenExpires")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("RoleID")
                         .HasColumnType("int");
 
@@ -966,7 +980,7 @@ namespace Repository.Migrations
                             CreatedAt = new DateTime(2023, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user6@example.com",
                             NiSize = "M",
-                            Password = "Password",
+                            Password = "1",
                             PhoneNumber = "0987654321",
                             RoleID = 5,
                             UserStatus = true,
@@ -979,7 +993,7 @@ namespace Repository.Migrations
                             CreatedAt = new DateTime(2023, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user7@example.com",
                             NiSize = "M",
-                            Password = "Password",
+                            Password = "1",
                             PhoneNumber = "0987654321",
                             RoleID = 5,
                             UserStatus = true,
@@ -992,7 +1006,7 @@ namespace Repository.Migrations
                             CreatedAt = new DateTime(2023, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user8@example.com",
                             NiSize = "M",
-                            Password = "Password",
+                            Password = "1",
                             PhoneNumber = "0987654321",
                             RoleID = 5,
                             UserStatus = true,
@@ -1005,7 +1019,7 @@ namespace Repository.Migrations
                             CreatedAt = new DateTime(2023, 9, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user9@example.com",
                             NiSize = "M",
-                            Password = "Password",
+                            Password = "1",
                             PhoneNumber = "0987654321",
                             RoleID = 5,
                             UserStatus = true,
