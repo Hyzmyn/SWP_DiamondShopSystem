@@ -103,13 +103,13 @@ namespace SWP.Areas.Manager.Controllers
                 DateTime previousEndDate = adjustedEndDate.AddYears(-1);
 
                 decimal previousPeriodTotal = _context.Orders
-                    .Where(o => o.TimeOrder >= previousStartDate && o.TimeOrder <= previousEndDate)
+                    .Where(o => o.TimeOrder >= previousStartDate && o.TimeOrder <= previousEndDate && o.OrderStatus == true)
                     .Sum(o => o.TotalPrice);
 
                 double percentageChange = CalculatePercentageChange(previousPeriodTotal, currentPeriodTotal);
 
                 int ordersCount = _context.Orders
-                    .Count(o => o.TimeOrder >= adjustedStartDate && o.TimeOrder <= adjustedEndDate);
+                    .Count(o => o.TimeOrder >= adjustedStartDate && o.TimeOrder <= adjustedEndDate && o.OrderStatus == true);
 
                 int totalUserCount = _context.Users
                     .Count(u => u.CreatedAt >= adjustedStartDate && u.CreatedAt <= adjustedEndDate);

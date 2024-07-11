@@ -653,25 +653,25 @@ namespace SWP.Areas.Manager.Controllers
             }
 
         }
+		[Route("orderdetails")]
+		public IActionResult OrderDetails(int orderId)
+		{
+			var order = context.Orders
+				.Include(o => o.User)
+				.Include(o => o.OrderDetails)
+					.ThenInclude(od => od.Product)
+				.FirstOrDefault(o => o.OrderID == orderId);
 
-        [Route("viewDetail")]
-        public IActionResult ViewDetail(int orderId)
-        {
-            var order = context.Orders
-                .Include(o => o.User)
-                .Include(o => o.OrderDetails)
-                    .ThenInclude(od => od.Product)
-                .FirstOrDefault(o => o.OrderID == orderId);
+			if (order == null)
+			{
+				return NotFound();
+			}
 
-            if (order == null)
-            {
-                return NotFound();
-            }
+			return View(order);
+		}
 
-            return View(order);
-        }
 
-        [Route("editorder")]
+		[Route("editorder")]
         public IActionResult EditOrder(int orderId)
         {
             var order = context.Orders.FirstOrDefault(o => o.OrderID == orderId);
