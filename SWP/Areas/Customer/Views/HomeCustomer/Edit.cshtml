@@ -1,42 +1,56 @@
 ﻿@model Repository.Models.User
-
 @{
     ViewData["Title"] = "Edit " + ViewBag.Field;
     Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml";
 }
-
 <h2>Edit @ViewBag.Field</h2>
-
-<form asp-action="Edit" method="post">
+<form asp-action="Edit" method="post" id="editForm">
     <div class="form-group">
         <label>@ViewBag.Field</label>
-        <input type="text" name="newValue" class="form-control" value="@{
-            switch (ViewBag.Field.ToLower())
-            {
-                case "username":
-                        @Model.Username
-;
-                    break;
-                case "email":
-                        @Model.Email
-;
-                    break;
-                case "phonenumber":
-                        @Model.PhoneNumber
-;
-                    break;
-                case "address":
-                        @Model.Address
-;
-                    break;
-                case "nisize":
-                        @Model.NiSize
-;
-                    break;
-            }
-        }" />
+        <input type="text" name="newValue" id="newValue" class="form-control" 
+               value="@(ViewBag.Field.ToLower() switch {
+                   "username" => Model.Username,
+                   "email" => Model.Email,
+                   "phonenumber" => Model.PhoneNumber,
+                   "address" => Model.Address,
+                   "nisize" => Model.NiSize,
+                   _ => ""
+               })"
+        @(ViewBag.Field.ToLower() == "phonenumber" ? "pattern=[0-9]+ " : "")
+        @(ViewBag.Field.ToLower() == "nisize" ? "min=\"6\" max=\"20\"" : "")
+               required />
     </div>
     <input type="hidden" name="field" value="@ViewBag.Field" />
     <button type="submit" class="btn btn-primary">Save</button>
     <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
 </form>
+
+@section Scripts {
+        <script>
+            $(document).ready(function() {
+                $('#editForm').submit(function(e) {
+                    var field = '@ViewBag.Field.ToLower()';
+                    var value = $('#newValue').val();
+
+                    if (field === 'phonenumber') {
+                        var phoneRegex = /^[0-9]+$/;
+                        
+                        if (!phoneRegex.test(value)) {
+                            alert('Phone number should contain only digits.');
+                            e.preventDefault();
+                            return false;
+                        }
+                    }
+
+                    if (field === 'nisize') {
+                        var size = parseInt(value);
+                        if (isNaN(size) || size < 6 || size > 20) {
+                            alert('NiSize should be a number between 6 and 20.');
+                            e.preventDefault();
+                            return false;
+                        }
+                    }
+                });
+            });
+        </script>
+}

@@ -10,9 +10,7 @@
 
 <h1>Order List</h1>
 
-<p>
-    <a asp-action="CreateOrder">Create New</a>
-</p>
+
 <p>@TempData["Message"]</p>
 @if (TempData["SuccessMessage"] != null)
 {
@@ -47,6 +45,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.OrderStatus)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeliveryStatus)
+            </th>
             <th> Action</th>
             <th></th>
         </tr>
@@ -73,9 +74,11 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.OrderStatus)
                 </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.DeliveryStatus)
+                    </td>
                 <td>
-                    <a asp-action="EditOrder" asp-route-orderId="@item.OrderID">Edit</a>
-                    <a asp-action="DeleteOrder" asp-route-orderId="@item.OrderID" onclick="return confirm('Are you sure you want to delete this order?')">Delete</a>
+                    <a asp-action="ViewDetail" asp-route-orderId="@item.OrderID">View Detail</a>
                 </td>
             </tr>
         }

@@ -20,8 +20,13 @@
     <!-- End layout styles -->
     <link rel="shortcut icon" href="~/LayoutManager/assets/images/favicon.ico" />
 </head>
-<body>
-    <div class="container-scroller">
+<body>@{
+        var userId = Context.Session.GetString("UserId");
+        var role = Context.Session.GetInt32("RoleID");
+    }
+    @if (role == 2)
+    {
+        <div class="container-scroller">
 
         <div class="container-fluid page-body-wrapper">
             <!-- partial:~/partials/_sidebar.html -->
@@ -79,6 +84,9 @@
                     <li class="nav-item">
                         <a class="nav-link" asp-area="manager" asp-controller="HomeManager" asp-action="MaterialList">MaterialList</a>
                     </li>
+                        <li class="nav-item">
+                                    <a class="nav-link" asp-area="manager" asp-controller="HomeManager" asp-action="PriceRateList">PriceRateList</a>
+                        </li>
                 </ul>
             </nav>
 
@@ -102,7 +110,7 @@
             <!-- main-panel ends -->
         </div>
         <!-- page-body-wrapper ends -->
-    </div>
+    </div>}
     <!-- container-scroller -->
     <!-- plugins:js -->
     <script src="~/AdminAssets/vendors/js/vendor.bundle.base.js"></script>

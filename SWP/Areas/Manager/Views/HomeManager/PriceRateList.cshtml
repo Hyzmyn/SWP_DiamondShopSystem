@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Repository.Models.PriceRateList>
+@{
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+    ViewData["Title"] = "Price Rate List";
+}
+
+<h1>Price Rate List</h1>
+<a href="@Url.Action("CreatePriceRate", "HomeManager", new { area = "Manager" })" class="btn btn-primary">Create New</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.PriceRateID)</th>
+            <th>@Html.DisplayNameFor(model => model.PriceRate)</th>
+            <th>@Html.DisplayNameFor(model => model.EffDate)</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+                <tr id="row-@item.PriceRateID">
+                    <td>@Html.DisplayFor(modelItem => item.PriceRateID)</td>
+                    <td>@Html.DisplayFor(modelItem => item.PriceRate)</td>
+                    <td>@Html.DisplayFor(modelItem => item.EffDate)</td>
+                    <td>
+                            <a href="@Url.Action("EditPriceRate", "HomeManager", new { area = "Manager", id = item.PriceRateID })" class="btn btn-warning">Edit</a>
+                            <a href="@Url.Action("DeletePriceRate", "HomeManager", new { area = "Manager", id = item.PriceRateID })" onclick="return confirm('Are you sure you want to delete this product?')" class="btn btn-warning">Delete</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
+
+

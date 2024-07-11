@@ -890,6 +890,92 @@ namespace SWP.Areas.Manager.Controllers
             var informationUser = context.Users.Where(u => u.RoleID == 5).ToList();
             return View(informationUser);
         }
+        [Route("priceratelist")]
+        public IActionResult PriceRateList()
+        {
+            var priceRateList = context.PriceRateLists.ToList();
+            return View(priceRateList);
+        }
+
+        [HttpGet]
+        [Route("createpricerate")]
+        public IActionResult CreatePriceRate()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("createpricerate")]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreatePriceRate(PriceRateList priceRateList)
+        {
+            if (!ModelState.IsValid)
+            {   
+                
+                priceRateList.EffDate = DateTime.Now;
+                context.Add(priceRateList);
+                context.SaveChanges();
+                return RedirectToAction(nameof(PriceRateList));
+            }
+            return View(priceRateList);
+        }
+
+        [HttpGet]
+        [Route("editpricerate")]
+        public IActionResult Edit(int id)
+        {
+            var priceRateList = context.PriceRateLists.Find(id);
+            if (priceRateList == null)
+            {
+                return NotFound();
+            }
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int id, PriceRateList priceRateList)
+        {
+            if (id != priceRateList.PriceRateID)
+            {
+                return NotFound();
+            }
+
+            if (!ModelState.IsValid)
+            {
+                var existingPriceRateList = context.PriceRateLists.Find(id);
+                if (existingPriceRateList == null)
+                {
+                    return NotFound();
+                }
+
+                existingPriceRateList.PriceRate = priceRateList.PriceRate;
+                context.Update(existingPriceRateList);
+                context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(priceRateList);
+        }
+
+        
+        [Route("deletepricerate")]
+        
+        public IActionResult DeletePriceRate(int id)
+        {
+            var priceRateList = context.PriceRateLists.Find(id);
+            if (priceRateList != null)
+            {
+                context.PriceRateLists.Remove(priceRateList);
+                context.SaveChanges();
+                TempData["SuccessMessage"] = "Price rate deleted successfully.";
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Item not found.";
+            }
+            return RedirectToAction("PriceRateList", "HomeManager", new { area = "Manager" });
+        }
+
 
 
         [Route("materiallist")]

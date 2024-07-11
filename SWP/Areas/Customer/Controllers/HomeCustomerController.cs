@@ -24,6 +24,7 @@ namespace SWP.Areas.Customer.Controllers
         private readonly ICompositeViewEngine _viewEngine;
         private readonly IServiceProvider _serviceProvider;
         private readonly DiamondShopContext _dbContext;
+        
         public HomeCustomerController(IUserService userService, ICartService cartService, IDiscountService discountService, IOrderService orderService, IWarrantyService warrantyService, DiamondShopContext context, ICompositeViewEngine viewEngine, IServiceProvider serviceProvider, DiamondShopContext dbContext)
         {
             _userService = userService;
@@ -39,83 +40,133 @@ namespace SWP.Areas.Customer.Controllers
         }
 
         [Route("")]
-		[Route("customer")]
-		public async Task<IActionResult> Index()
-		{
-			var userId = HttpContext.Session.GetString("UserId");
-			if (userId == null)
-			{
-				return RedirectToAction("Index", "Home");
-			}
+        [Route("customer")]
+        public async Task<IActionResult> Index()
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (userId == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
 
-			var user = await _userService.GetUserByIdAsync(int.Parse(userId));
-			return View(user);
+            var user = await _userService.GetUserByIdAsync(int.Parse(userId));
+            var walletPoint = await _context.WalletPoints.FirstOrDefaultAsync(w => w.UserID == int.Parse(userId));
+
+            ViewBag.WalletPoint = walletPoint;
+
+            return View(user);
+        }
+
+        [Route("edit")]
+        public async Task<IActionResult> Edit(string field)
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            var user = await _userService.GetUserByIdAsync(int.Parse(userId));
+            if (user == null)
+            {
+                return NotFound();
+            }
+            ViewBag.Field = field;
+            return View(user);
+        }
+
+        [HttpPost]
+        [Route("edit")]
+        public async Task<IActionResult> Edit(string field, string newValue)
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            var user = await _userService.GetUserByIdAsync(int.Parse(userId));
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            switch (field.ToLower())
+            {
+                case "username":
+                    if (string.IsNullOrWhiteSpace(newValue))
+                    {
+                        ModelState.AddModelError("", "Username cannot be empty.");
+                        return View(user);
+                    }
+                    user.Username = newValue;
+                    break;
+                case "email":
+                    
+                    user.Email = newValue;
+                    break;
+                case "phonenumber":
+                    if (!IsValidPhoneNumber(newValue))
+                    {
+                        ModelState.AddModelError("", "Phone number should contain only digits.");
+                        return View(user);
+                    }
+                    user.PhoneNumber = newValue;
+                    break;
+                case "address":
+                    if (string.IsNullOrWhiteSpace(newValue))
+                    {
+                        ModelState.AddModelError("", "Address cannot be empty.");
+                        return View(user);
+                    }
+                    user.Address = newValue;
+                    break;
+                case "nisize":
+                    if (!IsValidNiSize(newValue))
+                    {
+                        ModelState.AddModelError("", "NiSize should be a number between 6 and 20.");
+                        return View(user);
+                    }
+                    user.NiSize = newValue;
+                    break;
+                default:
+                    return BadRequest("Invalid field");
+            }
+
+            if (ModelState.IsValid)
+            {
+                await _userService.UpdateUserAsync(user);
+                UpdateSession(user);
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.Field = field;
+            return View(user);
+        }
+
+
+
+		private bool IsValidPhoneNumber(string phoneNumber)
+		{
+			System.Diagnostics.Debug.WriteLine("Phone number entered: " + phoneNumber);
+			return !string.IsNullOrWhiteSpace(phoneNumber) && phoneNumber.All(char.IsDigit);
 		}
 
-		[Route("edit")]
-		public async Task<IActionResult> Edit(string field)
-		{
-			var userId = HttpContext.Session.GetString("UserId");
-			if (userId == null)
-			{
-				return RedirectToAction("Index", "Home");
-			}
+		private bool IsValidNiSize(string niSize)
+        {
+            if (int.TryParse(niSize, out int size))
+            {
+                return size >= 6 && size <= 20;
+            }
+            return false;
+        }
 
-			var user = await _userService.GetUserByIdAsync(int.Parse(userId));
-			if (user == null)
-			{
-				return NotFound();
-			}
-
-			ViewBag.Field = field;
-			return View(user);
-		}
-
-		[HttpPost]
-		[Route("edit")]
-		public async Task<IActionResult> Edit(string field, string newValue)
-		{
-			var userId = HttpContext.Session.GetString("UserId");
-			if (userId == null)
-			{
-				return RedirectToAction("Index", "Home");
-			}
-
-			var user = await _userService.GetUserByIdAsync(int.Parse(userId));
-			if (user == null)
-			{
-				return NotFound();
-			}
-
-			switch (field.ToLower())
-			{
-				case "username":
-					user.Username = newValue;
-					break;
-				case "email":
-					user.Email = newValue;
-					break;
-				case "phonenumber":
-					user.PhoneNumber = newValue;
-					break;
-				case "address":
-					user.Address = newValue;
-					break;
-				case "nisize":
-					user.NiSize = newValue;
-					break;
-				default:
-					return BadRequest("Invalid field");
-			}
-			HttpContext.Session.SetString("Username", user.Username);
-			HttpContext.Session.SetString("Email", user.Email);
-			HttpContext.Session.SetString("PhoneNumber", user.PhoneNumber);
-			HttpContext.Session.SetString("Address", user.Address);
-			HttpContext.Session.SetString("NiSize", user.NiSize);
-
-			await _userService.UpdateUserAsync(user);
-            return RedirectToAction("Index");
-		}
+        private void UpdateSession(User user)
+        {
+            HttpContext.Session.SetString("Username", user.Username);
+            HttpContext.Session.SetString("Email", user.Email);
+            HttpContext.Session.SetString("PhoneNumber", user.PhoneNumber);
+            HttpContext.Session.SetString("Address", user.Address);
+            HttpContext.Session.SetString("NiSize", user.NiSize);
+        }
         [HttpPost]
         [Route("updatequantity")]
         public async Task<IActionResult> UpdateQuantity(int orderDetailId, int quantity)

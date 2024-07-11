@@ -107,7 +107,7 @@ namespace SWP.Areas.SaleStaff.Controllers
                 PriceRateID = productDto.PriceRateID,
                 TotalCost = productDto.TotalCost,
             };
-
+            
             context.Products.Add(product);
             context.SaveChanges();
 

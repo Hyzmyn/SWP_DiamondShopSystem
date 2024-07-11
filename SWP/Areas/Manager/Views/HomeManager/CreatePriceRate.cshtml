@@ -1,0 +1,43 @@
+﻿@model Repository.Models.PriceRateList
+@{
+    ViewData["Title"] = "Create Price Rate";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div class="row">
+    <div class="col-md-8 mx-auto rounded border p-3">
+        <h2 class="text-center mb-5">Create Price Rate</h2>
+        <form asp-action="CreatePriceRate" method="post">
+             <div class="row mb-3">
+                <label asp-for="PriceRate" class="col-sm-4 col-form-label">Price Rate ID</label>
+                <div class="col-sm-8">
+                    <input asp-for="PriceRateID" class="form-control">
+                    <span asp-validation-for="PriceRateID" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label asp-for="PriceRate" class="col-sm-4 col-form-label">Price Rate</label>
+                <div class="col-sm-8">
+                    <input asp-for="PriceRate" class="form-control">
+                    <span asp-validation-for="PriceRate" class="text-danger"></span>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="offset-sm-4 col-sm-4 d-grid">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="col-sm-4 d-grid">
+                    <a class="btn btn-outline-primary" asp-action="PriceRateList" role="button">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

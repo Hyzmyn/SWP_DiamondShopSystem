@@ -126,6 +126,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lTWFuYWdlclxDcmVhdGVPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Manager/Views/HomeManager/CreatePriceRate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lTWFuYWdlclxDcmVhdGVQcmljZVJhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Manager/Views/HomeManager/CreateProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lTWFuYWdlclxDcmVhdGVQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -162,6 +166,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lTWFuYWdlclxFZGl0T3JkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Manager/Views/HomeManager/EditPriceRate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lTWFuYWdlclxFZGl0UHJpY2VSYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Manager/Views/HomeManager/EditProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lTWFuYWdlclxFZGl0UHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -188,6 +196,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Manager/Views/HomeManager/OrderList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lTWFuYWdlclxPcmRlckxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Manager/Views/HomeManager/PriceRateList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lTWFuYWdlclxQcmljZVJhdGVMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ADMIN/Desktop/SWP391/SWP_DiamondShopSystem/SWP/Areas/Manager/Views/HomeManager/ProductList.cshtml]
