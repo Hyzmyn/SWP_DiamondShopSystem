@@ -54,20 +54,13 @@
 			</div>
 
 			<div class="row mb-3">
-				<label class="col-sm-4 col-form-label">MaterialID</label>
+				<label class="col-sm-4 col-form-label">Weight</label>
 				<div class="col-sm-8">
 					<input class="form-control" asp-for="Weight">
-					<span asp-validation-for="Weight" class="text-danger"></span>@*hiển thị lỗi xác thực màu đỏ*@
+					<span asp-validation-for="Weight" class="text-danger"></span>
 				</div>
 			</div>
 
-			<div class="row mb-3">
-				<label class="col-sm-4 col-form-label">CategoryID</label>
-				<div class="col-sm-8">
-					<input class="form-control" asp-for="CategoryID">
-					<span asp-validation-for="CategoryID" class="text-danger"></span>@*hiển thị lỗi xác thực màu đỏ*@
-				</div>
-			</div>
 
 			<div class="row mb-3">
 				<label class="col-sm-4 col-form-label">ProductionCost</label>
@@ -80,10 +73,17 @@
 			<div class="row mb-3">
 				<label class="col-sm-4 col-form-label">PriceRate</label>
 				<div class="col-sm-8">
-					<input class="form-control" asp-for="TotalCost">
-					<span asp-validation-for="TotalCost" class="text-danger"></span>@*hiển thị lỗi xác thực màu đỏ*@
+					<input class="form-control" asp-for="PriceRateID">
+					<span asp-validation-for="PriceRateID" class="text-danger"></span>@*hiển thị lỗi xác thực màu đỏ*@
 				</div>
 			</div>
+			<div class="row mb-3">
+				<div class="col-sm-8">
+					<input type="hidden" asp-for="TotalCost" value="1">
+					<span asp-validation-for="TotalCost" class="text-danger"></span>
+				</div>
+			</div>
+
 
 			<div class="row">
 				<div class="offset-sm-4 col-sm-4 d-grid">

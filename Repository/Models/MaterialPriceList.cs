@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Repository.Models
 {
@@ -17,6 +18,7 @@ namespace Repository.Models
 		public decimal SellPrice { get; set; }
 		public DateTime EffDate { get; set; }
 
-		public virtual Product Product { get; set; }
+        [ValidateNever]
+        public virtual Product Product { get; set; }
     }
 }

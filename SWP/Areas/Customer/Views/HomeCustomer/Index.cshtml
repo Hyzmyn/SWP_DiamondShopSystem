@@ -7,7 +7,9 @@
 
 @model Repository.Models.User
 
-
+@{
+    
+}
 
 <table class="table table-bordered">
     <tr>
@@ -34,6 +36,17 @@
         <td>Ni Size</td>
         <td>@(string.IsNullOrEmpty(Model.NiSize) ? "N/A" : Model.NiSize)</td>
         <td><a href="@Url.Action("Edit", new { field = "NiSize" })" class="btn btn-primary">Edit</a></td>
+    </tr>
+    <tr>
+        <td>Wallet Point</td>
+        @if (ViewBag.WalletPoint != null)
+        {
+            <td>@(ViewBag.WalletPoint.Point.ToString("N2"))</td>
+        }
+        else
+        {
+            <td>0</td>
+        }
     </tr>
 </table>
 

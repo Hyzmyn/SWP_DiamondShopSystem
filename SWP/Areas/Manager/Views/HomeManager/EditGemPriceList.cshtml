@@ -5,8 +5,8 @@
     Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
 }
 
-<h1>Edit Gem Price List Entry</h1>
-
+<h1>Edit Gem Price</h1>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 <p>
     <a asp-action="GemPriceList">Back to List</a>
 </p>
@@ -18,65 +18,48 @@
     </div>
 }
 
-<form asp-action="EditGemPriceList" method="post" enctype="multipart/form-data" class="mt-4">
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Gem ID</label>
-        <div class="col-sm-10">
-            <input asp-for="GemID" class="form-control" readonly />
-            <span asp-validation-for="GemID" class="text-danger"></span>
-        </div>
+<form asp-action="EditGemPriceList" asp-route-gemID="@Model.GemID" method="post" enctype="multipart/form-data" class="mt-4">
+
+
+    <div class="form-group">
+        <label asp-for="CaratWeight">Carat Weight</label>
+        <input asp-for="CaratWeight" type="number" class="form-control" min="1" max="5" />
+        <span asp-validation-for="CaratWeight" class="text-danger"></span>
     </div>
 
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Origin</label>
-        <div class="col-sm-10">
-            <input asp-for="Origin" class="form-control" />
-            <span asp-validation-for="Origin" class="text-danger"></span>
-        </div>
+    <div class="form-group">
+        <label asp-for="Color">Color</label>
+        <select asp-for="Color" class="form-control">
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="J">J</option>
+        </select>
+        <span asp-validation-for="Color" class="text-danger"></span>
     </div>
 
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Carat Weight</label>
-        <div class="col-sm-10">
-            <input asp-for="CaratWeight" class="form-control" />
-            <span asp-validation-for="CaratWeight" class="text-danger"></span>
-        </div>
+    <div class="form-group">
+        <label asp-for="Clarity">Clarity</label>
+        <select asp-for="Clarity" class="form-control">
+            <option value="IF">IF</option>
+            <option value="VVS1">VVS1</option>
+            <option value="VVS2">VVS2</option>
+            <option value="VS1">VS1</option>
+            <option value="VS2">VS2</option>
+        </select>
+        <span asp-validation-for="Clarity" class="text-danger"></span>
     </div>
 
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Color</label>
-        <div class="col-sm-10">
-            <input asp-for="Color" class="form-control" />
-            <span asp-validation-for="Color" class="text-danger"></span>
-        </div>
+    <div class="form-group">
+        <label asp-for="Cut">Cut</label>
+        <select asp-for="Cut" class="form-control">
+            <option value="Excelent">Excelent</option>
+            <option value="VeryGood">VeryGood</option>
+            <option value="Good">Good</option>
+        </select>
+        <span asp-validation-for="Cut" class="text-danger"></span>
     </div>
+    <button type="submit" class="btn btn-primary">Edit</button>
+</form>
 
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Clarity</label>
-        <div class="col-sm-10">
-            <input asp-for="Clarity" class="form-control" />
-            <span asp-validation-for="Clarity" class="text-danger"></span>
-        </div>
-    </div>
 
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Cut</label>
-        <div class="col-sm-10">
-            <input asp-for="Cut" class="form-control" />
-            <span asp-validation-for="Cut" class="text-danger"></span>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Price</label>
-        <div class="col-sm-10">
-            <input asp-for="Price" class="form-control" />
-            <span asp-validation-for="Price" class="text-danger"></span>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Effective Date</label>
-        <div class="col-sm-10">
-            <input asp-for="EffDate" class="form-control" />
-            <span asp-validation-f

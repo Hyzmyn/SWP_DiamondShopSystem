@@ -27,6 +27,15 @@ namespace Repository.Repositories
 
 			return priceRate?.PriceRate;
 		}
+        public async Task<int?> GetPriceRateIdAsync()
+        {
+            var today = DateTime.Today;
+            var priceRate = await _db.PriceRateLists
+                .Where(pr => pr.EffDate <= today)
+                .OrderByDescending(pr => pr.EffDate)
+                .FirstOrDefaultAsync();
 
-	}
+            return priceRate?.PriceRateID;
+        }
+    }
 }

@@ -149,7 +149,7 @@ namespace SWP.Controllers
             if (int.TryParse(HttpContext.Session.GetString("UserId"), out int userId))
             {
                 _logger.LogInformation($"PointUserAsync - Amount: {amount}");
-                var points = amount / 1000000;
+                var points = amount / 100000000;
                 var wallet = await _walletService.GetWalletPointByUserIdAsync(userId);
                 if (wallet != null)
                 {

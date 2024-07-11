@@ -7,41 +7,78 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Service.Services
 {
-    public class GemPriceListService : IGemPriceListService
-    {
-        private IGemPriceListRepository _repo;
-        public GemPriceListService(IGemPriceListRepository repo)
-        {
-            _repo = repo;
-        }
+	public class GemPriceListService : IGemPriceListService
+	{
+		private IGemPriceListRepository _repo;
+		public GemPriceListService(IGemPriceListRepository repo)
+		{
+			_repo = repo;
+		}
 
-        public Task AddGemPriceListAsync(GemPriceList gemPriceList)
-        {
-            throw new NotImplementedException();
-        }
+		public Task AddGemPriceListAsync(GemPriceList gemPriceList)
+		{
+			throw new NotImplementedException();
+		}
 
 
-        public Task DeleteGemPriceListAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
+		public Task DeleteGemPriceListAsync(int id)
+		{
+			throw new NotImplementedException();
+		}
 
-        public Task<List<GemPriceList>> GetGemPriceListsAsync(string keyword, int pageNumber, int pageSize, int defaultPageSize, string sortBy)
-        {
-            throw new NotImplementedException();
-        }
+		public Task<List<GemPriceList>> GetGemPriceListsAsync(string keyword, int pageNumber, int pageSize, int defaultPageSize, string sortBy)
+		{
+			throw new NotImplementedException();
+		}
 
-        public Task UpdateGemPriceListAsync(GemPriceList gemPriceList)
-        {
-            throw new NotImplementedException();
-        }
+		public Task UpdateGemPriceListAsync(GemPriceList gemPriceList)
+		{
+			throw new NotImplementedException();
+		}
+		public decimal CalculatePrice(string color, string cut, string clarity, decimal weight)
+		{
+			decimal colorValue = color switch
+			{
+				"D" => RandomNumberStore.RandomValues.D,
+				"E" => RandomNumberStore.RandomValues.E,
+				"F" => RandomNumberStore.RandomValues.F,
+				"J" => RandomNumberStore.RandomValues.J,
+				_ => 0
+			};
+
+			decimal clarityValue = clarity switch
+			{
+				"IF" => RandomNumberStore.RandomValues.IF,
+				"VVS1" => RandomNumberStore.RandomValues.VVS1,
+				"VVS2" => RandomNumberStore.RandomValues.VVS2,
+				"VS1" => RandomNumberStore.RandomValues.VS1,
+				"VS2" => RandomNumberStore.RandomValues.VS2,
+				_ => 0
+			};
+
+			decimal cutValue = cut switch
+			{
+				"Excellent" => RandomNumberStore.RandomValues.Excellent,
+				"VeryGood" => RandomNumberStore.RandomValues.VeryGood,
+				"Good" => RandomNumberStore.RandomValues.Good,
+				_ => 0
+			};
+
+			decimal caratValue = weight * RandomNumberStore.RandomValues.CaratPrice;
+
+			var price = colorValue + clarityValue + cutValue + caratValue;
+
+			return price;
+
+		}
 
 		public async Task CalculateAndSavePricesAsync()
 		{
-			var gemPriceLists =  _repo.Get().ToList();
+			var gemPriceLists = _repo.Get().ToList();
 
 			foreach (var gemPrice in gemPriceLists)
 			{

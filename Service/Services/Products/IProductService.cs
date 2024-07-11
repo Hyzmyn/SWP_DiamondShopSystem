@@ -16,6 +16,7 @@ namespace Service.Services
         public List<Product> GetProducts();
         public List<Product> GetAllProducts();
 
+        Task<decimal> CalculateProductPrice(decimal priceRateId, int GemID, decimal weight, decimal ProductionCost);
         Task CalculateAndSaveProductPricesAsync();
 
 

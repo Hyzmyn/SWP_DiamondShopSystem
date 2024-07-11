@@ -36,19 +36,19 @@
                 @Html.DisplayNameFor(model => model.ImageUrl2)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GemID)
+                @Html.DisplayNameFor(model => model.Gems.GemCode)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Weight)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CategoryID)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.ProductionCost)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PriceRateID)
+               PriceRate
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalCost)
             </th>
             <th> Action</th>
 
@@ -72,21 +72,20 @@
                     <img src="~/images/product/@item.ImageUrl2" width="1000" alt="Image 1" />
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.GemID)
+                    @Html.DisplayFor(modelItem => item.Gems.GemCode)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Weight)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CategoryID)
+                    @Html.DisplayFor(modelItem => item.ProductionCost)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ProductionCost)
+                    @Html.DisplayFor(modelItem => item.PriceRateID)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.TotalCost)
                 </td>
-
                 <td>
                     <a asp-action="EditProduct" asp-route-productCode="@item.ProductCode">Edit</a>
                     <a asp-action="DeleteProduct" asp-route-productCode="@item.ProductCode" onclick="return confirm('Are you sure you want to delete this product?')">Delete</a>

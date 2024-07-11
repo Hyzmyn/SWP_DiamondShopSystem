@@ -5,7 +5,7 @@
     Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
 }
 
-<h1>Create New Gem Price List Entry</h1>
+<h1>Create New Gem Price</h1>
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 <p>
     <a asp-action="GemPriceList">Back to List</a>
@@ -19,44 +19,52 @@
 }
 
 <form asp-action="CreateGemPriceList" method="post">
+
     <div class="form-group">
-        <label asp-for="GemID">Gem ID</label>
-        <input asp-for="GemID" class="form-control" />
+        <label asp-for="GemID" class="form-label">Gem Code</label>
+        @Html.DropDownListFor(m => m.GemID, (IEnumerable<SelectListItem>)ViewData["Gems"], "Select a Gem", new { @class = "form-control", required = "required" })
         <span asp-validation-for="GemID" class="text-danger"></span>
     </div>
 
-
     <div class="form-group">
-        <label asp-for="CaratWeight">Carat Weight</label>
-        <input asp-for="CaratWeight" class="form-control" />
+        <label asp-for="CaratWeight" class="form-label">Carat Weight</label>
+        <input asp-for="CaratWeight" type="number" class="form-control" min="1" max="5" required="required" />
         <span asp-validation-for="CaratWeight" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Color">Color</label>
-        <input asp-for="Color" class="form-control" />
+        <label asp-for="Color" class="form-label">Color</label>
+        <select asp-for="Color" class="form-control" required="required">
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="J">J</option>
+        </select>
         <span asp-validation-for="Color" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Clarity">Clarity</label>
-        <input asp-for="Clarity" class="form-control" />
+        <label asp-for="Clarity" class="form-label">Clarity</label>
+        <select asp-for="Clarity" class="form-control" required="required">
+            <option value="IF">IF</option>
+            <option value="VVS1">VVS1</option>
+            <option value="VVS2">VVS2</option>
+            <option value="VS1">VS1</option>
+            <option value="VS2">VS2</option>
+        </select>
         <span asp-validation-for="Clarity" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Cut">Cut</label>
-        <input asp-for="Cut" class="form-control" />
+        <label asp-for="Cut" class="form-label">Cut</label>
+        <select asp-for="Cut" class="form-control" required="required">
+            <option value="Excellent">Excellent</option>
+            <option value="VeryGood">VeryGood</option>
+            <option value="Good">Good</option>
+        </select>
         <span asp-validation-for="Cut" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
-        <label asp-for="Price">Price</label>
-        <input asp-for="Price" class="form-control" />
-        <span asp-validation-for="Price" class="text-danger"></span>
-    </div>
-
-
-
     <button type="submit" class="btn btn-primary">Create</button>
 </form>
+

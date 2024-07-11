@@ -17,7 +17,8 @@
 <div class="row">
     <div class="col-md-8 mx-auto rounded border p-3">
         <h2 class="text-center mb-5">Edit Gem</h2>
-        <form method="post" asp-action="EditGem" asp-route-gemCode="@Model.GemCode">
+        <form method="post" asp-action="EditGem" asp-route-gemCode="@Model.GemID">
+            <input type="hidden" asp-for="GemID" />
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">GemCode</label>
                 <div class="col-sm-8">
@@ -45,7 +46,7 @@
             <div class="row mb-3">
                 <label class="col-sm-4 col-form-label">FourC</label>
                 <div class="col-sm-8">
-                    <input class="form-control" asp-for="FourC" />
+                    <input class="form-control" type="number" class="form-control" asp-for="FourC" min="0" />
                     <span asp-validation-for="FourC" class="text-danger"></span>
                 </div>
             </div>
