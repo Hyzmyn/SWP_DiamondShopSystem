@@ -48,8 +48,8 @@
             <th>
                 @Html.DisplayNameFor(model => model.DeliveryStatus)
             </th>
-            <th> Action</th>
-            <th></th>
+@*             <th> Action</th> *@
+
         </tr>
     </thead>
     <tbody>
@@ -77,9 +77,9 @@
                     <td>
                     @Html.DisplayFor(modelItem => item.DeliveryStatus)
                     </td>
-                <td>
+@*                 <td>
                     <a asp-action="ViewDetail" asp-route-orderId="@item.OrderID">View Detail</a>
-                </td>
+                </td> *@
             </tr>
         }
     </tbody>

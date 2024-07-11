@@ -20,85 +20,84 @@
     <link rel="shortcut icon" href="../../LayoutSaleStaff/assets/images/favicon.ico" />
 </head>
 <body>
-    @{
-        var userId = Context.Session.GetString("UserId");
-        var role = Context.Session.GetInt32("RoleID");
-    }
-    @if (role == 2)
-    {
-            <div class="container-scroller">
-                <div class="container-fluid page-body-wrapper">
-                    <!-- partial:../../partials/_sidebar.html -->
-                    <nav class="sidebar sidebar-offcanvas" id="sidebar">
-                        <ul class="nav">
-                            <li class="nav-item nav-profile">
-                                <a href="#" class="nav-link">
-                                    <div class="nav-profile-image">
-                                        <img src="../../LayoutSaleStaff/assets/images/faces/face1.jpg" alt="profile">
-                                        <span class="login-status online"></span>
-                                        <!--change to offline or busy as needed-->
-                                    </div>
-                                    <div class="nav-profile-text d-flex flex-column">
-                                        <span class="font-weight-bold mb-2">Minh Sang</span>
-                                        <span class="text-secondary text-small">Diamond Store</span>
-                                    </div>
-                                    <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                                    <span class="menu-title">Product Manager</span>
-                                    <i class="menu-arrow"></i>
-                                    <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-                                </a>
-                                <div class="collapse" id="ui-basic">
-                                    <ul class="nav flex-column sub-menu">
-                                        <li class="nav-item"> 
-                                            <a class="nav-link" asp-area="salestaff" asp-controller="HomeSaleStaff" asp-action="ProductList">ProductList</a>
-                                        </li>
-                                        <li class="nav-item"> 
-                                            <a class="nav-link" asp-area="salestaff" asp-controller="HomeSaleStaff" asp-action="DiscountList">DiscountList</a>
-                                        </li>
-                                        <li class="nav-item"> 
-                                            <a class="nav-link" asp-area="salestaff" asp-controller="HomeSaleStaff" asp-action="GemPriceList">GemPriceList</a>
-                                        </li>
-                                        <li class="nav-item"> 
-                                            <a class="nav-link" asp-area="salestaff" asp-controller="HomeSaleStaff" asp-action="MaterialPriceList">MaterialPriceList</a>
-                                        </li>
-                                    </ul>
+    
+        <div class="container-scroller">
+
+            <div class="container-fluid page-body-wrapper">
+                <!-- partial:../../partials/_sidebar.html -->
+                <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                    <ul class="nav">
+                        <li class="nav-item nav-profile">
+                            <a href="#" class="nav-link">
+                                <div class="nav-profile-image">
+                                    <img src="../../LayoutSaleStaff/assets/images/faces/face1.jpg" alt="profile">
+                                    <span class="login-status online"></span>
+                                    <!--change to offline or busy as needed-->
                                 </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="salestaff" asp-controller="HomeSaleStaff" asp-action="OrderList">Order</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="salestaff" asp-controller="HomeSaleStaff" asp-action="HistoryOrder">
-                                    <span class="menu-title">History Order</span>
-                                    <i class="mdi mdi-format-list-bulleted menu-icon"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- partial -->
-                    <div class="main-panel">
-                        <div class="content-wrapper">
-                        @RenderBody()
-                        </div>
-                        <!-- content-wrapper ends -->
-                        <!-- partial:../../partials/_footer.html -->
-                        <footer class="footer">
-                            <div class="container-fluid d-flex justify-content-between">
-                                <span class="text-muted d-block text-center text-sm-start d-sm-inline-block">Copyright © bootstrapdash.com 2021</span>
-                                <span class="float-none float-sm-end mt-1 mt-sm-0 text-end"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin template</a> from Bootstrapdash.com</span>
+                                <div class="nav-profile-text d-flex flex-column">
+                                    <span class="font-weight-bold mb-2">Minh Sang</span>
+                                    <span class="text-secondary text-small">Diamond Store</span>
+                                </div>
+                                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                                <span class="menu-title">Product Manager</span>
+                                <i class="menu-arrow"></i>
+                                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                            </a>
+                            <div class="collapse" id="ui-basic">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"> <a class="nav-link" asp-area="salestaff" asp-controller="HomeSaleStaff" asp-action="ProductList">ProductList</a></li>
+                                    <li class="nav-item"> <a class="nav-link" asp-area="salestaff" asp-controller="HomeSaleStaff" asp-action="DiscountList">DiscountList</a></li>
+
+                                    <li class="nav-item"> <a class="nav-link" asp-area="salestaff" asp-controller="HomeSaleStaff" asp-action="GemPriceList">GemPriceList</a></li>
+                                    <li class="nav-item"> <a class="nav-link" asp-area="salestaff" asp-controller="HomeSaleStaff" asp-action="MaterialPriceList">MaterialPriceList</a></li>
                             </div>
-                        </footer>
-                        <!-- partial -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="salestaff" asp-controller="HomeSaleStaff" asp-action="OrderList">Order
+                                <i class="mdi mdi-contacts menu-icon"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="salestaff" asp-controller="HomeSaleStaff" asp-action="HistoryOrder">
+                                <span class="menu-title">History Order</span>
+                                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="salestaff" asp-controller="Home" asp-action="Index">
+                                <span class="menu-title">Exit</span>
+                                <i class="mdi mdi-exit-to-app menu-icon"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+                <!-- partial -->
+                <div class="main-panel">
+                    <div class="content-wrapper">
+                @RenderBody()
                     </div>
-                    <!-- main-panel ends -->
+                    <!-- content-wrapper ends -->
+                    <!-- partial:../../partials/_footer.html -->
+                    <footer class="footer">
+                        <div class="container-fluid d-flex justify-content-between">
+                            <span class="text-muted d-block text-center text-sm-start d-sm-inline-block">Copyright © bootstrapdash.com 2021</span>
+                            <span class="float-none float-sm-end mt-1 mt-sm-0 text-end"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin template</a> from Bootstrapdash.com</span>
+                        </div>
+                    </footer>
+                    <!-- partial -->
                 </div>
-                <!-- page-body-wrapper ends -->
+                <!-- main-panel ends -->
             </div>
-    }
+            <!-- page-body-wrapper ends -->
+        </div>
+    
     <!-- container-scroller -->
     <!-- plugins:js -->
     <script src="../../LayoutSaleStaff/assets/vendors/js/vendor.bundle.base.js"></script>

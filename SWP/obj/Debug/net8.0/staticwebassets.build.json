@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fScxqs5SQ8U7Zvcjr/0bGSEKEjiPF+UcOT9nvaI8AJ0=",
+  "Hash": "Mq/FzgJppVvFmyLZvZKA60VuarOqxbnKG1CjNij3+wc=",
   "Source": "SWP",
   "BasePath": "_content/SWP",
   "Mode": "Default",
@@ -4746,25 +4746,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\product\\20240711034203268.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240711041624174.jpg",
-      "SourceId": "SWP",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\wwwroot\\",
-      "BasePath": "_content/SWP",
-      "RelativePath": "images/product/20240711041624174.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\product\\20240711041624174.jpg"
     },
     {
       "Identity": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\21.jpg",
