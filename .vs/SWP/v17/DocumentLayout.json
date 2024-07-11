@@ -3,44 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\customer\\views\\homecustomer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\customer\\views\\homecustomer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\manager\\controllers\\homemanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\manager\\controllers\\homemanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\customer\\views\\shared\\_layoutcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\customer\\views\\shared\\_layoutcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\manager\\views\\homemanager\\editpricerate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\manager\\views\\homemanager\\editpricerate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\customer\\controllers\\homecustomercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\customer\\controllers\\homecustomercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\manager\\views\\homemanager\\priceratelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\manager\\views\\homemanager\\priceratelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\manager\\views\\homemanager\\editproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\manager\\views\\homemanager\\editproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\salestaff\\views\\shared\\_layoutsalestaff.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\salestaff\\views\\shared\\_layoutsalestaff.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\manager\\views\\homemanager\\createpricerate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\manager\\views\\homemanager\\createpricerate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\manager\\views\\homemanager\\editorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\manager\\views\\homemanager\\editorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\manager\\views\\shared\\_layoutmanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\manager\\views\\shared\\_layoutmanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\delivery\\views\\shared\\_layoutdelivery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\delivery\\views\\shared\\_layoutdelivery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\salestaff\\views\\homesalestaff\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\salestaff\\views\\homesalestaff\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|c:\\users\\admin\\desktop\\final_swp\\swp_final\\swp\\areas\\manager\\views\\homemanager\\productlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E5E455-42F8-4EB1-8A71-6054FCD6B83B}|SWP\\SWP.csproj|solutionrelative:swp\\areas\\manager\\views\\homemanager\\productlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 336,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,132 +50,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\HomeCustomer\\Edit.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Views\\HomeCustomer\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\HomeCustomer\\Edit.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Customer\\Views\\HomeCustomer\\Edit.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACQAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T19:53:59.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeCustomerController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Controllers\\HomeCustomerController.cs",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Controllers\\HomeCustomerController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Controllers\\HomeCustomerController.cs",
-              "RelativeToolTip": "SWP\\Areas\\Customer\\Controllers\\HomeCustomerController.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAqwE8AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T19:53:50.179Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_LayoutCustomer.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Customer\\Views\\Shared\\_LayoutCustomer.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAEAAAA",
+              "Title": "EditPriceRate.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\HomeManager\\EditPriceRate.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\EditPriceRate.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\HomeManager\\EditPriceRate.cshtml",
+              "RelativeToolTip": "SWP\\Areas\\Manager\\Views\\HomeManager\\EditPriceRate.cshtml",
+              "ViewState": "AQIAABAAAAAAAAAAAAAcwCQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T19:51:53.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "SWP\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T19:43:40.505Z",
+              "WhenOpened": "2024-07-11T00:51:17.492Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAAABwAAAAFAAAA",
+              "Title": "EditOrder.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\HomeManager\\EditOrder.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\EditOrder.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\HomeManager\\EditOrder.cshtml",
+              "RelativeToolTip": "SWP\\Areas\\Manager\\Views\\HomeManager\\EditOrder.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T19:42:25.922Z",
+              "WhenOpened": "2024-07-11T00:49:06.63Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_LayoutDelivery.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Delivery\\Views\\Shared\\_LayoutDelivery.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Delivery\\Views\\Shared\\_LayoutDelivery.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Delivery\\Views\\Shared\\_LayoutDelivery.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Delivery\\Views\\Shared\\_LayoutDelivery.cshtml",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAEMAAAALAAAA",
+              "DocumentIndex": 3,
+              "Title": "EditProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\HomeManager\\EditProduct.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\EditProduct.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\HomeManager\\EditProduct.cshtml",
+              "RelativeToolTip": "SWP\\Areas\\Manager\\Views\\HomeManager\\EditProduct.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T19:41:54.096Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_LayoutManager.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\Manager\\Views\\Shared\\_LayoutManager.cshtml",
-              "ViewState": "AQIAAGYAAAAAAAAAAAAAAG8AAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T19:41:33.013Z",
+              "WhenOpened": "2024-07-11T00:46:25.074Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "_LayoutSaleStaff.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\SaleStaff\\Views\\Shared\\_LayoutSaleStaff.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\Shared\\_LayoutSaleStaff.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\SaleStaff\\Views\\Shared\\_LayoutSaleStaff.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\SaleStaff\\Views\\Shared\\_LayoutSaleStaff.cshtml",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAYwGMAAAAKAAAA",
+              "Title": "CreatePriceRate.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\HomeManager\\CreatePriceRate.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\CreatePriceRate.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\HomeManager\\CreatePriceRate.cshtml",
+              "RelativeToolTip": "SWP\\Areas\\Manager\\Views\\HomeManager\\CreatePriceRate.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T19:40:18.497Z",
+              "WhenOpened": "2024-07-10T22:01:06.406Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
-              "RelativeToolTip": "SWP\\Areas\\SaleStaff\\Views\\HomeSaleStaff\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "PriceRateList.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\HomeManager\\PriceRateList.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\PriceRateList.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\HomeManager\\PriceRateList.cshtml",
+              "RelativeToolTip": "SWP\\Areas\\Manager\\Views\\HomeManager\\PriceRateList.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T19:40:04.713Z",
+              "WhenOpened": "2024-07-10T21:37:43.142Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "SWP\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "SWP\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAA4BAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "HomeManagerController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Controllers\\HomeManagerController.cs",
+              "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Controllers\\HomeManagerController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Controllers\\HomeManagerController.cs",
+              "RelativeToolTip": "SWP\\Areas\\Manager\\Controllers\\HomeManagerController.cs",
+              "ViewState": "AQIAAFoDAAAAAAAAAAAYwOsAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T21:28:55.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductList.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\HomeManager\\ProductList.cshtml",
+              "RelativeDocumentMoniker": "SWP\\Areas\\Manager\\Views\\HomeManager\\ProductList.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Final_SWP\\SWP_Final\\SWP\\Areas\\Manager\\Views\\HomeManager\\ProductList.cshtml",
+              "RelativeToolTip": "SWP\\Areas\\Manager\\Views\\HomeManager\\ProductList.cshtml",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAAAFoAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-10T19:39:41.064Z",
+              "WhenOpened": "2024-07-10T22:48:02.401Z",
               "EditorCaption": ""
             }
           ]
