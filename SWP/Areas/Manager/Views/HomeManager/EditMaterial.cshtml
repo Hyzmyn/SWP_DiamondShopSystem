@@ -1,0 +1,43 @@
+﻿@model Repository.Models.MaterialPriceList
+
+@{
+    ViewData["Title"] = "EditMaterial";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h1>EditMaterial</h1>
+
+<h4>MaterialPriceList</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditMaterial" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MaterialID" />
+            <div class="form-group">
+                <label asp-for="BuyPrice" class="control-label"></label>
+                <input asp-for="BuyPrice" class="form-control" />
+                <span asp-validation-for="BuyPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SellPrice" class="control-label"></label>
+                <input asp-for="SellPrice" class="form-control" />
+                <span asp-validation-for="SellPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EffDate" class="control-label"></label>
+                <input asp-for="EffDate" class="form-control" />
+                <span asp-validation-for="EffDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

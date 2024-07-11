@@ -529,6 +529,10 @@
       "PackagePath": "staticwebassets\\Certificate\\Certificate4.pdf"
     },
     {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\wwwroot\\Certificate\\Certificate6.pdf",
+      "PackagePath": "staticwebassets\\Certificate\\Certificate6.pdf"
+    },
+    {
       "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\wwwroot\\LayoutAdmin\\.gitignore",
       "PackagePath": "staticwebassets\\LayoutAdmin\\.gitignore"
     },
@@ -3483,6 +3487,18 @@
     {
       "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240624130200192.jpg",
       "PackagePath": "staticwebassets\\images\\product\\20240624130200192.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240711033757973.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240711033757973.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240711034203268.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240711034203268.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\20240711041624174.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20240711041624174.jpg"
     },
     {
       "Id": "C:\\Users\\ADMIN\\Desktop\\SWP391\\SWP_DiamondShopSystem\\SWP\\wwwroot\\images\\product\\21.jpg",

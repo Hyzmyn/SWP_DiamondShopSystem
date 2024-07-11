@@ -13,15 +13,17 @@ namespace Service.Services
 		private IGemPriceListRepository _gemPriceListRepo;
 		private IMaterialPriceListRepository _materialPriceListRepo;
 		private IPriceRateListService _priceRateListService;
+		private IPriceRateListRepository _PriceRateListRepository;
 
-
-		public ProductService(IProductRepository repo, IGemPriceListRepository gemPriceListRepository, IMaterialPriceListRepository materialPriceList, IPriceRateListService priceRateListService)
+		public ProductService(IProductRepository repo, IGemPriceListRepository gemPriceListRepository, IMaterialPriceListRepository materialPriceList, IPriceRateListService priceRateListService, IPriceRateListRepository priceRateListRepository)
 		{
 			_repo = repo;
 			_gemPriceListRepo = gemPriceListRepository;
 			_materialPriceListRepo = materialPriceList;
 			_priceRateListService = priceRateListService;
-		}
+            _PriceRateListRepository = priceRateListRepository;
+
+        }
 
 		public async Task AddProductAsync(Product product)
 		{
@@ -140,7 +142,29 @@ namespace Service.Services
             return _repo.GetTotalProductByField(productCode, color, clarity, cut, startPrice, endPrice);
         }
 
-		public async Task CalculateAndSaveProductPricesAsync()
+        public async Task<decimal> CalculateProductPrice(decimal priceRateId, int GemID, decimal weight, decimal ProductionCost)
+        {
+            var materialPriceLists = await _materialPriceListRepo.Get().ToListAsync();
+
+            // Get the applicable material price
+            var materialPrice = materialPriceLists
+                .Where(mpl => mpl.EffDate <= DateTime.Now)
+                .OrderByDescending(mpl => mpl.EffDate)
+                .FirstOrDefault();
+
+            var priceRate = _PriceRateListRepository.Get().FirstOrDefault(p => p.PriceRateID == priceRateId);
+            // Get the gem price by GemID
+            var gemPrice = _gemPriceListRepo.Get().FirstOrDefault(g => g.GemID == GemID);
+
+                if (materialPrice != null && priceRate != null && priceRate != null)
+                {
+                    return (materialPrice.SellPrice * weight) + gemPrice.Price + ProductionCost +
+                        ((materialPrice.SellPrice * weight) + gemPrice.Price + ProductionCost) * (priceRate.PriceRate / 100);
+                }
+				return 0;
+        }
+
+        public async Task CalculateAndSaveProductPricesAsync()
 		{
 			var products = await _repo.Get().ToListAsync();
 			var materialPriceLists = await _materialPriceListRepo.Get().ToListAsync();
@@ -162,8 +186,8 @@ namespace Service.Services
 
 				if (applicableMaterialPrice != null && applicableGemPrice != null && priceRate.HasValue)
 				{
-					product.TotalCost = (applicableMaterialPrice.SellPrice + applicableGemPrice.Price + product.ProductionCost) + 
-						((applicableMaterialPrice.SellPrice + applicableGemPrice.Price + product.ProductionCost) * (priceRate.Value / 100));
+					product.TotalCost = (applicableMaterialPrice.SellPrice * product.Weight) + applicableGemPrice.Price + product.ProductionCost + 
+						((applicableMaterialPrice.SellPrice * product.Weight) + applicableGemPrice.Price + product.ProductionCost) * (priceRate.Value / 100);
 				}
 			}
 

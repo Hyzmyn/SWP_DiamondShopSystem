@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Repository.Models
 {
@@ -18,7 +19,8 @@ namespace Repository.Models
 		public string Cut { get; set; }
 		public decimal Price { get; set; }
 
-		public virtual Gem Gem { get; set; }
+        [ValidateNever]
+        public virtual Gem Gem { get; set; }
 	}
 
 }

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Repository.Models.MaterialPriceList>
+
+@{
+    ViewData["Title"] = "MaterialList";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<h1>MaterialList</h1>
+
+@* <p>
+    <a asp-action="CreateMaterial">Create New</a>
+</p> *@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BuyPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SellPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EffDate)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BuyPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SellPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EffDate)
+                </td>
+@*                 <td>
+                    <a asp-action="EditMaterial" asp-route-id="@item.MaterialID">Edit</a> |
+                    <a asp-action="DeleteMaterial" asp-route-id="@item.MaterialID">Delete</a>
+                </td> *@
+            </tr>
+        }
+    </tbody>
+</table>

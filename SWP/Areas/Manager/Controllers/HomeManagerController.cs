@@ -1,9 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Microsoft.EntityFrameworkCore;
 using Repository.Models;
 using Service.Services;
+using SQLitePCL;
 using SWP.Helper;
+using System;
+using System.Data.OleDb;
 
 namespace SWP.Areas.Manager.Controllers
 {
@@ -18,8 +22,11 @@ namespace SWP.Areas.Manager.Controllers
         private readonly ICompositeViewEngine _viewEngine;
         private readonly IServiceProvider _serviceProvider;
         private readonly IWarrantyService _warrantyService;
+        private readonly IGemPriceListService _gemPriceListService;
+        private readonly IProductService _productService;
 
-        public HomeManagerController(DiamondShopContext context, IWebHostEnvironment environment, DiamondShopContext db, ICompositeViewEngine viewEngine, IServiceProvider serviceProvider, IWarrantyService warrantyService)
+        public HomeManagerController(DiamondShopContext context, IWebHostEnvironment environment, DiamondShopContext db, ICompositeViewEngine viewEngine, IServiceProvider serviceProvider,
+            IWarrantyService warrantyService, IGemPriceListService gemPriceListService, IProductService productService)
         {
             this.context = context;
             this.environment = environment;
@@ -27,6 +34,8 @@ namespace SWP.Areas.Manager.Controllers
             _viewEngine = viewEngine;
             _serviceProvider = serviceProvider;
             _warrantyService = warrantyService;
+            _gemPriceListService = gemPriceListService;
+            _productService = productService;
         }
 
         [Route("")]
@@ -37,8 +46,8 @@ namespace SWP.Areas.Manager.Controllers
         }
 
         [Route("gemlist")]
-		
-		public IActionResult GemList()
+
+        public IActionResult GemList()
         {
             var lstGem = db.Gems.ToList();
             return View(lstGem);
@@ -46,31 +55,30 @@ namespace SWP.Areas.Manager.Controllers
 
 
         [Route("creategem")]
-		[HttpGet]
-		public IActionResult CreateGem()
+        [HttpGet]
+        public IActionResult CreateGem()
         {
-			
-			return View();
-		}
+            return View();
+        }
         [Route("creategem")]
         [HttpPost]
-		public IActionResult CreateGem(Gem gem)
-		{
-			if (ModelState.IsValid)
-			{
-				context.Add(gem);
-				context.SaveChanges();
-				TempData["SuccessMessage"] = "Gem created successfully!";
-				return RedirectToAction(nameof(GemList));
-			}
-			return View(gem);
-		}
+        public IActionResult CreateGem(Gem gem)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Add(gem);
+                context.SaveChanges();
+                TempData["SuccessMessage"] = "Gem created successfully!";
+                return RedirectToAction(nameof(GemList));
+            }
+            return View(gem);
+        }
         [Route("genpdf/{id}")]
         [HttpGet]
         public async Task<IActionResult> GenerateWarrantyPdf(int id)
         {
 
-          
+
             var model = await context.Gems.FirstOrDefaultAsync(o => o.GemID == id);
 
             await _warrantyService.ExPortPdf(HtmlAsync(model), id.ToString(), "Certificate");
@@ -143,9 +151,9 @@ namespace SWP.Areas.Manager.Controllers
         [Route("editgem")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult EditGem(string gemCode, GemDto gemDto)
+        public IActionResult EditGem(int GemId, GemDto gemDto)
         {
-            var gem = context.Gems.FirstOrDefault(g => g.GemCode == gemCode);
+            var gem = context.Gems.FirstOrDefault(g => g.GemID == GemId);
             if (gem == null)
             {
                 return RedirectToAction(nameof(GemList));
@@ -174,8 +182,7 @@ namespace SWP.Areas.Manager.Controllers
         }
 
 
-        [HttpPost]
-        [Route("deletegem/{gemCode}")]
+        [Route("deletegem")]
         public IActionResult DeleteGem(string gemCode)
         {
             var gem = context.Gems.FirstOrDefault(g => g.GemCode == gemCode);
@@ -194,7 +201,7 @@ namespace SWP.Areas.Manager.Controllers
             }
             catch (Exception ex)
             {
-                
+
                 TempData["Error"] = $"An error occurred while deleting the gem: {ex.Message}";
             }
 
@@ -204,14 +211,20 @@ namespace SWP.Areas.Manager.Controllers
         [Route("gempricelist")]
         public IActionResult GemPriceList()
         {
-            var gemPriceList = db.GemPriceLists.ToList();
+            var gemPriceList = context.GemPriceLists.Include(g => g.Gem).ToList();
             return View(gemPriceList);
         }
-
         [HttpGet]
         [Route("creategempricelist")]
         public IActionResult CreateGemPriceList()
         {
+            var gems = context.Gems.ToList();
+            ViewData["GemID"] = gems.Select(g => new SelectListItem
+            {
+                Value = g.GemID.ToString(),
+                Text = g.GemCode
+            }).ToList();
+
             return View();
         }
 
@@ -221,17 +234,25 @@ namespace SWP.Areas.Manager.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Save to database logic here
-                context.GemPriceLists.Add(gemPriceList);
-                context.SaveChanges();
+                var gemPrice = context.GemPriceLists.Find(gemPriceList.GemID);
 
-                TempData["SuccessMessage"] = "Gem price list entry created successfully!";
-                return RedirectToAction(nameof(GemPriceList));
+                if (gemPrice == null)
+                {
+                    gemPriceList.Price = _gemPriceListService.CalculatePrice(gemPriceList.Color, gemPriceList.Cut, gemPriceList.Clarity, gemPriceList.CaratWeight);
+                    context.GemPriceLists.Add(gemPriceList);
+                    context.SaveChanges();
+                    TempData["SuccessMessage"] = "Gem price list entry created successfully!";
+                    return RedirectToAction(nameof(GemPriceList));
+                }
+                else
+                {
+                    TempData["FailedMEssage"] = "Gem Price Existed";
+                }
             }
-
             // If ModelState is not valid, return the view with validation errors
             return View(gemPriceList);
         }
+
         [HttpGet]
         [Route("editgempricelist/{gemID}")]
         public IActionResult EditGemPriceList(int gemID)
@@ -261,7 +282,18 @@ namespace SWP.Areas.Manager.Controllers
             {
                 try
                 {
-                    context.Update(gemPriceList);
+                    var OldGemPrice = context.GemPriceLists.Find(gemID);
+                    if (OldGemPrice != null)
+                    {
+                        OldGemPrice.Color = gemPriceList.Color;
+                        OldGemPrice.Cut = gemPriceList.Cut;
+                        OldGemPrice.Clarity = gemPriceList.Clarity;
+                        OldGemPrice.CaratWeight = gemPriceList.CaratWeight;
+                        OldGemPrice.Price = _gemPriceListService.CalculatePrice(gemPriceList.Color, gemPriceList.Cut, gemPriceList.Clarity, gemPriceList.CaratWeight);
+                    }
+
+
+                    context.Update(OldGemPrice);
                     context.SaveChanges();
                     TempData["SuccessMessage"] = "Gem Price List entry updated successfully.";
                     return RedirectToAction(nameof(GemPriceList));
@@ -271,41 +303,44 @@ namespace SWP.Areas.Manager.Controllers
                     TempData["ErrorMessage"] = "Concurrency error occurred.";
                 }
             }
-
+            else
+            {
+                return View(gemPriceList); // Return the view with validation errors
+            }
             return View(gemPriceList);
         }
 
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Route("deletegempricelist/{gemID}")]
-        public IActionResult DeleteGemPriceList(int gemID)
-        {
-            var gemPriceList = context.GemPriceLists.Find(gemID);
-            if (gemPriceList == null)
-            {
-                TempData["ErrorMessage"] = "Gem Price List entry not found.";
-                return RedirectToAction(nameof(GemPriceList));
-            }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //[Route("deletegempricelist/{gemID}")]
+        //public IActionResult DeleteGemPriceList(int gemID)
+        //{
+        //    var gemPriceList = context.GemPriceLists.Find(gemID);
+        //    if (gemPriceList == null)
+        //    {
+        //        TempData["ErrorMessage"] = "Gem Price List entry not found.";
+        //        return RedirectToAction(nameof(GemPriceList));
+        //    }
 
-            try
-            {
-                context.GemPriceLists.Remove(gemPriceList);
-                context.SaveChanges();
-                TempData["SuccessMessage"] = "Gem Price List entry deleted successfully.";
-            }
-            catch (Exception ex)
-            {
-                TempData["ErrorMessage"] = $"An error occurred while deleting the Gem Price List entry: {ex.Message}";
-            }
+        //    try
+        //    {
+        //        context.GemPriceLists.Remove(gemPriceList);
+        //        context.SaveChanges();
+        //        TempData["SuccessMessage"] = "Gem Price List entry deleted successfully.";
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        TempData["ErrorMessage"] = $"An error occurred while deleting the Gem Price List entry: {ex.Message}";
+        //    }
 
-            return RedirectToAction(nameof(GemPriceList));
-        }
+        //    return RedirectToAction(nameof(GemPriceList));
+        //}
 
         [Route("productlist")]
         public IActionResult ProductList()
         {
-            var lstProDuct = db.Products.ToList();
+            var lstProDuct = db.Products.Include(p => p.Gems).Include(p => p.PriceRateLists).ToList();
             return View(lstProDuct);
         }
 
@@ -322,7 +357,7 @@ namespace SWP.Areas.Manager.Controllers
 
         [Route("createproduct")]
         [HttpPost]
-        public IActionResult CreateProduct(ProductDto productDto)
+        public async Task<IActionResult> CreateProduct(ProductDto productDto)
         {
             //xác thực tệp hình ảnh, nếu nó null thì thêm lỗi vào trạng thái
             if (productDto.ImageUrl1 == null)
@@ -358,6 +393,8 @@ namespace SWP.Areas.Manager.Controllers
 
                 productDto.ImageUrl2.CopyTo(stream);
             }
+            productDto.TotalCost = await _productService.CalculateProductPrice(productDto.PriceRateID, productDto.GemID, productDto.Weight, productDto.ProductionCost);
+
             Product product = new Product()
             {
                 ProductCode = productDto.ProductCode,
@@ -365,11 +402,11 @@ namespace SWP.Areas.Manager.Controllers
                 ImageUrl1 = newFileName1,
                 ImageUrl2 = newFileName2,
                 GemID = productDto.GemID,
-				Weight = productDto.Weight,
-                CategoryID = productDto.CategoryID,
+                Weight = productDto.Weight,
+                CategoryID = 1,
                 ProductionCost = productDto.ProductionCost,
                 PriceRateID = productDto.PriceRateID,
-                
+                TotalCost = productDto.TotalCost,
             };
 
             context.Products.Add(product);
@@ -410,7 +447,7 @@ namespace SWP.Areas.Manager.Controllers
 
         [Route("editproduct")]
         [HttpPost]
-        public IActionResult EditProduct(string ProductCode, ProductDto productDto)
+        public async Task<IActionResult> EditProduct(string ProductCode, ProductDto productDto)
         {
             var product = context.Products.FirstOrDefault(p => p.ProductCode == ProductCode);
             if (product == null)
@@ -472,7 +509,7 @@ namespace SWP.Areas.Manager.Controllers
                     }
                 }
             }
-
+            var price = await _productService.CalculateProductPrice(productDto.PriceRateID, productDto.GemID, productDto.Weight, productDto.ProductionCost);
 
             // Update the product in the database
             product.ProductCode = productDto.ProductCode;
@@ -484,6 +521,7 @@ namespace SWP.Areas.Manager.Controllers
             product.CategoryID = productDto.CategoryID;
             product.ProductionCost = productDto.ProductionCost;
             product.PriceRateID = productDto.PriceRateID;
+            product.TotalCost = price;
 
             context.SaveChanges();
             return RedirectToAction("ProductList", "HomeManager");
@@ -844,7 +882,7 @@ namespace SWP.Areas.Manager.Controllers
             return RedirectToAction("DiscountList");
         }
 
-        
+
 
         [Route("informationuser")]
         public IActionResult InformationUser()
@@ -853,8 +891,149 @@ namespace SWP.Areas.Manager.Controllers
             return View(informationUser);
         }
 
-        
 
+        [Route("materiallist")]
+        public IActionResult MaterialList()
+        {
+            var Material = db.MaterialPriceLists.Include(m => m.Product).ToList();
+            return View(Material);
+        }
 
+        [HttpGet]
+        [Route("createMaterial")]
+        public IActionResult CreateMaterial()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("createMaterial")]
+        public IActionResult CreateMaterial(MaterialPriceList materialPriceList)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(materialPriceList);
+            }
+
+            var id = context.MaterialPriceLists.Max(m => m.MaterialID);
+            var material = new MaterialPriceList
+            {
+                MaterialID = id + 1,
+                BuyPrice = materialPriceList.BuyPrice,
+                SellPrice = materialPriceList.SellPrice,
+                EffDate = DateTime.Now,
+
+            };
+
+            try
+            {
+                context.MaterialPriceLists.Add(materialPriceList);
+                context.SaveChanges();
+
+                TempData["SuccessMessage"] = "Discount created successfully.";
+                return RedirectToAction("MaterialList", "HomeManager");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"Failed to create discount: {ex.Message}";
+                return View(materialPriceList);
+            }
+        }
+
+        [HttpGet]
+        [Route("editMaterial/{id}")]
+        public IActionResult EditMaterial(int materialId)
+        {
+            // Retrieve the discount from your data source based on discountId
+            var material = context.MaterialPriceLists.FirstOrDefault(d => d.MaterialID == materialId);
+
+            if (material == null)
+            {
+                return NotFound();
+            }
+
+            var newMaterial = new MaterialPriceList
+            {
+                BuyPrice = material.BuyPrice,
+                SellPrice = material.SellPrice,
+                EffDate = DateTime.Now,
+            };
+
+            return View(newMaterial);
+        }
+
+        [HttpPost]
+        [Route("editMaterial")]
+        public IActionResult EditMaterial(MaterialPriceList material)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(material);
+            }
+
+            try
+            {
+                // Retrieve the existing discount from your data source
+                var newMaterial = context.MaterialPriceLists.FirstOrDefault(d => d.MaterialID == material.MaterialID);
+
+                if (newMaterial == null)
+                {
+                    return NotFound();
+                }
+
+                // Update the properties of the retrieved discount entity
+                newMaterial.SellPrice = material.SellPrice;
+                newMaterial.BuyPrice = material.BuyPrice;
+
+                // Save changes to the database
+                context.SaveChanges();
+
+                TempData["SuccessMessage"] = "material updated successfully.";
+                return RedirectToAction("MaterialList");
+            }
+            catch (Exception ex)
+            {
+                // Log the exception and handle it accordingly
+                TempData["ErrorMessage"] = $"An error occurred while updating the material: {ex.Message}";
+                return View(material);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult DeleteMaterial(int materialId)
+        {
+            var material = context.MaterialPriceLists.FirstOrDefault(d => d.MaterialID == materialId);
+            if (material == null)
+            {
+                TempData["ErrorMessage"] = "Discount not found.";
+                return RedirectToAction("DiscountList");
+            }
+
+            return View(materialId);
+        }
+        [HttpPost, ActionName("deleteDiscount")]
+        public IActionResult DeleteMaterialPrice(int materialId)
+        {
+            try
+            {
+                var material = context.MaterialPriceLists.FirstOrDefault(d => d.MaterialID == materialId);
+                if (material == null)
+                {
+                    TempData["ErrorMessage"] = "Material not found.";
+                    return RedirectToAction("Material");
+                }
+
+                context.MaterialPriceLists.Remove(material);
+                context.SaveChanges();
+
+                TempData["SuccessMessage"] = "Material deleted successfully.";
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"An error occurred while deleting the material: {ex.Message}";
+            }
+
+            return RedirectToAction("MaterialList");
+        }
     }
 }

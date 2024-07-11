@@ -572,3 +572,4 @@ C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\refint\
 C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.pdb
 C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.genruntimeconfig.cache
 C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\ref\SWP.dll
+C:\Users\ADMIN\Desktop\SWP391\SWP_DiamondShopSystem\SWP\obj\Debug\net8.0\SWP.MvcApplicationPartsAssemblyInfo.cs

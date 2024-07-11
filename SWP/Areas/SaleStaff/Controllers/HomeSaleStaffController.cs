@@ -20,13 +20,14 @@ namespace SWP.Areas.SaleStaff.Controllers
         private readonly IWebHostEnvironment environment;
         private readonly IProductService _productService;
         DiamondShopContext db = new DiamondShopContext();
-        public HomeSaleStaffController(DiamondShopContext context, IWebHostEnvironment environment)
+        public HomeSaleStaffController(DiamondShopContext context, IWebHostEnvironment environment, IProductService productService)
         {
             this.context = context;
             this.environment = environment;
+			_productService = productService;
 
 
-        }
+		}
 
         [Route("")]
         [Route("homesalestaff")]
@@ -39,7 +40,7 @@ namespace SWP.Areas.SaleStaff.Controllers
         [Route("productlist")]
         public IActionResult ProductList()
         {
-            var lstProDuct = db.Products.ToList();
+            var lstProDuct = db.Products.Include(p => p.Gems).Include(p => p.PriceRateLists).ToList(); 
             return View(lstProDuct);
         }
 
@@ -56,7 +57,7 @@ namespace SWP.Areas.SaleStaff.Controllers
 
         [Route("createproduct")]
         [HttpPost]
-        public IActionResult CreateProduct(ProductDto productDto)
+        public async Task<IActionResult> CreateProduct(ProductDto productDto)
         {
             //xác thực tệp hình ảnh, nếu nó null thì thêm lỗi vào trạng thái
             if (productDto.ImageUrl1 == null)
@@ -92,6 +93,7 @@ namespace SWP.Areas.SaleStaff.Controllers
 
                 productDto.ImageUrl2.CopyTo(stream);
             }
+            productDto.TotalCost = await _productService.CalculateProductPrice(productDto.PriceRateID, productDto.GemID, productDto.Weight, productDto.ProductionCost);
             Product product = new Product()
             {
                 ProductCode = productDto.ProductCode,
@@ -100,9 +102,10 @@ namespace SWP.Areas.SaleStaff.Controllers
                 ImageUrl2 = newFileName2,
                 GemID = productDto.GemID,
                 Weight = productDto.Weight,
-                CategoryID = productDto.CategoryID,
+                CategoryID = 1,
                 ProductionCost = productDto.ProductionCost,
                 PriceRateID = productDto.PriceRateID,
+                TotalCost = productDto.TotalCost,
             };
 
             context.Products.Add(product);
@@ -143,7 +146,7 @@ namespace SWP.Areas.SaleStaff.Controllers
 
         [Route("editproduct")]
         [HttpPost]
-        public IActionResult EditProduct(string ProductCode, ProductDto productDto)
+        public async Task<IActionResult> EditProduct(string ProductCode, ProductDto productDto)
         {
             var product = context.Products.FirstOrDefault(p => p.ProductCode == ProductCode);
             if (product == null)
@@ -205,7 +208,7 @@ namespace SWP.Areas.SaleStaff.Controllers
                     }
                 }
             }
-
+            var price = await _productService.CalculateProductPrice(productDto.PriceRateID, productDto.GemID, productDto.Weight, productDto.ProductionCost);
 
             // Update the product in the database
             product.ProductCode = productDto.ProductCode;
@@ -217,6 +220,7 @@ namespace SWP.Areas.SaleStaff.Controllers
             product.CategoryID = productDto.CategoryID;
             product.ProductionCost = productDto.ProductionCost;
             product.PriceRateID = productDto.PriceRateID;
+            product.TotalCost = price;
 
             context.SaveChanges();
             return RedirectToAction("ProductList", "HomeSaleStaff");
